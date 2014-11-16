@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        myscene.scene = SCNScene(named: "hurricane.dae")
+        myscene.scene = SCNScene(named: "abaddon.dae")
         myscene.allowsCameraControl = true;
         myscene.backgroundColor = UIColor.lightGrayColor()
 

@@ -16,6 +16,7 @@
 		54E08A071A19435800BDC644 /* ShipSpinnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E08A061A19435800BDC644 /* ShipSpinnerTests.swift */; };
 		54E08A111A1943B000BDC644 /* untitled.dae in Resources */ = {isa = PBXBuildFile; fileRef = 54E08A101A1943B000BDC644 /* untitled.dae */; };
 		54E08A131A1947F300BDC644 /* hurricane.dae in Resources */ = {isa = PBXBuildFile; fileRef = 54E08A121A1947F300BDC644 /* hurricane.dae */; };
+		54E08A151A194D0F00BDC644 /* abaddon.dae in Resources */ = {isa = PBXBuildFile; fileRef = 54E08A141A194D0F00BDC644 /* abaddon.dae */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,7 @@
 		54E08A061A19435800BDC644 /* ShipSpinnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipSpinnerTests.swift; sourceTree = "<group>"; };
 		54E08A101A1943B000BDC644 /* untitled.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = untitled.dae; sourceTree = "<group>"; };
 		54E08A121A1947F300BDC644 /* hurricane.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = hurricane.dae; sourceTree = "<group>"; };
+		54E08A141A194D0F00BDC644 /* abaddon.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = abaddon.dae; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +89,7 @@
 				54E089F21A19435800BDC644 /* ViewController.swift */,
 				54E089F41A19435800BDC644 /* Main.storyboard */,
 				54E08A121A1947F300BDC644 /* hurricane.dae */,
+				54E08A141A194D0F00BDC644 /* abaddon.dae */,
 				54E08A101A1943B000BDC644 /* untitled.dae */,
 				54E089F71A19435800BDC644 /* Images.xcassets */,
 				54E089F91A19435800BDC644 /* LaunchScreen.xib */,
@@ -201,6 +204,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54E08A151A194D0F00BDC644 /* abaddon.dae in Resources */,
 				54E089F61A19435800BDC644 /* Main.storyboard in Resources */,
 				54E08A111A1943B000BDC644 /* untitled.dae in Resources */,
 				54E089FB1A19435800BDC644 /* LaunchScreen.xib in Resources */,
