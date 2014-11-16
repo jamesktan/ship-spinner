@@ -20,6 +20,12 @@ class ViewController: UIViewController {
         myscene.allowsCameraControl = true;
         myscene.backgroundColor = UIColor.lightGrayColor()
 
+//        let ambientLightNode = SCNNode()
+//        ambientLightNode.light = SCNLight()
+//        ambientLightNode.light!.type = SCNLightTypeAmbient
+//        ambientLightNode.light!.color = UIColor(white: 0.5, alpha: 0.5)
+//        myscene.scene!.rootNode.addChildNode(ambientLightNode)
+
 
         
     }
