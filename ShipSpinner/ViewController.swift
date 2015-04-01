@@ -30,6 +30,17 @@ class ViewController: UIViewController {
         myscene.scene = SCNScene(named: "kushdae.scnassets/kush_cloakedfighter")
         myscene.allowsCameraControl = true;
         
+        // Spin
+        let spin = CABasicAnimation(keyPath: "rotation")
+        // Use from-to to explicitly make a full rotation around z
+        spin.fromValue = NSValue(SCNVector4: SCNVector4(x: 0, y: 1, z: 0, w: 0))
+        spin.toValue = NSValue(SCNVector4: SCNVector4(x: 0, y: 1, z: 0, w: Float(2 * M_PI)))
+        spin.duration = 20
+        spin.repeatCount = .infinity
+        myscene.scene?.rootNode.addAnimation(spin, forKey: "spin around")
+
+        
+        
         if frame.presenter == nil {
             NSLog("ERROR")
             return
