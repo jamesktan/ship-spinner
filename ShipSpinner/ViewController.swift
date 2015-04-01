@@ -8,6 +8,7 @@
 
 import UIKit
 import SceneKit
+import SpriteKit
 
 class ViewController: UIViewController {
     
@@ -39,7 +40,12 @@ class ViewController: UIViewController {
         spin.repeatCount = .infinity
         myscene.scene?.rootNode.addAnimation(spin, forKey: "spin around")
 
-        
+        //BG
+        myscene.backgroundColor = UIColor.clearColor() 
+//        var backgroundTexture : SKTexture = SKTexture(imageNamed:"MyImage.png")
+//        var background : SKSpriteNode = SKSpriteNode(texture:backgroundTexture, size:self.view.frame.size)
+//        background.position = CGPointMake(CGRectGetMidX(self.view.frame), CGRectGetMidY(self.view.frame))
+//        myscene.scene?.background.contents = ["bghw.jpg","bghw.jpg","bghw.jpg","bghw.jpg","bghw.jpg","bghw.jpg"]
         
         if frame.presenter == nil {
             NSLog("ERROR")
