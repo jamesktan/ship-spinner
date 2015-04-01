@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		546FC6B11A1952EE00F644D7 /* ab3_t1_d.png in Resources */ = {isa = PBXBuildFile; fileRef = 546FC6B01A1952EE00F644D7 /* ab3_t1_d.png */; };
 		54C6AFFA1ACC36B200E1D0F1 /* kushdae.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 54C6AFF91ACC36B200E1D0F1 /* kushdae.scnassets */; };
+		54C6AFFC1ACC6EBF00E1D0F1 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6AFFB1ACC6EBF00E1D0F1 /* Presenter.swift */; };
+		54C6AFFE1ACC6EE100E1D0F1 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6AFFD1ACC6EE100E1D0F1 /* Interactor.swift */; };
+		54C6B0001ACC6EF000E1D0F1 /* ShipEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6AFFF1ACC6EF000E1D0F1 /* ShipEntity.swift */; };
+		54C6B0021ACC7BA200E1D0F1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6B0011ACC7BA200E1D0F1 /* DataManager.swift */; };
 		54E089EE1A19435800BDC644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E089ED1A19435800BDC644 /* AppDelegate.swift */; };
 		54E089F11A19435800BDC644 /* ShipSpinner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54E089EF1A19435800BDC644 /* ShipSpinner.xcdatamodeld */; };
 		54E089F31A19435800BDC644 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E089F21A19435800BDC644 /* ViewController.swift */; };
@@ -34,6 +38,10 @@
 /* Begin PBXFileReference section */
 		546FC6B01A1952EE00F644D7 /* ab3_t1_d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ab3_t1_d.png; sourceTree = "<group>"; };
 		54C6AFF91ACC36B200E1D0F1 /* kushdae.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = kushdae.scnassets; sourceTree = "<group>"; };
+		54C6AFFB1ACC6EBF00E1D0F1 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		54C6AFFD1ACC6EE100E1D0F1 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		54C6AFFF1ACC6EF000E1D0F1 /* ShipEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipEntity.swift; sourceTree = "<group>"; };
+		54C6B0011ACC7BA200E1D0F1 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		54E089E81A19435800BDC644 /* ShipSpinner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShipSpinner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E089EC1A19435800BDC644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54E089ED1A19435800BDC644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -91,6 +99,10 @@
 			children = (
 				54E089ED1A19435800BDC644 /* AppDelegate.swift */,
 				54E089F21A19435800BDC644 /* ViewController.swift */,
+				54C6AFFB1ACC6EBF00E1D0F1 /* Presenter.swift */,
+				54C6AFFD1ACC6EE100E1D0F1 /* Interactor.swift */,
+				54C6B0011ACC7BA200E1D0F1 /* DataManager.swift */,
+				54C6AFFF1ACC6EF000E1D0F1 /* ShipEntity.swift */,
 				54E089F41A19435800BDC644 /* Main.storyboard */,
 				546FC6B01A1952EE00F644D7 /* ab3_t1_d.png */,
 				54E08A121A1947F300BDC644 /* hurricane.dae */,
@@ -237,7 +249,11 @@
 			files = (
 				54E089F31A19435800BDC644 /* ViewController.swift in Sources */,
 				54E089EE1A19435800BDC644 /* AppDelegate.swift in Sources */,
+				54C6B0001ACC6EF000E1D0F1 /* ShipEntity.swift in Sources */,
+				54C6B0021ACC7BA200E1D0F1 /* DataManager.swift in Sources */,
+				54C6AFFC1ACC6EBF00E1D0F1 /* Presenter.swift in Sources */,
 				54E089F11A19435800BDC644 /* ShipSpinner.xcdatamodeld in Sources */,
+				54C6AFFE1ACC6EE100E1D0F1 /* Interactor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +379,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ShipSpinner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -373,6 +390,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ShipSpinner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

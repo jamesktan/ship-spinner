@@ -17,6 +17,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        var p = Presenter()
+        var i = Interactor()
+        var d = DataManager()
+        var vc = ViewController.shared
+        
+        ViewController.frame.presenter = p
+        p.interactor = i
+        i.presenter = p
+        i.dm = d
+        d.interactor = i
+        
+        
         return true
     }
 

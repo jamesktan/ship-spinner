@@ -10,20 +10,29 @@ import UIKit
 import SceneKit
 
 class ViewController: UIViewController {
-
+    
     @IBOutlet weak var myscene: SCNView!
+    
+    class var shared : ViewController {
+        struct Static {
+            static let instance : ViewController = ViewController()
+        }
+        return Static.instance
+    }
+    struct frame {
+        static var presenter : Presenter? = nil
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //let url2 = NSBundle.mainBundle().URLForResource("kushdae.scnassets/kush_cloakedfighter", withExtension: "dae")
-        //; = SCNSceneSource(URL: url2, options: nil)
-        //myscene.scene = SCNScene(named: "kustdaw.scnassets/kush_cloakedfighter.dae")
+
         myscene.scene = SCNScene(named: "kushdae.scnassets/kush_cloakedfighter")
         myscene.allowsCameraControl = true;
-        //myscene.backgroundColor = UIColor.lightGrayColor()
-
         
+        if frame.presenter == nil {
+            NSLog("ERROR")
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,6 +40,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    
 
 }
 
