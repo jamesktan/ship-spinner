@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		546FC6B11A1952EE00F644D7 /* ab3_t1_d.png in Resources */ = {isa = PBXBuildFile; fileRef = 546FC6B01A1952EE00F644D7 /* ab3_t1_d.png */; };
+		54C6AFFA1ACC36B200E1D0F1 /* kushdae.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 54C6AFF91ACC36B200E1D0F1 /* kushdae.scnassets */; };
 		54E089EE1A19435800BDC644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E089ED1A19435800BDC644 /* AppDelegate.swift */; };
 		54E089F11A19435800BDC644 /* ShipSpinner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54E089EF1A19435800BDC644 /* ShipSpinner.xcdatamodeld */; };
 		54E089F31A19435800BDC644 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E089F21A19435800BDC644 /* ViewController.swift */; };
@@ -32,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		546FC6B01A1952EE00F644D7 /* ab3_t1_d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ab3_t1_d.png; sourceTree = "<group>"; };
+		54C6AFF91ACC36B200E1D0F1 /* kushdae.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = kushdae.scnassets; sourceTree = "<group>"; };
 		54E089E81A19435800BDC644 /* ShipSpinner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShipSpinner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E089EC1A19435800BDC644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54E089ED1A19435800BDC644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				54E08A121A1947F300BDC644 /* hurricane.dae */,
 				54E08A141A194D0F00BDC644 /* abaddon.dae */,
 				54E08A101A1943B000BDC644 /* untitled.dae */,
+				54C6AFF91ACC36B200E1D0F1 /* kushdae.scnassets */,
 				54E089F71A19435800BDC644 /* Images.xcassets */,
 				54E089F91A19435800BDC644 /* LaunchScreen.xib */,
 				54E089EF1A19435800BDC644 /* ShipSpinner.xcdatamodeld */,
@@ -211,6 +214,7 @@
 				54E089F61A19435800BDC644 /* Main.storyboard in Resources */,
 				54E08A111A1943B000BDC644 /* untitled.dae in Resources */,
 				54E089FB1A19435800BDC644 /* LaunchScreen.xib in Resources */,
+				54C6AFFA1ACC36B200E1D0F1 /* kushdae.scnassets in Resources */,
 				546FC6B11A1952EE00F644D7 /* ab3_t1_d.png in Resources */,
 				54E08A131A1947F300BDC644 /* hurricane.dae in Resources */,
 				54E089F81A19435800BDC644 /* Images.xcassets in Resources */,

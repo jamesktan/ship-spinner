@@ -16,16 +16,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        myscene.scene = SCNScene(named: "abaddon.dae")
+        //let url2 = NSBundle.mainBundle().URLForResource("kushdae.scnassets/kush_cloakedfighter", withExtension: "dae")
+        //; = SCNSceneSource(URL: url2, options: nil)
+        //myscene.scene = SCNScene(named: "kustdaw.scnassets/kush_cloakedfighter.dae")
+        myscene.scene = SCNScene(named: "kushdae.scnassets/kush_cloakedfighter")
         myscene.allowsCameraControl = true;
-        myscene.backgroundColor = UIColor.lightGrayColor()
-
-//        let ambientLightNode = SCNNode()
-//        ambientLightNode.light = SCNLight()
-//        ambientLightNode.light!.type = SCNLightTypeAmbient
-//        ambientLightNode.light!.color = UIColor(white: 0.5, alpha: 0.5)
-//        myscene.scene!.rootNode.addChildNode(ambientLightNode)
-
+        //myscene.backgroundColor = UIColor.lightGrayColor()
 
         
     }
