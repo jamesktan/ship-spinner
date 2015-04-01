@@ -32,4 +32,8 @@ class DataManager: NSObject {
     func findShipList() -> NSArray {
         return ["Kushan Cloaked Fighter"]
     }
+    
+    func getHello() {
+        NSLog("HELLO DM")
+    }
 }

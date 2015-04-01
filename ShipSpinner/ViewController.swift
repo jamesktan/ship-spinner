@@ -32,7 +32,9 @@ class ViewController: UIViewController {
         
         if frame.presenter == nil {
             NSLog("ERROR")
+            return
         }
+        frame.presenter?.getHello()
     }
 
     override func didReceiveMemoryWarning() {

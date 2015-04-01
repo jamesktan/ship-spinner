@@ -20,5 +20,9 @@ class Interactor: NSObject {
     func getShip(id_ship : NSString) -> ShipEntity {
         return dm!.findShip(id_ship)
     }
-    
+ 
+    func getHello() {
+        NSLog("Hello!!!")
+        dm?.getHello()
+    }
 }

@@ -20,5 +20,6 @@ class Presenter: NSObject {
     
     func getHello() {
         NSLog("HELLO")
+        interactor?.getHello()
     }
 }
