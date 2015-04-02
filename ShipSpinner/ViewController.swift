@@ -14,6 +14,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var myscene: SCNView!
     
+    @IBOutlet weak var buttonList : UIButton
+    @IBOutlet weak var buttonDetail : UIButton
+    @IBOutlet weak var buttonStats : UIButton
+    @IBOutlet weak var buttonSettings : UIButton
+    var buttons = [buttonList, buttonDetail, butonStats, buttonSettings]
+    
     @IBOutlet weak var shipListView : UITableView!
     @IBOutlet weak var shipDetailView : UIView!
     @IBOutlet weak var shipStatisticsView : UIView!
