@@ -13,8 +13,21 @@ class Interactor: NSObject {
     var presenter : Presenter? = nil
     var dm : DataManager? = nil
     
+    // getShipList - return list of all ship names
     func getShipList() -> NSArray {
         return dm!.findShipList()
+    }
+    
+    // getShipListNice - return a nice named list of all ships
+    func getShipListNice() -> NSArray {
+        var niceList : NSMutableArray = []
+        var shipList = self.getShipList()
+        for ship in shipList {
+            var shipEntity = interactor!.getShip(ship)
+            var niceName = ship.shipName
+            niceList.addObject(niceName)
+        }
+        return niceList
     }
     
     func getShip(id_ship : NSString) -> ShipEntity {
