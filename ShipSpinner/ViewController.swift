@@ -70,26 +70,19 @@ class ViewController: UIViewController {
         var view = views.objectAtIndex(sender.tag)
         var frame = frames.objectAtIndex(sender.tag)
         if sender.selected {
-            handleAnimation(view, frame, FALSE)
+            handleAnimation(view, frame, 0.0)
         } else {
-            handleAnimation(view, frame, TRUE)
+            handleAnimation(view, frame, 1.0)
         }
         sender.selected = !(sender.selected)
     }
     
     // Custom Methods - HandleAnimation
     
-    func handleAnimation(view : UIView, moveToPoint : CGPoint, alpha : Bool) {
-        if !alpha {
-            UIView.animateWithDuration(hideTime, animations: {
-                view.alpha = 0.0
-            }
-        }
+    func handleAnimation(view : UIView, moveToPoint : CGPoint, alpha : Float) {
         UIView.animateWithDuration(transTime, animations: {
             view.setFrame(CGRectMake(moveToPoint.x, moveToPoint.y, view.frame.size.width, view.frame.size.height))
-            if alpha {
-                view.alpha = 1.0
-            }
+            view.alpha = alpha
         }, completion: {
         })
     }
