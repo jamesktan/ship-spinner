@@ -87,7 +87,11 @@ class ViewController: UIViewController {
     
     func handleAnimation(view : UIView, moveToPoint : CGPoint, alpha : Float) {
         UIView.animateWithDuration(transTime, animations: {
-            view.setFrame(CGRectMake(moveToPoint.x, moveToPoint.y, view.frame.size.width, view.frame.size.height))
+            far offset = 0
+            if alpha == 0.0 {
+                offset = -320
+            }
+            view.setFrame(CGRectMake(moveToPoint.x + offset, moveToPoint.y, view.frame.size.width, view.frame.size.height))
             view.alpha = alpha
         }, completion: {
         })
