@@ -29,6 +29,7 @@ class ViewController: UIViewController {
     }
 
     // UIView LifeCycle Stuff
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -71,16 +72,24 @@ class ViewController: UIViewController {
     
     // Custom Methods - Changing Properties
     
-    func getAndLoadShip() {
-    }
-    
     func changeWallpaper() {
+        frame!.presenter.setWallpaper(wallpaperID)
     }
     
     func changeMusic() {
+        frame!.presenter.setMusic(musicID)
     }
     
     func changeShip() {
+        frame!.presenter.setShip(shipID)
+    }
+    
+    func changeShipRotateSpeed() {
+        frame!.presenter.setRotateSpeed(rotateRate)
+    }
+    
+    func downloadShips() {
+        frame!.presenter.download()
     }
 
 }
