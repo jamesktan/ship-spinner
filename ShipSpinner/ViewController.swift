@@ -13,10 +13,18 @@ import SpriteKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var myscene: SCNView!
+    
     @IBOutlet weak var shipListView : UITableView!
     @IBOutlet weak var shipDetailView : UIView!
     @IBOutlet weak var shipStatisticsView : UIView!
     @IBOutlet weak var settingsView : UIView!
+    var view = [shipListView, shipDetailView, shipStatisticsView, settingView]
+    
+    var frameList = CGRectMake(0,0,320,768)
+    var frameDetail = CGRectMake(0,0,320,768)
+    var frameStats = CGRectMake(0,0,320,768)
+    var frameSetting = CGRectMake(0,0,320,768)
+    var frames = [frameList, frameDetail, frameStats, frameSetting]
     
     class var shared : ViewController {
         struct Static {
@@ -58,37 +66,53 @@ class ViewController: UIViewController {
     
     // Custom Methods - Hide / Show Windows
     
-    func showSettings() {
-    }
-
-    func showShipList() {
+    @IBAction func showView(sender:UIButton) {
+        var view = views.objectAtIndex(sender.tag)
+        var frame = frames.objectAtIndex(sender.tag)
+        if sender.selected {
+            handleAnimation(view, frame, FALSE)
+        } else {
+            handleAnimation(view, frame, TRUE)
+        }
+        sender.selected = !(sender.selected)
     }
     
-    func showShipDetails() {
-    }
+    // Custom Methods - HandleAnimation
     
-    func showShipStatistics() {
+    func handleAnimation(view : UIView, moveToPoint : CGPoint, alpha : Bool) {
+        if !alpha {
+            UIView.animateWithDuration(hideTime, animations: {
+                view.alpha = 0.0
+            }
+        }
+        UIView.animateWithDuration(transTime, animations: {
+            view.setFrame(CGRectMake(moveToPoint.x, moveToPoint.y, view.frame.size.width, view.frame.size.height))
+            if alpha {
+                view.alpha = 1.0
+            }
+        }, completion: {
+        })
     }
     
     // Custom Methods - Changing Properties
     
-    func changeWallpaper() {
+    @IBAction func changeWallpaper() {
         frame!.presenter.setWallpaper(wallpaperID)
     }
     
-    func changeMusic() {
+    @IBAction func changeMusic() {
         frame!.presenter.setMusic(musicID)
     }
     
-    func changeShip() {
+    @IBAction func changeShip() {
         frame!.presenter.setShip(shipID)
     }
     
-    func changeShipRotateSpeed() {
+    @IBAction func changeShipRotateSpeed(sender : UISlider) {
         frame!.presenter.setRotateSpeed(rotateRate)
     }
     
-    func downloadShips() {
+    @IBAction func downloadShips() {
         frame!.presenter.download()
     }
 
