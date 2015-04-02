@@ -51,6 +51,10 @@ class DataManager: NSObject {
         defaults.synchronize()
     }
     
+    func download() {
+    
+    }
+    
     func getHello() {
         NSLog("HELLO DM")
     }
