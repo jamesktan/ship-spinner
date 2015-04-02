@@ -8,7 +8,7 @@ For thousands of years, the Kushan survived on the arid planet Kharak, corralled
 Primarily, this application was just for fun and as a learning experience. That said, the features here are limited on purpose.
 
 - Ship Viewing
-- Ship Desctiption
+- Ship Description
 - Ship Statistics
 - Rotate
 - Save Screenshot
