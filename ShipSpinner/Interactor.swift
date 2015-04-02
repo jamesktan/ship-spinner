@@ -13,6 +13,8 @@ class Interactor: NSObject {
     var presenter : Presenter? = nil
     var dm : DataManager? = nil
     
+    // GET
+    
     // getShipList - return list of all ship names
     func getShipList() -> NSArray {
         return dm!.findShipList()
@@ -21,7 +23,7 @@ class Interactor: NSObject {
     // getShipListNice - return a nice named list of all ships
     func getShipListNice() -> NSArray {
         var niceList : NSMutableArray = []
-        var shipList = self.getShipList()
+        var shipList = getShipList()
         for ship in shipList {
             var shipEntity = interactor!.getShip(ship)
             var niceName = ship.shipName
@@ -33,6 +35,29 @@ class Interactor: NSObject {
     func getShip(id_ship : NSString) -> ShipEntity {
         return dm!.findShip(id_ship)
     }
+    
+    // SET
+    
+    func setWallpaper(id : NSString) {
+        dm!.saveDefault("currentWall", id)
+    }
+    
+    func setMusic(id : NSString) {
+        dm!.saveDefault("currentMusic", id)
+    }
+    
+    func setShip(id : NSString) {
+        dm!.saveDefault("currentShip", id)
+    }
+    
+    func setRotateSpeed(v : NSNumber) {
+        dm!.saveDefault("currentSpeed", id)
+    }
+    
+    func download() {
+        dm!.download()
+    }
+    
  
     func getHello() {
         NSLog("Hello!!!")
