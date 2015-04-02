@@ -24,6 +24,27 @@ class Presenter: NSObject {
         return niceList
     }
 
+    // SET
+    
+    func setWallpaper(idWall : NSString) {
+        interactor?.setWallpaper(idWall)
+    }
+    
+    func setMusic(idMusic : NSString) {
+        interactor?.setMusic(idMusic)
+    }
+    
+    func setShip(idShip : NSString) {
+        interactor?.setShip(idShip)
+    }
+    
+    func setRotateSpeed(idSpeed : Float) {
+        interactor?.setRotateSpeed(NSNumber(numberWithFloat:idSpeed))
+    }
+    
+    func download() {
+        interactor?.download()
+    }
     
     func getHello() {
         NSLog("HELLO")
