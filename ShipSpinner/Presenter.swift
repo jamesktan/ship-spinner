@@ -1,5 +1,5 @@
 //
-//  SSPresenter.swift
+//  Presenter.swift
 //  ShipSpinner
 //
 //  Created by James Tan on 4/1/15.
@@ -10,6 +10,7 @@ import UIKit
 
 class Presenter: NSObject {
     
+    // VIPER
     var view : ViewController? = nil
     var interactor : Interactor? = nil
     
@@ -17,6 +18,12 @@ class Presenter: NSObject {
         var ship = interactor!.getShip(name_ship)
         return (ship.shipName!, ship.shipClass!, ship.shipRole!, ship.shipDescription!, ship.shipAssetPath!)
     }
+    
+    func getShipListNice() -> NSArray {
+        var niceList = interactor.getShipListNice
+        return niceList
+    }
+
     
     func getHello() {
         NSLog("HELLO")
