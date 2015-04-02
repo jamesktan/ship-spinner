@@ -20,7 +20,7 @@ class Presenter: NSObject {
     }
     
     func getShipListNice() -> NSArray {
-        var niceList = interactor.getShipListNice
+        var niceList = interactor!.getShipListNice()
         return niceList
     }
 
@@ -39,7 +39,7 @@ class Presenter: NSObject {
     }
     
     func setRotateSpeed(idSpeed : Float) {
-        interactor?.setRotateSpeed(NSNumber(numberWithFloat:idSpeed))
+        interactor?.setRotateSpeed(NSNumber(float:idSpeed))
     }
     
     func download() {

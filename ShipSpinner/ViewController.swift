@@ -14,23 +14,14 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var myscene: SCNView!
     
-    @IBOutlet weak var buttonList : UIButton
-    @IBOutlet weak var buttonDetail : UIButton
-    @IBOutlet weak var buttonStats : UIButton
-    @IBOutlet weak var buttonSettings : UIButton
-    var buttons = [buttonList, buttonDetail, butonStats, buttonSettings]
+    @IBOutlet weak var buttonList : UIButton!
+    @IBOutlet weak var buttonDetail : UIButton!
+    @IBOutlet weak var buttonSettings : UIButton!
     
     @IBOutlet weak var shipListView : UITableView!
     @IBOutlet weak var shipDetailView : UIView!
-    @IBOutlet weak var shipStatisticsView : UIView!
-    @IBOutlet weak var settingsView : UIView!
-    var view = [shipListView, shipDetailView, shipStatisticsView, settingView]
-    
-    var frameList = CGRectMake(0,0,320,768)
-    var frameDetail = CGRectMake(0,0,320,768)
-    var frameStats = CGRectMake(0,0,320,768)
-    var frameSetting = CGRectMake(0,0,320,768)
-    var frames = [frameList, frameDetail, frameStats, frameSetting]
+    @IBOutlet weak var settingView : UIView!
+    var views : NSArray? = nil
     
     class var shared : ViewController {
         struct Static {
@@ -47,6 +38,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        views = [shipDetailView, shipDetailView, settingView]
+        
         myscene.scene = SCNScene(named: "kushdae.scnassets/kush_cloakedfighter")
         myscene.allowsCameraControl = true;
         
@@ -73,51 +66,58 @@ class ViewController: UIViewController {
     // Custom Methods - Hide / Show Windows
     
     @IBAction func showView(sender:UIButton) {
-        var view = views.objectAtIndex(sender.tag)
-        var frame = frames.objectAtIndex(sender.tag)
+        
+        var view : UIView = views!.objectAtIndex(sender.tag) as UIView
         if sender.selected {
-            handleAnimation(view, frame, 0.0)
+            handleAnimation(view, moveToPoint: view.frame.origin, alpha: 0.0)
         } else {
-            handleAnimation(view, frame, 1.0)
+            handleAnimation(view, moveToPoint: view.frame.origin, alpha: 1.0)
         }
         sender.selected = !(sender.selected)
     }
     
     // Custom Methods - HandleAnimation
     
-    func handleAnimation(view : UIView, moveToPoint : CGPoint, alpha : Float) {
+    func handleAnimation(view : UIView, moveToPoint : CGPoint, alpha : CGFloat) {
+        var transTime = 1.0
         UIView.animateWithDuration(transTime, animations: {
-            far offset = 0
-            if alpha == 0.0 {
-                offset = -320
-            }
-            view.setFrame(CGRectMake(moveToPoint.x + offset, moveToPoint.y, view.frame.size.width, view.frame.size.height))
-            view.alpha = alpha
-        }, completion: {
+            var offset : CGFloat = 0
+//            if alpha == 0.0 {
+//                offset = -320.0
+//            }
+            view.frame = CGRectMake(moveToPoint.x + offset, moveToPoint.y, view.frame.size.width, view.frame.size.height)
+            view.alpha = CGFloat(alpha)
         })
     }
     
     // Custom Methods - Changing Properties
     
     @IBAction func changeWallpaper() {
-        frame!.presenter.setWallpaper(wallpaperID)
+        var wallpaperID = "bg1.jpg"
+        frame.presenter!.setWallpaper(wallpaperID)
     }
     
     @IBAction func changeMusic() {
-        frame!.presenter.setMusic(musicID)
+        var musicID = "music1.jpg"
+        frame.presenter!.setMusic(musicID)
     }
     
     @IBAction func changeShip() {
-        frame!.presenter.setShip(shipID)
+        var shipID = "ship1"
+        frame.presenter!.setShip(shipID)
     }
     
     @IBAction func changeShipRotateSpeed(sender : UISlider) {
-        frame!.presenter.setRotateSpeed(rotateRate)
+        var rotateRate : Float = 30.0
+        frame.presenter!.setRotateSpeed(rotateRate)
     }
     
     @IBAction func downloadShips() {
-        frame!.presenter.download()
+        frame.presenter!.download()
     }
 
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 }
 

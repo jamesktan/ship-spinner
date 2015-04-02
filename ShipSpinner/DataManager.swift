@@ -37,17 +37,17 @@ class DataManager: NSObject {
     }
     
     func getDefault(key : NSString) -> AnyObject? {
-        var defaults : NSUserDefaults = NSUserDefaults.standardDefaults()
+        var defaults : NSUserDefaults = NSUserDefaults.standardUserDefaults()
         if defaults.objectForKey(key) == nil { //if - No Defaults Saved
-            defaults.setObject(key, defaultsDictionary(key))
-            defaults.synchronize
+//            defaults.setObject(key, forKey: defaultDictionary.objectForKey(key))
+            defaults.synchronize()
         } 
         return defaults.objectForKey(key)
     }
     
-    func saveDefault(key : NSString, value: AnyObject) {
-        var defaults : NSUserDefaults = NSUserDefaults.standardDefaults()
-        defaults.setObject(key, value)
+    func saveDefault(key : NSString, value: AnyObject?) {
+        var defaults : NSUserDefaults = NSUserDefaults.standardUserDefaults()
+//        defaults.setObject(value, forKey: defaultDictionary.objectForKey(key))
         defaults.synchronize()
     }
     

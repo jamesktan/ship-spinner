@@ -25,9 +25,9 @@ class Interactor: NSObject {
         var niceList : NSMutableArray = []
         var shipList = getShipList()
         for ship in shipList {
-            var shipEntity = interactor!.getShip(ship)
-            var niceName = ship.shipName
-            niceList.addObject(niceName)
+            var shipEntity = getShip(ship as NSString)
+            var niceName = shipEntity.shipName
+            niceList.addObject(niceName!)
         }
         return niceList
     }
@@ -39,19 +39,19 @@ class Interactor: NSObject {
     // SET
     
     func setWallpaper(id : NSString) {
-        dm!.saveDefault("currentWall", id)
+        dm!.saveDefault("currentWall", value: id)
     }
     
     func setMusic(id : NSString) {
-        dm!.saveDefault("currentMusic", id)
+        dm!.saveDefault("currentMusic", value: id)
     }
     
     func setShip(id : NSString) {
-        dm!.saveDefault("currentShip", id)
+        dm!.saveDefault("currentvalue: Ship", value: id)
     }
     
     func setRotateSpeed(v : NSNumber) {
-        dm!.saveDefault("currentSpeed", id)
+        dm!.saveDefault("currentSpeed", value: v)
     }
     
     func download() {
