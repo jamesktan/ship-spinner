@@ -13,6 +13,10 @@ import SpriteKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var myscene: SCNView!
+    @IBOutlet weak var shipListView : UITableView!
+    @IBOutlet weak var shipDetailView : UIView!
+    @IBOutlet weak var shipStatisticsView : UIView!
+    @IBOutlet weak var settingsView : UIView!
     
     class var shared : ViewController {
         struct Static {
@@ -24,7 +28,7 @@ class ViewController: UIViewController {
         static var presenter : Presenter? = nil
     }
 
-    
+    // UIView LifeCycle Stuff
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,7 +37,6 @@ class ViewController: UIViewController {
         
         // Spin
         let spin = CABasicAnimation(keyPath: "rotation")
-        // Use from-to to explicitly make a full rotation around z
         spin.fromValue = NSValue(SCNVector4: SCNVector4(x: 0, y: 1, z: 0, w: 0))
         spin.toValue = NSValue(SCNVector4: SCNVector4(x: 0, y: 1, z: 0, w: Float(2 * M_PI)))
         spin.duration = 20
@@ -42,16 +45,7 @@ class ViewController: UIViewController {
 
         //BG
         myscene.backgroundColor = UIColor.clearColor() 
-//        var backgroundTexture : SKTexture = SKTexture(imageNamed:"MyImage.png")
-//        var background : SKSpriteNode = SKSpriteNode(texture:backgroundTexture, size:self.view.frame.size)
-//        background.position = CGPointMake(CGRectGetMidX(self.view.frame), CGRectGetMidY(self.view.frame))
-//        myscene.scene?.background.contents = ["bghw.jpg","bghw.jpg","bghw.jpg","bghw.jpg","bghw.jpg","bghw.jpg"]
         
-        if frame.presenter == nil {
-            NSLog("ERROR")
-            return
-        }
-        frame.presenter?.getHello()
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,7 +53,35 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    // TableViewDelegate Methods
     
+    // Custom Methods - Hide / Show Windows
+    
+    func showSettings() {
+    }
+
+    func showShipList() {
+    }
+    
+    func showShipDetails() {
+    }
+    
+    func showShipStatistics() {
+    }
+    
+    // Custom Methods - Changing Properties
+    
+    func getAndLoadShip() {
+    }
+    
+    func changeWallpaper() {
+    }
+    
+    func changeMusic() {
+    }
+    
+    func changeShip() {
+    }
 
 }
 
