@@ -110,6 +110,9 @@
                                         <variation key="widthClass=regular" fixedFrame="YES">
                                             <rect key="frame" x="194" y="21" width="46" height="30"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="changeRotate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7fY-VV-xnJ"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROTATE:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdN-ny-fc3">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -130,6 +133,9 @@
                                         <variation key="widthClass=regular" fixedFrame="YES">
                                             <rect key="frame" x="191" y="59" width="53" height="30"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="downloadShips" destination="BYZ-38-t0r" eventType="touchUpInside" id="g7L-nj-mbT"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPDATE SHIPS:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Og0-Os-LaK">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
@@ -150,6 +156,9 @@
                                         <variation key="widthClass=regular" fixedFrame="YES">
                                             <rect key="frame" x="194" y="97" width="46" height="30"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="changeWallpaper" destination="BYZ-38-t0r" eventType="touchUpInside" id="cEL-UA-dYt"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BACKGROUND:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5r-JH-gvd">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
