@@ -67,9 +67,6 @@ class ViewController: UIViewController {
         spin.repeatCount = .infinity
         myscene.scene?.rootNode.addAnimation(spin, forKey: "spin around")
 
-        //BG
-        myscene.scene = SCNScene(named: "kushdae.scnassets/kush_cloakedfighter")
-
         // Load View with Data
         shipID = frame.presenter!.idForLastShip()
         wallpaperID = frame.presenter!.idForLastWallpaper()
