@@ -10,7 +10,7 @@ import UIKit
 import SceneKit
 import SpriteKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     // Scene
     @IBOutlet weak var myscene: SCNView!
@@ -96,7 +96,18 @@ class ViewController: UIViewController {
     }
     
     // TableViewDelegate Methods
-    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        return
+    }
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
     // Custom Methods - Hide / Show Windows
     
     @IBAction func showView(sender:UIButton) {
