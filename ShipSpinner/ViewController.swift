@@ -27,9 +27,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var settingView : UIView!
     var views : NSArray? = nil
     
+    let spinKey = "spinRoundRound"
     let transTime = 0.33
-    var wallpaperID = "bg1.jpg"
+    var wallpaperID = ""
     var shipID = ""
+    var rotate = false
+    
     
     // Labels
     @IBOutlet weak var l_name: UILabel!
@@ -59,17 +62,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
         views = [shipListView, shipDetailView, settingView]
         
-        // Spin
-        let spin = CABasicAnimation(keyPath: "rotation")
-        spin.fromValue = NSValue(SCNVector4: SCNVector4(x: 0, y: 1, z: 0, w: 0))
-        spin.toValue = NSValue(SCNVector4: SCNVector4(x: 0, y: 1, z: 0, w: Float(2 * M_PI)))
-        spin.duration = 20
-        spin.repeatCount = .infinity
-        myscene.scene?.rootNode.addAnimation(spin, forKey: "spin around")
-
         // Load View with Data
         shipID = frame.presenter!.idForLastShip()
         wallpaperID = frame.presenter!.idForLastWallpaper()
+        rotate = frame.presenter!.shouldRotate()
+        
         loadWallpaper(wallpaperID)
         loadShipData(shipID)
 
@@ -81,12 +78,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func loadShipData(id : NSString) {
+        
+        // Labels
         var shipInfo = frame.presenter!.getShip(id)
         l_name.text = shipInfo.0
         l_class.text = shipInfo.1
         l_role.text = shipInfo.2
         tv_description.text = shipInfo.3
+        
+        // Model
         myscene.scene = SCNScene(named: shipInfo.4)
+        
+        // Spin
+        (rotate) ?
+            myscene.scene?.rootNode.addAnimation(frame.presenter!.createSpin(), forKey: spinKey) :
+            myscene.scene?.rootNode.removeAnimationForKey(spinKey)
     }
     
     func loadWallpaper(id : NSString) {
@@ -97,17 +103,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // TableViewDelegate Methods
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        var details = frame.presenter!.getListDisplayDetails(indexPath)
+        var cell : UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: details.0)
+        cell.textLabel?.text = details.1 //friendlyName
+        cell.imageView?.image = details.2 //image
         return UITableViewCell()
     }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        var cell : UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
+        shipID = cell.reuseIdentifier! // Change the current shipID
+        loadShipData(shipID) // Change the Ship Details
+        frame.presenter!.setShip(shipID) // Set New Default Ship
+        tableView.deselectRowAtIndexPath(indexPath, animated: true) // Unhighlight Row
+        showView(buttonList) // Hides the view
         return
     }
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return frame.presenter!.getShipListCount()
     }
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 1
-    }
+    
     // Custom Methods - Hide / Show Windows
     
     @IBAction func showView(sender:UIButton) {
@@ -132,14 +148,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         frame.presenter!.setWallpaper(wallpaperID)
     }
     
-    func changeShip(shipID : NSString) {
-        frame.presenter!.setShip(shipID)
-        loadShipData(shipID)
-    }
-    
-    @IBAction func changeShipRotateSpeed(sender : UIButton) {
-        var rotateRate : Float = 30.0
-        frame.presenter!.setRotateSpeed(rotateRate)
+    @IBAction func changeRotate(sender: UIButton) {
+        sender.selected ? frame.presenter!.setRotate(false) : frame.presenter!.setRotate(true)
+        sender.selected = !sender.selected
     }
     
     @IBAction func downloadShips() {

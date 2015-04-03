@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import SceneKit
+import SpriteKit
 
 class Presenter: NSObject {
     
@@ -20,6 +22,9 @@ class Presenter: NSObject {
     func idForLastWallpaper() -> NSString {
         return ""
     }
+    func shouldRotate() -> Bool {
+        return false
+    }
     
     func getShip(name_ship : NSString) -> (NSString, NSString, NSString, NSString, NSString) {
         var ship = interactor!.getShip(name_ship)
@@ -30,6 +35,13 @@ class Presenter: NSObject {
         return (UIImage(), UIViewContentMode.Center)
     }
     
+    func getShipListCount() -> NSInteger {
+        return getShipListNice().count
+    }
+    
+    func getListDisplayDetails(indexpath : NSIndexPath) -> (NSString, NSString, UIImage) {
+        return ("","",UIImage())
+    }
     func getShipListNice() -> NSArray {
         var niceList = interactor!.getShipListNice()
         return niceList
@@ -67,8 +79,8 @@ class Presenter: NSObject {
         interactor?.setShip(idShip)
     }
     
-    func setRotateSpeed(idSpeed : Float) {
-        interactor?.setRotateSpeed(NSNumber(float:idSpeed))
+    func setRotate(rotate : Bool) {
+        interactor?.setRotateSpeed(NSNumber(bool:rotate))
     }
     
     func download() {
@@ -79,4 +91,14 @@ class Presenter: NSObject {
         NSLog("HELLO")
         interactor?.getHello()
     }
+    
+    func createSpin() -> CABasicAnimation {
+        let spin = CABasicAnimation(keyPath: "rotation")
+        spin.fromValue = NSValue(SCNVector4: SCNVector4(x: 0, y: 1, z: 0, w: 0))
+        spin.toValue = NSValue(SCNVector4: SCNVector4(x: 0, y: 1, z: 0, w: Float(2 * M_PI)))
+        spin.duration = 20
+        spin.repeatCount = .infinity
+        return spin
+    }
+    
 }
