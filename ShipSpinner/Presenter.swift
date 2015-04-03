@@ -17,14 +17,15 @@ class Presenter: NSObject {
     var interactor : Interactor? = nil
     
     func idForLastShip() -> NSString {
-        return ""
+        return interactor!.idForLastShip()
     }
     func idForLastWallpaper() -> NSString {
-        return ""
+        return interactor!.idForLastWallpaper()
     }
     func shouldRotate() -> Bool {
-        return false
+        return interactor!.shouldRotate().boolValue
     }
+    
     
     func getShip(name_ship : NSString) -> (NSString, NSString, NSString, NSString, NSString) {
         var ship = interactor!.getShip(name_ship)
@@ -52,10 +53,6 @@ class Presenter: NSObject {
         var index = bgList.indexOfObject(id_current)
         var nextIndex = (index + 1 == bgList.count) ? 0 : index + 1
         return bgList.objectAtIndex(nextIndex) as NSString
-    }
-    
-    func getCurrentBackground() -> NSString {
-        return interactor!.getCurrentBackground()
     }
     
     func getNextMusic(id_current : NSString) -> NSString {
@@ -91,6 +88,8 @@ class Presenter: NSObject {
         NSLog("HELLO")
         interactor?.getHello()
     }
+    
+    // Create
     
     func createSpin() -> CABasicAnimation {
         let spin = CABasicAnimation(keyPath: "rotation")

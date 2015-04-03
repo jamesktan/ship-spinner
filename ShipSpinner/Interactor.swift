@@ -36,10 +36,18 @@ class Interactor: NSObject {
         return dm!.findShip(id_ship)
     }
     
-    func getCurrentBackground() -> NSString {
-        dm!.getDefault("currentWall")
+    func idForLastWallpaper() -> NSString {
+        return dm!.getDefault("currentWall") as NSString
     }
     
+    func idForLastShip() -> NSString {
+        return dm!.getDefault("currentShip") as NSString
+    }
+    
+    func shouldRotate() -> NSNumber {
+        return dm!.getDefault("shouldRotate") as NSNumber
+    }
+        
     // SET
     
     func setWallpaper(id : NSString) {
@@ -51,11 +59,11 @@ class Interactor: NSObject {
     }
     
     func setShip(id : NSString) {
-        dm!.saveDefault("currentvalue: Ship", value: id)
+        dm!.saveDefault("currentShip", value: id)
     }
     
     func setRotateSpeed(v : NSNumber) {
-        dm!.saveDefault("currentSpeed", value: v)
+        dm!.saveDefault("shouldRotate", value: v)
     }
     
     func download() {
