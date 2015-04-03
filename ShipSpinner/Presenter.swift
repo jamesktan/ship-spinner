@@ -14,9 +14,20 @@ class Presenter: NSObject {
     var view : ViewController? = nil
     var interactor : Interactor? = nil
     
+    func idForLastShip() -> NSString {
+        return ""
+    }
+    func idForLastWallpaper() -> NSString {
+        return ""
+    }
+    
     func getShip(name_ship : NSString) -> (NSString, NSString, NSString, NSString, NSString) {
         var ship = interactor!.getShip(name_ship)
-        return (ship.shipName!, ship.shipClass!, ship.shipRole!, ship.shipDescription!, ship.shipAssetPath!)
+        return ("NAME: " + ship.shipName!, "CLASS: " + ship.shipClass!, "ROLE: "+ship.shipRole!, ship.shipDescription!, ship.shipAssetPath!)
+    }
+    
+    func getWallpaper(name_wallpaper : NSString) -> (UIImage, UIViewContentMode){
+        return (UIImage(), UIViewContentMode.Center)
     }
     
     func getShipListNice() -> NSArray {
@@ -24,6 +35,24 @@ class Presenter: NSObject {
         return niceList
     }
 
+    func getNextBackground(id_current : NSString) -> NSString {
+        var bgList = []//interactor?.getBackgroundList()
+        var index = bgList.indexOfObject(id_current)
+        var nextIndex = (index + 1 == bgList.count) ? 0 : index + 1
+        return bgList.objectAtIndex(nextIndex) as NSString
+    }
+    
+    func getCurrentBackground() -> NSString {
+        return interactor!.getCurrentBackground()
+    }
+    
+    func getNextMusic(id_current : NSString) -> NSString {
+        var musicList = []
+        var index = musicList.indexOfObject(id_current)
+        var nextIndex = (index + 1 == musicList.count) ? 0 : index + 1
+        return musicList.objectAtIndex(nextIndex) as NSString
+    }
+    
     // SET
     
     func setWallpaper(idWall : NSString) {

@@ -23,7 +23,6 @@
                                 </variation>
                             </imageView>
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" loops="NO" playing="YES" sceneName="test" allowsCameraControl="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Cp-rM-W9c">
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="768" id="KQi-df-w9u"/>
                                     <constraint firstAttribute="width" constant="1024" id="aYT-6W-yeN"/>
@@ -363,6 +362,7 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                         <outlet property="shipDetailView" destination="Duj-9P-ZIp" id="DIG-81-ISV"/>
                         <outlet property="shipListView" destination="pcd-yd-0Py" id="A5c-qs-uJM"/>
                         <outlet property="tv_description" destination="8Dp-lT-3Dp" id="Wqv-sH-j0w"/>
+                        <outlet property="wallpaper" destination="S0y-Xq-uxl" id="eNB-f1-gbb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

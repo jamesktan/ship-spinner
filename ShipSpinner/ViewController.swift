@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     
     // Scene
     @IBOutlet weak var myscene: SCNView!
+    @IBOutlet weak var wallpaper: UIImageView!
     
     // Top Nav
     @IBOutlet weak var buttonList : UIButton!
@@ -27,7 +28,8 @@ class ViewController: UIViewController {
     var views : NSArray? = nil
     
     let transTime = 0.33
-
+    var wallpaperID = "bg1.jpg"
+    var shipID = ""
     
     // Labels
     @IBOutlet weak var l_name: UILabel!
@@ -52,12 +54,10 @@ class ViewController: UIViewController {
     // UIView LifeCycle Stuff
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
 
         views = [shipListView, shipDetailView, settingView]
-        
-        myscene.scene = SCNScene(named: "kushdae.scnassets/kush_cloakedfighter")
-        myscene.allowsCameraControl = true;
         
         // Spin
         let spin = CABasicAnimation(keyPath: "rotation")
@@ -68,8 +68,14 @@ class ViewController: UIViewController {
         myscene.scene?.rootNode.addAnimation(spin, forKey: "spin around")
 
         //BG
-        myscene.backgroundColor = UIColor.clearColor() 
-        
+        myscene.scene = SCNScene(named: "kushdae.scnassets/kush_cloakedfighter")
+
+        // Load View with Data
+        shipID = frame.presenter!.idForLastShip()
+        wallpaperID = frame.presenter!.idForLastWallpaper()
+        loadWallpaper(wallpaperID)
+        loadShipData(shipID)
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,30 +83,35 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    func loadShipData(id : NSString) {
+        var shipInfo = frame.presenter!.getShip(id)
+        l_name.text = shipInfo.0
+        l_class.text = shipInfo.1
+        l_role.text = shipInfo.2
+        tv_description.text = shipInfo.3
+        myscene.scene = SCNScene(named: shipInfo.4)
+    }
+    
+    func loadWallpaper(id : NSString) {
+        var image = frame.presenter!.getWallpaper(id)
+        wallpaper.image = image.0
+        wallpaper.contentMode = image.1
+    }
+    
     // TableViewDelegate Methods
     
     // Custom Methods - Hide / Show Windows
     
     @IBAction func showView(sender:UIButton) {
-        
         var view : UIView = views!.objectAtIndex(sender.tag) as UIView
-        if sender.selected {
-            handleAnimation(view, moveToPoint: view.frame.origin, alpha: 0.0)
-        } else {
-            handleAnimation(view, moveToPoint: view.frame.origin, alpha: 1.0)
-        }
+        var alpha : CGFloat = sender.selected ? 0.0 : 1.0
+        handleAnimation(view, moveToPoint: view.frame.origin, alpha: alpha)
         sender.selected = !(sender.selected)
     }
     
-    // Custom Methods - HandleAnimation
-    
     func handleAnimation(view : UIView, moveToPoint : CGPoint, alpha : CGFloat) {
         UIView.animateWithDuration(transTime, animations: {
-            var offset : CGFloat = 0
-//            if alpha == 0.0 {
-//                offset = -320.0
-//            }
-            view.frame = CGRectMake(moveToPoint.x + offset, moveToPoint.y, view.frame.size.width, view.frame.size.height)
+            view.frame = CGRectMake(moveToPoint.x, moveToPoint.y, view.frame.size.width, view.frame.size.height)
             view.alpha = CGFloat(alpha)
         })
     }
@@ -108,21 +119,17 @@ class ViewController: UIViewController {
     // Custom Methods - Changing Properties
     
     @IBAction func changeWallpaper() {
-        var wallpaperID = "bg1.jpg"
+        wallpaperID = frame.presenter!.getNextBackground(wallpaperID)
+        loadWallpaper(wallpaperID)
         frame.presenter!.setWallpaper(wallpaperID)
     }
     
-    @IBAction func changeMusic() {
-        var musicID = "music1.jpg"
-        frame.presenter!.setMusic(musicID)
-    }
-    
-    @IBAction func changeShip() {
-        var shipID = "ship1"
+    func changeShip(shipID : NSString) {
         frame.presenter!.setShip(shipID)
+        loadShipData(shipID)
     }
     
-    @IBAction func changeShipRotateSpeed(sender : UISlider) {
+    @IBAction func changeShipRotateSpeed(sender : UIButton) {
         var rotateRate : Float = 30.0
         frame.presenter!.setRotateSpeed(rotateRate)
     }

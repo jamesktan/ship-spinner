@@ -36,6 +36,10 @@ class Interactor: NSObject {
         return dm!.findShip(id_ship)
     }
     
+    func getCurrentBackground() -> NSString {
+        dm!.getDefault("currentWall")
+    }
+    
     // SET
     
     func setWallpaper(id : NSString) {
