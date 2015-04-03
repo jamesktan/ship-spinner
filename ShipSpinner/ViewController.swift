@@ -54,7 +54,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        views = [shipDetailView, shipDetailView, settingView]
+        views = [shipListView, shipDetailView, settingView]
         
         myscene.scene = SCNScene(named: "kushdae.scnassets/kush_cloakedfighter")
         myscene.allowsCameraControl = true;
