@@ -33,13 +33,13 @@ class DataManager: NSObject {
     }
     
     func findShipList() -> NSArray {
-        return ["Kushan Cloaked Fighter"]
+        return ["kushan_fighter.scnae"]
     }
     
     func getDefault(key : NSString) -> AnyObject? {
         var defaults : NSUserDefaults = NSUserDefaults.standardUserDefaults()
         if defaults.objectForKey(key) == nil { //if - No Defaults Saved
-//            defaults.setObject(key, forKey: defaultDictionary.objectForKey(key))
+            defaults.setValue(defaultDictionary.objectForKey(key), forKey: key)
             defaults.synchronize()
         } 
         return defaults.objectForKey(key)
@@ -47,15 +47,11 @@ class DataManager: NSObject {
     
     func saveDefault(key : NSString, value: AnyObject?) {
         var defaults : NSUserDefaults = NSUserDefaults.standardUserDefaults()
-//        defaults.setObject(value, forKey: defaultDictionary.objectForKey(key))
+        defaults.setValue(value, forKey: key)
         defaults.synchronize()
     }
     
     func download() {
     
-    }
-    
-    func getHello() {
-        NSLog("HELLO DM")
     }
 }
