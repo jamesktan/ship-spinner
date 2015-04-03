@@ -12,16 +12,32 @@ import SpriteKit
 
 class ViewController: UIViewController {
     
+    // Scene
     @IBOutlet weak var myscene: SCNView!
     
+    // Top Nav
     @IBOutlet weak var buttonList : UIButton!
     @IBOutlet weak var buttonDetail : UIButton!
     @IBOutlet weak var buttonSettings : UIButton!
     
+    // Views
     @IBOutlet weak var shipListView : UITableView!
     @IBOutlet weak var shipDetailView : UIView!
     @IBOutlet weak var settingView : UIView!
     var views : NSArray? = nil
+    
+    let transTime = 0.33
+
+    
+    // Labels
+    @IBOutlet weak var l_name: UILabel!
+    @IBOutlet weak var l_class: UILabel!
+    @IBOutlet weak var l_role: UILabel!
+    @IBOutlet weak var l_length: UILabel!
+    @IBOutlet weak var l_mass: UILabel!
+    @IBOutlet weak var l_acc: UILabel!
+    @IBOutlet weak var tv_description: UITextView!
+    
     
     class var shared : ViewController {
         struct Static {
@@ -79,7 +95,6 @@ class ViewController: UIViewController {
     // Custom Methods - HandleAnimation
     
     func handleAnimation(view : UIView, moveToPoint : CGPoint, alpha : CGFloat) {
-        var transTime = 1.0
         UIView.animateWithDuration(transTime, animations: {
             var offset : CGFloat = 0
 //            if alpha == 0.0 {
