@@ -25,14 +25,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var shipListView : UITableView!
     @IBOutlet weak var shipDetailView : UIView!
     @IBOutlet weak var settingView : UIView!
-    var views : NSArray? = nil
     
     let spinKey = "spinRoundRound"
     let transTime = 0.33
-    var wallpaperID = ""
-    var shipID = ""
-    var rotate = false
-    
+    var wallpaperID = "" //preload
+    var shipID = "" //preload
+    var rotate = false //preload
+    var views : NSArray? = nil //preload
+
     
     // Labels
     @IBOutlet weak var l_name: UILabel!
@@ -151,6 +151,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBAction func changeRotate(sender: UIButton) {
         sender.selected ? frame.presenter!.setRotate(false) : frame.presenter!.setRotate(true)
         sender.selected = !sender.selected
+        rotate = !rotate
     }
     
     @IBAction func downloadShips() {
