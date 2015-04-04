@@ -54,10 +54,6 @@ class Interactor: NSObject {
         dm!.saveDefault("currentWall", value: id)
     }
     
-    func setMusic(id : NSString) {
-        dm!.saveDefault("currentMusic", value: id)
-    }
-    
     func setShip(id : NSString) {
         dm!.saveDefault("currentShip", value: id)
     }
@@ -68,11 +64,5 @@ class Interactor: NSObject {
     
     func download() {
         dm!.download()
-    }
-    
- 
-    func getHello() {
-        NSLog("Hello!!!")
-        dm?.getHello()
     }
 }

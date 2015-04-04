@@ -25,7 +25,6 @@
 		5465AC2F1ACDBA0500636FBA /* stack8.png in Resources */ = {isa = PBXBuildFile; fileRef = 5465AC251ACDBA0500636FBA /* stack8.png */; };
 		5465AC301ACDBA0500636FBA /* stack8.svg in Resources */ = {isa = PBXBuildFile; fileRef = 5465AC261ACDBA0500636FBA /* stack8.svg */; };
 		54BA14B51ACC8F0D00054079 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54BA14B41ACC8F0D00054079 /* SpriteKit.framework */; };
-		54C6AFFA1ACC36B200E1D0F1 /* kushdae.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 54C6AFF91ACC36B200E1D0F1 /* kushdae.scnassets */; };
 		54C6AFFC1ACC6EBF00E1D0F1 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6AFFB1ACC6EBF00E1D0F1 /* Presenter.swift */; };
 		54C6AFFE1ACC6EE100E1D0F1 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6AFFD1ACC6EE100E1D0F1 /* Interactor.swift */; };
 		54C6B0001ACC6EF000E1D0F1 /* ShipEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6AFFF1ACC6EF000E1D0F1 /* ShipEntity.swift */; };
@@ -37,6 +36,10 @@
 		54E089F81A19435800BDC644 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 54E089F71A19435800BDC644 /* Images.xcassets */; };
 		54E089FB1A19435800BDC644 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E089F91A19435800BDC644 /* LaunchScreen.xib */; };
 		54E08A071A19435800BDC644 /* ShipSpinnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E08A061A19435800BDC644 /* ShipSpinnerTests.swift */; };
+		54EC67A31AD05F5A009CE568 /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54EC67A21AD05F5A009CE568 /* defaults.plist */; };
+		54EC67A51AD060BE009CE568 /* asset.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54EC67A41AD060BE009CE568 /* asset.plist */; };
+		54EC67A71AD060C8009CE568 /* detail.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54EC67A61AD060C8009CE568 /* detail.plist */; };
+		54EC67A91AD062E3009CE568 /* kush_cloakedfighter.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EC67A81AD062E3009CE568 /* kush_cloakedfighter.scnassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,7 +71,6 @@
 		5465AC251ACDBA0500636FBA /* stack8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stack8.png; sourceTree = "<group>"; };
 		5465AC261ACDBA0500636FBA /* stack8.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = stack8.svg; sourceTree = "<group>"; };
 		54BA14B41ACC8F0D00054079 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		54C6AFF91ACC36B200E1D0F1 /* kushdae.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = kushdae.scnassets; sourceTree = "<group>"; };
 		54C6AFFB1ACC6EBF00E1D0F1 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		54C6AFFD1ACC6EE100E1D0F1 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		54C6AFFF1ACC6EF000E1D0F1 /* ShipEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipEntity.swift; sourceTree = "<group>"; };
@@ -84,6 +86,10 @@
 		54E08A001A19435800BDC644 /* ShipSpinnerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShipSpinnerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E08A051A19435800BDC644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54E08A061A19435800BDC644 /* ShipSpinnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipSpinnerTests.swift; sourceTree = "<group>"; };
+		54EC67A21AD05F5A009CE568 /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaults.plist; sourceTree = "<group>"; };
+		54EC67A41AD060BE009CE568 /* asset.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = asset.plist; sourceTree = "<group>"; };
+		54EC67A61AD060C8009CE568 /* detail.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = detail.plist; sourceTree = "<group>"; };
+		54EC67A81AD062E3009CE568 /* kush_cloakedfighter.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = kush_cloakedfighter.scnassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,7 +145,6 @@
 		54E089DF1A19435800BDC644 = {
 			isa = PBXGroup;
 			children = (
-				54BA14B41ACC8F0D00054079 /* SpriteKit.framework */,
 				54E089EA1A19435800BDC644 /* ShipSpinner */,
 				54E08A031A19435800BDC644 /* ShipSpinnerTests */,
 				54E089E91A19435800BDC644 /* Products */,
@@ -158,7 +163,6 @@
 		54E089EA1A19435800BDC644 /* ShipSpinner */ = {
 			isa = PBXGroup;
 			children = (
-				54EC67A11ACFB7B9009CE568 /* asset */,
 				54E089ED1A19435800BDC644 /* AppDelegate.swift */,
 				54E089F21A19435800BDC644 /* ViewController.swift */,
 				54C6AFFB1ACC6EBF00E1D0F1 /* Presenter.swift */,
@@ -166,9 +170,6 @@
 				54C6B0011ACC7BA200E1D0F1 /* DataManager.swift */,
 				54C6AFFF1ACC6EF000E1D0F1 /* ShipEntity.swift */,
 				54E089F41A19435800BDC644 /* Main.storyboard */,
-				5465AC1C1ACDBA0500636FBA /* icons */,
-				5465AC311ACDBA0E00636FBA /* bgs */,
-				54C6AFF91ACC36B200E1D0F1 /* kushdae.scnassets */,
 				54E089F71A19435800BDC644 /* Images.xcassets */,
 				54E089F91A19435800BDC644 /* LaunchScreen.xib */,
 				54E089EF1A19435800BDC644 /* ShipSpinner.xcdatamodeld */,
@@ -180,6 +181,11 @@
 		54E089EB1A19435800BDC644 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				54BA14B41ACC8F0D00054079 /* SpriteKit.framework */,
+				5465AC311ACDBA0E00636FBA /* bgs */,
+				5465AC1C1ACDBA0500636FBA /* icons */,
+				54EC67A11ACFB7B9009CE568 /* asset */,
+				54EC67A81AD062E3009CE568 /* kush_cloakedfighter.scnassets */,
 				54E089EC1A19435800BDC644 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -205,6 +211,9 @@
 		54EC67A11ACFB7B9009CE568 /* asset */ = {
 			isa = PBXGroup;
 			children = (
+				54EC67A21AD05F5A009CE568 /* defaults.plist */,
+				54EC67A41AD060BE009CE568 /* asset.plist */,
+				54EC67A61AD060C8009CE568 /* detail.plist */,
 			);
 			name = asset;
 			sourceTree = "<group>";
@@ -289,21 +298,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54EC67A91AD062E3009CE568 /* kush_cloakedfighter.scnassets in Resources */,
 				5465AC1B1ACDB7F800636FBA /* bg1.jpg in Resources */,
 				5465AC2E1ACDBA0500636FBA /* settings20.svg in Resources */,
 				5465AC301ACDBA0500636FBA /* stack8.svg in Resources */,
 				5465AC151ACDB7F800636FBA /* bg7.jpg in Resources */,
 				5465AC2B1ACDBA0500636FBA /* layers4.png in Resources */,
 				54E089F61A19435800BDC644 /* Main.storyboard in Resources */,
+				54EC67A51AD060BE009CE568 /* asset.plist in Resources */,
+				54EC67A31AD05F5A009CE568 /* defaults.plist in Resources */,
 				5465AC191ACDB7F800636FBA /* bg3.jpg in Resources */,
 				54E089FB1A19435800BDC644 /* LaunchScreen.xib in Resources */,
 				5465AC171ACDB7F800636FBA /* bg5.jpg in Resources */,
 				5465AC1A1ACDB7F800636FBA /* bg2.jpg in Resources */,
 				5465AC2D1ACDBA0500636FBA /* settings20.png in Resources */,
-				54C6AFFA1ACC36B200E1D0F1 /* kushdae.scnassets in Resources */,
 				5465AC281ACDBA0500636FBA /* bars5.svg in Resources */,
 				5465AC291ACDBA0500636FBA /* information32.png in Resources */,
 				5465AC181ACDB7F800636FBA /* bg4.jpg in Resources */,
+				54EC67A71AD060C8009CE568 /* detail.plist in Resources */,
 				5465AC271ACDBA0500636FBA /* bars5.png in Resources */,
 				54E089F81A19435800BDC644 /* Images.xcassets in Resources */,
 				5465AC2A1ACDBA0500636FBA /* information32.svg in Resources */,

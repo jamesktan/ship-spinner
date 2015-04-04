@@ -12,10 +12,8 @@ class DataManager: NSObject {
     
     var interactor : Interactor? = nil
     
-    var assetFile : NSString = "assetDefault.plist" //default
-    var detailFile : NSString = "detailDefault.plist" //default
-    var assetFileDownload : NSString = "asset.plist"
-    var detailFileDownload : NSString = "defailt.plist"
+    var assetFile : NSString = "asset.plist" //default
+    var detailFile : NSString = "detail.plist" //default
     var defaultsFile : NSString = "defaults.plist" //default vals
     
     var assetDictionary : NSDictionary = NSDictionary() //load locally first, then load from file
@@ -25,16 +23,20 @@ class DataManager: NSObject {
     func load() {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
         let pathDownloads = paths.stringByAppendingPathComponent("Downloads") as NSString
-        
+
+        defaultDictionary = NSDictionary(contentsOfFile: defaultsFile as String)!
+
         if NSFileManager.defaultManager().fileExistsAtPath(pathDownloads) {
             // download file exists
-            
+            var assetDownload = pathDownloads.stringByAppendingPathComponent(assetFile)
+            var detailsDownload = pathDownloads.stringByAppendingPathComponent(detailFile)
+            assetDictionary = NSDictionary(contentsOfFile: assetDownload)!
+            detailsDictionary = NSDictionary(contentsOfFile: detailsDownload)!
         } else {
             // no downloads exist, use the bundled local ones
             assetDictionary = NSDictionary(contentsOfFile: assetFile as String)!
             detailsDictionary = NSDictionary(contentsOfFile: detailFile as String)!
         }
-        defaultDictionary = NSDictionary(objectsAndKeys:defaultsFile)
     }
     
     func findShip(id_ship : NSString) -> ShipEntity {
@@ -44,7 +46,7 @@ class DataManager: NSObject {
     }
     
     func findShipList() -> NSArray {
-        return ["kushan_fighter.scnae"]
+        return assetDictionary.allKeys
     }
     
     func getDefault(key : NSString) -> AnyObject? {

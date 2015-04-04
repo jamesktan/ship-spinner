@@ -67,11 +67,7 @@ class Presenter: NSObject {
     func setWallpaper(idWall : NSString) {
         interactor?.setWallpaper(idWall)
     }
-    
-    func setMusic(idMusic : NSString) {
-        interactor?.setMusic(idMusic)
-    }
-    
+        
     func setShip(idShip : NSString) {
         interactor?.setShip(idShip)
     }
@@ -84,10 +80,6 @@ class Presenter: NSObject {
         interactor?.download()
     }
     
-    func getHello() {
-        NSLog("HELLO")
-        interactor?.getHello()
-    }
     
     // Create
     
