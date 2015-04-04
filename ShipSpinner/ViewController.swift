@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var buttonList : UIButton!
     @IBOutlet weak var buttonDetail : UIButton!
     @IBOutlet weak var buttonSettings : UIButton!
+    @IBOutlet weak var buttonRotate: UIButton!
     
     // Views
     @IBOutlet weak var shipListView : UITableView!
@@ -69,9 +70,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         loadWallpaper(wallpaperID)
         loadShipData(shipID)
-
+        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -86,18 +87,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tv_description.text = shipInfo.3
         
         // Model
+        myscene.backgroundColor = UIColor.clearColor()
         myscene.scene = SCNScene(named: shipInfo.4)
         
         // Spin
+        buttonRotate.selected = rotate
         (rotate) ?
             myscene.scene?.rootNode.addAnimation(frame.presenter!.createSpin(), forKey: spinKey) :
             myscene.scene?.rootNode.removeAnimationForKey(spinKey)
     }
     
     func loadWallpaper(id : NSString) {
-        var image = frame.presenter!.getWallpaper(id)
-        wallpaper.image = image.0
-        wallpaper.contentMode = image.1
+        var image : (UIImage, UIViewContentMode) = frame.presenter!.getWallpaper(id)
+        self.wallpaper.image = image.0
+        self.wallpaper.contentMode = image.1
     }
     
     // TableViewDelegate Methods
@@ -106,8 +109,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var details = frame.presenter!.getListDisplayDetails(indexPath)
         var cell : UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: details.0)
         cell.textLabel?.text = details.1 //friendlyName
-        cell.imageView?.image = details.2 //image
-        return UITableViewCell()
+        //cell.imageView?.image = details.2 //image
+        
+        NSLog(cell.textLabel!.text!)
+        return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -144,14 +149,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func changeWallpaper() {
         wallpaperID = frame.presenter!.getNextBackground(wallpaperID)
+        frame.presenter!.setWallpaper(wallpaperID, contentMode: wallpaper.contentMode)
         loadWallpaper(wallpaperID)
-        frame.presenter!.setWallpaper(wallpaperID)
     }
     
     @IBAction func changeRotate(sender: UIButton) {
+        
         sender.selected ? frame.presenter!.setRotate(false) : frame.presenter!.setRotate(true)
         sender.selected = !sender.selected
         rotate = !rotate
+        
+        (rotate) ?
+            myscene.scene?.rootNode.addAnimation(frame.presenter!.createSpin(), forKey: spinKey) :
+            myscene.scene?.rootNode.removeAnimationForKey(spinKey)
+
     }
     
     @IBAction func downloadShips() {

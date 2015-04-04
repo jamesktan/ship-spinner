@@ -36,8 +36,28 @@ class Interactor: NSObject {
         return dm!.findShip(id_ship)
     }
     
-    func idForLastWallpaper() -> NSString {
-        return dm!.getDefault("currentWall") as NSString
+    func idForLastWallpaper() -> NSString  {
+        var bgList: NSArray = dm!.getDefault("currentWall") as NSArray
+        return bgList.objectAtIndex(0) as NSString
+    }
+    
+    func getWallpaper(id : NSString) -> (UIImage, UIViewContentMode) {
+        var bgList: NSArray = dm!.getDefault("currentWall") as NSArray
+        NSLog("%@", bgList.objectAtIndex(0) as NSString)
+        NSLog("%@", bgList.objectAtIndex(1) as NSString)
+        var image : UIImage = UIImage(named: bgList.objectAtIndex(0) as NSString)!
+        
+        var contentMode : UIViewContentMode? = nil
+        contentMode = bgList.objectAtIndex(1).isEqualToString("center") ? UIViewContentMode.Center : UIViewContentMode.Right
+        
+        return (image, contentMode!)
+    }
+    
+    func getNextWallpaper(id: NSString)->NSString {
+        var wallpapers = dm!.getWallPaperList()
+        var index = wallpapers.indexOfObject(id)
+        var nextIndex = (index + 1 == wallpapers.count) ? 0 : index + 1
+        return wallpapers.objectAtIndex(nextIndex) as NSString
     }
     
     func idForLastShip() -> NSString {
@@ -50,8 +70,9 @@ class Interactor: NSObject {
         
     // SET
     
-    func setWallpaper(id : NSString) {
-        dm!.saveDefault("currentWall", value: id)
+    func setWallpaper(id : NSString, contentMode: UIViewContentMode) {
+        var mode = (contentMode == UIViewContentMode.Center) ? "center" : "right"
+        dm!.saveDefault("currentWall", value: [id,mode] )
     }
     
     func setShip(id : NSString) {

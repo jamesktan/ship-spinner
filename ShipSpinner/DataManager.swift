@@ -12,9 +12,9 @@ class DataManager: NSObject {
     
     var interactor : Interactor? = nil
     
-    var assetFile : NSString = "asset.plist" //default
-    var detailFile : NSString = "detail.plist" //default
-    var defaultsFile : NSString = "defaults.plist" //default vals
+    var assetFile : NSString = "asset" //default
+    var detailFile : NSString = "detail" //default
+    var defaultsFile : NSString = "defaults" //default vals
     
     var assetDictionary : NSDictionary = NSDictionary() //load locally first, then load from file
     var detailsDictionary : NSDictionary = NSDictionary() //load locally first, then load from file
@@ -24,7 +24,7 @@ class DataManager: NSObject {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
         let pathDownloads = paths.stringByAppendingPathComponent("Downloads") as NSString
 
-        defaultDictionary = NSDictionary(contentsOfFile: defaultsFile as String)!
+        defaultDictionary = NSDictionary(contentsOfFile: getPath(defaultsFile))!
 
         if NSFileManager.defaultManager().fileExistsAtPath(pathDownloads) {
             // download file exists
@@ -34,8 +34,8 @@ class DataManager: NSObject {
             detailsDictionary = NSDictionary(contentsOfFile: detailsDownload)!
         } else {
             // no downloads exist, use the bundled local ones
-            assetDictionary = NSDictionary(contentsOfFile: assetFile as String)!
-            detailsDictionary = NSDictionary(contentsOfFile: detailFile as String)!
+            assetDictionary = NSDictionary(contentsOfFile: getPath(assetFile))!
+            detailsDictionary = NSDictionary(contentsOfFile: getPath(detailFile))!
         }
     }
     
@@ -47,6 +47,10 @@ class DataManager: NSObject {
     
     func findShipList() -> NSArray {
         return assetDictionary.allKeys
+    }
+    
+    func getWallPaperList() -> NSArray {
+        return ["bg1.jpg", "bg2.jpg", "bg3.jpg", "bg4.jpg", "bg5.jpg", "bg6.jpg", "bg7.jpg"]
     }
     
     func getDefault(key : NSString) -> AnyObject? {
@@ -66,5 +70,12 @@ class DataManager: NSObject {
     
     func download() {
     
+    }
+    
+    func getPath( fileName: NSString) -> NSString {
+        return NSBundle.mainBundle().pathForResource(fileName, ofType: "plist")!
+    }
+    func getPathJPG(fileName: NSString)->NSString {
+        return NSBundle.mainBundle().pathForResource(fileName, ofType: "jpg")!
     }
 }

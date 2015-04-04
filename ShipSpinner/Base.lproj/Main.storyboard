@@ -107,6 +107,7 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <state key="selected" title="OFF"/>
                                         <variation key="widthClass=regular" fixedFrame="YES">
                                             <rect key="frame" x="194" y="21" width="46" height="30"/>
                                         </variation>
@@ -314,6 +315,7 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                             <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-yd-0Py">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="59" y="0.0" width="195" height="768"/>
                                 </variation>
@@ -363,6 +365,7 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                     <connections>
                         <outlet property="buttonDetail" destination="6OU-s6-E8P" id="0Ak-xS-mXf"/>
                         <outlet property="buttonList" destination="f1j-1t-nuL" id="PJC-qM-7vY"/>
+                        <outlet property="buttonRotate" destination="DC0-e4-Yqw" id="9Db-ke-AUw"/>
                         <outlet property="buttonSettings" destination="a9D-eu-L3l" id="YFj-Kl-YOA"/>
                         <outlet property="l_acc" destination="Uhf-GP-Kwe" id="mnM-q5-8y1"/>
                         <outlet property="l_class" destination="52h-V0-kJ5" id="8w4-y2-CbD"/>
@@ -375,7 +378,7 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                         <outlet property="shipDetailView" destination="Duj-9P-ZIp" id="DIG-81-ISV"/>
                         <outlet property="shipListView" destination="pcd-yd-0Py" id="A5c-qs-uJM"/>
                         <outlet property="tv_description" destination="8Dp-lT-3Dp" id="Wqv-sH-j0w"/>
-                        <outlet property="wallpaper" destination="S0y-Xq-uxl" id="eNB-f1-gbb"/>
+                        <outlet property="wallpaper" destination="S0y-Xq-uxl" id="bgF-oe-17h"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

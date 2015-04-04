@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>shouldRotate</key>
-	<false/>
+	<true/>
 	<key>currentShip</key>
 	<string>kush_cloakedfighter.dae</string>
 	<key>currentWall</key>
