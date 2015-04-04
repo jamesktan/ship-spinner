@@ -158,6 +158,7 @@
 		54E089EA1A19435800BDC644 /* ShipSpinner */ = {
 			isa = PBXGroup;
 			children = (
+				54EC67A11ACFB7B9009CE568 /* asset */,
 				54E089ED1A19435800BDC644 /* AppDelegate.swift */,
 				54E089F21A19435800BDC644 /* ViewController.swift */,
 				54C6AFFB1ACC6EBF00E1D0F1 /* Presenter.swift */,
@@ -199,6 +200,13 @@
 				54E08A051A19435800BDC644 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		54EC67A11ACFB7B9009CE568 /* asset */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = asset;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

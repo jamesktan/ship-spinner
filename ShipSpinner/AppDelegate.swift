@@ -21,6 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         var p = Presenter()
         var i = Interactor()
         var d = DataManager()
+        d.load()
         var vc = ViewController.shared
         
         ViewController.frame.presenter = p

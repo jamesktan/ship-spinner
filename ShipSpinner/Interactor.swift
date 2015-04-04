@@ -23,7 +23,7 @@ class Interactor: NSObject {
     // getShipListNice - return a nice named list of all ships
     func getShipListNice() -> NSArray {
         var niceList : NSMutableArray = []
-        var shipList = getShipList()
+        var shipList = dm!.findShipList()
         for ship in shipList {
             var shipEntity = getShip(ship as NSString)
             var niceName = shipEntity.shipName

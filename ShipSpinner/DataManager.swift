@@ -12,17 +12,28 @@ class DataManager: NSObject {
     
     var interactor : Interactor? = nil
     
-    var assetFile : NSString = "asset.plist"
-    var detailFile : NSString = "detail.plist"
-    var defaultsFile : NSString = "defaults.plist"
+    var assetFile : NSString = "assetDefault.plist" //default
+    var detailFile : NSString = "detailDefault.plist" //default
+    var assetFileDownload : NSString = "asset.plist"
+    var detailFileDownload : NSString = "defailt.plist"
+    var defaultsFile : NSString = "defaults.plist" //default vals
     
-    var assetDictionary : NSDictionary = NSDictionary()
-    var detailsDictionary : NSDictionary = NSDictionary()
-    var defaultDictionary : NSDictionary = NSDictionary()
+    var assetDictionary : NSDictionary = NSDictionary() //load locally first, then load from file
+    var detailsDictionary : NSDictionary = NSDictionary() //load locally first, then load from file
+    var defaultDictionary : NSDictionary = NSDictionary() //load locally
     
     func load() {
-        assetDictionary = NSDictionary(objectsAndKeys:assetFile)
-        detailsDictionary = NSDictionary(objectsAndKeys:detailFile)
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
+        let pathDownloads = paths.stringByAppendingPathComponent("Downloads") as NSString
+        
+        if NSFileManager.defaultManager().fileExistsAtPath(pathDownloads) {
+            // download file exists
+            
+        } else {
+            // no downloads exist, use the bundled local ones
+            assetDictionary = NSDictionary(contentsOfFile: assetFile as String)!
+            detailsDictionary = NSDictionary(contentsOfFile: detailFile as String)!
+        }
         defaultDictionary = NSDictionary(objectsAndKeys:defaultsFile)
     }
     
