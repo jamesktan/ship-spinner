@@ -109,6 +109,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var details = frame.presenter!.getListDisplayDetails(indexPath)
         var cell : UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: details.0)
         cell.textLabel?.text = details.1 //friendlyName
+        cell.backgroundColor = UIColor.clearColor()
+        cell.textLabel!.textColor = UIColor.whiteColor()
+        cell.textLabel!.font = UIFont(name: "Helvetica-Bold", size: 13.0)
         //cell.imageView?.image = details.2 //image
         
         NSLog(cell.textLabel!.text!)

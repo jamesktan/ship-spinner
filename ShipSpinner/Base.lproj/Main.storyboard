@@ -245,11 +245,11 @@
                                     </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Dp-lT-3Dp" userLabel="Description">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <mutableString key="text">Triikor wings were deadly arsenals of speed and firepower that surpassed the Fiirkan's, able to take a heavy beating before being destroyed. Commonly known as interceptors, the Triikor silhouette was a chilling image of the Taiidani Empire's power until the Homeworld War.
+                                        <string key="text">Triikor wings were deadly arsenals of speed and firepower that surpassed the Fiirkan's, able to take a heavy beating before being destroyed. Commonly known as interceptors, the Triikor silhouette was a chilling image of the Taiidani Empire's power until the Homeworld War.
 
 The Triikor, unlike traditional fighters, does not have a centred weight of gravity. The Triikor uses two small mass drivers, which concentrate the mass of the fighter to one side. Ironically, this is quite similar to the style of design used in Kushan fighters of the Homeworld War, who often used an off-set cockpit (instead of an off-set centre of gravity).   Though there are advantages in such a cockpit (the said added amount of firepower and the ability to change directions with less exchange of brutal centrifugal force) the difficulty in flying such a vehicle means that Taiidan pilots as well as Kushan pilots need special training to adapt to the odd design. However, pilots that are able to master the Triikor are highly feared and respected both on and off the battlefield.
 
-</mutableString>
+</string>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="widthClass=regular" fixedFrame="YES">
@@ -312,12 +312,12 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                                     </mask>
                                 </variation>
                             </view>
-                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-yd-0Py">
+                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-yd-0Py">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                                 <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="59" y="0.0" width="195" height="768"/>
+                                    <rect key="frame" x="59" y="0.0" width="251" height="768"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="REy-Xd-8fR"/>
