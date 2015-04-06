@@ -37,21 +37,46 @@ class Util: NSObject {
         var filePath : NSString = ""
         
         // Use Alamo Fire to Download the .ZIP files (which can be large)
-        Alamofire.request(.GET, "http://httpbin.org/get")
+        var urlObj : NSURL = NSURL(string: url)!
 
-        Alamofire.download(.GET, "http://httpbin.org/stream/100", { (temporaryURL, response) in
+        // Get or Create the Path
+        var path = Util.getDownloadPath() //Documents/Download/
+        var exists = NSFileManager.defaultManager().fileExistsAtPath(path)
+        if !exists {
+            NSFileManager.defaultManager().createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil, error: nil)
+        }
+        NSLog("path at: %@", path)
+        
+        // Downloadthe file
+        Alamofire.download(.GET, url as String, { (temporaryURL, response) in
+            
             if let directoryURL = NSFileManager.defaultManager()
                 .URLsForDirectory(.DocumentDirectory,
                     inDomains: .UserDomainMask)[0]
                 as? NSURL {
                     let pathComponent = response.suggestedFilename
-                    
-                    return directoryURL.URLByAppendingPathComponent(pathComponent!)
+                    let directoryString =  path.stringByAppendingPathComponent(pathComponent!)
+                    filePath = directoryString as NSString // set the filepath where it is downloaded
+                    NSLog("downloaded to: %@", filePath)
+                    let directoryURL = NSURL(string: directoryString)
+                    return directoryURL!
             }
-            
             return temporaryURL
         })
         
-        return filePath
+        // Get the Extract Path
+        var filenameRaw = filePath.lastPathComponent as NSString
+        var filename = filenameRaw.stringByReplacingOccurrencesOfString(".zip", withString: "")
+        var extractPath = path.stringByAppendingPathComponent(filename)
+        NSLog("extract path: %@", extractPath)
+        
+        // Unzip the file
+        SSZipArchive.unzipFileAtPath(filePath, toDestination: extractPath)
+        NSFileManager.defaultManager().removeItemAtPath(filePath, error: nil)
+        NSLog("deleted the .zip file at %@", filePath)
+        
+        
+        
+        return extractPath
     }
 }
