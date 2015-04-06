@@ -50,42 +50,45 @@ class Util: NSObject {
     
     class func downloadModelAndUnzipAtPath(url: NSString) -> NSString {
         var filePath : NSString = ""
+        NSLog("downloadURL: %@", url)
         
         // Use Alamo Fire to Download the .ZIP files (which can be large)
         var urlObj : NSURL = NSURL(string: url)!
         
         var path = Util.loadOrCreatePath()
         
+        var dest = path
+        
         // Downloadthe file
-        Alamofire.download(.GET, url as String, { (temporaryURL, response) in
-            
-            if let directoryURL = NSFileManager.defaultManager()
-                .URLsForDirectory(.DocumentDirectory,
-                    inDomains: .UserDomainMask)[0]
-                as? NSURL {
-                    let pathComponent = response.suggestedFilename
-                    let directoryString =  path.stringByAppendingPathComponent(pathComponent!)
-                    filePath = directoryString as NSString // set the filepath where it is downloaded
-                    NSLog("downloaded to: %@", filePath)
-                    let directoryURL = NSURL(string: directoryString)
-                    return directoryURL!
-            }
-            return temporaryURL
-        })
+        filePath = Util.downloadFileAtPath(url)
+//        Alamofire.download(.GET, url as String, { (temporaryURL, response) in
+//            
+//            if let directoryURL = NSFileManager.defaultManager()
+//                .URLsForDirectory(.DocumentDirectory,
+//                    inDomains: .UserDomainMask)[0]
+//                as? NSURL {
+//                    let pathComponent = response.suggestedFilename
+//                    let directoryString =  path.stringByAppendingPathComponent(pathComponent!)
+//                    filePath = directoryString as NSString // set the filepath where it is downloaded
+//                    NSLog("downloaded to: %@", filePath)
+//                    let directoryURL = NSURL(string: directoryString)
+//                    return directoryURL!
+//            }
+//            return temporaryURL
+//        })
         
         // Get the Extract Path
         var filenameRaw = filePath.lastPathComponent as NSString
         var filename = filenameRaw.stringByReplacingOccurrencesOfString(".zip", withString: "")
-        var extractPath = path.stringByAppendingPathComponent(filename)
-        NSLog("extract path: %@", extractPath)
+        NSLog("extract path: %@", path)
         
         // Unzip the file
-        SSZipArchive.unzipFileAtPath(filePath, toDestination: extractPath)
+        SSZipArchive.unzipFileAtPath(filePath, toDestination: path)
         NSFileManager.defaultManager().removeItemAtPath(filePath, error: nil)
         NSLog("deleted the .zip file at %@", filePath)
         
         
         
-        return extractPath
+        return path.stringByAppendingPathComponent(filename)
     }
 }

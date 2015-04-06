@@ -71,7 +71,7 @@
 		540392AA1AD2795E006A717F /* information32_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = information32_selected.png; sourceTree = "<group>"; };
 		540392AB1AD2795E006A717F /* layers4_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layers4_selected.png; sourceTree = "<group>"; };
 		540392AC1AD2795E006A717F /* settings20_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings20_selected.png; sourceTree = "<group>"; };
-		540392B21AD29A15006A717F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		540392B21AD29A15006A717F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		5465AC0E1ACDB7F800636FBA /* bg7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg7.jpg; sourceTree = "<group>"; };
 		5465AC0F1ACDB7F800636FBA /* bg6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg6.jpg; sourceTree = "<group>"; };
 		5465AC101ACDB7F800636FBA /* bg5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg5.jpg; sourceTree = "<group>"; };
@@ -215,7 +215,6 @@
 		54E089DF1A19435800BDC644 = {
 			isa = PBXGroup;
 			children = (
-				540392B21AD29A15006A717F /* Alamofire.framework */,
 				54E089EA1A19435800BDC644 /* ShipSpinner */,
 				54E08A031A19435800BDC644 /* ShipSpinnerTests */,
 				54E089E91A19435800BDC644 /* Products */,
@@ -255,6 +254,7 @@
 			children = (
 				5471FBCB1AD25AC7003451D4 /* ShipSpinner-Bridging-Header.h */,
 				5471FBDE1AD25AD7003451D4 /* SSZipArchive */,
+				540392B21AD29A15006A717F /* Alamofire.framework */,
 				54BA14B41ACC8F0D00054079 /* SpriteKit.framework */,
 				5465AC311ACDBA0E00636FBA /* bgs */,
 				5465AC1C1ACDBA0500636FBA /* icons */,

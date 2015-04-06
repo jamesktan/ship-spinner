@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShipSpinner/Util.swift"
-            timestampString = "450014984.34308"
+            filePath = "ShipSpinner/ViewController.swift"
+            timestampString = "450018747.375817"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
-            landmarkName = "downloadFileAtPath(_:)"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
+            landmarkName = "loadShipData(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ShipSpinner/Util.swift"
-            timestampString = "450014985.779114"
+            filePath = "ShipSpinner/ViewController.swift"
+            timestampString = "450018758.242419"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "52"
-            endingLineNumber = "52"
-            landmarkName = "downloadModelAndUnzipAtPath(_:)"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "loadShipData(_:)"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

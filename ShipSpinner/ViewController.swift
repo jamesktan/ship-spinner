@@ -170,6 +170,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBAction func downloadShips() {
         frame.presenter!.download()
+        shipListView.reloadData()
     }
 
     override func prefersStatusBarHidden() -> Bool {
