@@ -9,6 +9,7 @@
 import UIKit
 
 class Util: NSObject {
+    
     class func getDownloadPath() -> NSString {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
         let pathDownloads = paths.stringByAppendingPathComponent("Downloads") as NSString
@@ -18,6 +19,7 @@ class Util: NSObject {
     class func getPath( fileName: NSString) -> NSString {
         return NSBundle.mainBundle().pathForResource(fileName, ofType: "plist")!
     }
+    
     class func getPathJPG(fileName: NSString)->NSString {
         return NSBundle.mainBundle().pathForResource(fileName, ofType: "jpg")!
     }
@@ -32,6 +34,8 @@ class Util: NSObject {
     
     class func downloadModelAndUnzipAtPath(url: NSString) -> NSString {
         var filePath : NSString = ""
+        
+        // return the path of the unzip sans .dae file (the .scnassets folder path)
         return filePath
     }
 }
