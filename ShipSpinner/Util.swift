@@ -40,7 +40,7 @@ class Util: NSObject {
         //Check the path exists
         var path = loadOrCreatePath()
         
-        var urlObj : NSURL = NSURL(string: url)!
+        var urlObj : NSURL = NSURL(string: url as String)!
         var urlData : NSData = NSData(contentsOfURL: urlObj)!
         var filePath = path.stringByAppendingPathComponent(url.lastPathComponent)
         urlData.writeToFile(filePath, atomically: true)

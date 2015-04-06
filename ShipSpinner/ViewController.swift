@@ -88,9 +88,57 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // Model
         if frame.presenter!.isFileDownloaded() {
-            var sceneNode = frame.presenter!.getShipNode(id) as SCNNode
-            myscene.scene?.rootNode.addChildNode(sceneNode)
             
+            
+//            // create and add a camera to the scene
+//            SCNNode *cameraNode = [SCNNode node];
+//            cameraNode.camera = [SCNCamera camera];
+//            [scene.rootNode addChildNode:cameraNode];
+//            
+//            // place the camera
+//            cameraNode.position = SCNVector3Make(0, 0, 15);
+//            
+//            // create and add a light to the scene
+//            SCNNode *lightNode = [SCNNode node];
+//            lightNode.light = [SCNLight light];
+//            lightNode.light.type = SCNLightTypeOmni;
+//            lightNode.position = SCNVector3Make(0, 10, 10);
+//            [scene.rootNode addChildNode:lightNode];
+//            
+//            // create and add an ambient light to the scene
+//            SCNNode *ambientLightNode = [SCNNode node];
+//            ambientLightNode.light = [SCNLight light];
+//            ambientLightNode.light.type = SCNLightTypeAmbient;
+//            ambientLightNode.light.color = [UIColor darkGrayColor];
+//            [scene.rootNode addChildNode:ambientLightNode];
+//          
+            var scene = SCNScene()
+            
+            var cameraNode = SCNNode()
+            cameraNode.camera = SCNCamera()
+            scene.rootNode.addChildNode(cameraNode)
+            
+            cameraNode.position = SCNVector3Make(0, 0, 15)
+            
+            var lightNode : SCNNode = SCNNode()
+            lightNode.light = SCNLight()
+            lightNode.light?.type = SCNLightTypeOmni
+            lightNode.position = SCNVector3Make(0, 10, 10)
+            scene.rootNode.addChildNode(lightNode)
+            
+            var ambientNode : SCNNode = SCNNode()
+            ambientNode.light = SCNLight()
+            ambientNode.light?.type = SCNLightTypeAmbient
+            ambientNode.light?.color = UIColor.darkGrayColor()
+            scene.rootNode.addChildNode(ambientNode)
+            
+            var sceneNode = frame.presenter!.getShipNode(id) as SCNNode
+            sceneNode.position = SCNVector3Make(0, 0, 0)
+            scene.rootNode.addChildNode(sceneNode)
+            
+            myscene.backgroundColor = UIColor.clearColor()
+            myscene.allowsCameraControl = true
+            myscene.scene = scene
         } else {
             myscene.backgroundColor = UIColor.clearColor()
             myscene.scene = SCNScene(named: shipInfo.4)

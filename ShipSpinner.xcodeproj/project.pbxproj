@@ -354,7 +354,6 @@
 				TargetAttributes = {
 					54E089E71A19435800BDC644 = {
 						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = CUYMUDSGA4;
 					};
 					54E089FF1A19435800BDC644 = {
 						CreatedOnToolsVersion = 6.1;

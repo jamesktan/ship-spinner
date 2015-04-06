@@ -95,8 +95,8 @@ class DataManager: NSObject {
             // Compose the New Key
             var index = downloadLinks.indexOfObject(link)
             var key : NSString = fileLinks.objectAtIndex(index) as NSString
-            //var newValue = newPath.lastPathComponent.stringByAppendingPathComponent(key) // compose path to the dae file
-            var newValue = newPath.stringByAppendingPathComponent(key)
+            var newValue = newPath.lastPathComponent.stringByAppendingPathComponent(key) // compose path to the dae file
+//            var newValue = newPath.stringByAppendingPathComponent(key)
             NSLog("new path var: %@", newValue)
 
             // Set the AssetDictionary
