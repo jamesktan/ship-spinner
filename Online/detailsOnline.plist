@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>kush_interceptor</key>
+	<array>
+		<string>Kushan Interceptor</string>
+		<string>Fighter</string>
+		<string>Anti-String Craft</string>
+		<string>Description!</string>
+	</array>
+	<key>kush_cloakedfighter.dae</key>
+	<array>
+		<string>Spectre-class Cloaked Fighter</string>
+		<string>Fighter</string>
+		<string>Anti-Strike Craft</string>
+		<string>Using light-curving energy fields the cloaking device literally &quot;flips&quot; the image of the background scenery to fold onto the ship&apos;s hull, producing a sort of inside-out image. What light would normally hit the ship instead shoots out from the opposite side, giving the illusion, with only the faintest distortion in sharpness, that the fighter is not really there. Unfortunately the pilot must drop the cloaking field to fire as the field is not strong enough to wrap the same illusion around the fast-moving fire and during this point he is particularly vulnerable.
+
+		It was also rumored that the cloaking field and constant exposure to it has a destabilizing effect upon pilots. It was known that many of these pilots are somewhat eccentric and several of them, who have lost loved ones in battle, call themselves &quot;the Invisibles&quot; and see themselves as spirits of vengeance, going so far as to unnecessarily track enemy ships down or destroy vessels that have already surrendered.
+
+		Some Invisibles even believe that the cloaking field lets them see into the dark spaces between stars and there are yet unproven rumors of dark rituals in unused launch bays. Despite all this controversy and the bad name that flows around the Spectre, it is ultimately an extremely useful craft and remains one of the most important parts of the Kushan fleet.</string>
+	</array>
+</dict>
+</plist>
