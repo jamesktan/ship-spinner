@@ -24,7 +24,7 @@ class DataManager: NSObject {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
         let pathDownloads = paths.stringByAppendingPathComponent("Downloads") as NSString
 
-        defaultDictionary = NSDictionary(contentsOfFile: getPath(defaultsFile))!
+        defaultDictionary = NSDictionary(contentsOfFile: Util.getPath(defaultsFile))!
 
         if NSFileManager.defaultManager().fileExistsAtPath(pathDownloads) {
             // download file exists
@@ -34,8 +34,8 @@ class DataManager: NSObject {
             detailsDictionary = NSDictionary(contentsOfFile: detailsDownload)!
         } else {
             // no downloads exist, use the bundled local ones
-            assetDictionary = NSDictionary(contentsOfFile: getPath(assetFile))!
-            detailsDictionary = NSDictionary(contentsOfFile: getPath(detailFile))!
+            assetDictionary = NSDictionary(contentsOfFile: Util.getPath(assetFile))!
+            detailsDictionary = NSDictionary(contentsOfFile: Util.getPath(detailFile))!
         }
     }
     
@@ -109,10 +109,4 @@ class DataManager: NSObject {
         
     }
     
-    func getPath( fileName: NSString) -> NSString {
-        return NSBundle.mainBundle().pathForResource(fileName, ofType: "plist")!
-    }
-    func getPathJPG(fileName: NSString)->NSString {
-        return NSBundle.mainBundle().pathForResource(fileName, ofType: "jpg")!
-    }
 }
