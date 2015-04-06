@@ -23,11 +23,26 @@ class Util: NSObject {
         return NSBundle.mainBundle().pathForResource(fileName, ofType: "jpg")!
     }
     
+    class func loadOrCreatePath()-> NSString {
+        // Get or Create the Path
+        var path = Util.getDownloadPath() //Documents/Download/
+        var exists = NSFileManager.defaultManager().fileExistsAtPath(path)
+        if !exists {
+            NSFileManager.defaultManager().createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil, error: nil)
+        }
+        NSLog("path at: %@", path)
+        return path
+
+    }
     // Downloads the PLIST file
     class func downloadFileAtPath(url: NSString) -> NSString {
+        
+        //Check the path exists
+        var path = loadOrCreatePath()
+        
         var urlObj : NSURL = NSURL(string: url)!
         var urlData : NSData = NSData(contentsOfURL: urlObj)!
-        var filePath = Util.getDownloadPath().stringByAppendingPathComponent(url.lastPathComponent)
+        var filePath = path.stringByAppendingPathComponent(url.lastPathComponent)
         urlData.writeToFile(filePath, atomically: true)
         return filePath
     }
@@ -38,14 +53,8 @@ class Util: NSObject {
         
         // Use Alamo Fire to Download the .ZIP files (which can be large)
         var urlObj : NSURL = NSURL(string: url)!
-
-        // Get or Create the Path
-        var path = Util.getDownloadPath() //Documents/Download/
-        var exists = NSFileManager.defaultManager().fileExistsAtPath(path)
-        if !exists {
-            NSFileManager.defaultManager().createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil, error: nil)
-        }
-        NSLog("path at: %@", path)
+        
+        var path = Util.loadOrCreatePath()
         
         // Downloadthe file
         Alamofire.download(.GET, url as String, { (temporaryURL, response) in

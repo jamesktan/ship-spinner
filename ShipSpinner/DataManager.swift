@@ -70,8 +70,8 @@ class DataManager: NSObject {
     
     func download() {
         var base : NSString = getDefault("downloadURL") as NSString
-        var assetOnline : NSString = base + assetFile + ".plist"
-        var detailOnline : NSString = base + detailFile + ".plist"
+        var assetOnline : NSString = base + assetFile + "Online.plist"
+        var detailOnline : NSString = base + detailFile + "Online.plist"
         
         // Download the plist
         var assetFilePath = Util.downloadFileAtPath(assetOnline)
