@@ -26,6 +26,7 @@
 		5465AC301ACDBA0500636FBA /* stack8.svg in Resources */ = {isa = PBXBuildFile; fileRef = 5465AC261ACDBA0500636FBA /* stack8.svg */; };
 		5471FBC71AD08C1A003451D4 /* logo76.png in Resources */ = {isa = PBXBuildFile; fileRef = 5471FBC51AD08C1A003451D4 /* logo76.png */; };
 		5471FBC81AD08C1A003451D4 /* logo76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5471FBC61AD08C1A003451D4 /* logo76@2x.png */; };
+		5471FBCA1AD250CA003451D4 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5471FBC91AD250C9003451D4 /* Util.swift */; };
 		54BA14B51ACC8F0D00054079 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54BA14B41ACC8F0D00054079 /* SpriteKit.framework */; };
 		54C6AFFC1ACC6EBF00E1D0F1 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6AFFB1ACC6EBF00E1D0F1 /* Presenter.swift */; };
 		54C6AFFE1ACC6EE100E1D0F1 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6AFFD1ACC6EE100E1D0F1 /* Interactor.swift */; };
@@ -74,6 +75,7 @@
 		5465AC261ACDBA0500636FBA /* stack8.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = stack8.svg; sourceTree = "<group>"; };
 		5471FBC51AD08C1A003451D4 /* logo76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo76.png; sourceTree = "<group>"; };
 		5471FBC61AD08C1A003451D4 /* logo76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo76@2x.png"; sourceTree = "<group>"; };
+		5471FBC91AD250C9003451D4 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		54BA14B41ACC8F0D00054079 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		54C6AFFB1ACC6EBF00E1D0F1 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		54C6AFFD1ACC6EE100E1D0F1 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				54C6AFFD1ACC6EE100E1D0F1 /* Interactor.swift */,
 				54C6B0011ACC7BA200E1D0F1 /* DataManager.swift */,
 				54C6AFFF1ACC6EF000E1D0F1 /* ShipEntity.swift */,
+				5471FBC91AD250C9003451D4 /* Util.swift */,
 				54E089F41A19435800BDC644 /* Main.storyboard */,
 				54E089F71A19435800BDC644 /* Images.xcassets */,
 				54E089F91A19435800BDC644 /* LaunchScreen.xib */,
@@ -350,6 +353,7 @@
 				54E089F31A19435800BDC644 /* ViewController.swift in Sources */,
 				54E089EE1A19435800BDC644 /* AppDelegate.swift in Sources */,
 				54C6B0001ACC6EF000E1D0F1 /* ShipEntity.swift in Sources */,
+				5471FBCA1AD250CA003451D4 /* Util.swift in Sources */,
 				54C6B0021ACC7BA200E1D0F1 /* DataManager.swift in Sources */,
 				54C6AFFC1ACC6EBF00E1D0F1 /* Presenter.swift in Sources */,
 				54E089F11A19435800BDC644 /* ShipSpinner.xcdatamodeld in Sources */,

@@ -6,6 +6,8 @@
 	<true/>
 	<key>currentShip</key>
 	<string>kush_cloakedfighter.dae</string>
+	<key>downloadURL</key>
+	<string>http://example.com/</string>
 	<key>currentWall</key>
 	<array>
 		<string>bg1.jpg</string>

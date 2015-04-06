@@ -28,8 +28,8 @@ class DataManager: NSObject {
 
         if NSFileManager.defaultManager().fileExistsAtPath(pathDownloads) {
             // download file exists
-            var assetDownload = pathDownloads.stringByAppendingPathComponent(assetFile)
-            var detailsDownload = pathDownloads.stringByAppendingPathComponent(detailFile)
+            var assetDownload = pathDownloads.stringByAppendingPathComponent(assetFile+"Download.plist")
+            var detailsDownload = pathDownloads.stringByAppendingPathComponent(detailFile+"Download.plist")
             assetDictionary = NSDictionary(contentsOfFile: assetDownload)!
             detailsDictionary = NSDictionary(contentsOfFile: detailsDownload)!
         } else {
@@ -69,7 +69,44 @@ class DataManager: NSObject {
     }
     
     func download() {
-    
+        var base : NSString = getDefault("downloadURL") as NSString
+        var assetOnline : NSString = base + assetFile + ".plist"
+        var detailOnline : NSString = base + detailFile + ".plist"
+        
+        // Download the plist
+        var assetFilePath = Util.downloadFileAtPath(assetOnline)
+        var detailFilePath = Util.downloadFileAtPath(detailOnline)
+        
+        // Open and Parse the plist for download links
+        var assetDictionary : NSMutableDictionary = NSMutableDictionary(contentsOfFile: assetFilePath as String)!
+        var fileLinks : NSArray = assetDictionary.allKeys as NSArray
+        var downloadLinks : NSArray = assetDictionary.allValues as NSArray
+        
+        // Download each model, get the filepath, and store the last two in the asset dictionary, unpack it
+        var count = NSNumber(integer: fileLinks.count)
+        var userInfo : NSDictionary = ["count":count]
+        NSNotificationCenter.defaultCenter().postNotificationName("progress+start", object: nil, userInfo:userInfo)
+        
+        for link in downloadLinks {
+            var newPath : NSString = Util.downloadModelAndUnzipAtPath(link as NSString) as NSString //download the file
+            
+            // Compose the New Key
+            var index = downloadLinks.indexOfObject(link)
+            var key : NSString = fileLinks.objectAtIndex(index) as NSString
+            var newValue = newPath.lastPathComponent.stringByAppendingPathComponent(key)
+
+            // Set the AssetDictionary
+            assetDictionary.removeObjectForKey(key)
+            assetDictionary.setValue(newValue, forKey: key)
+            
+            // Let progress be known!
+            NSNotificationCenter.defaultCenter().postNotificationName("progress+1", object: nil)
+        }
+        
+        // Save the new assetFile
+        assetDictionary.writeToFile(assetFilePath, atomically: true)
+        NSNotificationCenter.defaultCenter().postNotificationName("progress+end", object: nil)
+        
     }
     
     func getPath( fileName: NSString) -> NSString {
