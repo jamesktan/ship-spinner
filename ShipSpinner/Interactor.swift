@@ -15,6 +15,10 @@ class Interactor: NSObject {
     
     // GET
     
+    func isFileDownloaded() -> Bool {
+        return dm!.downloadFileExists()
+    }
+    
     // getShipList - return list of all ship names
     func getShipList() -> NSArray {
         return dm!.findShipList()

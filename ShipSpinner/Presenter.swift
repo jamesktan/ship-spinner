@@ -16,6 +16,10 @@ class Presenter: NSObject {
     var view : ViewController? = nil
     var interactor : Interactor? = nil
     
+    func isFileDownloaded() -> Bool {
+        return interactor!.isFileDownloaded()
+    }
+    
     func idForLastShip() -> NSString {
         return interactor!.idForLastShip()
     }
@@ -30,6 +34,14 @@ class Presenter: NSObject {
     func getShip(name_ship : NSString) -> (NSString, NSString, NSString, NSString, NSString) {
         var ship = interactor!.getShip(name_ship)
         return ("NAME: " + ship.shipName!, "CLASS: " + ship.shipClass!, "ROLE: "+ship.shipRole!, ship.shipDescription!, ship.shipAssetPath!)
+    }
+    func getShipNode(name_ship:NSString) -> SCNNode {
+        var ship = interactor!.getShip(name_ship)
+
+        var sceneSource : SCNSceneSource = SCNSceneSource(URL: NSURL(string: ship.shipAssetPath as String)!, options: nil)!
+        var sceneIdentifier : String = "kush_cloakedfighter"
+        var sceneNode : SCNNode = sceneSource.entryWithIdentifier(sceneIdentifier, withClass: SCNNode.self) as SCNNode
+        return sceneNode
     }
     
     func getWallpaper(name_wallpaper : NSString) -> (UIImage, UIViewContentMode){

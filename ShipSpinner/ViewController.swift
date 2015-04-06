@@ -87,9 +87,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tv_description.text = shipInfo.3
         
         // Model
-        myscene.backgroundColor = UIColor.clearColor()
-        myscene.scene = SCNScene(named: shipInfo.4)
-        
+        if frame.presenter!.isFileDownloaded() {
+            var sceneNode = frame.presenter!.getShipNode(id) as SCNNode
+            myscene.scene?.rootNode.addChildNode(sceneNode)
+            
+        } else {
+            myscene.backgroundColor = UIColor.clearColor()
+            myscene.scene = SCNScene(named: shipInfo.4)
+        }
         // Spin
         buttonRotate.selected = rotate
         (rotate) ?
@@ -169,10 +174,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @IBAction func downloadShips() {
-        var view : UIAlertView = UIAlertView(title: "Woops!", message: "Not available in this launch! Please stay tuned!", delegate: nil, cancelButtonTitle: "OK")
-        view.show()
-        //frame.presenter!.download()
-        //shipListView.reloadData()
+        frame.presenter!.download()
+        shipListView.reloadData()
     }
 
     @IBAction func about(sender: UIButton) {

@@ -21,12 +21,10 @@ class DataManager: NSObject {
     var defaultDictionary : NSDictionary = NSDictionary() //load locally
     
     func load() {
-        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
-        let pathDownloads = paths.stringByAppendingPathComponent("Downloads") as NSString
-
+        let pathDownloads = Util.getDownloadPath()
         defaultDictionary = NSDictionary(contentsOfFile: Util.getPath(defaultsFile))!
 
-        if NSFileManager.defaultManager().fileExistsAtPath(pathDownloads) {
+        if downloadFileExists() {
             // download file exists
             var assetDownload = pathDownloads.stringByAppendingPathComponent(assetFile+"Online.plist")
             var detailsDownload = pathDownloads.stringByAppendingPathComponent(detailFile+"Online.plist")
@@ -37,6 +35,10 @@ class DataManager: NSObject {
             assetDictionary = NSDictionary(contentsOfFile: Util.getPath(assetFile))!
             detailsDictionary = NSDictionary(contentsOfFile: Util.getPath(detailFile))!
         }
+    }
+    
+    func downloadFileExists() -> Bool{
+        return NSFileManager.defaultManager().fileExistsAtPath(Util.getDownloadPath()) ? true : false
     }
     
     func findShip(id_ship : NSString) -> ShipEntity {

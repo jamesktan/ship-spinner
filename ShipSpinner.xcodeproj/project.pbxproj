@@ -354,6 +354,7 @@
 				TargetAttributes = {
 					54E089E71A19435800BDC644 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = CUYMUDSGA4;
 					};
 					54E089FF1A19435800BDC644 = {
 						CreatedOnToolsVersion = 6.1;
@@ -591,6 +592,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -609,6 +611,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
