@@ -11,6 +11,7 @@
 		540392AE1AD2795E006A717F /* information32_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 540392AA1AD2795E006A717F /* information32_selected.png */; };
 		540392AF1AD2795E006A717F /* layers4_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 540392AB1AD2795E006A717F /* layers4_selected.png */; };
 		540392B01AD2795E006A717F /* settings20_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 540392AC1AD2795E006A717F /* settings20_selected.png */; };
+		540392B31AD29A15006A717F /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 540392B21AD29A15006A717F /* Alamofire.framework */; };
 		5465AC151ACDB7F800636FBA /* bg7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5465AC0E1ACDB7F800636FBA /* bg7.jpg */; };
 		5465AC161ACDB7F800636FBA /* bg6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5465AC0F1ACDB7F800636FBA /* bg6.jpg */; };
 		5465AC171ACDB7F800636FBA /* bg5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5465AC101ACDB7F800636FBA /* bg5.jpg */; };
@@ -70,6 +71,7 @@
 		540392AA1AD2795E006A717F /* information32_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = information32_selected.png; sourceTree = "<group>"; };
 		540392AB1AD2795E006A717F /* layers4_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layers4_selected.png; sourceTree = "<group>"; };
 		540392AC1AD2795E006A717F /* settings20_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings20_selected.png; sourceTree = "<group>"; };
+		540392B21AD29A15006A717F /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		5465AC0E1ACDB7F800636FBA /* bg7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg7.jpg; sourceTree = "<group>"; };
 		5465AC0F1ACDB7F800636FBA /* bg6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg6.jpg; sourceTree = "<group>"; };
 		5465AC101ACDB7F800636FBA /* bg5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg5.jpg; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 			files = (
 				5471FBE01AD25AFD003451D4 /* libz.dylib in Frameworks */,
 				54BA14B51ACC8F0D00054079 /* SpriteKit.framework in Frameworks */,
+				540392B31AD29A15006A717F /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,6 +215,7 @@
 		54E089DF1A19435800BDC644 = {
 			isa = PBXGroup;
 			children = (
+				540392B21AD29A15006A717F /* Alamofire.framework */,
 				54E089EA1A19435800BDC644 /* ShipSpinner */,
 				54E08A031A19435800BDC644 /* ShipSpinnerTests */,
 				54E089E91A19435800BDC644 /* Products */,
@@ -298,6 +302,7 @@
 				54E089E41A19435800BDC644 /* Sources */,
 				54E089E51A19435800BDC644 /* Frameworks */,
 				54E089E61A19435800BDC644 /* Resources */,
+				540392B11AD299C2006A717F /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -409,6 +414,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		540392B11AD299C2006A717F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		54E089E41A19435800BDC644 /* Sources */ = {
@@ -553,6 +575,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ShipSpinner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -567,6 +593,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ShipSpinner/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

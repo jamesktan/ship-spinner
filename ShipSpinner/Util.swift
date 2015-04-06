@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class Util: NSObject {
     class func getDownloadPath() -> NSString {
@@ -22,6 +23,7 @@ class Util: NSObject {
         return NSBundle.mainBundle().pathForResource(fileName, ofType: "jpg")!
     }
     
+    // Downloads the PLIST file
     class func downloadFileAtPath(url: NSString) -> NSString {
         var urlObj : NSURL = NSURL(string: url)!
         var urlData : NSData = NSData(contentsOfURL: urlObj)!
@@ -30,8 +32,26 @@ class Util: NSObject {
         return filePath
     }
     
+    
     class func downloadModelAndUnzipAtPath(url: NSString) -> NSString {
         var filePath : NSString = ""
+        
+        // Use Alamo Fire to Download the .ZIP files (which can be large)
+        Alamofire.request(.GET, "http://httpbin.org/get")
+
+        Alamofire.download(.GET, "http://httpbin.org/stream/100", { (temporaryURL, response) in
+            if let directoryURL = NSFileManager.defaultManager()
+                .URLsForDirectory(.DocumentDirectory,
+                    inDomains: .UserDomainMask)[0]
+                as? NSURL {
+                    let pathComponent = response.suggestedFilename
+                    
+                    return directoryURL.URLByAppendingPathComponent(pathComponent!)
+            }
+            
+            return temporaryURL
+        })
+        
         return filePath
     }
 }
