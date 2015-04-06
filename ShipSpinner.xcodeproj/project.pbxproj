@@ -38,6 +38,10 @@
 		5471FBDB1AD25AC8003451D4 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 5471FBD41AD25AC8003451D4 /* zip.c */; };
 		5471FBDC1AD25AC8003451D4 /* SSZipArchive.m in Sources */ = {isa = PBXBuildFile; fileRef = 5471FBD71AD25AC8003451D4 /* SSZipArchive.m */; };
 		5471FBE01AD25AFD003451D4 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5471FBDF1AD25AFD003451D4 /* libz.dylib */; };
+		548B33D21AD2CA0F00B7CD8B /* logo40.png in Resources */ = {isa = PBXBuildFile; fileRef = 548B33D01AD2CA0F00B7CD8B /* logo40.png */; };
+		548B33D31AD2CA0F00B7CD8B /* logo80.png in Resources */ = {isa = PBXBuildFile; fileRef = 548B33D11AD2CA0F00B7CD8B /* logo80.png */; };
+		548B33D61AD2CA4C00B7CD8B /* logo29.png in Resources */ = {isa = PBXBuildFile; fileRef = 548B33D41AD2CA4C00B7CD8B /* logo29.png */; };
+		548B33D71AD2CA4C00B7CD8B /* logo58.png in Resources */ = {isa = PBXBuildFile; fileRef = 548B33D51AD2CA4C00B7CD8B /* logo58.png */; };
 		54BA14B51ACC8F0D00054079 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54BA14B41ACC8F0D00054079 /* SpriteKit.framework */; };
 		54C6AFFC1ACC6EBF00E1D0F1 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6AFFB1ACC6EBF00E1D0F1 /* Presenter.swift */; };
 		54C6AFFE1ACC6EE100E1D0F1 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6AFFD1ACC6EE100E1D0F1 /* Interactor.swift */; };
@@ -105,6 +109,10 @@
 		5471FBD61AD25AC8003451D4 /* SSZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSZipArchive.h; sourceTree = "<group>"; };
 		5471FBD71AD25AC8003451D4 /* SSZipArchive.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSZipArchive.m; sourceTree = "<group>"; };
 		5471FBDF1AD25AFD003451D4 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		548B33D01AD2CA0F00B7CD8B /* logo40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo40.png; sourceTree = "<group>"; };
+		548B33D11AD2CA0F00B7CD8B /* logo80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo80.png; sourceTree = "<group>"; };
+		548B33D41AD2CA4C00B7CD8B /* logo29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo29.png; sourceTree = "<group>"; };
+		548B33D51AD2CA4C00B7CD8B /* logo58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo58.png; sourceTree = "<group>"; };
 		54BA14B41ACC8F0D00054079 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		54C6AFFB1ACC6EBF00E1D0F1 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		54C6AFFD1ACC6EE100E1D0F1 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
@@ -151,6 +159,10 @@
 		5465AC1C1ACDBA0500636FBA /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				548B33D41AD2CA4C00B7CD8B /* logo29.png */,
+				548B33D51AD2CA4C00B7CD8B /* logo58.png */,
+				548B33D01AD2CA0F00B7CD8B /* logo40.png */,
+				548B33D11AD2CA0F00B7CD8B /* logo80.png */,
 				540392A91AD2795E006A717F /* bars5_selected.png */,
 				540392AA1AD2795E006A717F /* information32_selected.png */,
 				540392AB1AD2795E006A717F /* layers4_selected.png */,
@@ -376,6 +388,7 @@
 				540392AD1AD2795E006A717F /* bars5_selected.png in Resources */,
 				54EC67A91AD062E3009CE568 /* kush_cloakedfighter.scnassets in Resources */,
 				5465AC1B1ACDB7F800636FBA /* bg1.jpg in Resources */,
+				548B33D61AD2CA4C00B7CD8B /* logo29.png in Resources */,
 				5465AC2E1ACDBA0500636FBA /* settings20.svg in Resources */,
 				540392AE1AD2795E006A717F /* information32_selected.png in Resources */,
 				5465AC301ACDBA0500636FBA /* stack8.svg in Resources */,
@@ -391,14 +404,17 @@
 				5465AC171ACDB7F800636FBA /* bg5.jpg in Resources */,
 				5465AC1A1ACDB7F800636FBA /* bg2.jpg in Resources */,
 				5465AC2D1ACDBA0500636FBA /* settings20.png in Resources */,
+				548B33D21AD2CA0F00B7CD8B /* logo40.png in Resources */,
 				5465AC281ACDBA0500636FBA /* bars5.svg in Resources */,
 				540392AF1AD2795E006A717F /* layers4_selected.png in Resources */,
 				5465AC291ACDBA0500636FBA /* information32.png in Resources */,
+				548B33D31AD2CA0F00B7CD8B /* logo80.png in Resources */,
 				5465AC181ACDB7F800636FBA /* bg4.jpg in Resources */,
 				54EC67A71AD060C8009CE568 /* detail.plist in Resources */,
 				5465AC271ACDBA0500636FBA /* bars5.png in Resources */,
 				54E089F81A19435800BDC644 /* Images.xcassets in Resources */,
 				5465AC2A1ACDBA0500636FBA /* information32.svg in Resources */,
+				548B33D71AD2CA4C00B7CD8B /* logo58.png in Resources */,
 				5471FBC81AD08C1A003451D4 /* logo76@2x.png in Resources */,
 				5465AC161ACDB7F800636FBA /* bg6.jpg in Resources */,
 				5465AC2C1ACDBA0500636FBA /* layers4.svg in Resources */,

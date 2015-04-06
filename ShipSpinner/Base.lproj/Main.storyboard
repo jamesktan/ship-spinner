@@ -102,6 +102,9 @@
                                         <variation key="widthClass=regular" fixedFrame="YES">
                                             <rect key="frame" x="104" y="147" width="52" height="30"/>
                                         </variation>
+                                        <connections>
+                                            <action selector="about:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BTZ-yM-jgK"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DC0-e4-Yqw">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>

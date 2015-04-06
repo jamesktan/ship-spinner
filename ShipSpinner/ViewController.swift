@@ -169,8 +169,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @IBAction func downloadShips() {
-        frame.presenter!.download()
-        shipListView.reloadData()
+        var view : UIAlertView = UIAlertView(title: "Woops!", message: "Not available in this launch! Please stay tuned!", delegate: nil, cancelButtonTitle: "OK")
+        view.show()
+        //frame.presenter!.download()
+        //shipListView.reloadData()
+    }
+
+    @IBAction func about(sender: UIButton) {
+        var view : UIAlertView = UIAlertView(title: "Nabaal Shipyards", message: "I don't own any content! Everything here belongs to GearBox", delegate: nil, cancelButtonTitle: "OK")
+        view.show()
     }
 
     override func prefersStatusBarHidden() -> Bool {
