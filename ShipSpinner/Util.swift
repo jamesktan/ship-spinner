@@ -15,6 +15,10 @@ class Util: NSObject {
         let pathDownloads = paths.stringByAppendingPathComponent("Downloads") as NSString
         return pathDownloads
     }
+    class func downloadPathExists() -> Bool {
+        var path = Util.getDownloadPath() //Documents/Download/
+        return NSFileManager.defaultManager().fileExistsAtPath(path)
+    }
     
     class func getPath( fileName: NSString) -> NSString {
         return NSBundle.mainBundle().pathForResource(fileName, ofType: "plist")!

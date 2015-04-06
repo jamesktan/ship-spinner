@@ -114,7 +114,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             sceneNode.position = SCNVector3Make(0, 0, 0)
             scene.rootNode.addChildNode(sceneNode)
             myscene.scene = scene
-            
 
         } else {
             myscene.scene = SCNScene(named: shipInfo.4)
@@ -124,8 +123,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Spin
         buttonRotate.selected = rotate
         (rotate) ?
-            myscene.scene!.rootNode.addAnimation(frame.presenter!.createSpin(), forKey: spinKey) :
-            myscene.scene!.rootNode.removeAnimationForKey(spinKey)
+            myscene.scene?.rootNode.addAnimation(frame.presenter!.createSpin(), forKey: spinKey) :
+            myscene.scene?.rootNode.removeAnimationForKey(spinKey)
     }
     
     func loadWallpaper(id : NSString) {
