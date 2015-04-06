@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		540392AD1AD2795E006A717F /* bars5_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 540392A91AD2795E006A717F /* bars5_selected.png */; };
+		540392AE1AD2795E006A717F /* information32_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 540392AA1AD2795E006A717F /* information32_selected.png */; };
+		540392AF1AD2795E006A717F /* layers4_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 540392AB1AD2795E006A717F /* layers4_selected.png */; };
+		540392B01AD2795E006A717F /* settings20_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 540392AC1AD2795E006A717F /* settings20_selected.png */; };
 		5465AC151ACDB7F800636FBA /* bg7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5465AC0E1ACDB7F800636FBA /* bg7.jpg */; };
 		5465AC161ACDB7F800636FBA /* bg6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5465AC0F1ACDB7F800636FBA /* bg6.jpg */; };
 		5465AC171ACDB7F800636FBA /* bg5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5465AC101ACDB7F800636FBA /* bg5.jpg */; };
@@ -62,6 +66,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		540392A91AD2795E006A717F /* bars5_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bars5_selected.png; sourceTree = "<group>"; };
+		540392AA1AD2795E006A717F /* information32_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = information32_selected.png; sourceTree = "<group>"; };
+		540392AB1AD2795E006A717F /* layers4_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layers4_selected.png; sourceTree = "<group>"; };
+		540392AC1AD2795E006A717F /* settings20_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings20_selected.png; sourceTree = "<group>"; };
 		5465AC0E1ACDB7F800636FBA /* bg7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg7.jpg; sourceTree = "<group>"; };
 		5465AC0F1ACDB7F800636FBA /* bg6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg6.jpg; sourceTree = "<group>"; };
 		5465AC101ACDB7F800636FBA /* bg5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg5.jpg; sourceTree = "<group>"; };
@@ -140,6 +148,10 @@
 		5465AC1C1ACDBA0500636FBA /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				540392A91AD2795E006A717F /* bars5_selected.png */,
+				540392AA1AD2795E006A717F /* information32_selected.png */,
+				540392AB1AD2795E006A717F /* layers4_selected.png */,
+				540392AC1AD2795E006A717F /* settings20_selected.png */,
 				5471FBC51AD08C1A003451D4 /* logo76.png */,
 				5471FBC61AD08C1A003451D4 /* logo76@2x.png */,
 				5465AC1D1ACDBA0500636FBA /* bars5.png */,
@@ -356,15 +368,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				540392AD1AD2795E006A717F /* bars5_selected.png in Resources */,
 				54EC67A91AD062E3009CE568 /* kush_cloakedfighter.scnassets in Resources */,
 				5465AC1B1ACDB7F800636FBA /* bg1.jpg in Resources */,
 				5465AC2E1ACDBA0500636FBA /* settings20.svg in Resources */,
+				540392AE1AD2795E006A717F /* information32_selected.png in Resources */,
 				5465AC301ACDBA0500636FBA /* stack8.svg in Resources */,
 				5465AC151ACDB7F800636FBA /* bg7.jpg in Resources */,
 				5465AC2B1ACDBA0500636FBA /* layers4.png in Resources */,
 				54E089F61A19435800BDC644 /* Main.storyboard in Resources */,
 				5471FBC71AD08C1A003451D4 /* logo76.png in Resources */,
 				54EC67A51AD060BE009CE568 /* asset.plist in Resources */,
+				540392B01AD2795E006A717F /* settings20_selected.png in Resources */,
 				54EC67A31AD05F5A009CE568 /* defaults.plist in Resources */,
 				5465AC191ACDB7F800636FBA /* bg3.jpg in Resources */,
 				54E089FB1A19435800BDC644 /* LaunchScreen.xib in Resources */,
@@ -372,6 +387,7 @@
 				5465AC1A1ACDB7F800636FBA /* bg2.jpg in Resources */,
 				5465AC2D1ACDBA0500636FBA /* settings20.png in Resources */,
 				5465AC281ACDBA0500636FBA /* bars5.svg in Resources */,
+				540392AF1AD2795E006A717F /* layers4_selected.png in Resources */,
 				5465AC291ACDBA0500636FBA /* information32.png in Resources */,
 				5465AC181ACDB7F800636FBA /* bg4.jpg in Resources */,
 				54EC67A71AD060C8009CE568 /* detail.plist in Resources */,
