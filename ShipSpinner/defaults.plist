@@ -7,7 +7,7 @@
 	<key>currentShip</key>
 	<string>kush_cloakedfighter.dae</string>
 	<key>downloadURL</key>
-	<string>http://example.com/</string>
+	<string>https://s3-us-west-1.amazonaws.com/naabal/</string>
 	<key>currentWall</key>
 	<array>
 		<string>bg1.jpg</string>
