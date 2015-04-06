@@ -92,12 +92,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             var scene = SCNScene()
             
-            var cameraNode = SCNNode()
-            cameraNode.camera = SCNCamera()
-            scene.rootNode.addChildNode(cameraNode)
-            
-            cameraNode.position = SCNVector3Make(0, -1, 10)
-            
             var lightNode : SCNNode = SCNNode()
             lightNode.light = SCNLight()
             lightNode.light?.type = SCNLightTypeOmni
