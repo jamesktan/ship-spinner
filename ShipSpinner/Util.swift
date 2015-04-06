@@ -31,7 +31,7 @@ class Util: NSObject {
             NSFileManager.defaultManager().createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil, error: nil)
         }
         NSLog("path at: %@", path)
-        return path
+        return path as NSString
 
     }
     // Downloads the PLIST file

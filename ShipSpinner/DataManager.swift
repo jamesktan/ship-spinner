@@ -28,8 +28,8 @@ class DataManager: NSObject {
 
         if NSFileManager.defaultManager().fileExistsAtPath(pathDownloads) {
             // download file exists
-            var assetDownload = pathDownloads.stringByAppendingPathComponent(assetFile+"Download.plist")
-            var detailsDownload = pathDownloads.stringByAppendingPathComponent(detailFile+"Download.plist")
+            var assetDownload = pathDownloads.stringByAppendingPathComponent(assetFile+"Online.plist")
+            var detailsDownload = pathDownloads.stringByAppendingPathComponent(detailFile+"Online.plist")
             assetDictionary = NSDictionary(contentsOfFile: assetDownload)!
             detailsDictionary = NSDictionary(contentsOfFile: detailsDownload)!
         } else {

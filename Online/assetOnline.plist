@@ -3,8 +3,8 @@
 <plist version="1.0">
 <dict>
 	<key>kush_cloakedfighter.dae</key>
-	<string>kush_cloakedfighter.scnassets/kush_cloakedfighter.dae</string>
+	<string>https://s3-us-west-1.amazonaws.com/naabal/kush_cloakedfighter.scnassets.zip</string>
 	<key>kush_interceptor.dae</key>
-	<string>http://www.s3.com/kush_intercetor.zip</string>
+	<string>https://s3-us-west-1.amazonaws.com/naabal/kush_intercetor.zip</string>
 </dict>
 </plist>
