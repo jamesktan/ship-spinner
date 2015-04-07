@@ -49,7 +49,7 @@ class Interactor: NSObject {
         
         var ddURL = NSFileManager.defaultManager().URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: false, error: nil)
         var a = ddURL!.URLByAppendingPathComponent(url)
-        var sceneIdentifier : String = "Kus_CloakedFighter1"
+        var sceneIdentifier : String = properties.shipEntryNode!
         //var b : NSArray = sceneSource.identifiersOfEntriesWithClass(SCNNode.self)!
         return (a, sceneIdentifier)
     }
