@@ -18,6 +18,23 @@ The Mk. 5 employed a large twin rotary cannon inside the nose armor plates that 
 </string>
 		<string>Kus_Interceptor1</string>
 	</array>
+
+
+	<key>taid_attackbomber.dae</key>
+	<array>
+		<string>Kaark-class Attack Bombe</string>
+		<string>Fighter</string>
+		<string>Anti-Capital Ship</string>
+		<string>While less manueverable than most fighters, the Kaark makes up for it by converting its engines into weapons. The Kaark literally uses its fuel plasma as a weapon, directing it through two cannons at either side of it. To add to the damage the Kaark electromagnetically charges the plasma as it passes through the cannons and then projects them forward towards their target, usually a frigate or super capital ship but on occasion non-combat vessels or even crippled strike craft.
+
+During the Homeworld War Kaarks were rarely used against other fighters and even against corvettes because not only were they slow moving but the plasma was very slow compared to other devices of weaponry, even missiles. For this reason Kaarks would usually be dispatched to fight capital ships of various sizes or raid resourcer convoys. In case the Kaarks did end up in trouble though they were likely to resort to using electric countermeasure systems, manned by the rear-seat engineer.
+
+</string>
+		<string>Tai_AttackBomber1</string>
+	</array>
+
+
+
 	<key>kush_cloakedfighter.dae</key>
 	<array>
 		<string>Spectre-class Cloaked Fighter</string>
