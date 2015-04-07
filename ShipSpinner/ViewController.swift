@@ -79,7 +79,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func loadShipData(id : NSString) {
-        
         // Labels
         var shipInfo = frame.presenter!.getShip(id)
         l_name.text = shipInfo.0
@@ -107,6 +106,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         (rotate) ?
             myscene.scene?.rootNode.addAnimation(frame.presenter!.createSpin(), forKey: spinKey) :
             myscene.scene?.rootNode.removeAnimationForKey(spinKey)
+        
     }
     
     func loadWallpaper(id : NSString) {
