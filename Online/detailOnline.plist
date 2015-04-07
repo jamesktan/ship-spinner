@@ -22,7 +22,7 @@ The Mk. 5 employed a large twin rotary cannon inside the nose armor plates that 
 
 	<key>taid_attackbomber.dae</key>
 	<array>
-		<string>Kaark-class Attack Bombe</string>
+		<string>Kaark-class Attack Bomber</string>
 		<string>Fighter</string>
 		<string>Anti-Capital Ship</string>
 		<string>While less manueverable than most fighters, the Kaark makes up for it by converting its engines into weapons. The Kaark literally uses its fuel plasma as a weapon, directing it through two cannons at either side of it. To add to the damage the Kaark electromagnetically charges the plasma as it passes through the cannons and then projects them forward towards their target, usually a frigate or super capital ship but on occasion non-combat vessels or even crippled strike craft.
