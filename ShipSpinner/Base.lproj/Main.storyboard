@@ -210,7 +210,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="-6" y="8" width="195" height="788"/>
+                                            <rect key="frame" x="-6" y="8" width="235" height="788"/>
                                         </variation>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCELERATION: 500 M/S" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhf-GP-Kwe">
@@ -259,7 +259,7 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="-5" y="186" width="195" height="598"/>
+                                            <rect key="frame" x="-5" y="186" width="229" height="598"/>
                                         </variation>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLASS: FIGHTER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52h-V0-kJ5">
@@ -282,11 +282,11 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME: HIIGARAN INTERCEPTOR" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3y-uk-1rk">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="34" width="180" height="36"/>
+                                            <rect key="frame" x="0.0" y="34" width="216" height="36"/>
                                         </variation>
                                     </label>
                                 </subviews>
@@ -304,7 +304,7 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="800" y="-24" width="195" height="792"/>
+                                    <rect key="frame" x="800" y="-24" width="224" height="792"/>
                                     <mask key="subviews">
                                         <include reference="xSl-og-GwD"/>
                                         <include reference="Uhf-GP-Kwe"/>

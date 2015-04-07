@@ -70,7 +70,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         loadWallpaper(wallpaperID)
         loadShipData(shipID)
-        
+                
     }
     
     override func didReceiveMemoryWarning() {
