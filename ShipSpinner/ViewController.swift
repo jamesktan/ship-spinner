@@ -79,6 +79,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func loadShipData(id : NSString) {
+        
         // Labels
         var shipInfo = frame.presenter!.getShip(id)
         l_name.text = shipInfo.0

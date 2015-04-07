@@ -43,6 +43,7 @@
 		548B33D61AD2CA4C00B7CD8B /* logo29.png in Resources */ = {isa = PBXBuildFile; fileRef = 548B33D41AD2CA4C00B7CD8B /* logo29.png */; };
 		548B33D71AD2CA4C00B7CD8B /* logo58.png in Resources */ = {isa = PBXBuildFile; fileRef = 548B33D51AD2CA4C00B7CD8B /* logo58.png */; };
 		54BA14B51ACC8F0D00054079 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54BA14B41ACC8F0D00054079 /* SpriteKit.framework */; };
+		54C50B961AD47418005EDB5C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C50B951AD47418005EDB5C /* QuartzCore.framework */; };
 		54C6AFFC1ACC6EBF00E1D0F1 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6AFFB1ACC6EBF00E1D0F1 /* Presenter.swift */; };
 		54C6AFFE1ACC6EE100E1D0F1 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6AFFD1ACC6EE100E1D0F1 /* Interactor.swift */; };
 		54C6B0001ACC6EF000E1D0F1 /* ShipEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6AFFF1ACC6EF000E1D0F1 /* ShipEntity.swift */; };
@@ -114,6 +115,7 @@
 		548B33D41AD2CA4C00B7CD8B /* logo29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo29.png; sourceTree = "<group>"; };
 		548B33D51AD2CA4C00B7CD8B /* logo58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo58.png; sourceTree = "<group>"; };
 		54BA14B41ACC8F0D00054079 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		54C50B951AD47418005EDB5C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		54C6AFFB1ACC6EBF00E1D0F1 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
 		54C6AFFD1ACC6EE100E1D0F1 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		54C6AFFF1ACC6EF000E1D0F1 /* ShipEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipEntity.swift; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				54C50B961AD47418005EDB5C /* QuartzCore.framework in Frameworks */,
 				5471FBE01AD25AFD003451D4 /* libz.dylib in Frameworks */,
 				54BA14B51ACC8F0D00054079 /* SpriteKit.framework in Frameworks */,
 				540392B31AD29A15006A717F /* Alamofire.framework in Frameworks */,
@@ -267,6 +270,7 @@
 				5471FBCB1AD25AC7003451D4 /* ShipSpinner-Bridging-Header.h */,
 				5471FBDE1AD25AD7003451D4 /* SSZipArchive */,
 				540392B21AD29A15006A717F /* Alamofire.framework */,
+				54C50B951AD47418005EDB5C /* QuartzCore.framework */,
 				54BA14B41ACC8F0D00054079 /* SpriteKit.framework */,
 				5465AC311ACDBA0E00636FBA /* bgs */,
 				5465AC1C1ACDBA0500636FBA /* icons */,
