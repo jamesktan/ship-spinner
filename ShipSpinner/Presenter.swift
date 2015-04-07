@@ -41,6 +41,7 @@ class Presenter: NSObject {
         var sceneSource : SCNSceneSource = SCNSceneSource(URL: props.0 , options: nil)!
         var sceneNode : SCNNode = sceneSource.entryWithIdentifier(props.1, withClass: SCNNode.self) as SCNNode
         sceneNode.position = SCNVector3Make(0, 0, 0)
+        sceneNode.rotation = SCNVector4Make(1, 0, 0, Float(M_PI/2))
         
         return sceneNode
     }
@@ -124,7 +125,7 @@ class Presenter: NSObject {
         var lightNode : SCNNode = SCNNode()
         lightNode.light = SCNLight()
         lightNode.light?.type = SCNLightTypeOmni
-        lightNode.position = SCNVector3Make(10, 0, -20)
+        lightNode.position = SCNVector3Make(10, 6, 10)
         return lightNode
     }
     

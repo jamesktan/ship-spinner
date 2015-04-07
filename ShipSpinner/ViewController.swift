@@ -86,6 +86,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         l_role.text = shipInfo.2
         tv_description.text = shipInfo.3
         
+        
         // Model
         if frame.presenter!.isFileDownloaded() {
             
