@@ -1,0 +1,4 @@
+README
+
+cd /Applications/Xcode.app/Contents/Developer/usr/bin/
+./copySceneKitAssets /Users/jamestan/Downloads/kush_interceptor.scnassets -o /Users/jamestan/Documents/kush_interceptor_o.scnassets
