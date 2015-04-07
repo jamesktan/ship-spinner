@@ -49,6 +49,8 @@ class Presenter: NSObject {
         var sceneIdentifier : String = "Kus_CloakedFighter1"
         var b : NSArray = sceneSource.identifiersOfEntriesWithClass(SCNNode.self)!
         var sceneNode : SCNNode = sceneSource.entryWithIdentifier(sceneIdentifier, withClass: SCNNode.self) as SCNNode
+        sceneNode.position = SCNVector3Make(0, 0, 0)
+        
         return sceneNode
     }
     
@@ -106,6 +108,22 @@ class Presenter: NSObject {
         spin.duration = 20
         spin.repeatCount = .infinity
         return spin
+    }
+    
+    func createLightNode() -> SCNNode {
+        var lightNode : SCNNode = SCNNode()
+        lightNode.light = SCNLight()
+        lightNode.light?.type = SCNLightTypeOmni
+        lightNode.position = SCNVector3Make(0, 6, 10)
+        return lightNode
+    }
+    
+    func createAmbientLightNode() -> SCNNode {
+        var ambientNode : SCNNode = SCNNode()
+        ambientNode.light = SCNLight()
+        ambientNode.light?.type = SCNLightTypeAmbient
+        ambientNode.light?.color = UIColor.grayColor()
+        return ambientNode
     }
     
 }

@@ -89,23 +89,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Model
         if frame.presenter!.isFileDownloaded() {
             
-            
             var scene = SCNScene()
-            
-            var lightNode : SCNNode = SCNNode()
-            lightNode.light = SCNLight()
-            lightNode.light?.type = SCNLightTypeOmni
-            lightNode.position = SCNVector3Make(0, 6, 10)
-            scene.rootNode.addChildNode(lightNode)
-            
-            var ambientNode : SCNNode = SCNNode()
-            ambientNode.light = SCNLight()
-            ambientNode.light?.type = SCNLightTypeAmbient
-            ambientNode.light?.color = UIColor.grayColor()
-            scene.rootNode.addChildNode(ambientNode)
-            
+            scene.rootNode.addChildNode(frame.presenter!.createLightNode())
+            scene.rootNode.addChildNode(frame.presenter!.createAmbientLightNode())
             var sceneNode = frame.presenter!.getShipNode(id) as SCNNode
-            sceneNode.position = SCNVector3Make(0, 0, 0)
             scene.rootNode.addChildNode(sceneNode)
             myscene.scene = scene
 
