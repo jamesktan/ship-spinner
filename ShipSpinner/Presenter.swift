@@ -124,7 +124,7 @@ class Presenter: NSObject {
         var lightNode : SCNNode = SCNNode()
         lightNode.light = SCNLight()
         lightNode.light?.type = SCNLightTypeOmni
-        lightNode.position = SCNVector3Make(0, 6, 10)
+        lightNode.position = SCNVector3Make(10, 0, -20)
         return lightNode
     }
     
@@ -132,7 +132,7 @@ class Presenter: NSObject {
         var ambientNode : SCNNode = SCNNode()
         ambientNode.light = SCNLight()
         ambientNode.light?.type = SCNLightTypeAmbient
-        ambientNode.light?.color = UIColor.grayColor()
+        ambientNode.light?.color = UIColor.darkGrayColor()
         return ambientNode
     }
     

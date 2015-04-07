@@ -33,7 +33,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var shipID = "" //preload
     var rotate = false //preload
     var views : NSArray? = nil //preload
-
     
     // Labels
     @IBOutlet weak var l_name: UILabel!
