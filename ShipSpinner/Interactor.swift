@@ -40,6 +40,14 @@ class Interactor: NSObject {
         return dm!.findShip(id_ship)
     }
     
+    func getShipDDProperties(id_ship: NSString)->(NSURL, String) {
+        var ddURL = NSFileManager.defaultManager().URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: false, error: nil)
+        var a = ddURL!.URLByAppendingPathComponent("/Downloads/kush_cloakedfighter.scnassets/kush_cloakedfighter.dae")
+        var sceneIdentifier : String = "Kus_CloakedFighter1"
+        //var b : NSArray = sceneSource.identifiersOfEntriesWithClass(SCNNode.self)!
+        return (a, sceneIdentifier)
+    }
+    
     func idForLastWallpaper() -> NSString  {
         var bgList: NSArray = dm!.getDefault("currentWall") as NSArray
         return bgList.objectAtIndex(0) as NSString

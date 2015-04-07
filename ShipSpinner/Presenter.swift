@@ -36,19 +36,10 @@ class Presenter: NSObject {
         return ("NAME: " + ship.shipName!, "CLASS: " + ship.shipClass!, "ROLE: "+ship.shipRole!, ship.shipDescription!, ship.shipAssetPath!)
     }
     func getShipNode(name_ship:NSString) -> SCNNode {
-//        NSURL *documentsDirectoryURL = [[NSFileManager defaultManager] URLForDirectory:NSDocumentDirectory inDomain:NSUserDomainMask appropriateForURL:nil create:NO error:nil];
-//        documentsDirectoryURL = [documentsDirectoryURL URLByAppendingPathComponent:@"product-1-optimized.scnassets/cube.dae"];
-//
-        var ddURL = NSFileManager.defaultManager().URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: false, error: nil)
-        var a = ddURL!.URLByAppendingPathComponent("/Downloads/kush_cloakedfighter.scnassets/kush_cloakedfighter.dae")
         
-        var ship = interactor!.getShip(name_ship)
-        var shipasst = ship.shipAssetPath as String
-        var url = NSURL(string: shipasst)
-        var sceneSource : SCNSceneSource = SCNSceneSource(URL: a , options: nil)!
-        var sceneIdentifier : String = "Kus_CloakedFighter1"
-        var b : NSArray = sceneSource.identifiersOfEntriesWithClass(SCNNode.self)!
-        var sceneNode : SCNNode = sceneSource.entryWithIdentifier(sceneIdentifier, withClass: SCNNode.self) as SCNNode
+        var props = interactor!.getShipDDProperties(name_ship)
+        var sceneSource : SCNSceneSource = SCNSceneSource(URL: props.0 , options: nil)!
+        var sceneNode : SCNNode = sceneSource.entryWithIdentifier(props.1, withClass: SCNNode.self) as SCNNode
         sceneNode.position = SCNVector3Make(0, 0, 0)
         
         return sceneNode
