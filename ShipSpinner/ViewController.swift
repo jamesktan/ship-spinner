@@ -70,6 +70,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         loadWallpaper(wallpaperID)
         loadShipData(shipID)
+        wallpaper.addMotionEffect(frame.presenter!.createParallax())
                 
     }
     

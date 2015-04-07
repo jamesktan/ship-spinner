@@ -91,7 +91,26 @@ class Presenter: NSObject {
     
     
     // Create
-    
+    func createParallax()-> UIMotionEffectGroup {
+        // Set vertical effect
+        let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y",
+            type: .TiltAlongVerticalAxis)
+        verticalMotionEffect.minimumRelativeValue = -30
+        verticalMotionEffect.maximumRelativeValue = 30
+        
+        // Set horizontal effect
+        let horizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x",
+            type: .TiltAlongHorizontalAxis)
+        horizontalMotionEffect.minimumRelativeValue = -30
+        horizontalMotionEffect.maximumRelativeValue = 30
+        
+        // Create group to combine both
+        let group = UIMotionEffectGroup()
+        group.motionEffects = [horizontalMotionEffect, verticalMotionEffect]
+        
+        // Add both effects to your view
+        return group
+    }
     func createSpin() -> CABasicAnimation {
         let spin = CABasicAnimation(keyPath: "rotation")
         spin.fromValue = NSValue(SCNVector4: SCNVector4(x: 0, y: 1, z: 0, w: 0))
