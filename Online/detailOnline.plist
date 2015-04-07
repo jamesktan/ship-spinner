@@ -8,6 +8,7 @@
 		<string>Fighter</string>
 		<string>Anti-String Craft</string>
 		<string>Description!</string>
+		<string>Kus_CloakedFighter1</string>
 	</array>
 	<key>kush_cloakedfighter.dae</key>
 	<array>
@@ -19,6 +20,7 @@
 		It was also rumored that the cloaking field and constant exposure to it has a destabilizing effect upon pilots. It was known that many of these pilots are somewhat eccentric and several of them, who have lost loved ones in battle, call themselves &quot;the Invisibles&quot; and see themselves as spirits of vengeance, going so far as to unnecessarily track enemy ships down or destroy vessels that have already surrendered.
 
 		Some Invisibles even believe that the cloaking field lets them see into the dark spaces between stars and there are yet unproven rumors of dark rituals in unused launch bays. Despite all this controversy and the bad name that flows around the Spectre, it is ultimately an extremely useful craft and remains one of the most important parts of the Kushan fleet.</string>
+		<string>Kus_CloakedFighter1</string>
 	</array>
 </dict>
 </plist>

@@ -15,6 +15,7 @@ class ShipEntity: NSObject {
     var shipRole : NSString? = ""
     var shipDescription : NSString? = ""
     var shipAssetPath : NSString? = ""
+    var shipEntryNode : NSString? = ""
     
     func loadShipFromFile(d : (NSDictionary, NSDictionary), id_ship : NSString) {
         var assetDictionary = d.0 as NSDictionary
@@ -32,8 +33,8 @@ class ShipEntity: NSObject {
         shipClass = shipArray.objectAtIndex(1) as? NSString
         shipRole = shipArray.objectAtIndex(2) as? NSString
         shipDescription = shipArray.objectAtIndex(3) as? NSString
+        shipEntryNode = shipArray.objectAtIndex(4) as? NSString
     }
-    
     
     func deconstruct() {
         shipName = nil

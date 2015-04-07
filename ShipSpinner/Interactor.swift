@@ -41,8 +41,14 @@ class Interactor: NSObject {
     }
     
     func getShipDDProperties(id_ship: NSString)->(NSURL, String) {
+        var properties = getShip(id_ship)
+        var componentsArr : NSArray = properties.shipAssetPath!.pathComponents as NSArray
+        var range = NSRange(location: componentsArr.count-3, length: 3)
+        var subArr : NSArray = componentsArr.subarrayWithRange(range)
+        var url = subArr.componentsJoinedByString("/")
+        
         var ddURL = NSFileManager.defaultManager().URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: false, error: nil)
-        var a = ddURL!.URLByAppendingPathComponent("/Downloads/kush_cloakedfighter.scnassets/kush_cloakedfighter.dae")
+        var a = ddURL!.URLByAppendingPathComponent(url)
         var sceneIdentifier : String = "Kus_CloakedFighter1"
         //var b : NSArray = sceneSource.identifiersOfEntriesWithClass(SCNNode.self)!
         return (a, sceneIdentifier)
