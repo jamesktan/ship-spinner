@@ -116,7 +116,7 @@ class Presenter: NSObject {
         let spin = CABasicAnimation(keyPath: "rotation")
         spin.fromValue = NSValue(SCNVector4: SCNVector4(x: 0, y: 1, z: 0, w: 0))
         spin.toValue = NSValue(SCNVector4: SCNVector4(x: 0, y: 1, z: 0, w: Float(2 * M_PI)))
-        spin.duration = 20
+        spin.duration = 30
         spin.repeatCount = .infinity
         return spin
     }
