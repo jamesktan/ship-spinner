@@ -121,6 +121,16 @@ class Presenter: NSObject {
         return spin
     }
     
+    func createSpinRev() -> CABasicAnimation {
+        let spin = CABasicAnimation(keyPath: "rotation")
+        spin.fromValue = NSValue(SCNVector4: SCNVector4(x: 0, y: -1, z: 0, w: 0))
+        spin.toValue = NSValue(SCNVector4: SCNVector4(x: 0, y: -1, z: 0, w: -Float(2 * M_PI)))
+        spin.duration = 30
+        spin.repeatCount = .infinity
+        return spin
+    }
+
+    
     func createLightNode() -> SCNNode {
         var lightNode : SCNNode = SCNNode()
         lightNode.light = SCNLight()
@@ -136,5 +146,6 @@ class Presenter: NSObject {
         ambientNode.light?.color = UIColor.darkGrayColor()
         return ambientNode
     }
+
     
 }
