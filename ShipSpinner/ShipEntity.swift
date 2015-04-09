@@ -21,14 +21,14 @@ class ShipEntity: NSObject {
         var assetDictionary = d.0 as NSDictionary
         var detailsDictionary = d.1 as NSDictionary
         
-        Util.getDownloadPath().stringByAppendingPathComponent(assetDictionary.objectForKey(id_ship) as String)
+        Util.getDownloadPath().stringByAppendingPathComponent(assetDictionary.objectForKey(id_ship) as! String)
 
         shipAssetPath = (Util.downloadPathExists()) ?
-            Util.getDownloadPath().stringByAppendingPathComponent(assetDictionary.objectForKey(id_ship) as String)
+            Util.getDownloadPath().stringByAppendingPathComponent(assetDictionary.objectForKey(id_ship) as! String)
             :
             assetDictionary.objectForKey(id_ship) as? NSString
         
-        var shipArray = detailsDictionary.objectForKey(id_ship) as NSArray
+        var shipArray = detailsDictionary.objectForKey(id_ship) as! NSArray
         shipName = shipArray.objectAtIndex(0) as? NSString
         shipClass = shipArray.objectAtIndex(1) as? NSString
         shipRole = shipArray.objectAtIndex(2) as? NSString

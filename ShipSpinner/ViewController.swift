@@ -63,8 +63,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         views = [shipListView, shipDetailView, settingView]
         
         // Load View with Data
-        shipID = frame.presenter!.idForLastShip()
-        wallpaperID = frame.presenter!.idForLastWallpaper()
+        shipID = frame.presenter!.idForLastShip() as String
+        wallpaperID = frame.presenter!.idForLastWallpaper() as String
         rotate = frame.presenter!.shouldRotate()
         
         loadWallpaper(wallpaperID)
@@ -81,31 +81,36 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // Labels
         var shipInfo = frame.presenter!.getShip(id)
-        l_name.text = shipInfo.0
-        l_class.text = shipInfo.1
-        l_role.text = shipInfo.2
-        tv_description.text = shipInfo.3
+        l_name.text = shipInfo.0 as String
+        l_class.text = shipInfo.1 as String
+        l_role.text = shipInfo.2 as String
+        tv_description.text = shipInfo.3 as String
         
         
         // Model
         if frame.presenter!.isFileDownloaded() {
             
             var scene = SCNScene()
-            scene.rootNode.addChildNode(frame.presenter!.createLightNode())
-            scene.rootNode.addChildNode(frame.presenter!.createAmbientLightNode())
+            
+            var lightNode = frame.presenter!.createLightNode() as SCNNode
             var sceneNode = frame.presenter!.getShipNode(id) as SCNNode
+            var ambientNode = frame.presenter!.createAmbientLightNode()
+
+            scene.rootNode.addChildNode(lightNode)
+            scene.rootNode.addChildNode(ambientNode)
             scene.rootNode.addChildNode(sceneNode)
+            
             myscene.scene = scene
 
         } else {
-            myscene.scene = SCNScene(named: shipInfo.4)
+            myscene.scene = SCNScene(named: shipInfo.4 as String)
         }
         myscene.backgroundColor = UIColor.clearColor()
 
         // Spin
         buttonRotate.selected = rotate
         (rotate) ?
-            myscene.scene?.rootNode.addAnimation(frame.presenter!.createSpin(), forKey: spinKey) :
+            myscene.scene?.rootNode.childNodes.first!.addAnimation(frame.presenter!.createSpin(), forKey: spinKey) :
             myscene.scene?.rootNode.removeAnimationForKey(spinKey)
         
     }
@@ -120,8 +125,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var details = frame.presenter!.getListDisplayDetails(indexPath)
-        var cell : UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: details.0)
-        cell.textLabel?.text = details.1 //friendlyName
+        var cell : UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: details.0 as String)
+        cell.textLabel?.text = details.1 as String //friendlyName
         cell.backgroundColor = UIColor.clearColor()
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.textLabel!.font = UIFont(name: "Helvetica-Bold", size: 13.0)
@@ -148,7 +153,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // Custom Methods - Hide / Show Windows
     
     @IBAction func showView(sender:UIButton) {
-        var view : UIView = views!.objectAtIndex(sender.tag) as UIView
+        var view : UIView = views!.objectAtIndex(sender.tag) as! UIView
         var alpha : CGFloat = sender.selected ? 0.0 : 1.0
         handleAnimation(view, moveToPoint: view.frame.origin, alpha: alpha)
         sender.selected = !(sender.selected)
@@ -164,7 +169,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // Custom Methods - Changing Properties
     
     @IBAction func changeWallpaper() {
-        wallpaperID = frame.presenter!.getNextBackground(wallpaperID)
+        wallpaperID = frame.presenter!.getNextBackground(wallpaperID) as String
         frame.presenter!.setWallpaper(wallpaperID, contentMode: wallpaper.contentMode)
         loadWallpaper(wallpaperID)
     }

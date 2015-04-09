@@ -33,13 +33,13 @@ class Presenter: NSObject {
     
     func getShip(name_ship : NSString) -> (NSString, NSString, NSString, NSString, NSString) {
         var ship = interactor!.getShip(name_ship)
-        return ("NAME: " + ship.shipName!, "CLASS: " + ship.shipClass!, "ROLE: "+ship.shipRole!, ship.shipDescription!, ship.shipAssetPath!)
+        return ("NAME: " + (ship.shipName! as String), "CLASS: " + (ship.shipClass! as String), "ROLE: "+(ship.shipRole! as String), ship.shipDescription!, ship.shipAssetPath!)
     }
     func getShipNode(name_ship:NSString) -> SCNNode {
         
         var props = interactor!.getShipDDProperties(name_ship)
         var sceneSource : SCNSceneSource = SCNSceneSource(URL: props.0 , options: nil)!
-        var sceneNode : SCNNode = sceneSource.entryWithIdentifier(props.1, withClass: SCNNode.self) as SCNNode
+        var sceneNode : SCNNode = sceneSource.entryWithIdentifier(props.1, withClass: SCNNode.self) as! SCNNode
         sceneNode.position = SCNVector3Make(0, 0, 0)
         sceneNode.rotation = SCNVector4Make(1, 0, 0, Float(M_PI/2))
         
@@ -58,8 +58,8 @@ class Presenter: NSObject {
     func getListDisplayDetails(indexpath : NSIndexPath) -> (NSString, NSString, UIImage)  {
         var list : NSArray = getShipListNice()
         var ids : NSArray = interactor!.getShipList()
-        var id = ids.objectAtIndex(indexpath.row) as NSString
-        var name = list.objectAtIndex(indexpath.row) as NSString
+        var id = ids.objectAtIndex(indexpath.row) as! NSString
+        var name = list.objectAtIndex(indexpath.row) as! NSString
         return (id,name,UIImage())
     }
     

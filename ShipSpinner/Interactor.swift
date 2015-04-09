@@ -29,7 +29,7 @@ class Interactor: NSObject {
         var niceList : NSMutableArray = []
         var shipList = dm!.findShipList()
         for ship in shipList {
-            var shipEntity = getShip(ship as NSString)
+            var shipEntity = getShip(ship as! NSString)
             var niceName = shipEntity.shipName
             niceList.addObject(niceName!)
         }
@@ -49,21 +49,21 @@ class Interactor: NSObject {
         
         var ddURL = NSFileManager.defaultManager().URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: false, error: nil)
         var a = ddURL!.URLByAppendingPathComponent(url)
-        var sceneIdentifier : String = properties.shipEntryNode!
+        var sceneIdentifier : String = properties.shipEntryNode! as String
         //var b : NSArray = sceneSource.identifiersOfEntriesWithClass(SCNNode.self)!
         return (a, sceneIdentifier)
     }
     
     func idForLastWallpaper() -> NSString  {
-        var bgList: NSArray = dm!.getDefault("currentWall") as NSArray
-        return bgList.objectAtIndex(0) as NSString
+        var bgList: NSArray = dm!.getDefault("currentWall") as! NSArray
+        return bgList.objectAtIndex(0) as! NSString
     }
     
     func getWallpaper(id : NSString) -> (UIImage, UIViewContentMode) {
-        var bgList: NSArray = dm!.getDefault("currentWall") as NSArray
-        NSLog("%@", bgList.objectAtIndex(0) as NSString)
-        NSLog("%@", bgList.objectAtIndex(1) as NSString)
-        var image : UIImage = UIImage(named: bgList.objectAtIndex(0) as NSString)!
+        var bgList: NSArray = dm!.getDefault("currentWall") as! NSArray
+        NSLog("%@", bgList.objectAtIndex(0) as! NSString)
+        NSLog("%@", bgList.objectAtIndex(1) as! NSString)
+        var image : UIImage = UIImage(named: bgList.objectAtIndex(0) as! NSString as String)!
         
         var contentMode : UIViewContentMode? = nil
         contentMode = bgList.objectAtIndex(1).isEqualToString("center") ? UIViewContentMode.Center : UIViewContentMode.Right
@@ -75,15 +75,15 @@ class Interactor: NSObject {
         var wallpapers = dm!.getWallPaperList()
         var index = wallpapers.indexOfObject(id)
         var nextIndex = (index + 1 == wallpapers.count) ? 0 : index + 1
-        return wallpapers.objectAtIndex(nextIndex) as NSString
+        return wallpapers.objectAtIndex(nextIndex) as! NSString
     }
     
     func idForLastShip() -> NSString {
-        return dm!.getDefault("currentShip") as NSString
+        return dm!.getDefault("currentShip") as! NSString
     }
     
     func shouldRotate() -> NSNumber {
-        return dm!.getDefault("shouldRotate") as NSNumber
+        return dm!.getDefault("shouldRotate") as! NSNumber
     }
         
     // SET

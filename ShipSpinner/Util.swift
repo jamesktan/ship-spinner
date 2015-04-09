@@ -7,32 +7,32 @@
 //
 
 import UIKit
-import Alamofire
+//import Alamofire
 
 class Util: NSObject {
     class func getDownloadPath() -> NSString {
-        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as NSString
+        let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! NSString
         let pathDownloads = paths.stringByAppendingPathComponent("Downloads") as NSString
         return pathDownloads
     }
     class func downloadPathExists() -> Bool {
         var path = Util.getDownloadPath() //Documents/Download/
-        return NSFileManager.defaultManager().fileExistsAtPath(path)
+        return NSFileManager.defaultManager().fileExistsAtPath(path as String)
     }
     
     class func getPath( fileName: NSString) -> NSString {
-        return NSBundle.mainBundle().pathForResource(fileName, ofType: "plist")!
+        return NSBundle.mainBundle().pathForResource(fileName as String, ofType: "plist")!
     }
     class func getPathJPG(fileName: NSString)->NSString {
-        return NSBundle.mainBundle().pathForResource(fileName, ofType: "jpg")!
+        return NSBundle.mainBundle().pathForResource(fileName as String, ofType: "jpg")!
     }
     
     class func loadOrCreatePath()-> NSString {
         // Get or Create the Path
         var path = Util.getDownloadPath() //Documents/Download/
-        var exists = NSFileManager.defaultManager().fileExistsAtPath(path)
+        var exists = NSFileManager.defaultManager().fileExistsAtPath(path as String)
         if !exists {
-            NSFileManager.defaultManager().createDirectoryAtPath(path, withIntermediateDirectories: true, attributes: nil, error: nil)
+            NSFileManager.defaultManager().createDirectoryAtPath(path as String, withIntermediateDirectories: true, attributes: nil, error: nil)
         }
         NSLog("path at: %@", path)
         return path as NSString
@@ -57,7 +57,7 @@ class Util: NSObject {
         NSLog("downloadURL: %@", url)
         
         // Use Alamo Fire to Download the .ZIP files (which can be large)
-        var urlObj : NSURL = NSURL(string: url)!
+        var urlObj : NSURL = NSURL(string: url as String)!
         
         var path = Util.loadOrCreatePath()
         
@@ -87,8 +87,8 @@ class Util: NSObject {
         NSLog("extract path: %@", path)
         
         // Unzip the file
-        SSZipArchive.unzipFileAtPath(filePath, toDestination: path)
-        NSFileManager.defaultManager().removeItemAtPath(filePath, error: nil)
+        SSZipArchive.unzipFileAtPath(filePath as String, toDestination: path as String)
+        NSFileManager.defaultManager().removeItemAtPath(filePath as String, error: nil)
         NSLog("deleted the .zip file at %@", filePath)
         
         
