@@ -57,14 +57,14 @@ class DataManager: NSObject {
     }
     
     func getLightPosition(bgName:NSString) -> NSArray {
-        var list = getDefault("wallList") as! NSDictionary
+        var list = defaultDictionary.objectForKey("wallList") as! NSDictionary
         var object = list.objectForKey(bgName) as! NSArray
         var values = Util.splitByComma(object.lastObject as! NSString)
         return values
     }
     
     func getAmbientColor(bgName:NSString) -> NSArray {
-        var list = getDefault("wallList") as! NSDictionary
+        var list = defaultDictionary.objectForKey("wallList") as! NSDictionary
         var object = list.objectForKey(bgName) as! NSArray
         return Util.splitByComma(object.firstObject as! NSString)
     }

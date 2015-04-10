@@ -44,6 +44,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tv_description: UITextView!
     
     
+    // Nodes
+    var lightNode : SCNNode? = nil
+    var ambientNode : SCNNode? = nil
+    
     class var shared : ViewController {
         struct Static {
             static let instance : ViewController = ViewController()
@@ -92,12 +96,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             var scene = SCNScene()
             
-            var lightNode = frame.presenter!.createLightNode(wallpaperID)
-            var ambientNode = frame.presenter!.createAmbientLightNode(wallpaperID)
+            lightNode = frame.presenter!.createLightNode(wallpaperID)
+            ambientNode = frame.presenter!.createAmbientLightNode(wallpaperID)
             var sceneNode = frame.presenter!.getShipNode(id)
-            
-            scene.rootNode.addChildNode(lightNode)
-            scene.rootNode.addChildNode(ambientNode)
+
+            scene.rootNode.addChildNode(lightNode!)
+            scene.rootNode.addChildNode(ambientNode!)
             scene.rootNode.addChildNode(sceneNode)
             
             myscene.scene = scene
@@ -116,6 +120,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func loadWallpaper(id : NSString) {
+        // adjust the
+        lightNode?.removeFromParentNode()
+        ambientNode?.removeFromParentNode()
+        lightNode = frame.presenter!.createLightNode(id)
+        ambientNode = frame.presenter!.createAmbientLightNode(id)
+        myscene.scene?.rootNode.addChildNode(lightNode!)
+        myscene.scene?.rootNode.addChildNode(ambientNode!)
+
+        // Set the wallpaper image and content mode
         var image : (UIImage, UIViewContentMode) = frame.presenter!.getWallpaper(id)
         self.wallpaper.image = image.0
         self.wallpaper.contentMode = image.1
