@@ -7,7 +7,7 @@
 		<string>Blade-class Interceptor</string>
 		<string>Fighter</string>
 		<string>Anti-Strike Craft</string>
-		<string>Armarments:
+		<string>ARMARMENTS:
 2 x Small Projectile Cannons
 
 The Blade Project's original goals were to merely design an upgraded and refitted version of the Scout in the form of a new, more powerful "Heavy Interceptor". As time went on and old models of the Blade were scrapped the Heavy Interceptor simply became the Interceptor and was eventually simplified to excel at its single task: fighter-to-fighter combat. Versions 1 and 2, which followed the example of the Arrow were eventually scrapped for not being sufficiently worth the extra expenses needed to build them.
@@ -32,7 +32,7 @@ The Mk. 5 employed a large twin rotary cannon inside the nose armor plates that 
 		<string>Kaark-class Attack Bomber</string>
 		<string>Fighter</string>
 		<string>Anti-Capital Ship</string>
-		<string>Armarments:
+		<string>ARMARMENTS:
 2 Plasma Bomb Launchers
 
 While less manueverable than most fighters, the Kaark makes up for it by converting its engines into weapons. The Kaark literally uses its fuel plasma as a weapon, directing it through two cannons at either side of it. To add to the damage the Kaark electromagnetically charges the plasma as it passes through the cannons and then projects them forward towards their target, usually a frigate or super capital ship but on occasion non-combat vessels or even crippled strike craft.
@@ -54,7 +54,7 @@ During the Homeworld War Kaarks were rarely used against other fighters and even
 		<string>Spectre-class Cloaked Fighter</string>
 		<string>Fighter</string>
 		<string>Anti-Strike Craft</string>
-		<string>Armarments: 
+		<string>ARMARMENTS: 
 3 Small Projectile Cannons
 Cloak Generator
 
