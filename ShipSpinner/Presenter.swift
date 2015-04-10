@@ -130,11 +130,14 @@ class Presenter: NSObject {
         return spin
     }
 
-    func createLightNode() -> SCNNode {
+    func createLightNode(bgName : NSString) -> SCNNode {
+        
+        var positionInfo = interactor!.getLightPositionForBackground(bgName)
         var lightNode : SCNNode = SCNNode()
         lightNode.light = SCNLight()
         lightNode.light?.type = SCNLightTypeOmni
-        lightNode.position = SCNVector3Make(10, 6, 10)
+        lightNode.position = SCNVector3Make(positionInfo.0, positionInfo.1, positionInfo.2)
+        
         return lightNode
     }
     

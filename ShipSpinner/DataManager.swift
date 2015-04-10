@@ -55,6 +55,11 @@ class DataManager: NSObject {
         return ["bg1.jpg", "bg2.jpg", "bg3.jpg", "bg4.jpg", "bg5.jpg", "bg6.jpg", "bg7.jpg"]
     }
     
+    func getLightPosition(bgName:NSString) -> NSArray {
+        var array = [0, 0, 10]
+        return array
+    }
+    
     func getDefault(key : NSString) -> AnyObject? {
         var defaults : NSUserDefaults = NSUserDefaults.standardUserDefaults()
         if defaults.objectForKey(key as String) == nil { //if - No Defaults Saved

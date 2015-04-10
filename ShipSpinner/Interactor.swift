@@ -71,6 +71,11 @@ class Interactor: NSObject {
         return (image, contentMode!)
     }
     
+    func getLightPositionForBackground(bgName:NSString) -> (Float, Float, Float) {
+        var bgCoord = dm!.getLightPosition(bgName) as NSArray
+        return (bgCoord.firstObject as! Float, bgCoord.objectAtIndex(1) as! Float, bgCoord.lastObject as! Float)
+    }
+    
     func getNextWallpaper(id: NSString)->NSString {
         var wallpapers = dm!.getWallPaperList()
         var index = wallpapers.indexOfObject(id)
