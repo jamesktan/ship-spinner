@@ -96,8 +96,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             var sceneNode = frame.presenter!.getShipNode(id) as SCNNode
             var ambientNode = frame.presenter!.createAmbientLightNode()
             
-            sceneNode.addAnimation(frame.presenter!.createSpin(), forKey: spinKey)
-            
             scene.rootNode.addChildNode(lightNode)
             scene.rootNode.addChildNode(ambientNode)
             scene.rootNode.addChildNode(sceneNode)
@@ -109,11 +107,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         myscene.backgroundColor = UIColor.clearColor()
 
-//        // Spin
-//        buttonRotate.selected = rotate
-//        (rotate) ?
-//            myscene.scene?.rootNode.addAnimation(frame.presenter!.createSpin(), forKey: spinKey) :
-//            myscene.scene?.rootNode.removeAnimationForKey(spinKey)
+        // Spin
+        buttonRotate.selected = rotate
+        (rotate) ?
+            myscene.scene?.rootNode.addAnimation(frame.presenter!.createSpin(), forKey: spinKey) :
+            myscene.scene?.rootNode.removeAnimationForKey(spinKey)
         
     }
     
