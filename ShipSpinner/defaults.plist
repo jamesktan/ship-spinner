@@ -13,5 +13,43 @@
 		<string>bg1.jpg</string>
 		<string>center</string>
 	</array>
+	<key>wallList</key>
+	<dict>
+		<key>bg1.jpg</key>
+		<array>
+			<string>0.2,0.2,0.2,1.0</string>
+			<string>10,6,10</string>
+		</array>
+		<key>bg2.jpg</key>
+		<array>
+			<string>0.2,0.2,0.2,1.0</string>
+			<string>10,6,10</string>
+		</array>
+		<key>bg3.jpg</key>
+		<array>
+			<string>0.2,0.2,0.2,1.0</string>
+			<string>10,6,10</string>
+		</array>
+		<key>bg4.jpg</key>
+		<array>
+			<string>0.2,0.2,0.2,1.0</string>
+			<string>10,6,10</string>
+		</array>
+		<key>bg5.jpg</key>
+		<array>
+			<string>0.2,0.2,0.2,1.0</string>
+			<string>10,6,10</string>
+		</array>
+		<key>bg6.jpg</key>
+		<array>
+			<string>0.2,0.2,0.2,1.0</string>
+			<string>10,6,10</string>
+		</array>
+		<key>bg7.jpg</key>
+		<array>
+			<string>0.2,0.2,0.2,1.0</string>
+			<string>10,6,10</string>
+		</array>
+	</dict>
 </dict>
 </plist>

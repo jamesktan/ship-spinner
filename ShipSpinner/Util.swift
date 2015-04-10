@@ -10,6 +10,13 @@ import UIKit
 //import Alamofire
 
 class Util: NSObject {
+    
+    class func splitByComma(s : NSString) -> NSArray {
+        var values = s.componentsSeparatedByString(",")
+        var valuesNum = values.map({($0).floatValue})
+        return valuesNum
+    }
+    
     class func getDownloadPath() -> NSString {
         let paths = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0] as! NSString
         let pathDownloads = paths.stringByAppendingPathComponent("Downloads") as NSString

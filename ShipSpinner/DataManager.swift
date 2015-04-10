@@ -52,17 +52,21 @@ class DataManager: NSObject {
     }
     
     func getWallPaperList() -> NSArray {
-        return ["bg1.jpg", "bg2.jpg", "bg3.jpg", "bg4.jpg", "bg5.jpg", "bg6.jpg", "bg7.jpg"]
+        var list : NSDictionary = getDefault("wallList") as! NSDictionary
+        return list.allKeys
     }
     
     func getLightPosition(bgName:NSString) -> NSArray {
-        var array = [10, 6, 10]
-        return array
+        var list = getDefault("wallList") as! NSDictionary
+        var object = list.objectForKey(bgName) as! NSArray
+        var values = Util.splitByComma(object.lastObject as! NSString)
+        return values
     }
     
     func getAmbientColor(bgName:NSString) -> NSArray {
-        var array = [0.2, 0.2, 0.2, 1.0]
-        return array
+        var list = getDefault("wallList") as! NSDictionary
+        var object = list.objectForKey(bgName) as! NSArray
+        return Util.splitByComma(object.firstObject as! NSString)
     }
     
     func getDefault(key : NSString) -> AnyObject? {
@@ -106,7 +110,6 @@ class DataManager: NSObject {
             var index = downloadLinks.indexOfObject(link)
             var key : NSString = fileLinks.objectAtIndex(index) as! NSString
             var newValue = newPath.lastPathComponent.stringByAppendingPathComponent(key as String) // compose path to the dae file
-//            var newValue = newPath.stringByAppendingPathComponent(key)
             NSLog("new path var: %@", newValue)
 
             // Set the AssetDictionary
