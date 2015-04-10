@@ -130,7 +130,6 @@ class Presenter: NSObject {
         return spin
     }
 
-    
     func createLightNode() -> SCNNode {
         var lightNode : SCNNode = SCNNode()
         lightNode.light = SCNLight()
