@@ -208,8 +208,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     @IBAction func about(sender: UIButton) {
-        var view : UIAlertView = UIAlertView(title: "Nabaal Shipyards", message: "I don't own any content! Everything here belongs to GearBox", delegate: nil, cancelButtonTitle: "OK")
-        view.show()
+        frame.presenter!.createAboutAlert().show()
     }
 
     override func prefersStatusBarHidden() -> Bool {

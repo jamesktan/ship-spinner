@@ -158,5 +158,11 @@ class Presenter: NSObject {
         return ambientNode
     }
 
+    func createAboutAlert() -> UIAlertView {
+        var view : UIAlertView = UIAlertView(title: "Nabaal Shipyards",
+            message: "Created as fan-service to display and highlight the beautiful detail of Homeworld Remastered \n\n All models, assets, and lore belong to their respective owners (GearBox, Relic, Homeworld Shipyards and Encyclopedia Hiigara).  \n\nThe makers of Nabaal Shipards do not own any of the Homeworld assets, details, or descriptions.",
+            delegate: nil, cancelButtonTitle: "CLOSE")
+        return view
+    }
     
 }
