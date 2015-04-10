@@ -7,7 +7,10 @@
 		<string>Blade-class Interceptor</string>
 		<string>Fighter</string>
 		<string>Anti-Strike Craft</string>
-		<string>The Blade Project's original goals were to merely design an upgraded and refitted version of the Scout in the form of a new, more powerful "Heavy Interceptor". As time went on and old models of the Blade were scrapped the Heavy Interceptor simply became the Interceptor and was eventually simplified to excel at its single task: fighter-to-fighter combat. Versions 1 and 2, which followed the example of the Arrow were eventually scrapped for not being sufficiently worth the extra expenses needed to build them.
+		<string>Armarments:
+2 x Small Projectile Cannons
+
+The Blade Project's original goals were to merely design an upgraded and refitted version of the Scout in the form of a new, more powerful "Heavy Interceptor". As time went on and old models of the Blade were scrapped the Heavy Interceptor simply became the Interceptor and was eventually simplified to excel at its single task: fighter-to-fighter combat. Versions 1 and 2, which followed the example of the Arrow were eventually scrapped for not being sufficiently worth the extra expenses needed to build them.
 
 Marks 3 and 4 on the other hand were further upgraded so that they could also endure atmospheric flight and travel at speeds greater even than the Arrow. However, all these systems combined together to build up heating in the plasma vents which hence gave the pilots of these test flights the nickname "Bomb Jockey" as their prototype designs would often explode in flight.
 
@@ -17,6 +20,10 @@ The Mk. 5 employed a large twin rotary cannon inside the nose armor plates that 
 
 </string>
 		<string>Kus_Interceptor1</string>
+		<string>24.0 metres</string>
+		<string>60 tons</string>
+		<string>875 m/s</string>
+
 	</array>
 
 
@@ -25,12 +32,19 @@ The Mk. 5 employed a large twin rotary cannon inside the nose armor plates that 
 		<string>Kaark-class Attack Bomber</string>
 		<string>Fighter</string>
 		<string>Anti-Capital Ship</string>
-		<string>While less manueverable than most fighters, the Kaark makes up for it by converting its engines into weapons. The Kaark literally uses its fuel plasma as a weapon, directing it through two cannons at either side of it. To add to the damage the Kaark electromagnetically charges the plasma as it passes through the cannons and then projects them forward towards their target, usually a frigate or super capital ship but on occasion non-combat vessels or even crippled strike craft.
+		<string>Armarments:
+2 Plasma Bomb Launchers
+
+While less manueverable than most fighters, the Kaark makes up for it by converting its engines into weapons. The Kaark literally uses its fuel plasma as a weapon, directing it through two cannons at either side of it. To add to the damage the Kaark electromagnetically charges the plasma as it passes through the cannons and then projects them forward towards their target, usually a frigate or super capital ship but on occasion non-combat vessels or even crippled strike craft.
 
 During the Homeworld War Kaarks were rarely used against other fighters and even against corvettes because not only were they slow moving but the plasma was very slow compared to other devices of weaponry, even missiles. For this reason Kaarks would usually be dispatched to fight capital ships of various sizes or raid resourcer convoys. In case the Kaarks did end up in trouble though they were likely to resort to using electric countermeasure systems, manned by the rear-seat engineer.
 
 </string>
 		<string>Tai_AttackBomber1</string>
+		<string>24.7 metres</string>
+		<string>90 tons</string>
+		<string>750 m/s</string>
+
 	</array>
 
 
@@ -40,12 +54,20 @@ During the Homeworld War Kaarks were rarely used against other fighters and even
 		<string>Spectre-class Cloaked Fighter</string>
 		<string>Fighter</string>
 		<string>Anti-Strike Craft</string>
-		<string>Using light-curving energy fields the cloaking device literally &quot;flips&quot; the image of the background scenery to fold onto the ship&apos;s hull, producing a sort of inside-out image. What light would normally hit the ship instead shoots out from the opposite side, giving the illusion, with only the faintest distortion in sharpness, that the fighter is not really there. Unfortunately the pilot must drop the cloaking field to fire as the field is not strong enough to wrap the same illusion around the fast-moving fire and during this point he is particularly vulnerable.
+		<string>Armarments: 
+3 Small Projectile Cannons
+Cloak Generator
 
-	It was also rumored that the cloaking field and constant exposure to it has a destabilizing effect upon pilots. It was known that many of these pilots are somewhat eccentric and several of them, who have lost loved ones in battle, call themselves &quot;the Invisibles&quot; and see themselves as spirits of vengeance, going so far as to unnecessarily track enemy ships down or destroy vessels that have already surrendered.
+Using light-curving energy fields the cloaking device literally &quot;flips&quot; the image of the background scenery to fold onto the ship&apos;s hull, producing a sort of inside-out image. What light would normally hit the ship instead shoots out from the opposite side, giving the illusion, with only the faintest distortion in sharpness, that the fighter is not really there. Unfortunately the pilot must drop the cloaking field to fire as the field is not strong enough to wrap the same illusion around the fast-moving fire and during this point he is particularly vulnerable.
 
-	Some Invisibles even believe that the cloaking field lets them see into the dark spaces between stars and there are yet unproven rumors of dark rituals in unused launch bays. Despite all this controversy and the bad name that flows around the Spectre, it is ultimately an extremely useful craft and remains one of the most important parts of the Kushan fleet.</string>
+It was also rumored that the cloaking field and constant exposure to it has a destabilizing effect upon pilots. It was known that many of these pilots are somewhat eccentric and several of them, who have lost loved ones in battle, call themselves &quot;the Invisibles&quot; and see themselves as spirits of vengeance, going so far as to unnecessarily track enemy ships down or destroy vessels that have already surrendered.
+
+Some Invisibles even believe that the cloaking field lets them see into the dark spaces between stars and there are yet unproven rumors of dark rituals in unused launch bays. Despite all this controversy and the bad name that flows around the Spectre, it is ultimately an extremely useful craft and remains one of the most important parts of the Kushan fleet.</string>
 		<string>Kus_CloakedFighter1</string>
+		<string>15.4 metres</string>
+		<string>40 tons</string>
+		<string>775 m/s</string>
+
 	</array>
 </dict>
 </plist>

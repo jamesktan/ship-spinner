@@ -31,9 +31,19 @@ class Presenter: NSObject {
     }
     
     
-    func getShip(name_ship : NSString) -> (NSString, NSString, NSString, NSString, NSString) {
+    func getShip(name_ship : NSString) -> (NSString, NSString, NSString, NSString, NSString, NSString, NSString, NSString) {
         var ship = interactor!.getShip(name_ship)
-        return ("NAME: " + (ship.shipName! as String), "CLASS: " + (ship.shipClass! as String), "ROLE: "+(ship.shipRole! as String), ship.shipDescription!, ship.shipAssetPath!)
+        
+        var nameLabel = "NAME: " + (ship.shipName! as String)
+        var classLabel = "CLASS: " + (ship.shipClass! as String)
+        var roleLabel = "ROLE: "+(ship.shipRole! as String)
+        var shipDescription = ship.shipDescription!
+        var shipAssetPath = ship.shipAssetPath!
+        var shipLength = "LENGTH: " + (ship.shipLength! as String)
+        var shipMass = "MASS: " + (ship.shipMass! as String)
+        var shipSpeed = "SPEED: " + (ship.shipSpeed! as String)
+        
+        return (nameLabel, classLabel, roleLabel, shipDescription, shipAssetPath, shipLength, shipMass , shipSpeed)
     }
     func getShipNode(name_ship:NSString) -> SCNNode {
         

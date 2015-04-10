@@ -88,20 +88,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         l_name.text = shipInfo.0 as String
         l_class.text = shipInfo.1 as String
         l_role.text = shipInfo.2 as String
+        l_length.text = shipInfo.5 as String
+        l_mass.text = shipInfo.6 as String
+        l_acc.text = shipInfo.7 as String
         tv_description.text = shipInfo.3 as String
-        
         
         // Model
         if frame.presenter!.isFileDownloaded() {
             
             var scene = SCNScene()
             
-            lightNode = frame.presenter!.createLightNode(wallpaperID)
-            ambientNode = frame.presenter!.createAmbientLightNode(wallpaperID)
             var sceneNode = frame.presenter!.getShipNode(id)
-
-            scene.rootNode.addChildNode(lightNode!)
-            scene.rootNode.addChildNode(ambientNode!)
             scene.rootNode.addChildNode(sceneNode)
             
             myscene.scene = scene
@@ -110,7 +107,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             myscene.scene = SCNScene(named: shipInfo.4 as String)
         }
         myscene.backgroundColor = UIColor.clearColor()
-
+        loadLight(wallpaperID) // Load the right Lide nodes
+        
         // Spin
         buttonRotate.selected = rotate
         (rotate) ?
@@ -120,6 +118,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func loadWallpaper(id : NSString) {
+        // Load the Light Nodes
+        loadLight(id)
+        
+        // Set the wallpaper image and content mode
+        var image : (UIImage, UIViewContentMode) = frame.presenter!.getWallpaper(id)
+        self.wallpaper.image = image.0
+        self.wallpaper.contentMode = image.1
+    }
+    
+    func loadLight(id:NSString) {
         // adjust the
         lightNode?.removeFromParentNode()
         ambientNode?.removeFromParentNode()
@@ -127,11 +135,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         ambientNode = frame.presenter!.createAmbientLightNode(id)
         myscene.scene?.rootNode.addChildNode(lightNode!)
         myscene.scene?.rootNode.addChildNode(ambientNode!)
-
-        // Set the wallpaper image and content mode
-        var image : (UIImage, UIViewContentMode) = frame.presenter!.getWallpaper(id)
-        self.wallpaper.image = image.0
-        self.wallpaper.contentMode = image.1
     }
     
     // TableViewDelegate Methods
