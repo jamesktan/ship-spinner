@@ -71,9 +71,18 @@ class Interactor: NSObject {
         return (image, contentMode!)
     }
     
-    func getLightPositionForBackground(bgName:NSString) -> (Float, Float, Float) {
+    func getLightPositionForBG(bgName:NSString) -> (Float, Float, Float) {
         var bgCoord = dm!.getLightPosition(bgName) as NSArray
         return (bgCoord.firstObject as! Float, bgCoord.objectAtIndex(1) as! Float, bgCoord.lastObject as! Float)
+    }
+    
+    func getAmbientInformationForBG(bgName: NSString) -> (CGFloat, CGFloat, CGFloat, CGFloat) {
+        var colorVals = dm!.getAmbientColor(bgName) as NSArray
+        var red = colorVals.objectAtIndex(0) as! NSNumber
+        var green = colorVals.objectAtIndex(0) as! NSNumber
+        var blue = colorVals.objectAtIndex(0) as! NSNumber
+        var alpha = colorVals.objectAtIndex(0) as! NSNumber
+        return (CGFloat(red.floatValue), CGFloat(green.floatValue), CGFloat(blue.floatValue), CGFloat(alpha.floatValue))        
     }
     
     func getNextWallpaper(id: NSString)->NSString {

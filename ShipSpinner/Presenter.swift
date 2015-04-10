@@ -131,21 +131,20 @@ class Presenter: NSObject {
     }
 
     func createLightNode(bgName : NSString) -> SCNNode {
-        
-        var positionInfo = interactor!.getLightPositionForBackground(bgName)
+        var positionInfo = interactor!.getLightPositionForBG(bgName)
         var lightNode : SCNNode = SCNNode()
         lightNode.light = SCNLight()
         lightNode.light?.type = SCNLightTypeOmni
         lightNode.position = SCNVector3Make(positionInfo.0, positionInfo.1, positionInfo.2)
-        
         return lightNode
     }
     
-    func createAmbientLightNode() -> SCNNode {
+    func createAmbientLightNode(bgName : NSString) -> SCNNode {
+        var ambientInformation = interactor!.getAmbientInformationForBG(bgName)
         var ambientNode : SCNNode = SCNNode()
         ambientNode.light = SCNLight()
         ambientNode.light?.type = SCNLightTypeAmbient
-        ambientNode.light?.color = UIColor.darkGrayColor()
+        ambientNode.light?.color = UIColor(red: ambientInformation.0, green: ambientInformation.1, blue: ambientInformation.2, alpha: ambientInformation.3)
         return ambientNode
     }
 

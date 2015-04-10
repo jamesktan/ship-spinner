@@ -56,7 +56,12 @@ class DataManager: NSObject {
     }
     
     func getLightPosition(bgName:NSString) -> NSArray {
-        var array = [0, 0, 10]
+        var array = [10, 6, 10]
+        return array
+    }
+    
+    func getAmbientColor(bgName:NSString) -> NSArray {
+        var array = [0.2, 0.2, 0.2, 1.0]
         return array
     }
     

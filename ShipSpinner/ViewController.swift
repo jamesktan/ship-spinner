@@ -92,9 +92,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             var scene = SCNScene()
             
-            var lightNode = frame.presenter!.createLightNode(wallpaperID) as SCNNode
-            var sceneNode = frame.presenter!.getShipNode(id) as SCNNode
-            var ambientNode = frame.presenter!.createAmbientLightNode()
+            var lightNode = frame.presenter!.createLightNode(wallpaperID)
+            var ambientNode = frame.presenter!.createAmbientLightNode(wallpaperID)
+            var sceneNode = frame.presenter!.getShipNode(id)
             
             scene.rootNode.addChildNode(lightNode)
             scene.rootNode.addChildNode(ambientNode)
