@@ -49,6 +49,7 @@ class Presenter: NSObject {
         
         var props = interactor!.getShipDDProperties(name_ship)
         var sceneSource : SCNSceneSource = SCNSceneSource(URL: props.0 , options: nil)!
+        sceneSource.identifiersOfEntriesWithClass(SCNNode.self)
         var sceneNode : SCNNode = sceneSource.entryWithIdentifier(props.1, withClass: SCNNode.self) as! SCNNode
         sceneNode.position = SCNVector3Make(0, 0, 0)
         sceneNode.rotation = SCNVector4Make(1, 0, 0, Float(M_PI/2))
