@@ -67,7 +67,16 @@ class Presenter: NSObject {
         
         return nodes
     }
-    
+    func getScene(name : NSString)->SCNScene {
+        var props = interactor!.getShipDDProperties(name)
+        var sceneSource : SCNSceneSource = SCNSceneSource(URL: props.0 , options: nil)!
+        var scene : SCNScene = SCNScene(URL: props.0, options: nil, error: nil)!
+        for node in scene.rootNode.childNodes {
+            var node : SCNNode = node as! SCNNode
+            node.rotation = SCNVector4Make(1, 0, 0, Float(M_PI/2))
+        }
+        return scene
+    }
     func getWallpaper(name_wallpaper : NSString) -> (UIImage, UIViewContentMode){
         return interactor!.getWallpaper(name_wallpaper)
     }
