@@ -10,7 +10,7 @@ import UIKit
 import SceneKit
 import SpriteKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, SCNSceneRendererDelegate {
     
     @IBOutlet weak var activity: UIActivityIndicatorView!
     
@@ -72,7 +72,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         shipID = frame.presenter!.idForLastShip() as String
         wallpaperID = frame.presenter!.idForLastWallpaper() as String
         rotate = frame.presenter!.shouldRotate()
-        
+        myscene.delegate = self
         loadWallpaper(wallpaperID)
         loadShipData(shipID)
         wallpaper.addMotionEffect(frame.presenter!.createParallax())
@@ -84,6 +84,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func loadShipData(id : NSString) {
+        hideMyScene()
+        
         // Labels
         var shipInfo = frame.presenter!.getShip(id)
         l_name.text = shipInfo.0 as String
@@ -115,6 +117,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             myscene.scene?.rootNode.addAnimation(frame.presenter!.createSpin(), forKey: spinKey) :
             myscene.scene?.rootNode.removeAnimationForKey(spinKey)
         
+    }
+    
+    func renderer(aRenderer: SCNSceneRenderer, didRenderScene scene: SCNScene, atTime time: NSTimeInterval) {
+        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("showMyScene"), userInfo: nil, repeats: false)
+        NSLog("Loaded!")
     }
     
     func loadWallpaper(id : NSString) {
@@ -161,7 +168,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.activity.startAnimating()
             }, completion:{ finished in
                 self.loadShipData(self.shipID) // Change the Ship Details
-                NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("showMyScene"), userInfo: nil, repeats: false)
             }
         )
         
@@ -178,7 +184,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     // Custom Methods - Hide / Show Windows
-    
+    func hideMyScene() {
+        UIView.animateWithDuration(1.0, animations: {
+            self.myscene.alpha = 0.0
+            self.activity.startAnimating()
+        })
+
+    }
     func showMyScene() {
         UIView.animateWithDuration(1.0, animations: {
             self.myscene.alpha = 1.0
