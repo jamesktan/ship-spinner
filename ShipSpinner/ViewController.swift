@@ -78,7 +78,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         wallpaper.addMotionEffect(frame.presenter!.createParallax())
                 
     }
-    
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -97,20 +97,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // Model
         if frame.presenter!.isFileDownloaded() {
-            self.activity.startAnimating()
             
             var scene = SCNScene()
-            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
-
-                var sceneNode : NSMutableArray = frame.presenter!.getShipNode(id)
-                for node in sceneNode {
-                    scene.rootNode.addChildNode(node as! SCNNode)
-                }
-                
-                dispatch_async(dispatch_get_main_queue(), {
-                    self.activity.stopAnimating()
-                })
-            })
+            var sceneNode : NSMutableArray = frame.presenter!.getShipNode(id)
+            for node in sceneNode {
+                scene.rootNode.addChildNode(node as! SCNNode)
+            }
             myscene.scene = scene
 
         } else {
@@ -212,15 +204,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     }
     
-    @IBAction func downloadShips() {
+    @IBAction func downloadShips(sender: UIButton) {
         self.activity.startAnimating()
-
+        sender.enabled = false
+        sender.selected = true
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
             frame.presenter!.download()
-
             dispatch_async(dispatch_get_main_queue(), {
                 self.shipListView.reloadData()
                 self.activity.stopAnimating()
+                sender.enabled = true
+                sender.selected = false
             })
         })
     }

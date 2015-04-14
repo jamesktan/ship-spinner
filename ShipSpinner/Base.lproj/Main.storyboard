@@ -141,7 +141,7 @@
                                             <rect key="frame" x="191" y="59" width="53" height="30"/>
                                         </variation>
                                         <connections>
-                                            <action selector="downloadShips" destination="BYZ-38-t0r" eventType="touchUpInside" id="g7L-nj-mbT"/>
+                                            <action selector="downloadShips:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jt2-cT-4qr"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UPDATE SHIPS:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Og0-Os-LaK">
@@ -330,7 +330,7 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="imB-YW-rC9"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sf3-AC-0oN">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sf3-AC-0oN">
                                 <rect key="frame" x="-10" y="-10" width="20" height="20"/>
                                 <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="13" y="164" width="37" height="37"/>
