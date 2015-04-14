@@ -98,8 +98,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             
             var scene = SCNScene()
             
-            var sceneNode = frame.presenter!.getShipNode(id)
-            scene.rootNode.addChildNode(sceneNode)
+            var sceneNode : NSMutableArray = frame.presenter!.getShipNode(id)
+            for node in sceneNode {
+                scene.rootNode.addChildNode(node as! SCNNode)
+            }
             
             myscene.scene = scene
 

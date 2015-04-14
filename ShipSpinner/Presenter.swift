@@ -45,16 +45,23 @@ class Presenter: NSObject {
         
         return (nameLabel, classLabel, roleLabel, shipDescription, shipAssetPath, shipLength, shipMass , shipSpeed)
     }
-    func getShipNode(name_ship:NSString) -> SCNNode {
-        
+    func getShipNode(name_ship:NSString) -> NSMutableArray {
+        var nodes : NSMutableArray = []
         var props = interactor!.getShipDDProperties(name_ship)
         var sceneSource : SCNSceneSource = SCNSceneSource(URL: props.0 , options: nil)!
-        sceneSource.identifiersOfEntriesWithClass(SCNNode.self)
-        var sceneNode : SCNNode = sceneSource.entryWithIdentifier(props.1, withClass: SCNNode.self) as! SCNNode
-        sceneNode.position = SCNVector3Make(0, 0, 0)
-        sceneNode.rotation = SCNVector4Make(1, 0, 0, Float(M_PI/2))
+        var test : NSArray = sceneSource.identifiersOfEntriesWithClass(SCNNode.self)!
+        var testMute : NSMutableArray = NSMutableArray(array:test)
+        testMute.removeObject("node/2")
+        testMute.removeObject("node/1")
+        NSLog("%@ Available Nodes", test)
         
-        return sceneNode
+        for nodeName in testMute {
+            var sceneNode : SCNNode = sceneSource.entryWithIdentifier(nodeName as! String, withClass: SCNNode.self) as! SCNNode
+            sceneNode.position = SCNVector3Make(0, 0, 0)
+            sceneNode.rotation = SCNVector4Make(1, 0, 0, Float(M_PI/2))
+            nodes.addObject(sceneNode)
+        }
+        return nodes
     }
     
     func getWallpaper(name_wallpaper : NSString) -> (UIImage, UIViewContentMode){
