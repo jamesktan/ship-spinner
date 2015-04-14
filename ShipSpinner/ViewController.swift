@@ -12,6 +12,8 @@ import SpriteKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var activity: UIActivityIndicatorView!
+    
     // Scene
     @IBOutlet weak var myscene: SCNView!
     @IBOutlet weak var wallpaper: UIImageView!
@@ -95,14 +97,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // Model
         if frame.presenter!.isFileDownloaded() {
+            self.activity.startAnimating()
             
             var scene = SCNScene()
-            
-            var sceneNode : NSMutableArray = frame.presenter!.getShipNode(id)
-            for node in sceneNode {
-                scene.rootNode.addChildNode(node as! SCNNode)
-            }
-            
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
+
+                var sceneNode : NSMutableArray = frame.presenter!.getShipNode(id)
+                for node in sceneNode {
+                    scene.rootNode.addChildNode(node as! SCNNode)
+                }
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.activity.stopAnimating()
+                })
+            })
             myscene.scene = scene
 
         } else {
@@ -205,8 +213,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @IBAction func downloadShips() {
-        frame.presenter!.download()
-        shipListView.reloadData()
+        self.activity.startAnimating()
+
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
+            frame.presenter!.download()
+
+            dispatch_async(dispatch_get_main_queue(), {
+                self.shipListView.reloadData()
+                self.activity.stopAnimating()
+            })
+        })
     }
 
     @IBAction func about(sender: UIButton) {

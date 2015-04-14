@@ -330,6 +330,12 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="imB-YW-rC9"/>
                                 </connections>
                             </tableView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sf3-AC-0oN">
+                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="13" y="164" width="37" height="37"/>
+                                </variation>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -345,6 +351,7 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                                 <exclude reference="M92-xp-ZsB"/>
                                 <exclude reference="Duj-9P-ZIp"/>
                                 <exclude reference="pcd-yd-0Py"/>
+                                <exclude reference="sf3-AC-0oN"/>
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="3S5-Lg-Q6y"/>
@@ -360,6 +367,7 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                                 <include reference="M92-xp-ZsB"/>
                                 <include reference="Duj-9P-ZIp"/>
                                 <include reference="pcd-yd-0Py"/>
+                                <include reference="sf3-AC-0oN"/>
                             </mask>
                             <mask key="constraints">
                                 <include reference="3S5-Lg-Q6y"/>
@@ -369,6 +377,7 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
+                        <outlet property="activity" destination="sf3-AC-0oN" id="rgl-Av-ypV"/>
                         <outlet property="buttonDetail" destination="6OU-s6-E8P" id="0Ak-xS-mXf"/>
                         <outlet property="buttonList" destination="f1j-1t-nuL" id="PJC-qM-7vY"/>
                         <outlet property="buttonRotate" destination="DC0-e4-Yqw" id="9Db-ke-AUw"/>
