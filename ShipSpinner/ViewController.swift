@@ -84,7 +84,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func loadShipData(id : NSString) {
-        
         // Labels
         var shipInfo = frame.presenter!.getShip(id)
         l_name.text = shipInfo.0 as String
@@ -97,14 +96,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // Model
         if frame.presenter!.isFileDownloaded() {
-            
             var scene = SCNScene()
             var sceneNode : NSMutableArray = frame.presenter!.getShipNode(id)
             for node in sceneNode {
                 scene.rootNode.addChildNode(node as! SCNNode)
             }
             myscene.scene = scene
-
+            myscene.antialiasingMode = SCNAntialiasingMode.Multisampling4X
         } else {
             myscene.scene = SCNScene(named: shipInfo.4 as String)
         }
@@ -157,10 +155,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var cell : UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
         shipID = cell.reuseIdentifier! // Change the current shipID
-        loadShipData(shipID) // Change the Ship Details
+        
+        UIView.animateWithDuration(1.0, animations: {
+            self.myscene.alpha = 0.0
+            self.activity.startAnimating()
+            }, completion:{ finished in
+                self.loadShipData(self.shipID) // Change the Ship Details
+                NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("showMyScene"), userInfo: nil, repeats: false)
+            }
+        )
+        
         frame.presenter!.setShip(shipID) // Set New Default Ship
         tableView.deselectRowAtIndexPath(indexPath, animated: true) // Unhighlight Row
         showView(buttonList) // Hides the view
+        
+
         return
     }
     
@@ -169,6 +178,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     // Custom Methods - Hide / Show Windows
+    
+    func showMyScene() {
+        UIView.animateWithDuration(1.0, animations: {
+            self.myscene.alpha = 1.0
+            self.activity.stopAnimating()
+        })
+
+    }
     
     @IBAction func showView(sender:UIButton) {
         var view : UIView = views!.objectAtIndex(sender.tag) as! UIView
