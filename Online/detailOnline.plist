@@ -69,5 +69,27 @@ Some Invisibles even believe that the cloaking field lets them see into the dark
 		<string>775 m/s</string>
 
 	</array>
+
+
+	<key>bent_bentusiexchange.dae</key>
+	<array>
+		<string>Bentusi Exchange</string>
+		<string>Mothership</string>
+		<string>Mothership Class</string>
+		<string>ARMARMENTS: 
+3 Heavy Ion Cannons
+
+The primary role of the Bentusi Tradeship was to gain resources which were used by the Bentusi. Each ship had at least one Exchange Unit, which allowed the player to trade with the Bentusi starship. Resources could be transferred from any ship to a Bentusi Tradeship, and technologies could be transported back from the Tradeship to the other ship.
+
+Tradeships were also used to defend the Bentusi - whether it was the Tradeship itself or another Bentusi ship. Each tradeship was armed with three powerful, long range ion cannons, with white or yellow beams. These guns were used for defense against both strike craft and capital ships. Additionally some of the Tradeships were supplied with Super Acolytes. The first known use of a Tradeship for defence of another Bentusi ship was in the Exile Era, during the Battle of Hiigara when the Tradeships were wrenched by Harbor Ship from a nebula near Hiigara. In the Cataclysm Era Tradeships used their onboard super acolytes to neutralize the Kuun-Lan fleet.
+
+It was very uncommon to see multiple trade ships at any one time, as they were autonomous units trading mostly on the Outer Rim Trade Routes. However, they were seen also in the Inner Rim, over Hiigara and in the Great Wastelands and various other locations around the galaxy. During the Homeworld 2 Era, Karan S'jet stated that the Great Harbour Ship of Bentus was the "last of the Bentusi".</string>
+		<string>Ben_BentusiExchange1</string>
+		<string>10,000 metres</string>
+		<string>40000 tons</string>
+		<string>775 m/s</string>
+
+	</array>
+
 </dict>
 </plist>
