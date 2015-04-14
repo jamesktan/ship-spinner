@@ -35,6 +35,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var shipID = "" //preload
     var rotate = false //preload
     var views : NSArray? = nil //preload
+    var count = 0
     
     // Labels
     @IBOutlet weak var l_name: UILabel!
@@ -75,6 +76,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         myscene.delegate = self
         loadWallpaper(wallpaperID)
         loadShipData(shipID)
+        showMyScene()
         wallpaper.addMotionEffect(frame.presenter!.createParallax())
                 
     }
@@ -120,7 +122,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func renderer(aRenderer: SCNSceneRenderer, didRenderScene scene: SCNScene, atTime time: NSTimeInterval) {
-        NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("showMyScene"), userInfo: nil, repeats: false)
+        if rotate {
+            if count < 20 {
+                count += 1
+                NSLog("enabled!")
+                NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("showMyScene"), userInfo: nil, repeats: false)
+            } else {
+
+                return
+            }
+        } else {
+            NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("showMyScene"), userInfo: nil, repeats: false)
+        }
         NSLog("Loaded!")
     }
     
@@ -167,6 +180,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             self.myscene.alpha = 0.0
             self.activity.startAnimating()
             }, completion:{ finished in
+                self.count = 0
                 self.loadShipData(self.shipID) // Change the Ship Details
             }
         )
@@ -226,6 +240,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         sender.selected ? frame.presenter!.setRotate(false) : frame.presenter!.setRotate(true)
         sender.selected = !sender.selected
         rotate = !rotate
+        count = 0
         
         (rotate) ?
             myscene.scene?.rootNode.addAnimation(frame.presenter!.createSpin(), forKey: spinKey) :
