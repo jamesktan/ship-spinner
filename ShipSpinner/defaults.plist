@@ -17,7 +17,7 @@
 	<dict>
 		<key>bg1.jpg</key>
 		<array>
-			<string>0.2,0.2,0.2,1.0</string>
+			<string>1.0,1.0,1.0,1.0</string>
 			<string>10,6,10</string>
 		</array>
 		<key>bg2.jpg</key>

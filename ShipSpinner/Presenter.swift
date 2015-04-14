@@ -47,10 +47,13 @@ class Presenter: NSObject {
     }
     func getShipNode(name_ship:NSString) -> NSMutableArray {
         var nodes : NSMutableArray = []
+        
         var props = interactor!.getShipDDProperties(name_ship)
         var sceneSource : SCNSceneSource = SCNSceneSource(URL: props.0 , options: nil)!
+        
         var test : NSArray = sceneSource.identifiersOfEntriesWithClass(SCNNode.self)!
         var testMute : NSMutableArray = NSMutableArray(array:test)
+        
         testMute.removeObject("node/2")
         testMute.removeObject("node/1")
         NSLog("%@ Available Nodes", test)
@@ -61,6 +64,7 @@ class Presenter: NSObject {
             sceneNode.rotation = SCNVector4Make(1, 0, 0, Float(M_PI/2))
             nodes.addObject(sceneNode)
         }
+        
         return nodes
     }
     
