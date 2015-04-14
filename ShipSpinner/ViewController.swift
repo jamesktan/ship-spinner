@@ -208,6 +208,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.activity.startAnimating()
         sender.enabled = false
         sender.selected = true
+        showView(sender) // hide
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
             frame.presenter!.download()
             dispatch_async(dispatch_get_main_queue(), {
