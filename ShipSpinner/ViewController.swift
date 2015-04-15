@@ -100,11 +100,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // Model
         if frame.presenter!.isFileDownloaded() {
-            var scene = SCNScene()
-            var sceneNode : NSMutableArray = frame.presenter!.getShipNode(id)
-            for node in sceneNode {
-                scene.rootNode.addChildNode(node as! SCNNode)
-            }
+//            var scene = SCNScene()
+//            var sceneNode : NSMutableArray = frame.presenter!.getShipNode(id)
+//            for node in sceneNode {
+//                scene.rootNode.addChildNode(node as! SCNNode)
+//            }
+            var scene = frame.presenter!.getScene(id)
             myscene.scene = scene
             myscene.antialiasingMode = SCNAntialiasingMode.Multisampling4X
         } else {
@@ -134,7 +135,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         } else {
             NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("showMyScene"), userInfo: nil, repeats: false)
         }
-        NSLog("Loaded!")
     }
     
     func loadWallpaper(id : NSString) {
