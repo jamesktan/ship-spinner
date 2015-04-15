@@ -105,7 +105,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 scene.rootNode.addChildNode(node as! SCNNode)
             }
             myscene.scene = scene
-            myscene.antialiasingMode = SCNAntialiasingMode.None
+            myscene.antialiasingMode = SCNAntialiasingMode.Multisampling4X
         } else {
             myscene.scene = SCNScene(named: shipInfo.4 as String)
         }
