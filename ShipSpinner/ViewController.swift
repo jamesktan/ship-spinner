@@ -73,7 +73,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         shipID = frame.presenter!.idForLastShip() as String
         wallpaperID = frame.presenter!.idForLastWallpaper() as String
         rotate = frame.presenter!.shouldRotate()
-        myscene.delegate = self
         loadWallpaper(wallpaperID)
         loadShipData(shipID)
         wallpaper.addMotionEffect(frame.presenter!.createParallax())
@@ -97,6 +96,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         l_acc.text = shipInfo.7 as String
         
         hideMyScene()
+        
         // Model
         if frame.presenter!.isFileDownloaded() {
             var scene = SCNScene()
@@ -111,17 +111,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         myscene.backgroundColor = UIColor.clearColor()
         loadLight(wallpaperID) // Load the right Lide nodes
+        
         showMyScene()
+        
         // Spin
         buttonRotate.selected = rotate
         (rotate) ?
             myscene.scene?.rootNode.addAnimation(frame.presenter!.createSpin(), forKey: spinKey) :
             myscene.scene?.rootNode.removeAnimationForKey(spinKey)
-    }
-    
-    // Delegate - finished rendering
-    func renderer(aRenderer: SCNSceneRenderer, didRenderScene scene: SCNScene, atTime time: NSTimeInterval) {
-
     }
     
     func loadWallpaper(id : NSString) {
@@ -153,7 +150,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.backgroundColor = UIColor.clearColor()
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.textLabel!.font = UIFont(name: "Helvetica-Bold", size: 13.0)
-        //cell.imageView?.image = details.2 //image
         
         NSLog(cell.textLabel!.text!)
         return cell
@@ -177,17 +173,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // Custom Methods - Hide / Show Windows
     func hideMyScene() {
-        UIView.animateWithDuration(3.0, animations: {
-            self.myscene.alpha = 0.0
-            self.myscene.removeFromSuperview()
-            self.activity.startAnimating()
-
-            }, completion:{ finished in
-//                self.activity.startAnimating()
-            }
-        )
-
+        self.myscene.alpha = 0.0
+        self.myscene.removeFromSuperview()
+        self.activity.startAnimating()
     }
+    
     func showMyScene() {
         UIView.animateWithDuration(3.0, animations: {
             self.myscene.alpha = 1.0
@@ -197,6 +187,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
         )
     }
+    
     @IBAction func showView(sender:UIButton) {
         var view : UIView = views!.objectAtIndex(sender.tag) as! UIView
         var alpha : CGFloat = sender.selected ? 0.0 : 1.0
