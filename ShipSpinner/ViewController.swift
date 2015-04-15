@@ -96,6 +96,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         l_mass.text = shipInfo.6 as String
         l_acc.text = shipInfo.7 as String
         
+        hideMyScene()
         // Model
         if frame.presenter!.isFileDownloaded() {
             var scene = SCNScene()
@@ -110,28 +111,17 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         myscene.backgroundColor = UIColor.clearColor()
         loadLight(wallpaperID) // Load the right Lide nodes
-        
+        showMyScene()
         // Spin
         buttonRotate.selected = rotate
         (rotate) ?
             myscene.scene?.rootNode.addAnimation(frame.presenter!.createSpin(), forKey: spinKey) :
             myscene.scene?.rootNode.removeAnimationForKey(spinKey)
-        
     }
     
     // Delegate - finished rendering
     func renderer(aRenderer: SCNSceneRenderer, didRenderScene scene: SCNScene, atTime time: NSTimeInterval) {
-//        if rotate {
-//            if count < 20 {
-////                count += 1
-//                NSLog("enabled!")
-//                NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("showMyScene"), userInfo: nil, repeats: false)
-//            } else {
-//                return
-//            }
-//        } else {
-//            NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("showMyScene"), userInfo: nil, repeats: false)
-//        }
+
     }
     
     func loadWallpaper(id : NSString) {
@@ -187,18 +177,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // Custom Methods - Hide / Show Windows
     func hideMyScene() {
-        UIView.animateWithDuration(1.0, animations: {
+        UIView.animateWithDuration(3.0, animations: {
             self.myscene.alpha = 0.0
+            self.myscene.removeFromSuperview()
+            self.activity.startAnimating()
+
             }, completion:{ finished in
-                self.activity.startAnimating()
+//                self.activity.startAnimating()
             }
         )
 
     }
     func showMyScene() {
-        UIView.animateWithDuration(1.0, animations: {
+        UIView.animateWithDuration(3.0, animations: {
             self.myscene.alpha = 1.0
             }, completion:{ finished in
+                self.view.insertSubview(self.myscene, aboveSubview: self.wallpaper)
                 self.activity.stopAnimating()
             }
         )
