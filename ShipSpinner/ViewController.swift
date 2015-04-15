@@ -76,7 +76,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         myscene.delegate = self
         loadWallpaper(wallpaperID)
         loadShipData(shipID)
-        showMyScene()
         wallpaper.addMotionEffect(frame.presenter!.createParallax())
                 
     }
@@ -86,28 +85,26 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     func loadShipData(id : NSString) {
-        hideMyScene()
         
         // Labels
         var shipInfo = frame.presenter!.getShip(id)
         l_name.text = shipInfo.0 as String
         l_class.text = shipInfo.1 as String
         l_role.text = shipInfo.2 as String
+        tv_description.text = shipInfo.3 as String
         l_length.text = shipInfo.5 as String
         l_mass.text = shipInfo.6 as String
         l_acc.text = shipInfo.7 as String
-        tv_description.text = shipInfo.3 as String
         
         // Model
         if frame.presenter!.isFileDownloaded() {
-//            var scene = SCNScene()
-//            var sceneNode : NSMutableArray = frame.presenter!.getShipNode(id)
-//            for node in sceneNode {
-//                scene.rootNode.addChildNode(node as! SCNNode)
-//            }
-            var scene = frame.presenter!.getScene(id)
+            var scene = SCNScene()
+            var sceneNode : NSMutableArray = frame.presenter!.getShipNode(id)
+            for node in sceneNode {
+                scene.rootNode.addChildNode(node as! SCNNode)
+            }
             myscene.scene = scene
-            myscene.antialiasingMode = SCNAntialiasingMode.Multisampling4X
+            myscene.antialiasingMode = SCNAntialiasingMode.None
         } else {
             myscene.scene = SCNScene(named: shipInfo.4 as String)
         }
@@ -122,19 +119,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    // Delegate - finished rendering
     func renderer(aRenderer: SCNSceneRenderer, didRenderScene scene: SCNScene, atTime time: NSTimeInterval) {
-        if rotate {
-            if count < 20 {
-                count += 1
-                NSLog("enabled!")
-                NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("showMyScene"), userInfo: nil, repeats: false)
-            } else {
-
-                return
-            }
-        } else {
-            NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("showMyScene"), userInfo: nil, repeats: false)
-        }
+//        if rotate {
+//            if count < 20 {
+////                count += 1
+//                NSLog("enabled!")
+//                NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("showMyScene"), userInfo: nil, repeats: false)
+//            } else {
+//                return
+//            }
+//        } else {
+//            NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("showMyScene"), userInfo: nil, repeats: false)
+//        }
     }
     
     func loadWallpaper(id : NSString) {
@@ -175,16 +172,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var cell : UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
         shipID = cell.reuseIdentifier! // Change the current shipID
-        
-        UIView.animateWithDuration(1.0, animations: {
-            self.myscene.alpha = 0.0
-            self.activity.startAnimating()
-            }, completion:{ finished in
-                self.count = 0
-                self.loadShipData(self.shipID) // Change the Ship Details
-            }
-        )
-        
+        loadShipData(shipID)
         frame.presenter!.setShip(shipID) // Set New Default Ship
         tableView.deselectRowAtIndexPath(indexPath, animated: true) // Unhighlight Row
         showView(buttonList) // Hides the view
@@ -201,18 +189,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func hideMyScene() {
         UIView.animateWithDuration(1.0, animations: {
             self.myscene.alpha = 0.0
-            self.activity.startAnimating()
-        })
+            }, completion:{ finished in
+                self.activity.startAnimating()
+            }
+        )
 
     }
     func showMyScene() {
         UIView.animateWithDuration(1.0, animations: {
             self.myscene.alpha = 1.0
-            self.activity.stopAnimating()
-        })
-
+            }, completion:{ finished in
+                self.activity.stopAnimating()
+            }
+        )
     }
-    
     @IBAction func showView(sender:UIButton) {
         var view : UIView = views!.objectAtIndex(sender.tag) as! UIView
         var alpha : CGFloat = sender.selected ? 0.0 : 1.0
