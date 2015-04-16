@@ -150,7 +150,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.backgroundColor = UIColor.clearColor()
         cell.textLabel!.textColor = UIColor.whiteColor()
         cell.textLabel!.font = UIFont(name: "Helvetica-Bold", size: 13.0)
-        
+        cell.textLabel!.numberOfLines = 0
+        cell.textLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping
+
         NSLog(cell.textLabel!.text!)
         return cell
     }
