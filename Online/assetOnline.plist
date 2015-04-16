@@ -10,5 +10,16 @@
 	<string>https://s3-us-west-1.amazonaws.com/naabal/kush_interceptor.scnassets.zip</string>
 	<key>bent_bentusiexchange.dae</key>
 	<string>https://s3-us-west-1.amazonaws.com/naabal/bent_bentusiexchange.scnassets.zip</string>
+
+	<key>kush_carrier.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabal/kush_carrier.scnassets.zip</string>
+	<key>kush_resourcecollector.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabal/kush_resourcecollector.scnassets.zip</string>
+	<key>kush_ioncannonfrigate.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabal/kush_ioncannonfrigate.scnassets.zip</string>
+	<key>kad_swarmer.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabal/kad_swarmer.scnassets.zip</string>
+	<key>taid_scout.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabal/taid_scout.scnassets.zip</string>
 </dict>
 </plist>

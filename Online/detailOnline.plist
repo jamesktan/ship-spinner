@@ -91,5 +91,128 @@ It was very uncommon to see multiple trade ships at any one time, as they were a
 
 	</array>
 
+
+
+	<key>kad_swarmer.dae</key>
+	<array>
+		<string>Swarmer</string>
+		<string>Fighter</string>
+		<string>Strike Craft</string>
+		<string>ARMARMENTS:
+2 x Projectile Cannons
+
+These fighters may have been small, but in truth were a fearsome enemy of any vessel that dared to cross their path. They were responsible for the destruction of dozens of cargo vessels that passed through the nebula before the nebula was cut off from the galactic shipping lanes. Swarmers were named for their tendency to attack in large numbers like a flock of flies. A dozen Swarmers could reside within one group and two or three of these groups could easily rip any ship apart with their merciless firepower combined with their rapid speed as these encircle their targets.
+
+The only major weakness of the Swarmer is an extremely high fuel consumption in combat manoeuvres, which after a minute or so forces the Swarmers to dock with their Fuel Pods. If they do not reach the pods or if the pods are destroyed, the Swarmers will float in space without hope of recovery.
+
+The Swarmer held the distinction of being the first Kadeshi vessel to come face to face with the Kushan during that race's attempt to pass through the nebula while journeying to Hiigara. The Kushan Ambassador met with the Kadeshi Ambassador, whose personal Swarmer craft was dwarfed by the size of the Ambassador's heavy corvette. When the Kushan declined to join the Kadeshi and instead opted to retreat from the Garden of Kadesh, the Kadeshi refused and attacked the Kushan, literally swarming them with hundreds of Swarmers, who preyed mercilessly on the Kushan fleet. The Kushan were eventually able to defeat the Kadeshi entirely, but not before suffering great loss at the hands of the Kadeshi's Swarmer forces.
+
+</string>
+		<string>kad_swarmer1</string>
+		<string>8.4 metres</string>
+		<string>40 tons</string>
+		<string>1500 m/s</string>
+
+	</array>
+
+
+
+
+	<key>taid_scout.dae</key>
+	<array>
+		<string>Fiirkan-class Scout</string>
+		<string>Fighter</string>
+		<string>Reconnaissance</string>
+		<string>ARMARMENTS:
+2 x Small Mass Drivers
+
+The Fiirkan-class Scout were always the first fighters into a battle, making reconnaissance on enemy positions. The Fiirkans, who possess not only great agility but fairly decent firepower, were often a foreshadowing of events to come and when the Taiidan Empire's enemies saw a Fiirkan approaching, they knew the end was near.
+
+Named for a small bird of prey in the deserts of Kharak, the Fiirkan, like its namesake, mostly preys on the herbivores of space, such as resource collectors, using its mobility to get the better of its prey, diving in and out in hit and run strikes. Armed with two small Mass Drivers, the Fiirkan is more than a match for any non-combat vessel and while using evasive maneuvers for even a super capital in large numbers. Many a fleet has fallen to the Fiirkan for underestimating their power.
+
+Most pilots prefer the flashier Triikor-class Interceptor used by the elite core of the Taiidan pilots. Even so, those pilots who do choose to fly Fiirkans willingly are some of the best the Imperial Fleet has got and these "small birds" often show their hotshot comrades in the seat of Triikor that bigger guns doesn't necessarily mean better pilots.
+
+</string>
+		<string>taid_scout1</string>
+		<string>14.3 metres</string>
+		<string>40 tons</string>
+		<string>1000 m/s</string>
+
+	</array>
+
+
+
+
+
+	<key>kush_ioncannonfrigate.dae</key>
+	<array>
+		<string>Firelance-class Ion Cannon Frigate</string>
+		<string>Frigate</string>
+		<string>Anti-Capital Ship</string>
+		<string>ARMARMENTS:
+1 x Ion Cannon
+
+The Firelance-class Ion Cannon Frigate was developed by the Kushan using technology purchased from the Bentusi.
+
+The frigate is a simple design, basically the Vengeance with all the bulk around the central hull removed along with all the turrets. Instead, there is just the basic, thin frigate chassis with a long particle accelerator unit running down its centre spine, a fusion power plant, the engine, and crew space. The ship has no secondary weapon to speak of.
+
+Even so, despite this simplistic design the Firelance is a force to be reckoned with and possesses immense firepower used to tear through a frigate or super capital ship hull when used in greater numbers; even a careless fighter pilot can be shot if it zooms past the barrel. Its main weakness comes from its lack on maneuverability and speed and the fact that its single Ion Cannon has a slow fire rate and can only fire in one direction, with 1% frontal coverage. This leaves it very vulnerable to strike craft and should never be deployed without an escort. Traditionally, the first sign that a battle is lost is when the Firelances, under heavy fire, begin to pull back and retreat.
+
+</string>
+		<string>kush_ioncannonfrigate</string>
+		<string>122.5 metres</string>
+		<string>13,000 tons</string>
+		<string>300 m/s</string>
+
+	</array>
+
+	<key>kush_resourcecollector.dae</key>
+	<array>
+		<string>Providence-class Resource Collector</string>
+		<string>Collector</string>
+		<string>Resource Collection</string>
+		<string>ARMARMENTS:
+Phased Disassembler Array
+
+The Providence class of Resource Collectors is an even older design than the Mercy repair frigate. Apart from transport shuttles, the Providence was the first design put into service for the construction of the Mothership, and these ships helped to break down the initial massive asteroids brought in from the Belt, reducing them to useable resources. All resource gathering is achieved by the use of a specialized bow-mounted Phased Disassmbler Array, which breaks down the target into its component atoms and draws them into the Providence's huge storage bays. Once full, the Providence then returns to the Mothership and docks at one of the dermal ports to unload.
+
+Since almost all conflicts revolve around control of deep space asteroid and nebula fields, resource collection is one of the most dangerous duties in the fleet--and yet, no combat personnel crew any of these ships. Most of a Collector's functions are automated or controlled from the Mothership, so that only a skeleton crew of 4 engineers need to be aboard in a troubleshooting capacity. Needless to say, there are not many volunteers for this duty, and therefore all support staff must spend one week of their 8-week duty rotation aboard a Collector.
+
+Because an unarmed Providence usually lives or dies by the quality of its fighter escort, Providence crews have been known to pool some of their recreational credits and pass them on to fighter pilots that are especially reliable. Since it is a rare pilot who is willing to forgo the glamour of wracking up kills in order to stick close to a lumbering Collector, Providence crews tend to show their appreciation in order to keep such pilots requesting escort duty.
+
+</string>
+		<string>kush_resourcecollector</string>
+		<string>122.5 metres</string>
+		<string>40,000 tons</string>
+		<string>325 m/s</string>
+
+	</array>
+
+
+	<key>kush_carrier.dae</key>
+	<array>
+		<string>Imperator-class Carrier</string>
+		<string>Carrier</string>
+		<string>Ship Construction</string>
+		<string>ARMARMENTS:
+4 x Small Projectile Cannons
+
+The Mothership is the ultimate expression of Kushan power, but even it cannot be everywhere at once. In order to extend the power and reach of the fleet, engineers pushed the manufacturing abilities of the Mothership to their limits in order to produce a super-heavy capitol ship chassis, capable of containing the equipment necessary to function as a small scale mothership.
+
+The Imperator class Carrier requires the resources of a small asteroid belt simply to be built, and the entire Mothership manufacturing bay door must detached in order to launch this incredible starship. The Imperator has its own hyperspace jump engines and can carry a full assault wing of 50 fighters and 25 corvettes in its internal bays. It is fully capable of processing raw resources, and has a limited manufacturing ability, allowing it to construct any Frigate or Strike Craft hull. While not carrying an especially powerful offensive ability in of itself, it is protected by an array of rapid-fire point defense rail guns and heavy, layered armor.
+
+Of the 3 Imperators produced so far, none have been lost in combat, though the original prototype was heavily damaged in action at Gorth's Rift, when an unknown hostile ambushed it in a quadrant barren of resources. This incident led to the strategic imperative that all Carrier groups must maintain an adequate resource reserve at all times or withdraw immediately. Current deployment doctrine for carrier groups calls for a single Imperator to be escorted by one to two Avatar class Heavy Cruisers and a pair of Destroyers. Additional craft are expected once the Imperator group has reached its destination.
+
+</string>
+		<string>kush_carrier</string>
+		<string>122.5 metres</string>
+		<string>121,000 tons</string>
+		<string>300 m/s</string>
+
+	</array>
+
+
+
+
 </dict>
 </plist>
