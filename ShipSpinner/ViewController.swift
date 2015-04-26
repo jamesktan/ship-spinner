@@ -35,6 +35,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var shipID = "" //preload
     var rotate = false //preload
     var views : NSArray? = nil //preload
+    var buttons : NSArray? = nil
     var count = 0
     
     // Labels
@@ -68,6 +69,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         super.viewDidLoad()
 
         views = [shipListView, shipDetailView, settingView]
+        buttons = [buttonList, buttonDetail,buttonSettings]
         
         // Load View with Data
         shipID = frame.presenter!.idForLastShip() as String
@@ -188,6 +190,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.activity.stopAnimating()
             }
         )
+    }
+    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
+        for button in buttons! {
+            var b : UIButton = button as! UIButton
+            if b.selected {
+                if !b.isEqual(buttonDetail) {
+                    showView(b)
+                }
+            }
+        }
     }
     
     @IBAction func showView(sender:UIButton) {
