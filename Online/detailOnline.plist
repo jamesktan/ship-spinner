@@ -104,8 +104,6 @@ It was very uncommon to see multiple trade ships at any one time, as they were a
 	<key>kad_swarmer.dae</key>
 	<array>
 		<string>Swarmer</string>
-		<string>Fighter</string>
-		<string>Strike Craft</string>
 		<string>
 TYPE: Fighter
 ROLE: Strike Craft
