@@ -185,5 +185,4 @@ class Presenter: NSObject {
             delegate: nil, cancelButtonTitle: "CLOSE")
         return view
     }
-    
 }

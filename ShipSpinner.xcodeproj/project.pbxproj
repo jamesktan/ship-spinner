@@ -58,6 +58,13 @@
 		54EC67A51AD060BE009CE568 /* asset.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54EC67A41AD060BE009CE568 /* asset.plist */; };
 		54EC67A71AD060C8009CE568 /* detail.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54EC67A61AD060C8009CE568 /* detail.plist */; };
 		54EC67A91AD062E3009CE568 /* kush_cloakedfighter.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EC67A81AD062E3009CE568 /* kush_cloakedfighter.scnassets */; };
+		54EE6C251AEE619E00E8B807 /* guildstonebg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54EE6C241AEE619E00E8B807 /* guildstonebg.jpg */; };
+		54EE6C2C1AEEAE0200E8B807 /* hiigaran.png in Resources */ = {isa = PBXBuildFile; fileRef = 54EE6C261AEEAE0200E8B807 /* hiigaran.png */; };
+		54EE6C2D1AEEAE0200E8B807 /* kadesh.png in Resources */ = {isa = PBXBuildFile; fileRef = 54EE6C271AEEAE0200E8B807 /* kadesh.png */; };
+		54EE6C2E1AEEAE0200E8B807 /* kushan.png in Resources */ = {isa = PBXBuildFile; fileRef = 54EE6C281AEEAE0200E8B807 /* kushan.png */; };
+		54EE6C2F1AEEAE0200E8B807 /* taiidan.png in Resources */ = {isa = PBXBuildFile; fileRef = 54EE6C291AEEAE0200E8B807 /* taiidan.png */; };
+		54EE6C301AEEAE0200E8B807 /* turanic.png in Resources */ = {isa = PBXBuildFile; fileRef = 54EE6C2A1AEEAE0200E8B807 /* turanic.png */; };
+		54EE6C311AEEAE0200E8B807 /* vaygr.png in Resources */ = {isa = PBXBuildFile; fileRef = 54EE6C2B1AEEAE0200E8B807 /* vaygr.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -134,6 +141,13 @@
 		54EC67A41AD060BE009CE568 /* asset.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = asset.plist; sourceTree = "<group>"; };
 		54EC67A61AD060C8009CE568 /* detail.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = detail.plist; sourceTree = "<group>"; };
 		54EC67A81AD062E3009CE568 /* kush_cloakedfighter.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = kush_cloakedfighter.scnassets; sourceTree = "<group>"; };
+		54EE6C241AEE619E00E8B807 /* guildstonebg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guildstonebg.jpg; sourceTree = "<group>"; };
+		54EE6C261AEEAE0200E8B807 /* hiigaran.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hiigaran.png; sourceTree = "<group>"; };
+		54EE6C271AEEAE0200E8B807 /* kadesh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kadesh.png; sourceTree = "<group>"; };
+		54EE6C281AEEAE0200E8B807 /* kushan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kushan.png; sourceTree = "<group>"; };
+		54EE6C291AEEAE0200E8B807 /* taiidan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = taiidan.png; sourceTree = "<group>"; };
+		54EE6C2A1AEEAE0200E8B807 /* turanic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turanic.png; sourceTree = "<group>"; };
+		54EE6C2B1AEEAE0200E8B807 /* vaygr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = vaygr.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +174,7 @@
 		5465AC1C1ACDBA0500636FBA /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				54EE6C321AEEAE0A00E8B807 /* table */,
 				548B33D41AD2CA4C00B7CD8B /* logo29.png */,
 				548B33D51AD2CA4C00B7CD8B /* logo58.png */,
 				548B33D01AD2CA0F00B7CD8B /* logo40.png */,
@@ -187,6 +202,7 @@
 		5465AC311ACDBA0E00636FBA /* bgs */ = {
 			isa = PBXGroup;
 			children = (
+				54EE6C241AEE619E00E8B807 /* guildstonebg.jpg */,
 				5465AC0E1ACDB7F800636FBA /* bg7.jpg */,
 				5465AC0F1ACDB7F800636FBA /* bg6.jpg */,
 				5465AC101ACDB7F800636FBA /* bg5.jpg */,
@@ -306,6 +322,19 @@
 			name = asset;
 			sourceTree = "<group>";
 		};
+		54EE6C321AEEAE0A00E8B807 /* table */ = {
+			isa = PBXGroup;
+			children = (
+				54EE6C2B1AEEAE0200E8B807 /* vaygr.png */,
+				54EE6C261AEEAE0200E8B807 /* hiigaran.png */,
+				54EE6C271AEEAE0200E8B807 /* kadesh.png */,
+				54EE6C281AEEAE0200E8B807 /* kushan.png */,
+				54EE6C291AEEAE0200E8B807 /* taiidan.png */,
+				54EE6C2A1AEEAE0200E8B807 /* turanic.png */,
+			);
+			name = table;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -392,6 +421,7 @@
 				54EC67A91AD062E3009CE568 /* kush_cloakedfighter.scnassets in Resources */,
 				5465AC1B1ACDB7F800636FBA /* bg1.jpg in Resources */,
 				548B33D61AD2CA4C00B7CD8B /* logo29.png in Resources */,
+				54EE6C301AEEAE0200E8B807 /* turanic.png in Resources */,
 				5465AC2E1ACDBA0500636FBA /* settings20.svg in Resources */,
 				540392AE1AD2795E006A717F /* information32_selected.png in Resources */,
 				5465AC301ACDBA0500636FBA /* stack8.svg in Resources */,
@@ -406,12 +436,17 @@
 				54E089FB1A19435800BDC644 /* LaunchScreen.xib in Resources */,
 				5465AC171ACDB7F800636FBA /* bg5.jpg in Resources */,
 				5465AC1A1ACDB7F800636FBA /* bg2.jpg in Resources */,
+				54EE6C2C1AEEAE0200E8B807 /* hiigaran.png in Resources */,
 				5465AC2D1ACDBA0500636FBA /* settings20.png in Resources */,
+				54EE6C2D1AEEAE0200E8B807 /* kadesh.png in Resources */,
 				548B33D21AD2CA0F00B7CD8B /* logo40.png in Resources */,
+				54EE6C311AEEAE0200E8B807 /* vaygr.png in Resources */,
 				5465AC281ACDBA0500636FBA /* bars5.svg in Resources */,
+				54EE6C2E1AEEAE0200E8B807 /* kushan.png in Resources */,
 				540392AF1AD2795E006A717F /* layers4_selected.png in Resources */,
 				5465AC291ACDBA0500636FBA /* information32.png in Resources */,
 				548B33D31AD2CA0F00B7CD8B /* logo80.png in Resources */,
+				54EE6C251AEE619E00E8B807 /* guildstonebg.jpg in Resources */,
 				5465AC181ACDB7F800636FBA /* bg4.jpg in Resources */,
 				54EC67A71AD060C8009CE568 /* detail.plist in Resources */,
 				5465AC271ACDBA0500636FBA /* bars5.png in Resources */,
@@ -419,6 +454,7 @@
 				5465AC2A1ACDBA0500636FBA /* information32.svg in Resources */,
 				548B33D71AD2CA4C00B7CD8B /* logo58.png in Resources */,
 				5471FBC81AD08C1A003451D4 /* logo76@2x.png in Resources */,
+				54EE6C2F1AEEAE0200E8B807 /* taiidan.png in Resources */,
 				5465AC161ACDB7F800636FBA /* bg6.jpg in Resources */,
 				5465AC2C1ACDBA0500636FBA /* layers4.svg in Resources */,
 				5465AC2F1ACDBA0500636FBA /* stack8.png in Resources */,

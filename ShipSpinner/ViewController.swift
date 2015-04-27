@@ -167,12 +167,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.deselectRowAtIndexPath(indexPath, animated: true) // Unhighlight Row
         showView(buttonList) // Hides the view
         
+        var image = UIImage(named: "vaygr.png")
+        cell.imageView?.image = image
 
         return
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return frame.presenter!.getShipListCount()
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "DOWNLOADED"
+        }
+        if section == 1 {
+            return "AVAILABLE"
+        }
+        return "Woops"
     }
     
     // Custom Methods - Hide / Show Windows
