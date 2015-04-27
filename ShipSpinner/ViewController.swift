@@ -198,9 +198,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var view : UIView = views!.objectAtIndex(sender.tag) as! UIView
         var alpha : CGFloat = sender.selected ? 0.0 : 1.0
         handleAnimation(view, moveToPoint: view.frame.origin, alpha: alpha)
+        handleAnimationScene(view, button: sender)
         sender.selected = !(sender.selected)
     }
     
+    /// Handles the Supporting Views
     func handleAnimation(view : UIView, moveToPoint : CGPoint, alpha : CGFloat) {
         UIView.animateWithDuration(transTime, animations: {
             view.frame = CGRectMake(moveToPoint.x, moveToPoint.y, view.frame.size.width, view.frame.size.height)
@@ -209,6 +211,25 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    // Handles the Main Scene View
+    func handleAnimationScene(view : UIView, button:UIButton) {
+        if view.isEqual(shipDetailView) {
+            slideScene(button.selected)
+            return
+        }
+        if view.isEqual(shipListView){
+            slideScene(!button.selected)
+            return
+        }
+    }
+    func slideScene(leftRight: Bool) {
+        var value : CGFloat = (leftRight) ? 122.0 : -122.0 //true = Left, false = Right
+        UIView.animateWithDuration(transTime, animations: {
+            self.myscene.center.x = self.myscene.center.x + value
+        })
+
+        
+    }
     // Custom Methods - Changing Properties
     
     @IBAction func changeWallpaper() {
