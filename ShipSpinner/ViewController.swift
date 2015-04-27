@@ -120,7 +120,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Set the wallpaper image and content mode
         var image : (UIImage, UIViewContentMode) = frame.presenter!.getWallpaper(id)
         self.wallpaper.image = image.0
-        self.wallpaper.contentMode = image.1
+        self.wallpaper.contentMode = UIViewContentMode.ScaleAspectFill
     }
     
     func loadLight(id:NSString) {

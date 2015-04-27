@@ -86,27 +86,6 @@
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M92-xp-ZsB" userLabel="settings">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <view alpha="0.29999999999999966" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etw-TM-C4s" userLabel="BG">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="-7" y="-6" width="274" height="180"/>
-                                        </variation>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If2-Sb-ynT">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
-                                        <state key="normal" title="ABOUT">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="104" y="147" width="52" height="30"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="about:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BTZ-yM-jgK"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DC0-e4-Yqw">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
@@ -154,53 +133,47 @@
                                             <rect key="frame" x="20" y="63" width="138" height="22"/>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o1F-40-cq1">
+                                    <view alpha="0.29999999999999966" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etw-TM-C4s" userLabel="BG">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="-6" y="-25" width="274" height="180"/>
+                                        </variation>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If2-Sb-ynT">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
-                                        <state key="normal" title="NEXT">
+                                        <state key="normal" title="ABOUT">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="194" y="97" width="46" height="30"/>
+                                            <rect key="frame" x="105" y="99" width="52" height="30"/>
                                         </variation>
                                         <connections>
-                                            <action selector="changeWallpaper" destination="BYZ-38-t0r" eventType="touchUpInside" id="cEL-UA-dYt"/>
+                                            <action selector="about:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BTZ-yM-jgK"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BACKGROUND:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f5r-JH-gvd">
-                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="20" y="101" width="125" height="21"/>
-                                        </variation>
-                                    </label>
                                 </subviews>
                                 <variation key="default">
                                     <mask key="subviews">
-                                        <exclude reference="etw-TM-C4s"/>
-                                        <exclude reference="If2-Sb-ynT"/>
                                         <exclude reference="DC0-e4-Yqw"/>
                                         <exclude reference="FdN-ny-fc3"/>
                                         <exclude reference="ePY-JC-LxV"/>
                                         <exclude reference="Og0-Os-LaK"/>
-                                        <exclude reference="o1F-40-cq1"/>
-                                        <exclude reference="f5r-JH-gvd"/>
+                                        <exclude reference="etw-TM-C4s"/>
+                                        <exclude reference="If2-Sb-ynT"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="382" y="0.0" width="261" height="182"/>
+                                    <rect key="frame" x="382" y="0.0" width="262" height="129"/>
                                     <mask key="subviews">
-                                        <include reference="etw-TM-C4s"/>
-                                        <include reference="If2-Sb-ynT"/>
                                         <include reference="DC0-e4-Yqw"/>
                                         <include reference="FdN-ny-fc3"/>
                                         <include reference="ePY-JC-LxV"/>
                                         <include reference="Og0-Os-LaK"/>
-                                        <include reference="o1F-40-cq1"/>
-                                        <include reference="f5r-JH-gvd"/>
+                                        <include reference="etw-TM-C4s"/>
+                                        <include reference="If2-Sb-ynT"/>
                                     </mask>
                                 </variation>
                             </view>
