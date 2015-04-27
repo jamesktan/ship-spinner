@@ -40,11 +40,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // Labels
     @IBOutlet weak var l_name: UILabel!
-    @IBOutlet weak var l_class: UILabel!
-    @IBOutlet weak var l_role: UILabel!
-    @IBOutlet weak var l_length: UILabel!
-    @IBOutlet weak var l_mass: UILabel!
-    @IBOutlet weak var l_acc: UILabel!
     @IBOutlet weak var tv_description: UITextView!
     
     
@@ -90,13 +85,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Labels
         var shipInfo = frame.presenter!.getShip(id)
         l_name.text = shipInfo.0 as String
-//        l_class.text = shipInfo.1 as String
-//        l_role.text = shipInfo.2 as String
-        tv_description.text = shipInfo.3 as String
-//        l_length.text = shipInfo.5 as String
-//        l_mass.text = shipInfo.6 as String
-//        l_acc.text = shipInfo.7 as String
-//        
+        tv_description.text = shipInfo.1 as String
+        
         hideMyScene()
         
         // Model
@@ -109,7 +99,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             myscene.scene = scene
             myscene.antialiasingMode = SCNAntialiasingMode.Multisampling4X
         } else {
-            myscene.scene = SCNScene(named: shipInfo.4 as String)
+            myscene.scene = SCNScene(named: shipInfo.2 as String)
         }
         myscene.backgroundColor = UIColor.clearColor()
         loadLight(wallpaperID) // Load the right Lide nodes
@@ -216,6 +206,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             view.frame = CGRectMake(moveToPoint.x, moveToPoint.y, view.frame.size.width, view.frame.size.height)
             view.alpha = CGFloat(alpha)
         })
+        
     }
     
     // Custom Methods - Changing Properties

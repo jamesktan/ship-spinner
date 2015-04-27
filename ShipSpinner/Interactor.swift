@@ -40,7 +40,7 @@ class Interactor: NSObject {
         return dm!.findShip(id_ship)
     }
     
-    func getShipDDProperties(id_ship: NSString)->(NSURL, String) {
+    func getShipDDProperties(id_ship: NSString)->NSURL {
         var properties = getShip(id_ship)
         var componentsArr : NSArray = properties.shipAssetPath!.pathComponents as NSArray
         var range = NSRange(location: componentsArr.count-3, length: 3)
@@ -49,9 +49,7 @@ class Interactor: NSObject {
         
         var ddURL = NSFileManager.defaultManager().URLForDirectory(.DocumentDirectory, inDomain: .UserDomainMask, appropriateForURL: nil, create: false, error: nil)
         var a = ddURL!.URLByAppendingPathComponent(url)
-        var sceneIdentifier : String = properties.shipEntryNode! as String
-        //var b : NSArray = sceneSource.identifiersOfEntriesWithClass(SCNNode.self)!
-        return (a, sceneIdentifier)
+        return a
     }
     
     func idForLastWallpaper() -> NSString  {

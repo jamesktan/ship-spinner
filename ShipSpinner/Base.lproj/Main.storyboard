@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7531" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -24,19 +25,19 @@
                             </imageView>
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" loops="NO" playing="YES" sceneName="test" allowsCameraControl="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Cp-rM-W9c">
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="768" id="KQi-df-w9u"/>
-                                    <constraint firstAttribute="width" constant="1024" id="aYT-6W-yeN"/>
+                                    <constraint firstAttribute="width" constant="1024" id="KHu-a0-N4P"/>
+                                    <constraint firstAttribute="height" constant="768" id="v6z-6v-dt9"/>
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
-                                        <exclude reference="KQi-df-w9u"/>
-                                        <exclude reference="aYT-6W-yeN"/>
+                                        <exclude reference="KHu-a0-N4P"/>
+                                        <exclude reference="v6z-6v-dt9"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular">
                                     <mask key="constraints">
-                                        <include reference="KQi-df-w9u"/>
-                                        <include reference="aYT-6W-yeN"/>
+                                        <include reference="KHu-a0-N4P"/>
+                                        <include reference="v6z-6v-dt9"/>
                                     </mask>
                                 </variation>
                             </sceneKitView>
@@ -217,7 +218,7 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="-4" y="153" width="230" height="631"/>
+                                            <rect key="frame" x="-9" y="207" width="255" height="577"/>
                                         </variation>
                                     </textView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME: HIIGARAN INTERCEPTOR" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3y-uk-1rk">
@@ -226,13 +227,13 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="34" width="216" height="36"/>
+                                            <rect key="frame" x="0.0" y="35" width="216" height="36"/>
                                         </variation>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hiigaran.png" translatesAutoresizingMaskIntoConstraints="NO" id="2DC-1q-jax">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="taiidan.png" translatesAutoresizingMaskIntoConstraints="NO" id="2DC-1q-jax">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="58" y="59" width="100" height="100"/>
+                                            <rect key="frame" x="47" y="64" width="150" height="150"/>
                                         </variation>
                                     </imageView>
                                 </subviews>
@@ -244,7 +245,7 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="800" y="-24" width="224" height="804"/>
+                                    <rect key="frame" x="780" y="-24" width="244" height="804"/>
                                     <mask key="subviews">
                                         <include reference="8Dp-lT-3Dp"/>
                                         <include reference="F3y-uk-1rk"/>
@@ -273,8 +274,12 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2Cp-rM-W9c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="0J3-q1-Yn9"/>
                             <constraint firstAttribute="centerX" secondItem="2Cp-rM-W9c" secondAttribute="centerX" id="3S5-Lg-Q6y"/>
+                            <constraint firstAttribute="centerY" secondItem="2Cp-rM-W9c" secondAttribute="centerY" id="Dt0-zY-mVY"/>
+                            <constraint firstAttribute="centerX" secondItem="2Cp-rM-W9c" secondAttribute="centerX" id="NtL-uR-xfQ"/>
                             <constraint firstAttribute="centerY" secondItem="2Cp-rM-W9c" secondAttribute="centerY" id="XX1-c0-xSD"/>
+                            <constraint firstItem="2Cp-rM-W9c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="rxM-7n-5cN"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -288,8 +293,12 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                                 <exclude reference="sf3-AC-0oN"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="0J3-q1-Yn9"/>
                                 <exclude reference="3S5-Lg-Q6y"/>
+                                <exclude reference="Dt0-zY-mVY"/>
+                                <exclude reference="NtL-uR-xfQ"/>
                                 <exclude reference="XX1-c0-xSD"/>
+                                <exclude reference="rxM-7n-5cN"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -304,8 +313,12 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                                 <include reference="sf3-AC-0oN"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="3S5-Lg-Q6y"/>
-                                <include reference="XX1-c0-xSD"/>
+                                <exclude reference="0J3-q1-Yn9"/>
+                                <exclude reference="3S5-Lg-Q6y"/>
+                                <include reference="Dt0-zY-mVY"/>
+                                <include reference="NtL-uR-xfQ"/>
+                                <exclude reference="XX1-c0-xSD"/>
+                                <exclude reference="rxM-7n-5cN"/>
                             </mask>
                         </variation>
                     </view>
@@ -331,12 +344,12 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
         </scene>
     </scenes>
     <resources>
-        <image name="hiigaran.png" width="400" height="400"/>
         <image name="information32.png" width="128" height="128"/>
         <image name="information32_selected.png" width="128" height="128"/>
         <image name="layers4.png" width="128" height="128"/>
         <image name="layers4_selected.png" width="128" height="128"/>
         <image name="settings20.png" width="128" height="128"/>
         <image name="settings20_selected.png" width="128" height="128"/>
+        <image name="taiidan.png" width="400" height="400"/>
     </resources>
 </document>

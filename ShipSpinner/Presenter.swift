@@ -31,25 +31,20 @@ class Presenter: NSObject {
     }
     
     
-    func getShip(name_ship : NSString) -> (NSString, NSString, NSString, NSString, NSString, NSString, NSString, NSString) {
+    func getShip(name_ship : NSString) -> (NSString, NSString, NSString) {
         var ship = interactor!.getShip(name_ship)
         
         var nameLabel = "NAME: " + (ship.shipName! as String)
-        var classLabel = "CLASS: " + (ship.shipClass! as String)
-        var roleLabel = "ROLE: "+(ship.shipRole! as String)
         var shipDescription = ship.shipDescription!
         var shipAssetPath = ship.shipAssetPath!
-        var shipLength = "LENGTH: " + (ship.shipLength! as String)
-        var shipMass = "MASS: " + (ship.shipMass! as String)
-        var shipSpeed = "SPEED: " + (ship.shipSpeed! as String)
         
-        return (nameLabel, classLabel, roleLabel, shipDescription, shipAssetPath, shipLength, shipMass , shipSpeed)
+        return (nameLabel, shipDescription, shipAssetPath)
     }
     func getShipNode(name_ship:NSString) -> NSMutableArray {
         var nodes : NSMutableArray = []
         
         var props = interactor!.getShipDDProperties(name_ship)
-        var sceneSource : SCNSceneSource = SCNSceneSource(URL: props.0 , options: nil)!
+        var sceneSource : SCNSceneSource = SCNSceneSource(URL: props, options: nil)!
         
         var test : NSArray = sceneSource.identifiersOfEntriesWithClass(SCNNode.self)!
         var testMute : NSMutableArray = NSMutableArray(array:test)
