@@ -126,8 +126,8 @@ class Presenter: NSObject {
         // Set vertical effect
         let verticalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.y",
             type: .TiltAlongVerticalAxis)
-        verticalMotionEffect.minimumRelativeValue = -30
-        verticalMotionEffect.maximumRelativeValue = 30
+        verticalMotionEffect.minimumRelativeValue = 0
+        verticalMotionEffect.maximumRelativeValue = 0
         
         // Set horizontal effect
         let horizontalMotionEffect = UIInterpolatingMotionEffect(keyPath: "center.x",
