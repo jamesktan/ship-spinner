@@ -16,7 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg5.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="S0y-Xq-uxl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S0y-Xq-uxl">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
@@ -206,49 +206,6 @@
                             <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Duj-9P-ZIp" userLabel="info">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <view alpha="0.29999999999999966" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xSl-og-GwD" userLabel="bg">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="-6" y="8" width="235" height="788"/>
-                                        </variation>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ACCELERATION: 500 M/S" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhf-GP-Kwe">
-                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="12"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="148" width="180" height="20"/>
-                                        </variation>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESCRIPTION:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hep-0s-1Vy">
-                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="12"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="167" width="180" height="20"/>
-                                        </variation>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MASS: 50 TONS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ijz-an-6jJ">
-                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="129" width="180" height="20"/>
-                                        </variation>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LENGTH: 17M" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUL-Ip-jk5">
-                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="110" width="180" height="20"/>
-                                        </variation>
-                                    </label>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Dp-lT-3Dp" userLabel="Description">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <string key="text">Triikor wings were deadly arsenals of speed and firepower that surpassed the Fiirkan's, able to take a heavy beating before being destroyed. Commonly known as interceptors, the Triikor silhouette was a chilling image of the Taiidani Empire's power until the Homeworld War.
@@ -256,30 +213,13 @@
 The Triikor, unlike traditional fighters, does not have a centred weight of gravity. The Triikor uses two small mass drivers, which concentrate the mass of the fighter to one side. Ironically, this is quite similar to the style of design used in Kushan fighters of the Homeworld War, who often used an off-set cockpit (instead of an off-set centre of gravity).   Though there are advantages in such a cockpit (the said added amount of firepower and the ability to change directions with less exchange of brutal centrifugal force) the difficulty in flying such a vehicle means that Taiidan pilots as well as Kushan pilots need special training to adapt to the odd design. However, pilots that are able to master the Triikor are highly feared and respected both on and off the battlefield.
 
 </string>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="-5" y="186" width="229" height="598"/>
+                                            <rect key="frame" x="-4" y="153" width="230" height="631"/>
                                         </variation>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CLASS: FIGHTER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="52h-V0-kJ5">
-                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="70" width="180" height="20"/>
-                                        </variation>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROLE: ANTI FIGHTER" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqf-T1-sab">
-                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="90" width="180" height="20"/>
-                                        </variation>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME: HIIGARAN INTERCEPTOR" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3y-uk-1rk">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
@@ -289,41 +229,35 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                                             <rect key="frame" x="0.0" y="34" width="216" height="36"/>
                                         </variation>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hiigaran.png" translatesAutoresizingMaskIntoConstraints="NO" id="2DC-1q-jax">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="58" y="59" width="100" height="100"/>
+                                        </variation>
+                                    </imageView>
                                 </subviews>
                                 <variation key="default">
                                     <mask key="subviews">
-                                        <exclude reference="xSl-og-GwD"/>
-                                        <exclude reference="Uhf-GP-Kwe"/>
-                                        <exclude reference="hep-0s-1Vy"/>
-                                        <exclude reference="Ijz-an-6jJ"/>
-                                        <exclude reference="aUL-Ip-jk5"/>
                                         <exclude reference="8Dp-lT-3Dp"/>
-                                        <exclude reference="52h-V0-kJ5"/>
-                                        <exclude reference="qqf-T1-sab"/>
                                         <exclude reference="F3y-uk-1rk"/>
+                                        <exclude reference="2DC-1q-jax"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="800" y="-24" width="224" height="792"/>
+                                    <rect key="frame" x="800" y="-24" width="224" height="804"/>
                                     <mask key="subviews">
-                                        <include reference="xSl-og-GwD"/>
-                                        <include reference="Uhf-GP-Kwe"/>
-                                        <include reference="hep-0s-1Vy"/>
-                                        <include reference="Ijz-an-6jJ"/>
-                                        <include reference="aUL-Ip-jk5"/>
                                         <include reference="8Dp-lT-3Dp"/>
-                                        <include reference="52h-V0-kJ5"/>
-                                        <include reference="qqf-T1-sab"/>
                                         <include reference="F3y-uk-1rk"/>
+                                        <include reference="2DC-1q-jax"/>
                                     </mask>
                                 </variation>
                             </view>
-                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-yd-0Py">
+                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-yd-0Py">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
                                 <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="59" y="0.0" width="251" height="768"/>
+                                    <rect key="frame" x="60" y="0.0" width="224" height="768"/>
                                 </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="REy-Xd-8fR"/>
@@ -382,12 +316,7 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                         <outlet property="buttonList" destination="f1j-1t-nuL" id="PJC-qM-7vY"/>
                         <outlet property="buttonRotate" destination="DC0-e4-Yqw" id="9Db-ke-AUw"/>
                         <outlet property="buttonSettings" destination="a9D-eu-L3l" id="YFj-Kl-YOA"/>
-                        <outlet property="l_acc" destination="Uhf-GP-Kwe" id="mnM-q5-8y1"/>
-                        <outlet property="l_class" destination="52h-V0-kJ5" id="8w4-y2-CbD"/>
-                        <outlet property="l_length" destination="aUL-Ip-jk5" id="ez5-cP-yPG"/>
-                        <outlet property="l_mass" destination="Ijz-an-6jJ" id="a02-8q-azY"/>
                         <outlet property="l_name" destination="F3y-uk-1rk" id="TcT-yn-Z2Q"/>
-                        <outlet property="l_role" destination="qqf-T1-sab" id="dQb-4g-5HP"/>
                         <outlet property="myscene" destination="2Cp-rM-W9c" id="E1o-RZ-Pyu"/>
                         <outlet property="settingView" destination="M92-xp-ZsB" id="LIw-vu-29s"/>
                         <outlet property="shipDetailView" destination="Duj-9P-ZIp" id="DIG-81-ISV"/>
@@ -402,7 +331,7 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
         </scene>
     </scenes>
     <resources>
-        <image name="bg5.jpg" width="4096" height="1600"/>
+        <image name="hiigaran.png" width="400" height="400"/>
         <image name="information32.png" width="128" height="128"/>
         <image name="information32_selected.png" width="128" height="128"/>
         <image name="layers4.png" width="128" height="128"/>

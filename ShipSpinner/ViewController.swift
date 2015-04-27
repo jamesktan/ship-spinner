@@ -78,7 +78,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         loadWallpaper(wallpaperID)
         loadShipData(shipID)
         wallpaper.addMotionEffect(frame.presenter!.createParallax())
-                
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -90,13 +90,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Labels
         var shipInfo = frame.presenter!.getShip(id)
         l_name.text = shipInfo.0 as String
-        l_class.text = shipInfo.1 as String
-        l_role.text = shipInfo.2 as String
+//        l_class.text = shipInfo.1 as String
+//        l_role.text = shipInfo.2 as String
         tv_description.text = shipInfo.3 as String
-        l_length.text = shipInfo.5 as String
-        l_mass.text = shipInfo.6 as String
-        l_acc.text = shipInfo.7 as String
-        
+//        l_length.text = shipInfo.5 as String
+//        l_mass.text = shipInfo.6 as String
+//        l_acc.text = shipInfo.7 as String
+//        
         hideMyScene()
         
         // Model
@@ -147,7 +147,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var details = frame.presenter!.getListDisplayDetails(indexPath)
-        var cell : UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: details.0 as String)
+        var cell : UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle, reuseIdentifier: details.0 as String)
         cell.textLabel?.text = details.1 as String //friendlyName
         cell.backgroundColor = UIColor.clearColor()
         cell.textLabel!.textColor = UIColor.whiteColor()
@@ -155,6 +155,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel!.numberOfLines = 0
         cell.textLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping
 
+        cell.detailTextLabel?.text = "DOWNLOAD"
+        cell.detailTextLabel!.textColor = UIColor.lightGrayColor()
+        
         NSLog(cell.textLabel!.text!)
         return cell
     }
@@ -167,28 +170,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView.deselectRowAtIndexPath(indexPath, animated: true) // Unhighlight Row
         showView(buttonList) // Hides the view
         
-        var image = UIImage(named: "vaygr.png")
-        cell.imageView?.image = image
-
         return
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return frame.presenter!.getShipListCount()
-    }
-    
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 2
-    }
-    
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section == 0 {
-            return "DOWNLOADED"
-        }
-        if section == 1 {
-            return "AVAILABLE"
-        }
-        return "Woops"
     }
     
     // Custom Methods - Hide / Show Windows
