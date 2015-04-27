@@ -203,7 +203,7 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                                             <rect key="frame" x="0.0" y="35" width="216" height="36"/>
                                         </variation>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="taiidan.png" translatesAutoresizingMaskIntoConstraints="NO" id="2DC-1q-jax">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bent.png" translatesAutoresizingMaskIntoConstraints="NO" id="2DC-1q-jax">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <variation key="widthClass=regular" fixedFrame="YES">
                                             <rect key="frame" x="47" y="64" width="150" height="150"/>
@@ -302,6 +302,7 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                         <outlet property="buttonList" destination="f1j-1t-nuL" id="PJC-qM-7vY"/>
                         <outlet property="buttonRotate" destination="DC0-e4-Yqw" id="9Db-ke-AUw"/>
                         <outlet property="buttonSettings" destination="a9D-eu-L3l" id="YFj-Kl-YOA"/>
+                        <outlet property="fleetIcon" destination="2DC-1q-jax" id="56K-kW-MVh"/>
                         <outlet property="l_name" destination="F3y-uk-1rk" id="TcT-yn-Z2Q"/>
                         <outlet property="myscene" destination="2Cp-rM-W9c" id="E1o-RZ-Pyu"/>
                         <outlet property="settingView" destination="M92-xp-ZsB" id="LIw-vu-29s"/>
@@ -317,12 +318,12 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
         </scene>
     </scenes>
     <resources>
+        <image name="bent.png" width="400" height="400"/>
         <image name="information32.png" width="128" height="128"/>
         <image name="information32_selected.png" width="128" height="128"/>
         <image name="layers4.png" width="128" height="128"/>
         <image name="layers4_selected.png" width="128" height="128"/>
         <image name="settings20.png" width="128" height="128"/>
         <image name="settings20_selected.png" width="128" height="128"/>
-        <image name="taiidan.png" width="400" height="400"/>
     </resources>
 </document>

@@ -29,6 +29,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var shipDetailView : UIView!
     @IBOutlet weak var settingView : UIView!
     
+    @IBOutlet weak var fleetIcon: UIImageView!
+    
     let spinKey = "spinRoundRound"
     let transTime = 0.33
     var wallpaperID = "" //preload
@@ -86,6 +88,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var shipInfo = frame.presenter!.getShip(id)
         l_name.text = shipInfo.0 as String
         tv_description.text = shipInfo.1 as String
+        fleetIcon.image = shipInfo.3
         
         hideMyScene()
         

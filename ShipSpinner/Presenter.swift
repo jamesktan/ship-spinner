@@ -31,14 +31,18 @@ class Presenter: NSObject {
     }
     
     
-    func getShip(name_ship : NSString) -> (NSString, NSString, NSString) {
+    func getShip(name_ship : NSString) -> (NSString, NSString, NSString, UIImage) {
         var ship = interactor!.getShip(name_ship)
         
         var nameLabel = "NAME: " + (ship.shipName! as String)
         var shipDescription = ship.shipDescription!
         var shipAssetPath = ship.shipAssetPath!
         
-        return (nameLabel, shipDescription, shipAssetPath)
+        var shipRace = ship.shipRace!
+        var iconName = (shipRace as String) + ".png"
+        var icon = UIImage(named:iconName)
+        
+        return (nameLabel, shipDescription, shipAssetPath, icon!)
     }
     func getShipNode(name_ship:NSString) -> NSMutableArray {
         var nodes : NSMutableArray = []
