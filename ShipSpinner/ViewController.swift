@@ -162,7 +162,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         frame.presenter!.setShip(shipID) // Set New Default Ship
         tableView.deselectRowAtIndexPath(indexPath, animated: true) // Unhighlight Row
         showView(buttonList) // Hides the view
-        
+
         return
     }
     
@@ -185,7 +185,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 self.activity.stopAnimating()
             }
         )
+        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("handleAnimationScene"), userInfo: nil, repeats: false)
     }
+    
     override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
         for button in buttons! {
             var b : UIButton = button as! UIButton
@@ -201,8 +203,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         var view : UIView = views!.objectAtIndex(sender.tag) as! UIView
         var alpha : CGFloat = sender.selected ? 0.0 : 1.0
         handleAnimation(view, moveToPoint: view.frame.origin, alpha: alpha)
-        handleAnimationScene(view, button: sender)
         sender.selected = !(sender.selected)
+        handleAnimationScene()
+
     }
     
     /// Handles the Supporting Views
@@ -215,24 +218,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     // Handles the Main Scene View
-    func handleAnimationScene(view : UIView, button:UIButton) {
-        if view.isEqual(shipDetailView) {
-            slideScene(button.selected)
-            return
+    func handleAnimationScene() {
+        var value : CGFloat = 0.0
+        if buttonList.selected {
+            value = 122.0
         }
-        if view.isEqual(shipListView){
-            slideScene(!button.selected)
-            return
+        if buttonDetail.selected {
+            value = -122.0
         }
-    }
-    func slideScene(leftRight: Bool) {
-        var value : CGFloat = (leftRight) ? 122.0 : -122.0 //true = Left, false = Right
+        if buttonList.selected && buttonDetail.selected {
+            value = 0.0
+        }
         UIView.animateWithDuration(transTime, animations: {
-            self.myscene.center.x = self.myscene.center.x + value
+            self.myscene.frame.origin.x = value
         })
-
-        
     }
+
     // Custom Methods - Changing Properties
     
     @IBAction func changeWallpaper() {
@@ -251,6 +252,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         (rotate) ?
             myscene.scene?.rootNode.addAnimation(frame.presenter!.createSpin(), forKey: spinKey) :
             myscene.scene?.rootNode.removeAnimationForKey(spinKey)
+        NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("handleAnimationScene"), userInfo: nil, repeats: false)
+
 
     }
     
