@@ -20,7 +20,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S0y-Xq-uxl">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="-20" y="-30" width="1044" height="798"/>
+                                    <rect key="frame" x="-20" y="-30" width="1044" height="828"/>
                                 </variation>
                             </imageView>
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" loops="NO" playing="YES" sceneName="test" allowsCameraControl="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Cp-rM-W9c">
