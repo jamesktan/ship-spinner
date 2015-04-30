@@ -20,27 +20,11 @@ class DataManager: NSObject {
     var detailsDictionary : NSDictionary = NSDictionary() //load locally first, then load from file
     var defaultDictionary : NSDictionary = NSDictionary() //load locally
     
-    func load() {
-        let pathDownloads = Util.getDownloadPath()
-        defaultDictionary = NSDictionary(contentsOfFile: Util.getPath(defaultsFile) as String)!
-
-        if downloadFileExists() {
-            // download file exists
-            var assetDownload = pathDownloads.stringByAppendingPathComponent((assetFile as String)+"Online.plist")
-            var detailsDownload = pathDownloads.stringByAppendingPathComponent((detailFile as String)+"Online.plist")
-            assetDictionary = NSDictionary(contentsOfFile: assetDownload)!
-            detailsDictionary = NSDictionary(contentsOfFile: detailsDownload)!
-        } else {
-            // no downloads exist, use the bundled local ones
-            assetDictionary = NSDictionary(contentsOfFile: Util.getPath(assetFile) as String)!
-            detailsDictionary = NSDictionary(contentsOfFile: Util.getPath(detailFile) as String)!
-        }
-    }
     
     func downloadFileExists() -> Bool{
         return NSFileManager.defaultManager().fileExistsAtPath(Util.getDownloadPath() as String) ? true : false
     }
-    
+
     func findShip(id_ship : NSString) -> ShipEntity {
         var ship = ShipEntity()
         ship.loadShipFromFile((assetDictionary, detailsDictionary), id_ship: id_ship)
@@ -131,8 +115,74 @@ class DataManager: NSObject {
         return Util.folderExists(folderName)
     }
     
+    // @jtan todo: work on these
+
     func downloadShip(id:NSString) {
-        
+        var shipURL : NSString = assetDictionary.objectForKey(id) as! NSString
+        var shipPath : NSString = Util.downloadModelAndUnzipAtPath(shipURL)
+        var daePath : NSString = shipPath.lastPathComponent.stringByAppendingPathComponent(id as String)
+        saveShipAssetKeyValue(assetDictionary, shipID: id, folderName: daePath)
+        reloadAssetFile()
     }
+    
+    func saveShipAssetKeyValue(dict: NSDictionary, shipID: NSString, folderName: NSString ) {
+        
+        // Set the Values
+        var mDict : NSMutableDictionary = NSMutableDictionary(dictionary: dict)
+        mDict.removeObjectForKey(shipID)
+        mDict.setValue(folderName, forKey: shipID as String)
+        
+        // Compose the Path
+        let pathDownloads = Util.getDownloadPath()
+        var asset = pathDownloads.stringByAppendingPathComponent((assetFile as String)+".plist")
+        
+        // Write to File
+        mDict.writeToFile(asset as String, atomically: true)
+    }
+    
+    func reloadAssetFile() {
+        let pathDownloads = Util.getDownloadPath()
+        var asset = pathDownloads.stringByAppendingPathComponent((assetFile as String)+".plist")
+        assetDictionary = NSDictionary(contentsOfFile: asset as String)!
+    }
+    
+    func load() {
+        // First Load Only
+        loadDefaults()
+        downloadManifest()
+        
+        loadAssets()
+        loadDetails()
+    }
+    func downloadManifest() {
+        var base : NSString = getDefault("downloadURL") as! NSString
+        var assetOnline : NSString = (base as String) + (assetFile as String) + "Online.plist"
+        var detailOnline : NSString = (base as String) + (detailFile as String) + "Online.plist"
+        
+        // Download the plist
+        var assetFilePath = Util.downloadFileAtPath(assetOnline)
+        var detailFilePath = Util.downloadFileAtPath(detailOnline)
+    }
+    func loadAssets() {
+        var asset = (assetFile as String)+".plist"
+        var assetOnline = (assetFile as String)+"Online.plist"
+        var use = (Util.folderExists(asset)) ? asset : assetOnline
+        use = Util.getDownloadPath().stringByAppendingPathComponent(use)
+        assetDictionary = NSDictionary(contentsOfFile:use)!
+    }
+    func loadDetails() {
+        var detail = (detailFile as String)+".plist"
+        var detailOnline = (detailFile as String)+"Online.plist"
+        var use = (Util.folderExists(detail)) ? detail : detailOnline
+        use = Util.getDownloadPath().stringByAppendingPathComponent(use)
+        detailsDictionary = NSDictionary(contentsOfFile:use)!
+
+    }
+    func loadDefaults() {
+        let pathDownloads = Util.getDownloadPath()
+        defaultDictionary = NSDictionary(contentsOfFile: Util.getPath(defaultsFile) as String)!
+    }
+    
+
     
 }

@@ -11,6 +11,10 @@ import UIKit
 
 class Util: NSObject {
     
+    class func downloadFileExists() -> Bool{
+        return NSFileManager.defaultManager().fileExistsAtPath(Util.getDownloadPath() as String) ? true : false
+    }
+
     class func folderExists(s:NSString) -> Bool {
         var path = Util.getDownloadPath() //Documents/Download/
         var complete = path.stringByAppendingPathComponent(s as String)

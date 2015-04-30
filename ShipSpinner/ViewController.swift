@@ -147,12 +147,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel!.font = UIFont(name: "Helvetica-Bold", size: 13.0)
         cell.textLabel!.numberOfLines = 0
         cell.textLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping
-        cell.detailTextLabel!.textColor = UIColor.lightGrayColor()
 
         if frame.presenter!.shipIsPresent(details.0) {
-            cell.detailTextLabel?.text = ""
+            cell.detailTextLabel?.text = "SAVED"
+            cell.detailTextLabel!.textColor = UIColor.orangeColor()
+
         } else {
-            cell.detailTextLabel?.text = "DOWNLOAD"
+            cell.detailTextLabel?.text = "DOWNLOAD NOW"
+            cell.detailTextLabel!.textColor = UIColor.lightGrayColor()
+
         }
         NSLog(details.0 as String)
         NSLog(cell.textLabel!.text!)
@@ -165,20 +168,29 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // if the ship is not downloaded, download it first
         
         if (cell.detailTextLabel!.text != "") {
+            self.showView(self.buttonList) // Hides the view
+            tableView.deselectRowAtIndexPath(indexPath, animated: true) // Unhighlight Row
+
             self.activity.startAnimating()
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
                 frame.presenter!.downloadShip(self.shipID)
                 dispatch_async(dispatch_get_main_queue(), {
                     self.shipListView.reloadData()
                     self.activity.stopAnimating()
-                    self.showView(self.buttonList) // Hides the view
+//                    self.showView(self.buttonList) // Hides the view
+                    self.loadShipData(self.shipID)
+                    frame.presenter!.setShip(self.shipID) // Set New Default Ship
+//                    tableView.deselectRowAtIndexPath(indexPath, animated: true) // Unhighlight Row
+
                 })
             })
-        }
-        loadShipData(shipID)
-        frame.presenter!.setShip(shipID) // Set New Default Ship
-        tableView.deselectRowAtIndexPath(indexPath, animated: true) // Unhighlight Row
+        } else {
+            self.showView(self.buttonList) // Hides the view
+            self.loadShipData(self.shipID)
+            frame.presenter!.setShip(self.shipID) // Set New Default Ship
+            tableView.deselectRowAtIndexPath(indexPath, animated: true) // Unhighlight Row
 
+        }
         return
     }
     
@@ -216,6 +228,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @IBAction func showView(sender:UIButton) {
+        if (activity.isAnimating()) {
+            return
+        }
         var view : UIView = views!.objectAtIndex(sender.tag) as! UIView
         var alpha : CGFloat = sender.selected ? 0.0 : 1.0
         handleAnimation(view, moveToPoint: view.frame.origin, alpha: alpha)

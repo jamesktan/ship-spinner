@@ -125,6 +125,5 @@ class Interactor: NSObject {
     
     func downloadShip(id_ship : NSString) {
         dm!.downloadShip(id_ship)
-        dm!.load()
     }
 }
