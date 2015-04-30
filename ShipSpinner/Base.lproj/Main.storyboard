@@ -92,90 +92,79 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="-6" y="-25" width="274" height="180"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="274" height="114"/>
                                         </variation>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DC0-e4-Yqw">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DC0-e4-Yqw">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
-                                        <state key="normal" title="ON">
+                                        <state key="normal" title="ROTATE ON">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="selected" title="OFF"/>
+                                        <state key="selected" title="ROTATE OFF"/>
                                         <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="194" y="21" width="46" height="30"/>
+                                            <rect key="frame" x="116" y="8" width="135" height="30"/>
                                         </variation>
                                         <connections>
                                             <action selector="changeRotate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7fY-VV-xnJ"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ROTATE:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdN-ny-fc3">
-                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="20" y="25" width="125" height="21"/>
-                                        </variation>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePY-JC-LxV">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePY-JC-LxV">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
-                                        <state key="normal" title="DOWNLOAD">
+                                        <state key="normal" title="DOWNLOAD ALL SHIPS">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="179" y="59" width="79" height="30"/>
+                                            <rect key="frame" x="88" y="46" width="163" height="30"/>
                                         </variation>
                                         <connections>
                                             <action selector="downloadShips:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jt2-cT-4qr"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GET ALL SHIPS:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Og0-Os-LaK">
-                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="13"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="20" y="63" width="138" height="22"/>
-                                        </variation>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If2-Sb-ynT">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If2-Sb-ynT">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
-                                        <state key="normal" title="ABOUT">
+                                        <state key="normal" title="ABOUT NAABAL">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="105" y="99" width="52" height="30"/>
+                                            <rect key="frame" x="129" y="84" width="122" height="30"/>
                                         </variation>
                                         <connections>
                                             <action selector="about:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BTZ-yM-jgK"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETTINGS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIw-Vf-U45">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
+                                        <color key="textColor" red="0.12549019610000001" green="0.14901960780000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="12" width="83" height="21"/>
+                                        </variation>
+                                    </label>
                                 </subviews>
                                 <variation key="default">
                                     <mask key="subviews">
                                         <exclude reference="etw-TM-C4s"/>
                                         <exclude reference="DC0-e4-Yqw"/>
-                                        <exclude reference="FdN-ny-fc3"/>
                                         <exclude reference="ePY-JC-LxV"/>
-                                        <exclude reference="Og0-Os-LaK"/>
                                         <exclude reference="If2-Sb-ynT"/>
+                                        <exclude reference="CIw-Vf-U45"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="382" y="0.0" width="262" height="129"/>
+                                    <rect key="frame" x="382" y="0.0" width="262" height="114"/>
                                     <mask key="subviews">
                                         <include reference="etw-TM-C4s"/>
                                         <include reference="DC0-e4-Yqw"/>
-                                        <include reference="FdN-ny-fc3"/>
                                         <include reference="ePY-JC-LxV"/>
-                                        <include reference="Og0-Os-LaK"/>
                                         <include reference="If2-Sb-ynT"/>
+                                        <include reference="CIw-Vf-U45"/>
                                     </mask>
                                 </variation>
                             </view>
@@ -301,6 +290,7 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                     <connections>
                         <outlet property="activity" destination="sf3-AC-0oN" id="rgl-Av-ypV"/>
                         <outlet property="buttonDetail" destination="6OU-s6-E8P" id="0Ak-xS-mXf"/>
+                        <outlet property="buttonDownloadAll" destination="ePY-JC-LxV" id="0It-Tm-8bG"/>
                         <outlet property="buttonList" destination="f1j-1t-nuL" id="PJC-qM-7vY"/>
                         <outlet property="buttonRotate" destination="DC0-e4-Yqw" id="9Db-ke-AUw"/>
                         <outlet property="buttonSettings" destination="a9D-eu-L3l" id="YFj-Kl-YOA"/>

@@ -24,6 +24,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var buttonSettings : UIButton!
     @IBOutlet weak var buttonRotate: UIButton!
     
+    // Other Buttons
+    @IBOutlet weak var buttonDownloadAll: UIButton!
+
+    
     // Views
     @IBOutlet weak var shipListView : UITableView!
     @IBOutlet weak var shipDetailView : UIView!
@@ -167,7 +171,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         shipID = cell.reuseIdentifier! // Change the current shipID
         // if the ship is not downloaded, download it first
         
-        if (cell.detailTextLabel!.text != "") {
+        if (cell.detailTextLabel!.text != "SAVED") {
             self.showView(self.buttonList) // Hides the view
             tableView.deselectRowAtIndexPath(indexPath, animated: true) // Unhighlight Row
 
@@ -289,23 +293,48 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @IBAction func downloadShips(sender: UIButton) {
-        self.activity.startAnimating()
-        sender.enabled = false
-        sender.selected = true
-        showView(buttonSettings) // hide
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
-            frame.presenter!.download()
-            dispatch_async(dispatch_get_main_queue(), {
-                self.shipListView.reloadData()
-                self.activity.stopAnimating()
-                sender.enabled = true
-                sender.selected = false
+        var alert = UIAlertController(title: "Warming!", message: "You've chosen to download the entire ship library. \n\n Be aware that this will take some time, depending on internet connection. Ensure your device has enough space, is fully charged, and has a reliable internet connection", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "DOWNLOAD", style: UIAlertActionStyle.Default, handler: {action in
+            self.activity.startAnimating()
+            self.buttonDownloadAll.enabled = false
+            self.buttonDownloadAll.selected = true
+            self.showView(self.buttonSettings) // hide
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
+                frame.presenter!.download()
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.shipListView.reloadData()
+                    self.activity.stopAnimating()
+                    self.buttonDownloadAll.enabled = true
+                    self.buttonDownloadAll.selected = false
+                })
             })
-        })
+            self.handleAnimationScene()
+        }))
+        
+        self.presentViewController(alert, animated: true, completion: nil)
     }
+//    func startMassShipDownload() {
+//        self.activity.startAnimating()
+//        buttonDownloadAll.enabled = false
+//        buttonDownloadAll.selected = true
+//        showView(buttonSettings) // hide
+//        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
+//            frame.presenter!.download()
+//            dispatch_async(dispatch_get_main_queue(), {
+//                self.shipListView.reloadData()
+//                self.activity.stopAnimating()
+//                self.buttonDownloadAll.enabled = true
+//                self.buttonDownloadAll.selected = false
+//            })
+//        })
+//        handleAnimationScene()
+//
+//    }
 
     @IBAction func about(sender: UIButton) {
-        frame.presenter!.createAboutAlert().show()
+        var alert = frame.presenter!.createAboutAlert()
+        self.presentViewController(alert, animated: true, completion: nil)
     }
 
     override func prefersStatusBarHidden() -> Bool {

@@ -13,7 +13,7 @@ import SpriteKit
 class Presenter: NSObject {
     
     // VIPER
-    var view : ViewController? = nil
+    var vc : ViewController? = nil
     var interactor : Interactor? = nil
     
     func isFileDownloaded() -> Bool {
@@ -185,11 +185,20 @@ class Presenter: NSObject {
         ambientNode.light?.color = UIColor(red: ambientInformation.0, green: ambientInformation.1, blue: ambientInformation.2, alpha: ambientInformation.3)
         return ambientNode
     }
+//    func createDownloadAlert() -> UIAlertController {
+//        var alert = UIAlertController(title: "Warming!", message: "You've chosen to download the entire ship library. \n\n Be aware that this will take some time, depending on internet connection. Ensure your device has enough space, is fully charged, and has a reliable internet connection", preferredStyle: UIAlertControllerStyle.Alert)
+//        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler: nil))
+//        alert.addAction(UIAlertAction(title: "DOWNLOAD", style: UIAlertActionStyle.Default, handler: {action in
+//            self.vc!.startMassShipDownload()
+//        
+//        }))
+//        return alert
+//
+//    }
+    func createAboutAlert() -> UIAlertController {
+        var alert = UIAlertController(title: "Naabal Shipyards", message: "Created as fan-service to display and highlight the beautiful detail of Homeworld Remastered \n\n All models, assets, and lore belong to their respective owners (GearBox, Relic, Homeworld Shipyards and Encyclopedia Hiigara).  \n\nThe makers of Naabal Shipards do not own any of the Homeworld assets, details, or descriptions.", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler:nil))
 
-    func createAboutAlert() -> UIAlertView {
-        var view : UIAlertView = UIAlertView(title: "Naabal Shipyards",
-            message: "Created as fan-service to display and highlight the beautiful detail of Homeworld Remastered \n\n All models, assets, and lore belong to their respective owners (GearBox, Relic, Homeworld Shipyards and Encyclopedia Hiigara).  \n\nThe makers of Naabal Shipards do not own any of the Homeworld assets, details, or descriptions.",
-            delegate: nil, cancelButtonTitle: "CLOSE")
-        return view
+        return alert
     }
 }

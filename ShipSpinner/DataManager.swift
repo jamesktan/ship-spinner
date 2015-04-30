@@ -105,8 +105,11 @@ class DataManager: NSObject {
         }
         
         // Save the new assetFile
-        assetDictionary.writeToFile(assetFilePath as String, atomically: true)
+        let pathDownloads = Util.getDownloadPath()
+        var asset = pathDownloads.stringByAppendingPathComponent((assetFile as String)+".plist")
+        assetDictionary.writeToFile(asset as String, atomically: true)
         NSNotificationCenter.defaultCenter().postNotificationName("progress+end", object: nil)
+        reloadAssetFile()
         
     }
     
