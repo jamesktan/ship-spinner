@@ -11,6 +11,11 @@ import UIKit
 
 class Util: NSObject {
     
+    class func folderExists(s:NSString) -> Bool {
+        var path = Util.getDownloadPath() //Documents/Download/
+        var complete = path.stringByAppendingPathComponent(s as String)
+        return NSFileManager.defaultManager().fileExistsAtPath(complete)
+    }
     class func splitByComma(s : NSString) -> NSArray {
         var values = s.componentsSeparatedByString(",")
         var valuesNum = values.map({($0).floatValue})
@@ -45,6 +50,7 @@ class Util: NSObject {
         return path as NSString
 
     }
+    
     // Downloads the PLIST file
     class func downloadFileAtPath(url: NSString) -> NSString {
         

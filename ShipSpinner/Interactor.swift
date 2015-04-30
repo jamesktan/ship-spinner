@@ -117,4 +117,14 @@ class Interactor: NSObject {
         dm!.download()
         dm!.load()
     }
+    
+    func shipIsPresent(id_ship : NSString) -> Bool {
+        return dm!.shipDownloaded(id_ship)
+    }
+
+    
+    func downloadShip(id_ship : NSString) {
+        dm!.downloadShip(id_ship)
+        dm!.load()
+    }
 }

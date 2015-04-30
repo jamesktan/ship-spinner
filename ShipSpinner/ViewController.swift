@@ -147,10 +147,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.textLabel!.font = UIFont(name: "Helvetica-Bold", size: 13.0)
         cell.textLabel!.numberOfLines = 0
         cell.textLabel!.lineBreakMode = NSLineBreakMode.ByWordWrapping
-
-        cell.detailTextLabel?.text = "DOWNLOAD"
         cell.detailTextLabel!.textColor = UIColor.lightGrayColor()
-        
+
+        if frame.presenter!.shipIsPresent(details.0) {
+            cell.detailTextLabel?.text = ""
+        } else {
+            cell.detailTextLabel?.text = "DOWNLOAD"
+        }
+        NSLog(details.0 as String)
         NSLog(cell.textLabel!.text!)
         return cell
     }
@@ -158,10 +162,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var cell : UITableViewCell = tableView.cellForRowAtIndexPath(indexPath)!
         shipID = cell.reuseIdentifier! // Change the current shipID
+        // if the ship is not downloaded, download it first
+        
+        if (cell.detailTextLabel!.text != "") {
+            self.activity.startAnimating()
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), {
+                frame.presenter!.downloadShip(self.shipID)
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.shipListView.reloadData()
+                    self.activity.stopAnimating()
+                    self.showView(self.buttonList) // Hides the view
+                })
+            })
+        }
         loadShipData(shipID)
         frame.presenter!.setShip(shipID) // Set New Default Ship
         tableView.deselectRowAtIndexPath(indexPath, animated: true) // Unhighlight Row
-        showView(buttonList) // Hides the view
 
         return
     }

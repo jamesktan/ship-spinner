@@ -126,4 +126,13 @@ class DataManager: NSObject {
         
     }
     
+    func shipDownloaded(id: NSString) -> Bool {
+        var folderName = id.stringByReplacingOccurrencesOfString(".dae", withString: ".scnassets")
+        return Util.folderExists(folderName)
+    }
+    
+    func downloadShip(id:NSString) {
+        
+    }
+    
 }

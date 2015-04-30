@@ -84,6 +84,10 @@ class Presenter: NSObject {
         return getShipListNice().count
     }
     
+    func shipIsPresent(shipID: NSString) -> Bool {
+        return interactor!.shipIsPresent(shipID)
+    }
+    
     // resuse, nice title, image
     func getListDisplayDetails(indexpath : NSIndexPath) -> (NSString, NSString, UIImage)  {
         var list : NSArray = getShipListNice()
@@ -118,6 +122,10 @@ class Presenter: NSObject {
     
     func download() {
         interactor?.download()
+    }
+    
+    func downloadShip(id_ship: NSString) {
+        interactor?.downloadShip(id_ship)
     }
     
     
