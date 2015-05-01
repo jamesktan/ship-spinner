@@ -127,6 +127,10 @@ class DataManager: NSObject {
         saveShipAssetKeyValue(assetDictionary, shipID: id, folderName: daePath)
         reloadAssetFile()
     }
+    func downloadShipOffline() {
+        saveShipAssetKeyValue(assetDictionary, shipID: "kush_cloakedfighter.dae", folderName: "kush_cloakedfighter.scnassets/kush_cloakedfighter.dae")
+        reloadAssetFile()
+    }
     
     func saveShipAssetKeyValue(dict: NSDictionary, shipID: NSString, folderName: NSString ) {
         
@@ -152,19 +156,34 @@ class DataManager: NSObject {
     func load() {
         // First Load Only
         loadDefaults()
-        downloadManifest()
         
+        (Util.isInternetAvailable()) ? downloadManifest() : loadManifestFromFile()
         loadAssets()
         loadDetails()
-        loadShipFirstRun()
+        (Util.isInternetAvailable()) ? loadShipFirstRun() : loadManifestFromFile()
     }
     func loadShipFirstRun() {
         // Check if the file exists
         let pathDownloads = Util.getDownloadPath()
         var asset = pathDownloads.stringByAppendingPathComponent((assetFile as String)+".plist")
         if (!Util.fileExistsAtPath(asset)) { // file does not exist, download the ship
-            self.downloadShip(getDefault("currentShip") as! String)
+            if Util.isInternetAvailable() {
+                downloadShip(getDefault("currentShip") as! String)
+            } else {
+                downloadShipOffline()
+            }
         }
+    }
+    func loadManifestFromFile() {
+        //Create the Paths
+        var bundleAsset = NSBundle.mainBundle().resourcePath?.stringByAppendingPathComponent((assetFile as String)+"Online.plist")
+        var bundleDetail = NSBundle.mainBundle().resourcePath?.stringByAppendingPathComponent((detailFile as String)+"Online.plist")
+        var bundleSCN = NSBundle.mainBundle().resourcePath?.stringByAppendingPathComponent("kush_cloakedfighter.scnassets")
+
+        Util.copyBundleFilesToDocumentLibrary(bundleAsset!)
+        Util.copyBundleFilesToDocumentLibrary(bundleDetail!)
+        Util.copyBundleFilesToDocumentLibrary(bundleSCN!)
+        
     }
     func downloadManifest() {
         var base : NSString = getDefault("downloadURL") as! NSString

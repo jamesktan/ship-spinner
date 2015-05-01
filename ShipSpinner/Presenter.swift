@@ -195,6 +195,12 @@ class Presenter: NSObject {
 //        return alert
 //
 //    }
+    
+    func createNoInternetAlert() -> UIAlertController {
+        var alert = UIAlertController(title: "No Internet Connection", message: "Sorry! For one reason or another, you don't have internet. Please enable your internet before attempting to download more models.", preferredStyle: UIAlertControllerStyle.Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler:nil))
+        return alert
+    }
     func createAboutAlert() -> UIAlertController {
         var alert = UIAlertController(title: "Naabal Shipyards", message: "Created as fan-service to display and highlight the beautiful detail of Homeworld Remastered \n\n All models, assets, and lore belong to their respective owners (GearBox, Relic, Homeworld Shipyards and Encyclopedia Hiigara).  \n\nThe makers of Naabal Shipards do not own any of the Homeworld assets, details, or descriptions.", preferredStyle: UIAlertControllerStyle.Alert)
         alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel, handler:nil))

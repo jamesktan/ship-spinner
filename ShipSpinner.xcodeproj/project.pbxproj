@@ -23,6 +23,8 @@
 		5465AC2B1ACDBA0500636FBA /* layers4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5465AC211ACDBA0500636FBA /* layers4.png */; };
 		5465AC2D1ACDBA0500636FBA /* settings20.png in Resources */ = {isa = PBXBuildFile; fileRef = 5465AC231ACDBA0500636FBA /* settings20.png */; };
 		5465AC2F1ACDBA0500636FBA /* stack8.png in Resources */ = {isa = PBXBuildFile; fileRef = 5465AC251ACDBA0500636FBA /* stack8.png */; };
+		546DA63C1AF3573A00E4F05F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 546DA63B1AF3573A00E4F05F /* Reachability.m */; };
+		546DA63F1AF358BF00E4F05F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546DA63E1AF358BF00E4F05F /* SystemConfiguration.framework */; };
 		5471FBC71AD08C1A003451D4 /* logo76.png in Resources */ = {isa = PBXBuildFile; fileRef = 5471FBC51AD08C1A003451D4 /* logo76.png */; };
 		5471FBC81AD08C1A003451D4 /* logo76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5471FBC61AD08C1A003451D4 /* logo76@2x.png */; };
 		5471FBCA1AD250CA003451D4 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5471FBC91AD250C9003451D4 /* Util.swift */; };
@@ -50,8 +52,8 @@
 		54E089FB1A19435800BDC644 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 54E089F91A19435800BDC644 /* LaunchScreen.xib */; };
 		54E08A071A19435800BDC644 /* ShipSpinnerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E08A061A19435800BDC644 /* ShipSpinnerTests.swift */; };
 		54EC67A31AD05F5A009CE568 /* defaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54EC67A21AD05F5A009CE568 /* defaults.plist */; };
-		54EC67A51AD060BE009CE568 /* asset.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54EC67A41AD060BE009CE568 /* asset.plist */; };
-		54EC67A71AD060C8009CE568 /* detail.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54EC67A61AD060C8009CE568 /* detail.plist */; };
+		54EC67A51AD060BE009CE568 /* assetOnline.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54EC67A41AD060BE009CE568 /* assetOnline.plist */; };
+		54EC67A71AD060C8009CE568 /* detailOnline.plist in Resources */ = {isa = PBXBuildFile; fileRef = 54EC67A61AD060C8009CE568 /* detailOnline.plist */; };
 		54EC67A91AD062E3009CE568 /* kush_cloakedfighter.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 54EC67A81AD062E3009CE568 /* kush_cloakedfighter.scnassets */; };
 		54EE6C251AEE619E00E8B807 /* guildstonebg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 54EE6C241AEE619E00E8B807 /* guildstonebg.jpg */; };
 		54EE6C3E1AEEDB5F00E8B807 /* hiig.png in Resources */ = {isa = PBXBuildFile; fileRef = 54EE6C371AEEDB5F00E8B807 /* hiig.png */; };
@@ -91,6 +93,9 @@
 		5465AC211ACDBA0500636FBA /* layers4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layers4.png; sourceTree = "<group>"; };
 		5465AC231ACDBA0500636FBA /* settings20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings20.png; sourceTree = "<group>"; };
 		5465AC251ACDBA0500636FBA /* stack8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stack8.png; sourceTree = "<group>"; };
+		546DA63A1AF3573A00E4F05F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		546DA63B1AF3573A00E4F05F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		546DA63E1AF358BF00E4F05F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		5471FBC51AD08C1A003451D4 /* logo76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo76.png; sourceTree = "<group>"; };
 		5471FBC61AD08C1A003451D4 /* logo76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo76@2x.png"; sourceTree = "<group>"; };
 		5471FBC91AD250C9003451D4 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
@@ -129,8 +134,8 @@
 		54E08A051A19435800BDC644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54E08A061A19435800BDC644 /* ShipSpinnerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShipSpinnerTests.swift; sourceTree = "<group>"; };
 		54EC67A21AD05F5A009CE568 /* defaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = defaults.plist; sourceTree = "<group>"; };
-		54EC67A41AD060BE009CE568 /* asset.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = asset.plist; sourceTree = "<group>"; };
-		54EC67A61AD060C8009CE568 /* detail.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = detail.plist; sourceTree = "<group>"; };
+		54EC67A41AD060BE009CE568 /* assetOnline.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = assetOnline.plist; sourceTree = "<group>"; };
+		54EC67A61AD060C8009CE568 /* detailOnline.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = detailOnline.plist; sourceTree = "<group>"; };
 		54EC67A81AD062E3009CE568 /* kush_cloakedfighter.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = kush_cloakedfighter.scnassets; sourceTree = "<group>"; };
 		54EE6C241AEE619E00E8B807 /* guildstonebg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = guildstonebg.jpg; sourceTree = "<group>"; };
 		54EE6C371AEEDB5F00E8B807 /* hiig.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = hiig.png; sourceTree = "<group>"; };
@@ -147,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				546DA63F1AF358BF00E4F05F /* SystemConfiguration.framework in Frameworks */,
 				54C50B961AD47418005EDB5C /* QuartzCore.framework in Frameworks */,
 				5471FBE01AD25AFD003451D4 /* libz.dylib in Frameworks */,
 				54BA14B51ACC8F0D00054079 /* SpriteKit.framework in Frameworks */,
@@ -199,6 +205,15 @@
 				5465AC141ACDB7F800636FBA /* bg1.jpg */,
 			);
 			name = bgs;
+			sourceTree = "<group>";
+		};
+		546DA63D1AF3574000E4F05F /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				546DA63A1AF3573A00E4F05F /* Reachability.h */,
+				546DA63B1AF3573A00E4F05F /* Reachability.m */,
+			);
+			name = Reachability;
 			sourceTree = "<group>";
 		};
 		5471FBCC1AD25AC8003451D4 /* minizip */ = {
@@ -269,7 +284,9 @@
 			isa = PBXGroup;
 			children = (
 				5471FBCB1AD25AC7003451D4 /* ShipSpinner-Bridging-Header.h */,
+				546DA63D1AF3574000E4F05F /* Reachability */,
 				5471FBDE1AD25AD7003451D4 /* SSZipArchive */,
+				546DA63E1AF358BF00E4F05F /* SystemConfiguration.framework */,
 				540392B21AD29A15006A717F /* Alamofire.framework */,
 				54C50B951AD47418005EDB5C /* QuartzCore.framework */,
 				54BA14B41ACC8F0D00054079 /* SpriteKit.framework */,
@@ -303,8 +320,8 @@
 			isa = PBXGroup;
 			children = (
 				54EC67A21AD05F5A009CE568 /* defaults.plist */,
-				54EC67A41AD060BE009CE568 /* asset.plist */,
-				54EC67A61AD060C8009CE568 /* detail.plist */,
+				54EC67A41AD060BE009CE568 /* assetOnline.plist */,
+				54EC67A61AD060C8009CE568 /* detailOnline.plist */,
 			);
 			name = asset;
 			sourceTree = "<group>";
@@ -416,7 +433,7 @@
 				54E089F61A19435800BDC644 /* Main.storyboard in Resources */,
 				5471FBC71AD08C1A003451D4 /* logo76.png in Resources */,
 				54EE6C3F1AEEDB5F00E8B807 /* kad.png in Resources */,
-				54EC67A51AD060BE009CE568 /* asset.plist in Resources */,
+				54EC67A51AD060BE009CE568 /* assetOnline.plist in Resources */,
 				540392B01AD2795E006A717F /* settings20_selected.png in Resources */,
 				54EC67A31AD05F5A009CE568 /* defaults.plist in Resources */,
 				54EE6C441AEEDB5F00E8B807 /* kush.png in Resources */,
@@ -435,7 +452,7 @@
 				54EE6C411AEEDB5F00E8B807 /* tur.png in Resources */,
 				54EE6C421AEEDB5F00E8B807 /* vayg.png in Resources */,
 				5465AC181ACDB7F800636FBA /* bg4.jpg in Resources */,
-				54EC67A71AD060C8009CE568 /* detail.plist in Resources */,
+				54EC67A71AD060C8009CE568 /* detailOnline.plist in Resources */,
 				5465AC271ACDBA0500636FBA /* bars5.png in Resources */,
 				54E089F81A19435800BDC644 /* Images.xcassets in Resources */,
 				548B33D71AD2CA4C00B7CD8B /* logo58.png in Resources */,
@@ -486,6 +503,7 @@
 				54C6B0021ACC7BA200E1D0F1 /* DataManager.swift in Sources */,
 				54C6AFFC1ACC6EBF00E1D0F1 /* Presenter.swift in Sources */,
 				5471FBD81AD25AC8003451D4 /* ioapi.c in Sources */,
+				546DA63C1AF3573A00E4F05F /* Reachability.m in Sources */,
 				5471FBDB1AD25AC8003451D4 /* zip.c in Sources */,
 				54E089F11A19435800BDC644 /* ShipSpinner.xcdatamodeld in Sources */,
 				54C6AFFE1ACC6EE100E1D0F1 /* Interactor.swift in Sources */,
