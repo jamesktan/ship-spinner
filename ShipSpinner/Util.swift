@@ -7,12 +7,19 @@
 //
 
 import UIKit
+
 //import Alamofire
 
 class Util: NSObject {
-    
+    class func isInternetAvailable() -> Bool {
+        return false
+    }
     class func downloadFileExists() -> Bool{
         return NSFileManager.defaultManager().fileExistsAtPath(Util.getDownloadPath() as String) ? true : false
+    }
+    
+    class func fileExistsAtPath(s:NSString)->Bool {
+        return NSFileManager.defaultManager().fileExistsAtPath(s as String)
     }
 
     class func folderExists(s:NSString) -> Bool {
@@ -57,7 +64,6 @@ class Util: NSObject {
     
     // Downloads the PLIST file
     class func downloadFileAtPath(url: NSString) -> NSString {
-        
         //Check the path exists
         var path = loadOrCreatePath()
         

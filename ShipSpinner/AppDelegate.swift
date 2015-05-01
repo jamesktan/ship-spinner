@@ -30,8 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         i.presenter = p
         i.dm = d
         d.interactor = i
-        
-        
+
         return true
     }
 

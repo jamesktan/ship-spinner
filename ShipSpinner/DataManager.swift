@@ -156,6 +156,15 @@ class DataManager: NSObject {
         
         loadAssets()
         loadDetails()
+        loadShipFirstRun()
+    }
+    func loadShipFirstRun() {
+        // Check if the file exists
+        let pathDownloads = Util.getDownloadPath()
+        var asset = pathDownloads.stringByAppendingPathComponent((assetFile as String)+".plist")
+        if (!Util.fileExistsAtPath(asset)) { // file does not exist, download the ship
+            self.downloadShip(getDefault("currentShip") as! String)
+        }
     }
     func downloadManifest() {
         var base : NSString = getDefault("downloadURL") as! NSString
