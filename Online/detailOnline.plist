@@ -230,7 +230,223 @@ Of the 3 Imperators produced so far, none have been lost in combat, though the o
 	</array>
 
 
+	<key>hiig_interceptor.dae</key>
+	<array>
+		<string>Hiigaran Interceptor</string>
+		<string>
+TYPE: Strike Craft
+ROLE: Anti-Strike Craft
+SPEED: 480 m/s
 
+ARMARMENTS:
+1 x Kinetic Gun
+
+The Interceptor is a fast, maneuverable and versatile craft designed for patrol, escort, and capital ship defense. The interceptor is the second smallest hull type that features offensive strike capabilities. Speed and maneuverability are maximized; thin armor plating covers only critical systems. The interceptor is especially feared by non-combat vessels, other strike craft, and resource operations. These fighters are winged, twin-engined, and appear to have a centerline weapon mount poking out the middle of a twin-pronged nose. They can be easily classified as Hiigaran by their gray-white-orange colouration. It has a rotary cannon very similar to those on the original Kushan Blade-class Interceptor.
+
+The Hiigaran Interceptor squadron contains five ships. Use the interceptors to attack any groups of fighters or lone scouts in your area. This will stop the enemy from using radar to plan an attack or ambush on your current position, and they will need to try multiple tactics including hyperspacing to a random location if they wish to find you. The interceptors and Bombers of the enemy are the opponent's main cover for frigate assaults, and will make it harder for any corvettes or frigates of your own to attack them, so send a few interceptor squadrons to dispatch of the enemy.
+
+</string>
+<string>hiig</string>
+
+	</array>
+
+
+
+	<key>hiig_scout.dae</key>
+	<array>
+		<string>Hiigaran Scout</string>
+		<string>
+TYPE: Strike Craft
+ROLE: Recon
+SPEED: 480 m/s
+
+ARMARMENTS:
+1 x Pea Shooter
+1 x EMP Weapon
+
+The Hiigaran Scout is a very light strike craft used for patrolling and explorations, and also to harry enemy units. The Hiigaran and the Vaygr Scout are very much similar in terms of function and only differs in appearance and speed (when you research the engines upgrade for all fighters in the Vaygr race, your Vaygr scouts' movement speed is also upgraded and they become much faster than their Hiigaran counterpart).
+
+The scout has very fast engines but has only light armor and weapons. Thus, it relies on its maneuverability and speed to evade enemy fire. Although it is not designed for direct combat with any other ship, it can give special support to all other combat ships when upgraded with the EMP (electromagnetic pulse) ability as well as the sensor ping.
+
+</string>
+<string>hiig</string>
+
+	</array>
+
+
+
+	<key>hiig_shipyard.dae</key>
+	<array>
+		<string>Shipyard Naabal</string>
+		<string>
+TYPE: Mothership
+ROLE: Ship Construction
+SPEED: 15 m/s
+
+ARMARMENTS:
+12 x Hull Defense Guns
+
+The Shipyard Naabal, commanded by Elohim Naabal, was a massive ship construction facility located in the Sarum System, in the outskirts of the Hiigaran Control Zone.
+
+The Mothership fleet jumped to Sarum in hopes of rebuilding their fleet for a counter-offensive. However, upon arrival, they learned that the shipyard had been sustaining heavy Vaygr raids, one of which was in progress. After destroying the Vaygr attackers and repairing the Shipyard, the Hiigaran fleet was given control of a Carrier the shipyard had just produced, and after another Vaygr raid was stopped the fleet left, leaving the Shipyard to produce additional vessels.
+
+The Shipyard Naabal later met up with the Mothership fleet at the Vaygr Assembly Point in the Shining Hinterlands, where it repaired the damaged Progenitor Dreadnaught. It then joined the Mothership fleet.
+
+The Hiigaran Shipyard is a huge construction facility, capable of producing any ship in the Hiigaran fleet, and can also act as a resource drop off. These craft cannot be constructed by the Mothership, so they are built in huge orbital facilities and hyperspaced into battle. The shipyard is the only construction ship capable of building Battlecruisers, the largest warships in the fleet. A Shipyard represents a large investment of resources, and can only be called into battle if the player has one or more Hyperspace Modules on a production capable ship.
+
+</string>
+<string>hiig</string>
+
+	</array>
+
+
+	<key>kad_multibeamfrigate.dae</key>
+	<array>
+		<string>Hiigaran Scout</string>
+		<string>
+TYPE: Frigate
+ROLE: Anti-Capital Ship
+LENGTH: 69.7 meters
+SPEED: 280 m/s
+
+ARMARMENTS:
+4 x Ion Cannons
+
+"If you will not join, then die. There is no withdrawal from the Garden." 
+- Kadeshi Ambassador
+
+The Multi-Beam Frigate, often called the MBF, is an Ion Cannon frigate used by the Kadeshi as a primary weapon against capital ships. This is one of the most efficient capital ship killers in the game, as it possessed four ion cannons, two mounted on each side of the hull. The Kadeshi use these deadly frigates in groups of three or more to utterly devastate their opponents. When Multi-Beam frigates attack, they tend to perform a barrel roll, most likely to distribute damage across the target's hull, but also probably for better heat distribution. It is known that the Kushan met 17 Multi-Beam Frigates in the Great Nebula (and another two in the Sea of Lost Souls). The size and colour of the multi-beam frigates can often be confused with the Fuel Pod.
+
+</string>
+<string>kad</string>
+
+	</array>
+
+
+	<key>vgr_commbase.dae</key>
+	<array>
+		<string>Thaddis Sabbah - Command Station</string>
+		<string>
+TYPE: Command Station
+ROLE: N/A
+LENGTH: N/A
+SPEED: N/A
+
+ARMARMENTS:
+None
+
+The Command Station is a special strategic station used by the Vaygr, which filled the role of reconnaissance and communications. Only two such ships have been seen and only one was given a name.
+
+The station first appeared in the Gehenna Outskirts, when the Hiigaran fleet was attempting to reach the Oracle. Having no weapons, it was basically a target practice for most of the ships, but the lack of weapons was substituted by reinforced armor, improved regeneration and a communications facility located below the vessel. However, these stations were always protected by a heavy fleet.
+
+The station went unseen, until Captain Soban was captured by the Vaygr for interrogation purposes. He was taken to one of the named stations known as Thaddis Sabbah. For unknown reasons, this station was an extremely valuable asset to the Vaygr, evidenced by the massive fleet present to guard it, which also included parts of Makaan's Elite Guard. Unfortunately, this station was destroyed as the Hiigaran fleet was forced to capture it to rescue Sobab, who let his explosive devices destroy the station.
+
+Possesing no visible weapons, it is possible, that these stations provided almost the same purpose as production ships: ship docking, repairing etc. Also, its Communications Facility could allow the station to monitor hyperspace activity, detect cloaked ships, as well as increasing the sensor range. The station's armor was that of Capital Ships: ships like Interceptors did little damage, while Bombers and Ion Cannon Frigates dealt damage like to most Capital Ships.
+
+Not much is known about when the station was built, however, it appeared to have been an extremely important station, as much of the Vaygr fleet was assembled here. It was also where Makaan's Elite Guard resided.
+
+
+</string>
+<string>vayg</string>
+
+	</array>
+
+
+
+	<key>vgr_interceptor.dae</key>
+	<array>
+		<string>Vaygr Assault Craft</string>
+		<string>
+TYPE: Strike Craft
+ROLE: Anti-Strike Craft
+SPEED: 325 m/s
+
+ARMARMENTS:
+1 x Flechette Cannon
+
+The Vaygr Assault Craft was the smallest dedicated combat vessel in the Vaygr fleet. It specialized in dogfighting other fighters, with excellent speed, maneuverability, and a single, powerful forward-mounted Flechette Cannon. It is sometimes classed as an 'interceptor' by other races, and this suits it well as it excels at intercepting and destroying other fighters. Adhering to the typical Vaygr tactic of employing strength in numbers, 7 fighters comprise a squad for the same cost of a 5 ship squad of Hiigaran interceptors. Its armor, being lower in quality than that of Hiigaran interceptors, makes it a poor match against larger corvettes and frigates, but its speed allows it to survive a brief engagement with such vessels, acting as a distraction for larger ships in the fleet. Even so, it would be unwise to use these vessels for many tasks other than those for which it is designed.
+
+Its reputation as a fighter-killer deterred enemy fighter wings from entering the combat zone, thus denying an enemy fighter support. Often, fighter commanders will have assault craft attack the subsystems of larger vessels with little anti-fighter weaponry in order to goad enemy fighters to a dogfight in which they are outnumbered and, ultimately, outclassed. They were also excellent at performing hit-and-run attacks on resourcing operations, using their great speed to attack quickly and withdraw to avoid a fight against superior forces.
+
+</string>
+<string>vayg</string>
+
+	</array>
+
+
+	<key>vgr_lance.dae</key>
+	<array>
+		<string>Harridan-class Plasma Lance Fighter</string>
+		<string>
+TYPE: Strike Craft
+ROLE: Anti-Strike Craft
+SPEED: 260 m/s
+
+ARMARMENTS:
+1 x Plasma Lance
+
+Harridan-class Plasma Lance Fighter (Harridan pronounced [ˈhɑrɪdn]) was a heavy fighter equipped with a Plasma Lance which made these fighters a great weapon against enemy corvettes. Plasma Lance squadrons can strike enemy units from a relatively long distance considering they use plasma beam weaponry, which is notoriously short range. The weapon is relatively powerful for a fighter and can do large amounts of damage in a short time since the Harridan's weapon also fires more rapidly than the larger version found on corvettes and battlecruisers.
+
+The most effective use of Harridans is when they are combined with a much larger task force giving these expensive and rare fighters cover as they focus on destroying enemy corvettes. Due to their relatively low maximum speed they are very ineffective in engagements against enemy interceptors. Also, they lack significant firepower against capital ships since their plasma lance was not designed to penetrate the heavy armor found on frigates and larger ships. Therefore, the best effect can be achieved when Plasma Lance Fighters are escorted by Assault Crafts and Bombers so that the strike craft wing can be relatively effective against all manner of enemy. In such situations they can focus on crushing enemy corvettes, a task for which they were specially designed.
+
+</string>
+<string>vayg</string>
+
+	</array>
+
+
+
+	<key>vgr_minelayer.dae</key>
+	<array>
+		<string>Vaygr Minelayer Corvette</string>
+		<string>
+TYPE: Strike Craft
+ROLE: Minelayer
+SPEED: 215 m/s
+
+ARMARMENTS:
+1 x Mine Launcher
+
+The Vaygr Minelayer Corvette was a Vaygr unit designed to deploy automated explosive mines. The ship used a hull very similar to the Laser Corvette, and its bottom section was dominated by a large mine deploying system. At the back of the vessel, below the engines the slot used to deploy mines is visible. At the front, below the bridge two barrels of the Minesweeping system are visible, capable of destroying mines within 1200 meters range.
+
+Minelayer corvettes were unarmed, and therefore worked best in secured area, where curtains of minefield forced enemy units to fly around giving plenty of time to friendlies, or pass through it what would cause enormous damage to first units which arrive to the range of mines sensors. During combat they had to escape as fast as possible to avoid destruction and hope that enemy won't spot single small ship.
+
+
+</string>
+<string>vayg</string>
+
+	</array>
+
+
+
+	<key>tur_mothership.dae</key>
+	<array>
+		<string>Lord-class Attack Carrier</string>
+		<string>
+TYPE: Mothership
+ROLE: Anti-Capital Ship
+MASS: 109,000 tons
+LENGTH: 738.8 meters
+SPEED: 235 m/s
+
+ARMARMENTS:
+2 Large Ion Cannons
+10 Hull Defence Guns
+1 x Short Jump Hyperdrive
+
+The Turanic Raiders were a race of pirates and mercenaries known from the first attacks in the Turan sector in 9035 GSY. Most of their attacks were focused on trade lines and unprotected convoys. Apogee of Raiders power was during the Homeworld Era, when under the protectorate of the Taiidan Empire they rose in power. During the Cataclysm Era, the Raiders were still allied with the Taiidan Imperialist Faction.
+
+The Lord-class Attack Carrier is the only known Turanic heavy capital ship. A large and powerful vessel, they served two roles in Turanic Fleets: Strike craft carrier and capital starship on par with destroyers. The distinctive profile of these ships made it recognizable to any commander and, like most Turanic ships, is very utilitarian. It sports a basic rectangular/octagonal hull with a large power generator and engine protruding from the bottom and a high bridge with multiple sensor arrays on top, giving the captain a good field of view.
+
+Unlike most carriers, the Lord is able to defend itself well against all but the heaviest enemy ships due to its thick armor, redundant operating systems, and the best weaponry ever mounted on a carrier. These included as many as ten rapid fire point defense guns for dealing with corvettes and fighters, and two large ion cannons for dealing with frigates and capital ships. In the rear of the ship was the entrance to the hangar bay, allowing fighters to be safely launched even while the Lord is bringing its heavy weapons to bear. While these ships would be excellent on the offensive, most Turanic fleets use them as last resort weapons due to the cost of constructing one of these essential ships. After all, what's the point of winning a battle and capturing enemy ships if you lose the one ship capable of carrying off the spoils?
+
+By far the most famous Lord-class Heavy Carrier was the Rancor, which was responsible for the first attack on the newly-commissioned Kushan Mothership in the Great Wastelands. It was forced to retreat after losing most of its flight wing and was later destroyed in its second attempt to destroy the Mothership.
+
+
+</string>
+<string>tur</string>
+
+	</array>
 
 </dict>
 </plist>

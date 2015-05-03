@@ -21,5 +21,27 @@
 	<string>https://s3-us-west-1.amazonaws.com/naabalyards/kad_swarmer.scnassets.zip</string>
 	<key>taid_scout.dae</key>
 	<string>https://s3-us-west-1.amazonaws.com/naabalyards/taid_scout.scnassets.zip</string>
+
+
+	<key>hiig_interceptor.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabalyards/hiig_interceptor.scnassets.zip</string>
+	<key>hiig_scout.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabalyards/hiig_scout.scnassets.zip</string>
+	<key>hiig_shipyard.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabalyards/hiig_shipyard.scnassets.zip</string>
+	<key>kad_multibeamfrigate.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabalyards/kad_multibeamfrigate.scnassets.zip</string>
+	<key>vgr_commbase.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabalyards/vgr_commbase.scnassets.zip</string>
+	<key>vgr_interceptor.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabalyards/vgr_interceptor.scnassets.zip</string>
+	<key>vgr_lance.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabalyards/vgr_lance.scnassets.zip</string>
+	<key>vgr_minelayer.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabalyards/vgr_minelayer.scnassets.zip</string>
+	<key>tur_mothership.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabalyards/tur_mothership.scnassets.zip</string>
+
+
 </dict>
 </plist>
