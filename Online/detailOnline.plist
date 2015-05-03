@@ -302,7 +302,7 @@ The Hiigaran Shipyard is a huge construction facility, capable of producing any 
 
 	<key>kad_multibeamfrigate.dae</key>
 	<array>
-		<string>Hiigaran Scout</string>
+		<string>Kadesh Multi-Beam Frigate</string>
 		<string>
 TYPE: Frigate
 ROLE: Anti-Capital Ship
