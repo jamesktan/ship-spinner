@@ -58,6 +58,10 @@
 	<key>taid_carrier.dae</key>
 	<string>https://s3-us-west-1.amazonaws.com/naabalyards/taid_carrier.scnassets.zip</string>
 
+	<key>kush_assaultfrigate.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabalyards/kush_assaultfrigate.scnassets.zip</string>
+
+
 
 
 

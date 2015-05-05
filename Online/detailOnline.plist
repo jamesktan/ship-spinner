@@ -637,5 +637,35 @@ In combat the Saarkin Cho has performed admirably and was virtually undefeated u
 <string>taid</string>
 	</array>
 
+
+	<key>kush_assaultfrigate.dae</key>
+	<array>
+		<string>Vengeance-class Assault Frigate</string>
+		<string>
+TYPE: Frigate
+ROLE: Anti-Frigate
+MASS: 15,000 tons
+LENGTH: 108.7 meters
+SPEED: 325 m/s
+
+ARMARMENTS:
+4 x Large Projectile Cannons
+2 x Plasma Bomb Launcher
+
+Named for the burning hatred in the Kushan's hearts after the destruction of Kharak, the Kushan have sought forth to destroy the empire that charred their world. The Vengeance was armed with four large mass driver turrets and two plasma bomb launchers, all placed at the bow.
+
+Based on the Kudaark design, the Vengeance is well enough equipped to hold off other frigates and corvettes. In the late Homeworld War, Vengeance-class Assault Frigates were built in equal numbers with Firelance-class Ion Cannon Frigates. Mixed groups of these frigates were capable to stand against almost any kind of opponent.
+
+After the development of the Firelance-class Ion Cannon Frigate, certain Kushan flag officers became enamored with the power of the new beam weapon, overlooking the power and flexibility of the Vengeance design. This blindness to the Firelance's limitations led to several stinging defeats that resulted in a strategic decision that Vengeance hulls would be constructed with the Firelance variants on a nearly one-for-one basis right up until the end of the Homeworld War.
+
+Assault frigate crews are involved at almost every level of Kushan fleet operations, and as such have earned their namesake as a major participant in the campaign that brought down the Taiidan regime responsible for the near-genocide at Kharak.
+
+The Vengeance class of assault frigates are the workhorses of the Kushan fleet. Their four heavy turrets give excellent coverage, while dual forward-facing plasma bomb launchers give it the ability to devastate any capital ship in its path. Directly behind the massive engine housing is the only arc where the assault frigate is incapable of directing any sort of firepower. This, and the relatively slow tracking of the turret guns, means that despite its heavy offensive punch and deep armor plating, the assault frigate should not be deployed without an escort of fighters or multi-gun corvettes.
+
+</string>
+<string>kush</string>
+	</array>
+
+
 </dict>
 </plist>
