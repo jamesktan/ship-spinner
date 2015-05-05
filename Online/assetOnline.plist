@@ -43,5 +43,24 @@
 	<string>https://s3-us-west-1.amazonaws.com/naabalyards/tur_mothership.scnassets.zip</string>
 
 
+	<key>kush_dronefrigate.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabalyards/kush_dronefrigate.scnassets.zip</string>
+	<key>kush_missiledestroyer.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabalyards/kush_missiledestroyer.scnassets.zip</string>
+	<key>kush_salvagecorvette.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabalyards/kush_salvagecorvette.scnassets.zip</string>
+	<key>taid_ioncannonfrigate.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabalyards/taid_ioncannonfrigate.scnassets.zip</string>
+	<key>taid_missiledestroyer.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabalyards/taid_missiledestroyer.scnassets.zip</string>
+	<key>taid_mothership.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabalyards/taid_mothership.scnassets.zip</string>
+	<key>taid_carrier.dae</key>
+	<string>https://s3-us-west-1.amazonaws.com/naabalyards/taid_carrier.scnassets.zip</string>
+
+
+
+
+
 </dict>
 </plist>

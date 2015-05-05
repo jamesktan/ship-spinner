@@ -448,5 +448,194 @@ By far the most famous Lord-class Heavy Carrier was the Rancor, which was respon
 
 	</array>
 
+
+
+	<key>kush_dronefrigate.dae</key>
+	<array>
+		<string>Puppeteer-class Drone Frigate</string>
+		<string>
+TYPE: Frigate
+ROLE: Anti-Strike Craft
+MASS: 13,000 tons
+SPEED: 325 m/s
+
+ARMARMENTS:
+24 x Gun Drones
+
+The Puppeteer-class Drone Frigate was developed as flying platform for 24 Gun Drones, each one of them was controlled by AI systems on frigate, mixed with tracking devices each drone possessed. Two frigates mixed with a Trapper-class Gravity Well Generator could easily destroy a few squadrons of fighters and corvettes without risking any damage on it's own. Puppeteers were unique frigates containing high-tech systems. Most of hull was filled with small docks allowing to Launch and Retrieve drones each time it was required. An onboard phased disassembler array allowed the frigate to supplement drones when some of them were destroyed. Finally large transmitter placed on nose section of ship allowed it to transmit commands to each of 24 drones at a time.
+
+HISTORY:
+
+Early on in the fleet design debates, a faction within the Kushan military was pushing to develop a series of autonomous or tele-operated strike craft that would render on-board pilots obsolete. Unfortunately, AI systems never could match the adaptability or reliability of living pilots, and even communications delays of a fraction of a light second rendered remote-controlled drones useless in combat. Several promising designs of cheap, powerful drone were abandoned simply because there was no way to operate them effectively at range.
+
+Kushan Engineers have a unspoken belief that anything can be put to use, even the dead, and so it wasn't long before a research team trying to develop an effective anti-fighter capital ship turned the drone problem around so that it became a solution. The answer lay in not asking more from a drone than it was capable of doing. Instead of expecting a drone to behave like a fighter, researchers developed a sophisticated tracking and targeting system that could control 24 drones as if they were remote turrets. Deployed in a perfect sphere around a modified heavy frigate chassis, these drones can project firepower in any direction against multiple fast moving targets.
+
+The resulting Puppeteer Class Drone Frigate has the raw firepower of other Frigates, as each drone can carries a rapid fire rail gun, but the tactical coverage is unsurpassed, making the most effective anti-strike craft platform yet seen. Puppeteers can break up massed fighter attacks in less than a minute, and can even direct substantial fire against single targets like heavy corvettes or other enemy frigates. Two Puppeteers used in conjunction with a Trapper class Gravwell generator can completely destroy an enemy fleet that has concentrated on strike craft instead of capital ships.
+
+</string>
+<string>kush</string>
+
+	</array>
+
+
+	<key>kush_missiledestroyer.dae</key>
+	<array>
+		<string>Perdition-class Missile Destroyer</string>
+		<string>
+TYPE: Capital Ship
+ROLE: Anti-Strike Craft
+MASS: 28,000 tons
+SPEED: 295 m/s
+
+ARMARMENTS:
+4 x Guided Missile Launcher
+
+The ship was in fact a modified Revelation-class Destroyer. Instead of ion cannons and mass drivers however, four massive missile lauchers were mounted on the bow section. Missile destroyers were capable of take down large groups of fighters and each launcher stored up to 8 missiles and produced an additional one each 2.3 seconds, thanks to which a Perdition was a hard enemy to engage by all light units. However, the biggest flaw of the ship was disclosed during attacks on larger units such as cruisers or even other destroyers. When the destroyer had run out of missiles the destroyer was left with a very small amount of firepower and could then be easily destroyed. As such, Missile Destroyers should not go without an escort. Perditions usually operated in groups of two or more, thanks to which they could handle various tasks, and easily destroy very large groups of corvettes.
+
+The guided missile has long been a forgotten weapon in space combat. Small cheap missiles lacked the warhead strength and range to be a factor, while missiles large enough to be a threat simply could not be carried in large enough numbers on even capital ships to make it worth the time and resources. Kushan Engineers finally made a tactical breakthrough by applying the automated construction bay technologies used in the Mothership and, to a lesser extent, in Imperator Class Carriers. Missile Destroyers use the standard Destroyer hull, but replace the Ion Cannon systems with an automated assembly bay, capable of building a heavy missile armed with a fusion warhead every 5 seconds. A dual rail missile launcher is mounted on either side of the forward hull where the standards weapon bays used to be.
+
+Missile Destroyers have the best stand-off range of any ship in the fleet, but are vulnerable once their initial load of 32 missiles has been launched, and their rate of fire drops to how fast they can manufacture new missiles.
+
+* Each launcher can store 8 missiles, which are launched more rapidly than new ones can be produced (once every 2.3 seconds for each launcher). The Volley Attack launches missiles every .2 seconds until the reserves are depleted. The missiles have a max velocity of 1,250 m/s, can accelerate at 1,650 m/s^2, and each have 120 hit points.
+
+</string>
+<string>kush</string>
+	</array>
+
+
+
+
+
+	<key>kush_salvagecorvette.dae</key>
+	<array>
+		<string>Porter-class Salvage Corvette</string>
+		<string>
+TYPE: Strike Craft
+ROLE: Shp Capture
+MASS: 900 tons
+SPEED: 425 m/s
+
+ARMARMENTS:
+Salvage Subversion Routines
+
+The Mothership Fleet made use of them during the Homeworld War. It is not present during the Cataclysm Era. Tactically indespensible, the Porter, in sufficient numbers, could incapacitate and move almost any enemy vessel to the Mothership or a carrier to be taken over for use within the fleet. Capable of taking ships many times its size when operating in packs (such as carriers or heavy cruisers), enough Porters can neutralize entire groups of frigates, destroyers, and cruisers, with the desirable effect of bringing the target vessels under their fleet's control.
+
+It was decided to convert many of the heavy tugs used in the construction of the Kushan Mothership into the new heavily armored, battle-capable vessels that would be able to survive combat and dock with an enemy vessel, gain important information from it and finally tow it back to the Mothership for capture. The Porter, as this particular tug was known, was pulled back to the Mothership and the Scaffold for refitting and it became the basis for the corvette design used for combat corvettes such as the Cavalier-class Light Corvette and Hammer-class Heavy Corvette.
+
+The new design, the Porter Mk. 2, had several modifications. First, more armor was added to protect it from enemy fire. Advanced computers using AI-driven viruses, subvert and override programs, and decryption routines were added to its equipment. These subversion routines, which would work best on damaged ships, increase in power when there are more Porters assisting.
+
+Porters operate alone, as to draw little attention, and only on rare occasions will carry even a scout escort. A tour of duty aboard a Porter is hence, much like in the case of the Porter's Taiidan equivalent the Tiirshak, considered disciplinary duty in most cases.
+
+</string>
+<string>kush</string>
+	</array>
+
+
+
+	<key>taid_ioncannonfrigate.dae</key>
+	<array>
+		<string>Sajuuk Cor-class Ion Cannon Frigate</string>
+		<string>
+TYPE: Frigate
+ROLE: Anti-Capital Ship
+MASS: 13,000 tons
+SPEED: 300 m/s
+
+ARMARMENTS:
+1 x Ion Cannon
+
+The Sajuuk Cor was realized thanks to the Taiidani scientists who managed to configure the Ion Cannon to fit into a frigate hull. The Cannon itself was so large that it barely fit into the frigate-sized hull, yet it was the one true threat to vessels such as enemy cruisers. The project to develop this frigate was marked as Weapon X, and during combat trials the frigate received the name Sajuuk Cor, which can be translated into "God's Wrath" or "Sajuuk's Wrath".
+
+When the Sajuuk Cors entered normal service they were manned by combat veterans, and these crews became the most eager to serve their Empire in Taiidan Fleet. However, this eagerness caused many troubles for Taiidani admirals, as Sajuuk Cors tend to fly into the middle of the battle just to pin down the largest enemy ships. The frigate lacked anti-strike craft weaponry, so raids on these groups often led to severe losses amongst the frigates. Despite various attempts, no one could prevent such actions and eventually Ion Cannon Frigates were sent into battle only under heavy escort of Defense Field Frigates and Multi-Gun Corvettes[1].
+
+These frigates also had a significant impact on military morale, therefore they were commonly used by the Taiidan Elite Guard, most notably to secure hyperspace inhibitors around Hiigara. The most vulnerable inhibitor station was secured by over 100 of these frigates
+
+The Ion Beam is the single most powerful weapon technology developed by Taiidani science. The frigate hull can barely support the entire length of the particle acceleration unit, but it offers the quickest and most economical way to put this devastating weapon into battle.
+
+The design sequence was so rapid that the frigate entered frontline service still under its project name, "Weapon X," but within days of its first combat trials, crews had renamed the frigate "Sajuuk Cor"—an ancient phrase that translates roughly into "God's Wrath." Given the power of the weapon system, Sajuuk Cor crews were drawn only from veteran personnel, and quickly became some of the most driven members of the fleet. Where the obvious vulnerabilities of a ship with only one forward firing weapon would dictate cautious deployment, Beam Frigate crews operate as hunter/killers, and will often plow their frigates through formations of enemy fighters in order to pin a capital ship in a web of deadly blue-white cutting beams. While this tactic can be devastatingly effective, it drastically lowers the survivability of the Beam Frigates and, despite numerous disciplinary charges against zealous captains, there seems to be no increase in caution amongst Sajuuk Cor crews. Attempts to mix in greener or more cautious personnel has either had no effect, or produced an unacceptable drop in combat efficiency.
+
+As a result, fleet commanders have no choice but to assign escort vessels like Diirvass Corvettes and Tiifal defense frigates to cover the Sajuuk Cors as they dive into the thick of things, hunting the largest enemy vessels on the scope.
+
+</string>
+<string>taid</string>
+	</array>
+
+
+	<key>taid_missiledestroyer.dae</key>
+	<array>
+		<string>Skaal Fa-class Missile Destroyer</string>
+		<string>
+TYPE: Captal Ship
+ROLE: Anti-Strike Ship
+MASS: 28,000 tons
+LENGTH: 234.9 meters
+SPEED: 295 m/s
+
+ARMARMENTS:
+4 x Missile Launchers
+
+The Skaal Fa-class Missile Destroyer, named after the needle-flinging skaal fa of Kharak, was a secondary destroyer design based on the hull of the Skaal Tel-class Destroyer, and introduced by the Taiidan Empire during the Homeworld War. The main difference between the two designs was the Skaal Fa 's lack of any turrets or direct fire weapons. Instead, its forward hull was occupied by four large missile batteries and a production facility. This facility revolutionized the use of missiles on the battlefield of space, as it allowed the Skaal Tel to replenish its arsenal of fusion missiles after the initial load of 32 missiles was depleted.
+
+The missiles themselves were very fast and maneuverable, making them ideal weapons to deflect incoming waves of fighters. While they also gave the Missile Destroyer the largest standoff range of any capital ship, they were not powerful enough to punch through the heavy armor of capital ships with as much ease as the Skaal Tel's ion cannons. Lacking the dedicated anti-capital firepower, they were often paired up with a Standard Destroyer, which would attack a large enemy at close range, while the Skaal Fa would support it with long-range missile fire.
+
+Interestingly, the first ship of this class ever encountered by the Kushan exiles was not under Taiidan control, but instead remotely operated by the vessel known as the Ghost Ship in the Sea of Lost Souls. Upon deactivating the Ghost Ship's control field, the destroyer was taken over and included in the Mothership Fleet. Its missile systems were quickly analyzed by Kushan scientists and reverse-engineered into the Perdition-class Missile Destroyer.
+
+</string>
+<string>taid</string>
+	</array>
+
+
+
+	<key>taid_mothership.dae</key>
+	<array>
+		<string>Taiidan Imperial Flagship</string>
+		<string>
+TYPE: Mothership
+ROLE: Fleet Command
+MASS: 5,000,000 tons
+LENGTH: 1933.7 meters
+SPEED: 50 m/s
+
+ARMARMENTS:
+5 x Small Mass Drivers
+
+The Imperial Flagship was the personal ship of the Taiidan Emperor and was the location where the Taiidan Empire was controlled and ruled from.
+
+Emperor Riesstiu IV the Second, also known as Khaldeesh II, was the last Emperor of the Taiidan Empire (406 BHL-0 AHL) and certainly one of its most infamous. Throughout his reign Riesstiu seized more and more power, all the while orchestrating disastrous policies that would ruin what was left of the corrupt and declining Empire. Most notorious of these acts was the Kharakian Genocide and the heavy handed tactics used to quell both political and civilian dissenters at the start of the Taiidan Rebellion.
+
+The ship's history is unknown. Its use is continued up until the end of the game at which point the Imperial Flagship, now commanding the Taiidan Elite Guard of the Taiidan Imperial Fleet becomes the target of both the Taiidan Rebels and the Kushan. At this point it is eventually destroyed and the battle for Hiigara ends with the Emperor's death.
+
+In the climactic battle of the Homeworld War, the Exiles and the forces of the Taiidan Imperial Guard clashed in close Hiigara orbit. Emperor Riesstiu IV himself commanded his forces from aboard the massive Flagship of the Imperial Guard, similar in size and capability to the Kushan Mothership. However, Mad Emperor Reisstiu proved to be no better a military commander than he was a ruler; the Taiidan forces were crushed by the Kushan in this decisive battle.
+
+</string>
+<string>taid</string>
+	</array>
+
+
+
+
+	<key>taid_carrier.dae</key>
+	<array>
+		<string>Saarkin-Cho-class Carrier</string>
+		<string>
+TYPE: Capital Ship
+ROLE: Ship COnstructions
+MASS: 121,000 tons
+LENGTH: 503.2 meters
+SPEED: 300 m/s
+
+ARMARMENTS:
+4 x Small Mass Drivers
+
+The Saarkin Cho-class Carrier has been in continuous service for nearly 90 years (galactic standard) at this point, and due to the fall of the Taiidan Empire it seems unlikely that it will be replaced in frontline service anytime soon. The Saarkin Cho was designed at the height of Taiidani power, and was meant to function as the core of every Taiidani naval task force throughout the empire. At the Empire's fall there were 137 Saarkin Cho on active duty, and by the time the ashes of the civil war cooled approximately 70 of these heavy Carriers were still active, 19 of these flying the colors of the Imperialist faction.
+
+The Saarkin Cho was designed to be a fast-deployment Carrier with enough construction capacity to replace any expected combat losses up to and including Frigate-class vessels. The hangar bay is aligned forward and opens directly into the repair/construction bay, allowing strike craft to come directly off the manufacturing line and into combat. Taiidani strike pilots often joke about being aboard before the cockpit can cool. The forward launching bay is doublewide and allows for the simultaneous launch and recovery of two full strike wings while the Carrier itself is maneuvering at full combat speed.
+
+In combat the Saarkin Cho has performed admirably and was virtually undefeated until the Homeworld war and the Taiidani civil war that followed. Recent reports indicate that the Imperialist navy has upgraded the Saarkin Cho's point defense mass drivers to high-energy tracking plasma. If this is true, this Carrier has become extremely dangerous to attacking strike craft. Hiigaran intelligence recommends that any fleet encountering a Saarkin Cho-class Carrier should only engage it with a full attack squadron backed up by multiple vessels of Frigate class or above. If strike craft must attack without support, it is advised that they make their attack runs from the forward quadrant, where the defense turrets cannot track properly, and direct their fire into the lightly armored launch bay.
+
+</string>
+<string>taid</string>
+	</array>
+
 </dict>
 </plist>
