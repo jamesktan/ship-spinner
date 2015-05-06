@@ -667,5 +667,30 @@ The Vengeance class of assault frigates are the workhorses of the Kushan fleet. 
 	</array>
 
 
+	<key>taid_heavycorvette.dae</key>
+	<array>
+		<string>Taiidan Heavy Corvette</string>
+		<string>
+TYPE: Strike Craft
+ROLE: Anti-Strike Craft
+MASS: 750 tons
+LENGTH: 30.1 meters
+SPEED: 520 m/s
+
+ARMARMENTS:
+4 x Medium Mass Drivers
+
+
+The Heavy Corvette is a corvette-class vessel developed by the Taiidan Empire.
+
+Designed to be the ultimate strike craft killer, possess four medium-sized mass drivers with which they can attack enemy strike craft with ease. The corvette, while too slow to take on assault frigates on their own often can take down other frigates and also possesses a "burst mode" that allows it to fire exploding shells onto incoming strike craft or slow capital ships.
+
+After the Homeworld War, most of the outdated heavy corvettes were replaced by the more versatile multigun corvettes.
+
+</string>
+<string>taid</string>
+	</array>
+
+
 </dict>
 </plist>
