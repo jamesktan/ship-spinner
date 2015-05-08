@@ -14,42 +14,31 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S0y-Xq-uxl">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S0y-Xq-uxl">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="-20" y="-30" width="1044" height="828"/>
+                                    <rect key="frame" x="100" y="0.0" width="600" height="600"/>
                                 </variation>
                             </imageView>
                             <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" loops="NO" playing="YES" sceneName="test" allowsCameraControl="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Cp-rM-W9c">
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="1024" id="KHu-a0-N4P">
-                                        <variation key="widthClass=regular" constant="1600"/>
-                                    </constraint>
-                                    <constraint firstAttribute="height" constant="768" id="v6z-6v-dt9"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="KHu-a0-N4P"/>
-                                        <exclude reference="v6z-6v-dt9"/>
-                                    </mask>
-                                </variation>
-                                <variation key="widthClass=regular">
-                                    <mask key="constraints">
-                                        <include reference="KHu-a0-N4P"/>
-                                        <include reference="v6z-6v-dt9"/>
-                                    </mask>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <variation key="widthClass=regular" ambiguous="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                                 </variation>
                             </sceneKitView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1j-1t-nuL">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1j-1t-nuL">
+                                <rect key="frame" x="16" y="20" width="46" height="46"/>
                                 <inset key="contentEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
                                 <state key="normal" image="layers4.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" image="layers4_selected.png"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="7" width="40" height="40"/>
+                                </variation>
                                 <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="11" y="20" width="40" height="40"/>
                                 </variation>
@@ -57,13 +46,16 @@
                                     <action selector="showView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oag-lB-uzT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9D-eu-L3l">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9D-eu-L3l">
+                                <rect key="frame" x="16" y="128" width="46" height="46"/>
                                 <inset key="contentEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
                                 <state key="normal" image="settings20.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" image="settings20_selected.png"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="103" width="40" height="40"/>
+                                </variation>
                                 <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="11" y="116" width="40" height="40"/>
                                 </variation>
@@ -71,52 +63,31 @@
                                     <action selector="showView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oK5-aV-BzX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OU-s6-E8P">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <inset key="contentEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
-                                <state key="normal" image="information32.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="selected" image="information32_selected.png"/>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="11" y="68" width="40" height="40"/>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sf3-AC-0oN">
+                                <rect key="frame" x="29" y="182" width="20" height="20"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="12" y="151" width="37" height="37"/>
                                 </variation>
-                                <connections>
-                                    <action selector="showView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BUq-V8-Hom"/>
-                                </connections>
-                            </button>
-                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M92-xp-ZsB" userLabel="settings">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="14" y="164" width="37" height="37"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="14" y="164" width="37" height="37"/>
+                                </variation>
+                            </activityIndicatorView>
+                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M92-xp-ZsB" userLabel="settings">
+                                <rect key="frame" x="224" y="-6" width="152" height="161"/>
                                 <subviews>
-                                    <view alpha="0.29999999999999966" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="etw-TM-C4s" userLabel="BG">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="0.0" width="274" height="114"/>
-                                        </variation>
-                                    </view>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DC0-e4-Yqw">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
-                                        <state key="normal" title="ROTATE ON">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="selected" title="ROTATE OFF"/>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="116" y="8" width="135" height="30"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="changeRotate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7fY-VV-xnJ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePY-JC-LxV">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ePY-JC-LxV">
+                                        <rect key="frame" x="15" y="60" width="120" height="30"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
                                         <state key="normal" title="DOWNLOAD ALL SHIPS">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <variation key="heightClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="4" y="66" width="120" height="34"/>
+                                        </variation>
                                         <variation key="widthClass=regular" fixedFrame="YES">
                                             <rect key="frame" x="88" y="46" width="163" height="30"/>
                                         </variation>
@@ -124,13 +95,16 @@
                                             <action selector="downloadShips:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jt2-cT-4qr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If2-Sb-ynT">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If2-Sb-ynT">
+                                        <rect key="frame" x="0.0" y="88" width="130" height="65"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
                                         <state key="normal" title="ABOUT NAABAL">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <variation key="heightClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="-1" y="108" width="130" height="65"/>
+                                        </variation>
                                         <variation key="widthClass=regular" fixedFrame="YES">
                                             <rect key="frame" x="129" y="84" width="122" height="30"/>
                                         </variation>
@@ -138,41 +112,78 @@
                                             <action selector="about:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BTZ-yM-jgK"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SETTINGS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIw-Vf-U45">
-                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
-                                        <color key="textColor" red="0.12549019610000001" green="0.14901960780000001" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="8" y="12" width="83" height="21"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DC0-e4-Yqw">
+                                        <rect key="frame" x="27" y="15" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
+                                        <state key="normal" title="ROTATE ON">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" title="ROTATE OFF"/>
+                                        <variation key="heightClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="8" width="113" height="50"/>
                                         </variation>
-                                    </label>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="116" y="8" width="135" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="changeRotate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7fY-VV-xnJ"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="etw-TM-C4s"/>
-                                        <exclude reference="DC0-e4-Yqw"/>
-                                        <exclude reference="ePY-JC-LxV"/>
-                                        <exclude reference="If2-Sb-ynT"/>
-                                        <exclude reference="CIw-Vf-U45"/>
-                                    </mask>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="236" y="0.0" width="129" height="161"/>
                                 </variation>
                                 <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="382" y="0.0" width="262" height="114"/>
+                                    <rect key="frame" x="269" y="-6" width="262" height="114"/>
                                     <mask key="subviews">
-                                        <include reference="etw-TM-C4s"/>
-                                        <include reference="DC0-e4-Yqw"/>
                                         <include reference="ePY-JC-LxV"/>
                                         <include reference="If2-Sb-ynT"/>
-                                        <include reference="CIw-Vf-U45"/>
+                                        <include reference="DC0-e4-Yqw"/>
                                     </mask>
                                 </variation>
                             </view>
-                            <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Duj-9P-ZIp" userLabel="info">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-yd-0Py">
+                                <rect key="frame" x="70" y="0.0" width="162" height="600"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="58" y="0.0" width="170" height="400"/>
+                                </variation>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="100" y="0.0" width="224" height="768"/>
+                                </variation>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="REy-Xd-8fR"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="imB-YW-rC9"/>
+                                </connections>
+                            </tableView>
+                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Duj-9P-ZIp" userLabel="info">
+                                <rect key="frame" x="382" y="0.0" width="218" height="600"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Dp-lT-3Dp" userLabel="Description">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HIIGARAN INTERCEPTOR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3y-uk-1rk">
+                                        <rect key="frame" x="0.0" y="8" width="192" height="61"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="8" width="200" height="61"/>
+                                        </variation>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="35" width="216" height="36"/>
+                                        </variation>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tur.png" translatesAutoresizingMaskIntoConstraints="NO" id="2DC-1q-jax">
+                                        <rect key="frame" x="-11" y="64" width="240" height="128"/>
+                                        <variation key="heightClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="49" y="54" width="103" height="103"/>
+                                        </variation>
+                                        <variation key="widthClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="47" y="64" width="150" height="150"/>
+                                        </variation>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Dp-lT-3Dp" userLabel="Description">
+                                        <rect key="frame" x="-8" y="165" width="226" height="435"/>
                                         <string key="text">Triikor wings were deadly arsenals of speed and firepower that surpassed the Fiirkan's, able to take a heavy beating before being destroyed. Commonly known as interceptors, the Triikor silhouette was a chilling image of the Taiidani Empire's power until the Homeworld War.
 
 The Triikor, unlike traditional fighters, does not have a centred weight of gravity. The Triikor uses two small mass drivers, which concentrate the mass of the fighter to one side. Ironically, this is quite similar to the style of design used in Kushan fighters of the Homeworld War, who often used an off-set cockpit (instead of an off-set centre of gravity).   Though there are advantages in such a cockpit (the said added amount of firepower and the ability to change directions with less exchange of brutal centrifugal force) the difficulty in flying such a vehicle means that Taiidan pilots as well as Kushan pilots need special training to adapt to the odd design. However, pilots that are able to master the Triikor are highly feared and respected both on and off the battlefield.
@@ -181,112 +192,105 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="heightClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="148" width="200" height="252"/>
+                                        </variation>
                                         <variation key="widthClass=regular" fixedFrame="YES">
                                             <rect key="frame" x="-9" y="207" width="255" height="577"/>
                                         </variation>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NAME: HIIGARAN INTERCEPTOR" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3y-uk-1rk">
-                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="35" width="216" height="36"/>
-                                        </variation>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bent.png" translatesAutoresizingMaskIntoConstraints="NO" id="2DC-1q-jax">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="47" y="64" width="150" height="150"/>
-                                        </variation>
-                                    </imageView>
                                 </subviews>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="8Dp-lT-3Dp"/>
-                                        <exclude reference="F3y-uk-1rk"/>
-                                        <exclude reference="2DC-1q-jax"/>
-                                    </mask>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="400" y="0.0" width="200" height="400"/>
                                 </variation>
                                 <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="780" y="-24" width="244" height="804"/>
+                                    <rect key="frame" x="556" y="-24" width="244" height="804"/>
                                     <mask key="subviews">
-                                        <include reference="8Dp-lT-3Dp"/>
                                         <include reference="F3y-uk-1rk"/>
                                         <include reference="2DC-1q-jax"/>
+                                        <include reference="8Dp-lT-3Dp"/>
                                     </mask>
                                 </variation>
                             </view>
-                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-yd-0Py">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OU-s6-E8P">
+                                <rect key="frame" x="16" y="74" width="46" height="46"/>
+                                <inset key="contentEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
+                                <state key="normal" image="information32.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="information32_selected.png"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="55" width="40" height="40"/>
+                                </variation>
                                 <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="60" y="0.0" width="224" height="768"/>
+                                    <rect key="frame" x="11" y="68" width="40" height="40"/>
                                 </variation>
                                 <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="REy-Xd-8fR"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="imB-YW-rC9"/>
+                                    <action selector="showView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BUq-V8-Hom"/>
                                 </connections>
-                            </tableView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sf3-AC-0oN">
-                                <rect key="frame" x="-10" y="-10" width="20" height="20"/>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="14" y="164" width="37" height="37"/>
-                                </variation>
-                            </activityIndicatorView>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2Cp-rM-W9c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="0J3-q1-Yn9"/>
-                            <constraint firstAttribute="centerX" secondItem="2Cp-rM-W9c" secondAttribute="centerX" id="3S5-Lg-Q6y"/>
-                            <constraint firstAttribute="centerY" secondItem="2Cp-rM-W9c" secondAttribute="centerY" id="Dt0-zY-mVY"/>
-                            <constraint firstAttribute="centerX" secondItem="2Cp-rM-W9c" secondAttribute="centerX" id="NtL-uR-xfQ"/>
-                            <constraint firstAttribute="centerY" secondItem="2Cp-rM-W9c" secondAttribute="centerY" id="XX1-c0-xSD"/>
-                            <constraint firstItem="2Cp-rM-W9c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="rxM-7n-5cN"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="2Cp-rM-W9c" secondAttribute="trailing" constant="-16" id="2jS-ZQ-Cpo"/>
+                            <constraint firstAttribute="centerY" secondItem="S0y-Xq-uxl" secondAttribute="centerY" id="6Vu-kb-nf3"/>
+                            <constraint firstAttribute="centerX" secondItem="S0y-Xq-uxl" secondAttribute="centerX" id="B5T-jQ-1CI"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="S0y-Xq-uxl" secondAttribute="trailing" constant="-16" id="Jdi-Ro-HGX"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S0y-Xq-uxl" secondAttribute="bottom" id="KA7-Vj-zk6"/>
+                            <constraint firstAttribute="centerY" secondItem="2Cp-rM-W9c" secondAttribute="centerY" id="KOc-ge-BPD"/>
+                            <constraint firstItem="2Cp-rM-W9c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="O2Q-Z5-gMO"/>
+                            <constraint firstItem="S0y-Xq-uxl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="UFj-5l-fe4"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Cp-rM-W9c" secondAttribute="bottom" id="fVK-y7-gVb"/>
+                            <constraint firstItem="S0y-Xq-uxl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="j7G-9K-Dk8"/>
+                            <constraint firstAttribute="centerX" secondItem="2Cp-rM-W9c" secondAttribute="centerX" id="nKV-Y5-Y6G"/>
+                            <constraint firstItem="2Cp-rM-W9c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="rSD-Xg-ubl"/>
                         </constraints>
                         <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="S0y-Xq-uxl"/>
-                                <exclude reference="f1j-1t-nuL"/>
-                                <exclude reference="a9D-eu-L3l"/>
-                                <exclude reference="6OU-s6-E8P"/>
-                                <exclude reference="M92-xp-ZsB"/>
-                                <exclude reference="Duj-9P-ZIp"/>
-                                <exclude reference="pcd-yd-0Py"/>
-                                <exclude reference="sf3-AC-0oN"/>
-                            </mask>
                             <mask key="constraints">
-                                <exclude reference="0J3-q1-Yn9"/>
-                                <exclude reference="3S5-Lg-Q6y"/>
-                                <exclude reference="Dt0-zY-mVY"/>
-                                <exclude reference="NtL-uR-xfQ"/>
-                                <exclude reference="XX1-c0-xSD"/>
-                                <exclude reference="rxM-7n-5cN"/>
+                                <exclude reference="2jS-ZQ-Cpo"/>
+                                <exclude reference="KOc-ge-BPD"/>
+                                <exclude reference="O2Q-Z5-gMO"/>
+                                <exclude reference="nKV-Y5-Y6G"/>
+                                <exclude reference="rSD-Xg-ubl"/>
+                                <exclude reference="6Vu-kb-nf3"/>
+                                <exclude reference="B5T-jQ-1CI"/>
+                                <exclude reference="Jdi-Ro-HGX"/>
+                                <exclude reference="UFj-5l-fe4"/>
+                                <exclude reference="j7G-9K-Dk8"/>
+                                <exclude reference="KA7-Vj-zk6"/>
+                                <exclude reference="fVK-y7-gVb"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <include reference="2jS-ZQ-Cpo"/>
+                                <include reference="KOc-ge-BPD"/>
+                                <include reference="O2Q-Z5-gMO"/>
+                                <include reference="nKV-Y5-Y6G"/>
+                                <include reference="rSD-Xg-ubl"/>
+                                <include reference="6Vu-kb-nf3"/>
+                                <include reference="B5T-jQ-1CI"/>
+                                <include reference="Jdi-Ro-HGX"/>
+                                <include reference="UFj-5l-fe4"/>
+                                <include reference="j7G-9K-Dk8"/>
+                                <include reference="KA7-Vj-zk6"/>
+                                <include reference="fVK-y7-gVb"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
                             <mask key="subviews">
                                 <include reference="S0y-Xq-uxl"/>
+                                <include reference="2Cp-rM-W9c"/>
                                 <include reference="f1j-1t-nuL"/>
                                 <include reference="a9D-eu-L3l"/>
-                                <include reference="6OU-s6-E8P"/>
-                                <include reference="M92-xp-ZsB"/>
-                                <include reference="Duj-9P-ZIp"/>
-                                <include reference="pcd-yd-0Py"/>
                                 <include reference="sf3-AC-0oN"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="0J3-q1-Yn9"/>
-                                <exclude reference="3S5-Lg-Q6y"/>
-                                <include reference="Dt0-zY-mVY"/>
-                                <include reference="NtL-uR-xfQ"/>
-                                <exclude reference="XX1-c0-xSD"/>
-                                <exclude reference="rxM-7n-5cN"/>
+                                <include reference="M92-xp-ZsB"/>
+                                <include reference="pcd-yd-0Py"/>
+                                <include reference="Duj-9P-ZIp"/>
+                                <include reference="6OU-s6-E8P"/>
                             </mask>
                         </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
                     <connections>
                         <outlet property="activity" destination="sf3-AC-0oN" id="rgl-Av-ypV"/>
                         <outlet property="buttonDetail" destination="6OU-s6-E8P" id="0Ak-xS-mXf"/>
@@ -306,16 +310,16 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="192.75" y="533"/>
+            <point key="canvasLocation" x="111" y="1113"/>
         </scene>
     </scenes>
     <resources>
-        <image name="bent.png" width="400" height="400"/>
         <image name="information32.png" width="128" height="128"/>
         <image name="information32_selected.png" width="128" height="128"/>
         <image name="layers4.png" width="128" height="128"/>
         <image name="layers4_selected.png" width="128" height="128"/>
         <image name="settings20.png" width="128" height="128"/>
         <image name="settings20_selected.png" width="128" height="128"/>
+        <image name="tur.png" width="400" height="400"/>
     </resources>
 </document>
