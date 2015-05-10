@@ -2,7 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,18 +16,150 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S0y-Xq-uxl">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QMa-Z1-1Zw">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="100" y="0.0" width="600" height="600"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
                                 </variation>
-                            </imageView>
-                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" loops="NO" playing="YES" sceneName="test" allowsCameraControl="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Cp-rM-W9c">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <variation key="widthClass=regular" ambiguous="YES">
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                                </variation>
+                                <variation key="widthClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
                                 </variation>
+                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="400"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="800"/>
+                                </variation>
+                            </imageView>
+                            <sceneKitView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" allowsCameraControl="YES" autoenablesDefaultLighting="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kKr-KN-bQV">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
+                                </variation>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
+                                </variation>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="600"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="400"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="800" height="800"/>
+                                </variation>
                             </sceneKitView>
+                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="37m-do-Q6J" userLabel="INFOVIEW">
+                                <rect key="frame" x="356" y="1" width="244" height="599"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxf-6n-vNs">
+                                        <rect key="frame" x="8" y="8" width="228" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="8" width="200" height="54"/>
+                                        </variation>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="8" width="180" height="54"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="8" width="184" height="54"/>
+                                        </variation>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9xH-nr-77D">
+                                        <rect key="frame" x="47" y="70" width="150" height="150"/>
+                                        <variation key="heightClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="58" y="70" width="100" height="100"/>
+                                        </variation>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="38" y="70" width="125" height="125"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="50" y="70" width="100" height="100"/>
+                                        </variation>
+                                    </imageView>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HNN-Eg-q9b">
+                                        <rect key="frame" x="0.0" y="220" width="244" height="379"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="heightClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="178" width="216" height="222"/>
+                                        </variation>
+                                        <variation key="heightClass=regular" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="220" width="244" height="579"/>
+                                        </variation>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="213" width="200" height="387"/>
+                                        </variation>
+                                        <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="178" width="200" height="222"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="0.0" y="213" width="200" height="587"/>
+                                        </variation>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="384" y="0.0" width="216" height="400"/>
+                                </variation>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="356" y="1" width="244" height="799"/>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="200" y="0.0" width="200" height="600"/>
+                                </variation>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="556" y="0.0" width="244" height="600"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="200" y="0.0" width="200" height="400"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="584" y="0.0" width="216" height="400"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="200" y="0.0" width="200" height="800"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="556" y="0.0" width="244" height="800"/>
+                                </variation>
+                            </view>
+                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="ZDM-Mk-V9I">
+                                <rect key="frame" x="70" y="0.0" width="244" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="57" y="0.0" width="216" height="400"/>
+                                </variation>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="70" y="0.0" width="244" height="800"/>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="70" y="0.0" width="200" height="600"/>
+                                </variation>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="59" y="0.0" width="244" height="600"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="57" y="0.0" width="200" height="400"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="59" y="0.0" width="216" height="400"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="70" y="0.0" width="200" height="800"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="59" y="0.0" width="244" height="800"/>
+                                </variation>
+                            </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1j-1t-nuL">
                                 <rect key="frame" x="16" y="20" width="46" height="46"/>
                                 <inset key="contentEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
@@ -63,155 +194,6 @@
                                     <action selector="showView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oK5-aV-BzX"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sf3-AC-0oN">
-                                <rect key="frame" x="29" y="182" width="20" height="20"/>
-                                <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="12" y="151" width="37" height="37"/>
-                                </variation>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="14" y="164" width="37" height="37"/>
-                                </variation>
-                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="14" y="164" width="37" height="37"/>
-                                </variation>
-                            </activityIndicatorView>
-                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="M92-xp-ZsB" userLabel="settings">
-                                <rect key="frame" x="224" y="-6" width="152" height="161"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ePY-JC-LxV">
-                                        <rect key="frame" x="15" y="60" width="120" height="30"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
-                                        <state key="normal" title="DOWNLOAD ALL SHIPS">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="heightClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="4" y="66" width="120" height="34"/>
-                                        </variation>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="88" y="46" width="163" height="30"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="downloadShips:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jt2-cT-4qr"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="If2-Sb-ynT">
-                                        <rect key="frame" x="0.0" y="88" width="130" height="65"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
-                                        <state key="normal" title="ABOUT NAABAL">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="heightClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="-1" y="108" width="130" height="65"/>
-                                        </variation>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="129" y="84" width="122" height="30"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="about:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BTZ-yM-jgK"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DC0-e4-Yqw">
-                                        <rect key="frame" x="27" y="15" width="97" height="30"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="13"/>
-                                        <state key="normal" title="ROTATE ON">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="selected" title="ROTATE OFF"/>
-                                        <variation key="heightClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="8" y="8" width="113" height="50"/>
-                                        </variation>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="116" y="8" width="135" height="30"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="changeRotate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7fY-VV-xnJ"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="236" y="0.0" width="129" height="161"/>
-                                </variation>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="269" y="-6" width="262" height="114"/>
-                                    <mask key="subviews">
-                                        <include reference="ePY-JC-LxV"/>
-                                        <include reference="If2-Sb-ynT"/>
-                                        <include reference="DC0-e4-Yqw"/>
-                                    </mask>
-                                </variation>
-                            </view>
-                            <tableView clipsSubviews="YES" alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="pcd-yd-0Py">
-                                <rect key="frame" x="70" y="0.0" width="162" height="600"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="sectionIndexColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
-                                <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="58" y="0.0" width="170" height="400"/>
-                                </variation>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="100" y="0.0" width="224" height="768"/>
-                                </variation>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="REy-Xd-8fR"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="imB-YW-rC9"/>
-                                </connections>
-                            </tableView>
-                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Duj-9P-ZIp" userLabel="info">
-                                <rect key="frame" x="382" y="0.0" width="218" height="600"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="HIIGARAN INTERCEPTOR" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F3y-uk-1rk">
-                                        <rect key="frame" x="0.0" y="8" width="192" height="61"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="14"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="heightClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="8" width="200" height="61"/>
-                                        </variation>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="35" width="216" height="36"/>
-                                        </variation>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tur.png" translatesAutoresizingMaskIntoConstraints="NO" id="2DC-1q-jax">
-                                        <rect key="frame" x="-11" y="64" width="240" height="128"/>
-                                        <variation key="heightClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="49" y="54" width="103" height="103"/>
-                                        </variation>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="47" y="64" width="150" height="150"/>
-                                        </variation>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Dp-lT-3Dp" userLabel="Description">
-                                        <rect key="frame" x="-8" y="165" width="226" height="435"/>
-                                        <string key="text">Triikor wings were deadly arsenals of speed and firepower that surpassed the Fiirkan's, able to take a heavy beating before being destroyed. Commonly known as interceptors, the Triikor silhouette was a chilling image of the Taiidani Empire's power until the Homeworld War.
-
-The Triikor, unlike traditional fighters, does not have a centred weight of gravity. The Triikor uses two small mass drivers, which concentrate the mass of the fighter to one side. Ironically, this is quite similar to the style of design used in Kushan fighters of the Homeworld War, who often used an off-set cockpit (instead of an off-set centre of gravity).   Though there are advantages in such a cockpit (the said added amount of firepower and the ability to change directions with less exchange of brutal centrifugal force) the difficulty in flying such a vehicle means that Taiidan pilots as well as Kushan pilots need special training to adapt to the odd design. However, pilots that are able to master the Triikor are highly feared and respected both on and off the battlefield.
-
-</string>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                        <variation key="heightClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="0.0" y="148" width="200" height="252"/>
-                                        </variation>
-                                        <variation key="widthClass=regular" fixedFrame="YES">
-                                            <rect key="frame" x="-9" y="207" width="255" height="577"/>
-                                        </variation>
-                                    </textView>
-                                </subviews>
-                                <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="400" y="0.0" width="200" height="400"/>
-                                </variation>
-                                <variation key="widthClass=regular" fixedFrame="YES">
-                                    <rect key="frame" x="556" y="-24" width="244" height="804"/>
-                                    <mask key="subviews">
-                                        <include reference="F3y-uk-1rk"/>
-                                        <include reference="2DC-1q-jax"/>
-                                        <include reference="8Dp-lT-3Dp"/>
-                                    </mask>
-                                </variation>
-                            </view>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6OU-s6-E8P">
                                 <rect key="frame" x="16" y="74" width="46" height="46"/>
                                 <inset key="contentEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
@@ -229,88 +211,96 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
                                     <action selector="showView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BUq-V8-Hom"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sf3-AC-0oN">
+                                <rect key="frame" x="21" y="182" width="37" height="37"/>
+                                <variation key="heightClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="12" y="151" width="37" height="37"/>
+                                </variation>
+                                <variation key="heightClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="21" y="182" width="37" height="37"/>
+                                </variation>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="14" y="164" width="37" height="37"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="14" y="164" width="37" height="37"/>
+                                </variation>
+                            </activityIndicatorView>
+                            <view alpha="0.0" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGF-Dr-atJ">
+                                <rect key="frame" x="178" y="1" width="244" height="104"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTW-VB-23J">
+                                        <rect key="frame" x="62" y="37" width="120" height="30"/>
+                                        <state key="normal" title="DOWNLOAD ALL">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" title="DOWNLOADING...."/>
+                                        <connections>
+                                            <action selector="downloadShips:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KOe-mq-Ekx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iwy-oj-ZDZ">
+                                        <rect key="frame" x="64" y="66" width="116" height="30"/>
+                                        <state key="normal" title="ABOUT NAABAL">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S2c-pp-Ex6">
+                                        <rect key="frame" x="78" y="8" width="88" height="30"/>
+                                        <state key="normal" title="ROTATE: ON">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" title="ROTATE: OFF"/>
+                                        <connections>
+                                            <action selector="changeRotate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dXi-FH-OqQ"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="106" y="1" width="244" height="104"/>
+                                </variation>
+                                <variation key="widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="304" y="0.0" width="244" height="104"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="99" y="0.0" width="244" height="104"/>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="278" y="0.0" width="244" height="104"/>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="2Cp-rM-W9c" secondAttribute="trailing" constant="-16" id="2jS-ZQ-Cpo"/>
-                            <constraint firstAttribute="centerY" secondItem="S0y-Xq-uxl" secondAttribute="centerY" id="6Vu-kb-nf3"/>
-                            <constraint firstAttribute="centerX" secondItem="S0y-Xq-uxl" secondAttribute="centerX" id="B5T-jQ-1CI"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="S0y-Xq-uxl" secondAttribute="trailing" constant="-16" id="Jdi-Ro-HGX"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S0y-Xq-uxl" secondAttribute="bottom" id="KA7-Vj-zk6"/>
-                            <constraint firstAttribute="centerY" secondItem="2Cp-rM-W9c" secondAttribute="centerY" id="KOc-ge-BPD"/>
-                            <constraint firstItem="2Cp-rM-W9c" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="O2Q-Z5-gMO"/>
-                            <constraint firstItem="S0y-Xq-uxl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="UFj-5l-fe4"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2Cp-rM-W9c" secondAttribute="bottom" id="fVK-y7-gVb"/>
-                            <constraint firstItem="S0y-Xq-uxl" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="j7G-9K-Dk8"/>
-                            <constraint firstAttribute="centerX" secondItem="2Cp-rM-W9c" secondAttribute="centerX" id="nKV-Y5-Y6G"/>
-                            <constraint firstItem="2Cp-rM-W9c" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="rSD-Xg-ubl"/>
-                        </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="2jS-ZQ-Cpo"/>
-                                <exclude reference="KOc-ge-BPD"/>
-                                <exclude reference="O2Q-Z5-gMO"/>
-                                <exclude reference="nKV-Y5-Y6G"/>
-                                <exclude reference="rSD-Xg-ubl"/>
-                                <exclude reference="6Vu-kb-nf3"/>
-                                <exclude reference="B5T-jQ-1CI"/>
-                                <exclude reference="Jdi-Ro-HGX"/>
-                                <exclude reference="UFj-5l-fe4"/>
-                                <exclude reference="j7G-9K-Dk8"/>
-                                <exclude reference="KA7-Vj-zk6"/>
-                                <exclude reference="fVK-y7-gVb"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=compact">
-                            <mask key="constraints">
-                                <include reference="2jS-ZQ-Cpo"/>
-                                <include reference="KOc-ge-BPD"/>
-                                <include reference="O2Q-Z5-gMO"/>
-                                <include reference="nKV-Y5-Y6G"/>
-                                <include reference="rSD-Xg-ubl"/>
-                                <include reference="6Vu-kb-nf3"/>
-                                <include reference="B5T-jQ-1CI"/>
-                                <include reference="Jdi-Ro-HGX"/>
-                                <include reference="UFj-5l-fe4"/>
-                                <include reference="j7G-9K-Dk8"/>
-                                <include reference="KA7-Vj-zk6"/>
-                                <include reference="fVK-y7-gVb"/>
-                            </mask>
-                        </variation>
                         <variation key="widthClass=regular">
                             <mask key="subviews">
-                                <include reference="S0y-Xq-uxl"/>
-                                <include reference="2Cp-rM-W9c"/>
                                 <include reference="f1j-1t-nuL"/>
                                 <include reference="a9D-eu-L3l"/>
-                                <include reference="sf3-AC-0oN"/>
-                                <include reference="M92-xp-ZsB"/>
-                                <include reference="pcd-yd-0Py"/>
-                                <include reference="Duj-9P-ZIp"/>
                                 <include reference="6OU-s6-E8P"/>
+                                <include reference="sf3-AC-0oN"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
                         <outlet property="activity" destination="sf3-AC-0oN" id="rgl-Av-ypV"/>
                         <outlet property="buttonDetail" destination="6OU-s6-E8P" id="0Ak-xS-mXf"/>
-                        <outlet property="buttonDownloadAll" destination="ePY-JC-LxV" id="0It-Tm-8bG"/>
+                        <outlet property="buttonDownloadAll" destination="UTW-VB-23J" id="nXX-nV-XKZ"/>
                         <outlet property="buttonList" destination="f1j-1t-nuL" id="PJC-qM-7vY"/>
-                        <outlet property="buttonRotate" destination="DC0-e4-Yqw" id="9Db-ke-AUw"/>
+                        <outlet property="buttonRotate" destination="S2c-pp-Ex6" id="jvm-W1-Rat"/>
                         <outlet property="buttonSettings" destination="a9D-eu-L3l" id="YFj-Kl-YOA"/>
-                        <outlet property="fleetIcon" destination="2DC-1q-jax" id="56K-kW-MVh"/>
-                        <outlet property="l_name" destination="F3y-uk-1rk" id="TcT-yn-Z2Q"/>
-                        <outlet property="myscene" destination="2Cp-rM-W9c" id="E1o-RZ-Pyu"/>
-                        <outlet property="settingView" destination="M92-xp-ZsB" id="LIw-vu-29s"/>
-                        <outlet property="shipDetailView" destination="Duj-9P-ZIp" id="DIG-81-ISV"/>
-                        <outlet property="shipListView" destination="pcd-yd-0Py" id="A5c-qs-uJM"/>
-                        <outlet property="tv_description" destination="8Dp-lT-3Dp" id="Wqv-sH-j0w"/>
-                        <outlet property="wallpaper" destination="S0y-Xq-uxl" id="bgF-oe-17h"/>
+                        <outlet property="fleetIcon" destination="9xH-nr-77D" id="gNb-XG-fBy"/>
+                        <outlet property="l_name" destination="kxf-6n-vNs" id="Yyu-K8-o8K"/>
+                        <outlet property="myscene" destination="kKr-KN-bQV" id="CJR-mr-hVA"/>
+                        <outlet property="settingView" destination="lGF-Dr-atJ" id="pvT-us-Ztg"/>
+                        <outlet property="shipDetailView" destination="37m-do-Q6J" id="J0d-iC-tDC"/>
+                        <outlet property="shipListView" destination="ZDM-Mk-V9I" id="aEv-O7-Plf"/>
+                        <outlet property="tv_description" destination="HNN-Eg-q9b" id="B7A-sv-RoP"/>
+                        <outlet property="wallpaper" destination="QMa-Z1-1Zw" id="hJs-I0-iqU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="111" y="1113"/>
+            <point key="canvasLocation" x="81" y="1176"/>
         </scene>
     </scenes>
     <resources>
@@ -320,6 +310,5 @@ The Triikor, unlike traditional fighters, does not have a centred weight of grav
         <image name="layers4_selected.png" width="128" height="128"/>
         <image name="settings20.png" width="128" height="128"/>
         <image name="settings20_selected.png" width="128" height="128"/>
-        <image name="tur.png" width="400" height="400"/>
     </resources>
 </document>

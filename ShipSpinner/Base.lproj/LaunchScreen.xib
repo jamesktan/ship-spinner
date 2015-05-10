@@ -15,9 +15,6 @@
                     <variation key="heightClass=compact" fixedFrame="YES">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
                     </variation>
-                    <variation key="heightClass=regular" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="800"/>
-                    </variation>
                     <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
                     </variation>
@@ -26,9 +23,6 @@
                     </variation>
                     <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
-                    </variation>
-                    <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="0.0" width="800" height="800"/>
                     </variation>
                 </imageView>
             </subviews>

@@ -34,7 +34,7 @@ class Presenter: NSObject {
     func getShip(name_ship : NSString) -> (NSString, NSString, NSString, UIImage) {
         var ship = interactor!.getShip(name_ship)
         
-        var nameLabel = "NAME: " + (ship.shipName! as String)
+        var nameLabel = ship.shipName! as String
         var shipDescription = ship.shipDescription!
         var shipAssetPath = ship.shipAssetPath!
         

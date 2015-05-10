@@ -260,19 +260,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // Handles the Main Scene View
     func handleAnimationScene() {
-        var value : CGFloat = -288.0
-        if buttonList.selected {
-            value = -166.0
-        }
-        if buttonDetail.selected {
-            value = -410.0
-        }
-        if buttonList.selected && buttonDetail.selected {
-            value = -288.0
-        }
-        UIView.animateWithDuration(transTime, animations: {
-            self.myscene.frame.origin.x = value
-        })
+//        var value : CGFloat = -288.0
+//        if buttonList.selected {
+//            value = -166.0
+//        }
+//        if buttonDetail.selected {
+//            value = -410.0
+//        }
+//        if buttonList.selected && buttonDetail.selected {
+//            value = -288.0
+//        }
+//        UIView.animateWithDuration(transTime, animations: {
+//            self.myscene.frame.origin.x = value
+//        })
     }
 
     // Custom Methods - Changing Properties
