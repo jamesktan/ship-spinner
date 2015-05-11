@@ -23,18 +23,8 @@
 		5465AC2B1ACDBA0500636FBA /* layers4.png in Resources */ = {isa = PBXBuildFile; fileRef = 5465AC211ACDBA0500636FBA /* layers4.png */; };
 		5465AC2D1ACDBA0500636FBA /* settings20.png in Resources */ = {isa = PBXBuildFile; fileRef = 5465AC231ACDBA0500636FBA /* settings20.png */; };
 		5465AC2F1ACDBA0500636FBA /* stack8.png in Resources */ = {isa = PBXBuildFile; fileRef = 5465AC251ACDBA0500636FBA /* stack8.png */; };
-		546D355D1AFC172000F8B661 /* logo2_152.png in Resources */ = {isa = PBXBuildFile; fileRef = 546D355C1AFC172000F8B661 /* logo2_152.png */; };
-		546D355F1AFC176500F8B661 /* logo2_76.png in Resources */ = {isa = PBXBuildFile; fileRef = 546D355E1AFC176500F8B661 /* logo2_76.png */; };
-		546D35621AFC193700F8B661 /* logo3_152.png in Resources */ = {isa = PBXBuildFile; fileRef = 546D35601AFC193700F8B661 /* logo3_152.png */; };
-		546D35631AFC193700F8B661 /* logo3_76.png in Resources */ = {isa = PBXBuildFile; fileRef = 546D35611AFC193700F8B661 /* logo3_76.png */; };
-		546D35661AFC1AAA00F8B661 /* logo4_76.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 546D35641AFC1AAA00F8B661 /* logo4_76.jpeg */; };
-		546D35671AFC1AAA00F8B661 /* logo4_152.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 546D35651AFC1AAA00F8B661 /* logo4_152.jpg */; };
-		546D356A1AFC1AD700F8B661 /* logo4_152.png in Resources */ = {isa = PBXBuildFile; fileRef = 546D35681AFC1AD700F8B661 /* logo4_152.png */; };
-		546D356B1AFC1AD700F8B661 /* logo4_76.png in Resources */ = {isa = PBXBuildFile; fileRef = 546D35691AFC1AD700F8B661 /* logo4_76.png */; };
 		546DA63C1AF3573A00E4F05F /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 546DA63B1AF3573A00E4F05F /* Reachability.m */; };
 		546DA63F1AF358BF00E4F05F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 546DA63E1AF358BF00E4F05F /* SystemConfiguration.framework */; };
-		5471FBC71AD08C1A003451D4 /* logo76.png in Resources */ = {isa = PBXBuildFile; fileRef = 5471FBC51AD08C1A003451D4 /* logo76.png */; };
-		5471FBC81AD08C1A003451D4 /* logo76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5471FBC61AD08C1A003451D4 /* logo76@2x.png */; };
 		5471FBCA1AD250CA003451D4 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5471FBC91AD250C9003451D4 /* Util.swift */; };
 		5471FBD81AD25AC8003451D4 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 5471FBCE1AD25AC8003451D4 /* ioapi.c */; };
 		5471FBD91AD25AC8003451D4 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 5471FBD01AD25AC8003451D4 /* mztools.c */; };
@@ -54,10 +44,6 @@
 		54787C1B1AFFFDB600EB805D /* NaabalLogo512.png in Resources */ = {isa = PBXBuildFile; fileRef = 54787C0F1AFFFDB600EB805D /* NaabalLogo512.png */; };
 		54787C1C1AFFFDB600EB805D /* NaabalLogo1024.png in Resources */ = {isa = PBXBuildFile; fileRef = 54787C101AFFFDB600EB805D /* NaabalLogo1024.png */; };
 		54787C1D1AFFFDB600EB805D /* NaabalLogo2048.png in Resources */ = {isa = PBXBuildFile; fileRef = 54787C111AFFFDB600EB805D /* NaabalLogo2048.png */; };
-		548B33D21AD2CA0F00B7CD8B /* logo40.png in Resources */ = {isa = PBXBuildFile; fileRef = 548B33D01AD2CA0F00B7CD8B /* logo40.png */; };
-		548B33D31AD2CA0F00B7CD8B /* logo80.png in Resources */ = {isa = PBXBuildFile; fileRef = 548B33D11AD2CA0F00B7CD8B /* logo80.png */; };
-		548B33D61AD2CA4C00B7CD8B /* logo29.png in Resources */ = {isa = PBXBuildFile; fileRef = 548B33D41AD2CA4C00B7CD8B /* logo29.png */; };
-		548B33D71AD2CA4C00B7CD8B /* logo58.png in Resources */ = {isa = PBXBuildFile; fileRef = 548B33D51AD2CA4C00B7CD8B /* logo58.png */; };
 		54BA14B51ACC8F0D00054079 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54BA14B41ACC8F0D00054079 /* SpriteKit.framework */; };
 		54C50B961AD47418005EDB5C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 54C50B951AD47418005EDB5C /* QuartzCore.framework */; };
 		54C6AFFC1ACC6EBF00E1D0F1 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6AFFB1ACC6EBF00E1D0F1 /* Presenter.swift */; };
@@ -113,19 +99,9 @@
 		5465AC211ACDBA0500636FBA /* layers4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = layers4.png; sourceTree = "<group>"; };
 		5465AC231ACDBA0500636FBA /* settings20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings20.png; sourceTree = "<group>"; };
 		5465AC251ACDBA0500636FBA /* stack8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = stack8.png; sourceTree = "<group>"; };
-		546D355C1AFC172000F8B661 /* logo2_152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo2_152.png; sourceTree = "<group>"; };
-		546D355E1AFC176500F8B661 /* logo2_76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo2_76.png; sourceTree = "<group>"; };
-		546D35601AFC193700F8B661 /* logo3_152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo3_152.png; sourceTree = "<group>"; };
-		546D35611AFC193700F8B661 /* logo3_76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo3_76.png; sourceTree = "<group>"; };
-		546D35641AFC1AAA00F8B661 /* logo4_76.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo4_76.jpeg; sourceTree = "<group>"; };
-		546D35651AFC1AAA00F8B661 /* logo4_152.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = logo4_152.jpg; sourceTree = "<group>"; };
-		546D35681AFC1AD700F8B661 /* logo4_152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo4_152.png; sourceTree = "<group>"; };
-		546D35691AFC1AD700F8B661 /* logo4_76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo4_76.png; sourceTree = "<group>"; };
 		546DA63A1AF3573A00E4F05F /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		546DA63B1AF3573A00E4F05F /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		546DA63E1AF358BF00E4F05F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		5471FBC51AD08C1A003451D4 /* logo76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo76.png; sourceTree = "<group>"; };
-		5471FBC61AD08C1A003451D4 /* logo76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo76@2x.png"; sourceTree = "<group>"; };
 		5471FBC91AD250C9003451D4 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		5471FBCB1AD25AC7003451D4 /* ShipSpinner-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShipSpinner-Bridging-Header.h"; sourceTree = "<group>"; };
 		5471FBCD1AD25AC8003451D4 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
@@ -152,10 +128,6 @@
 		54787C0F1AFFFDB600EB805D /* NaabalLogo512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NaabalLogo512.png; sourceTree = "<group>"; };
 		54787C101AFFFDB600EB805D /* NaabalLogo1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NaabalLogo1024.png; sourceTree = "<group>"; };
 		54787C111AFFFDB600EB805D /* NaabalLogo2048.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NaabalLogo2048.png; sourceTree = "<group>"; };
-		548B33D01AD2CA0F00B7CD8B /* logo40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo40.png; sourceTree = "<group>"; };
-		548B33D11AD2CA0F00B7CD8B /* logo80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo80.png; sourceTree = "<group>"; };
-		548B33D41AD2CA4C00B7CD8B /* logo29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo29.png; sourceTree = "<group>"; };
-		548B33D51AD2CA4C00B7CD8B /* logo58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo58.png; sourceTree = "<group>"; };
 		54BA14B41ACC8F0D00054079 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		54C50B951AD47418005EDB5C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		54C6AFFB1ACC6EBF00E1D0F1 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
@@ -209,20 +181,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		540AA9871B00DE60002A5B6E /* logo */ = {
+			isa = PBXGroup;
+			children = (
+				54787C061AFFFDB600EB805D /* NaabalLogo29.png */,
+				54787C071AFFFDB600EB805D /* NaabalLogo40.png */,
+				54787C081AFFFDB600EB805D /* NaabalLogo58.png */,
+				54787C091AFFFDB600EB805D /* NaabalLogo76.png */,
+				54787C0A1AFFFDB600EB805D /* NaabalLogo80.png */,
+				54787C0B1AFFFDB600EB805D /* NaabalLogo87.png */,
+				54787C0C1AFFFDB600EB805D /* NaabalLogo120.png */,
+				54787C0D1AFFFDB600EB805D /* NaabalLogo152.png */,
+				54787C0E1AFFFDB600EB805D /* NaabalLogo180.png */,
+				54787C0F1AFFFDB600EB805D /* NaabalLogo512.png */,
+				54787C101AFFFDB600EB805D /* NaabalLogo1024.png */,
+				54787C111AFFFDB600EB805D /* NaabalLogo2048.png */,
+			);
+			name = logo;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		5465AC1C1ACDBA0500636FBA /* icons */ = {
 			isa = PBXGroup;
 			children = (
+				540AA9871B00DE60002A5B6E /* logo */,
 				54EE6C321AEEAE0A00E8B807 /* table */,
-				548B33D41AD2CA4C00B7CD8B /* logo29.png */,
-				548B33D51AD2CA4C00B7CD8B /* logo58.png */,
-				548B33D01AD2CA0F00B7CD8B /* logo40.png */,
-				548B33D11AD2CA0F00B7CD8B /* logo80.png */,
 				540392A91AD2795E006A717F /* bars5_selected.png */,
 				540392AA1AD2795E006A717F /* information32_selected.png */,
 				540392AB1AD2795E006A717F /* layers4_selected.png */,
 				540392AC1AD2795E006A717F /* settings20_selected.png */,
-				5471FBC51AD08C1A003451D4 /* logo76.png */,
-				5471FBC61AD08C1A003451D4 /* logo76@2x.png */,
 				5465AC1D1ACDBA0500636FBA /* bars5.png */,
 				5465AC1F1ACDBA0500636FBA /* information32.png */,
 				5465AC211ACDBA0500636FBA /* layers4.png */,
@@ -323,26 +310,6 @@
 		54E089EB1A19435800BDC644 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				54787C061AFFFDB600EB805D /* NaabalLogo29.png */,
-				54787C071AFFFDB600EB805D /* NaabalLogo40.png */,
-				54787C081AFFFDB600EB805D /* NaabalLogo58.png */,
-				54787C091AFFFDB600EB805D /* NaabalLogo76.png */,
-				54787C0A1AFFFDB600EB805D /* NaabalLogo80.png */,
-				54787C0B1AFFFDB600EB805D /* NaabalLogo87.png */,
-				54787C0C1AFFFDB600EB805D /* NaabalLogo120.png */,
-				54787C0D1AFFFDB600EB805D /* NaabalLogo152.png */,
-				54787C0E1AFFFDB600EB805D /* NaabalLogo180.png */,
-				54787C0F1AFFFDB600EB805D /* NaabalLogo512.png */,
-				54787C101AFFFDB600EB805D /* NaabalLogo1024.png */,
-				54787C111AFFFDB600EB805D /* NaabalLogo2048.png */,
-				546D35681AFC1AD700F8B661 /* logo4_152.png */,
-				546D35691AFC1AD700F8B661 /* logo4_76.png */,
-				546D35641AFC1AAA00F8B661 /* logo4_76.jpeg */,
-				546D35651AFC1AAA00F8B661 /* logo4_152.jpg */,
-				546D35601AFC193700F8B661 /* logo3_152.png */,
-				546D35611AFC193700F8B661 /* logo3_76.png */,
-				546D355E1AFC176500F8B661 /* logo2_76.png */,
-				546D355C1AFC172000F8B661 /* logo2_152.png */,
 				5471FBCB1AD25AC7003451D4 /* ShipSpinner-Bridging-Header.h */,
 				546DA63D1AF3574000E4F05F /* Reachability */,
 				5471FBDE1AD25AD7003451D4 /* SSZipArchive */,
@@ -482,22 +449,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				546D356A1AFC1AD700F8B661 /* logo4_152.png in Resources */,
 				540392AD1AD2795E006A717F /* bars5_selected.png in Resources */,
 				54EC67A91AD062E3009CE568 /* kush_cloakedfighter.scnassets in Resources */,
 				54787C161AFFFDB600EB805D /* NaabalLogo80.png in Resources */,
 				5465AC1B1ACDB7F800636FBA /* bg1.jpg in Resources */,
-				546D35621AFC193700F8B661 /* logo3_152.png in Resources */,
-				548B33D61AD2CA4C00B7CD8B /* logo29.png in Resources */,
 				54EE6C3E1AEEDB5F00E8B807 /* hiig.png in Resources */,
-				546D35661AFC1AAA00F8B661 /* logo4_76.jpeg in Resources */,
-				546D355F1AFC176500F8B661 /* logo2_76.png in Resources */,
 				540392AE1AD2795E006A717F /* information32_selected.png in Resources */,
 				5465AC151ACDB7F800636FBA /* bg7.jpg in Resources */,
 				54787C1C1AFFFDB600EB805D /* NaabalLogo1024.png in Resources */,
 				5465AC2B1ACDBA0500636FBA /* layers4.png in Resources */,
 				54E089F61A19435800BDC644 /* Main.storyboard in Resources */,
-				5471FBC71AD08C1A003451D4 /* logo76.png in Resources */,
 				54EE6C3F1AEEDB5F00E8B807 /* kad.png in Resources */,
 				54EC67A51AD060BE009CE568 /* assetOnline.plist in Resources */,
 				54787C1D1AFFFDB600EB805D /* NaabalLogo2048.png in Resources */,
@@ -505,37 +466,29 @@
 				54EC67A31AD05F5A009CE568 /* defaults.plist in Resources */,
 				54EE6C441AEEDB5F00E8B807 /* kush.png in Resources */,
 				54787C171AFFFDB600EB805D /* NaabalLogo87.png in Resources */,
-				546D356B1AFC1AD700F8B661 /* logo4_76.png in Resources */,
 				54787C131AFFFDB600EB805D /* NaabalLogo40.png in Resources */,
 				5465AC191ACDB7F800636FBA /* bg3.jpg in Resources */,
 				54E089FB1A19435800BDC644 /* LaunchScreen.xib in Resources */,
 				5465AC171ACDB7F800636FBA /* bg5.jpg in Resources */,
 				54EE6C401AEEDB5F00E8B807 /* taid.png in Resources */,
 				54787C181AFFFDB600EB805D /* NaabalLogo120.png in Resources */,
-				546D35631AFC193700F8B661 /* logo3_76.png in Resources */,
 				5465AC1A1ACDB7F800636FBA /* bg2.jpg in Resources */,
 				5465AC2D1ACDBA0500636FBA /* settings20.png in Resources */,
 				54EE6C431AEEDB5F00E8B807 /* bent.png in Resources */,
 				54787C1B1AFFFDB600EB805D /* NaabalLogo512.png in Resources */,
 				54787C151AFFFDB600EB805D /* NaabalLogo76.png in Resources */,
 				54787C121AFFFDB600EB805D /* NaabalLogo29.png in Resources */,
-				548B33D21AD2CA0F00B7CD8B /* logo40.png in Resources */,
 				540392AF1AD2795E006A717F /* layers4_selected.png in Resources */,
 				54787C141AFFFDB600EB805D /* NaabalLogo58.png in Resources */,
 				5465AC291ACDBA0500636FBA /* information32.png in Resources */,
-				548B33D31AD2CA0F00B7CD8B /* logo80.png in Resources */,
 				54EE6C251AEE619E00E8B807 /* guildstonebg.jpg in Resources */,
 				54EE6C411AEEDB5F00E8B807 /* tur.png in Resources */,
 				54EE6C421AEEDB5F00E8B807 /* vayg.png in Resources */,
 				5465AC181ACDB7F800636FBA /* bg4.jpg in Resources */,
-				546D355D1AFC172000F8B661 /* logo2_152.png in Resources */,
-				546D35671AFC1AAA00F8B661 /* logo4_152.jpg in Resources */,
 				54EC67A71AD060C8009CE568 /* detailOnline.plist in Resources */,
 				5465AC271ACDBA0500636FBA /* bars5.png in Resources */,
 				54E089F81A19435800BDC644 /* Images.xcassets in Resources */,
 				54787C191AFFFDB600EB805D /* NaabalLogo152.png in Resources */,
-				548B33D71AD2CA4C00B7CD8B /* logo58.png in Resources */,
-				5471FBC81AD08C1A003451D4 /* logo76@2x.png in Resources */,
 				54787C1A1AFFFDB600EB805D /* NaabalLogo180.png in Resources */,
 				5465AC161ACDB7F800636FBA /* bg6.jpg in Resources */,
 				5465AC2F1ACDBA0500636FBA /* stack8.png in Resources */,
