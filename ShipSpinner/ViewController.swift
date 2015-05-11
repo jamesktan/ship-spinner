@@ -213,7 +213,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // Custom Methods - Hide / Show Windows
     func hideMyScene() {
         self.myscene.alpha = 0.0
-//        self.myscene.removeFromSuperview()
         self.activity.startAnimating()
     }
     
@@ -221,7 +220,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         UIView.animateWithDuration(3.0, animations: {
             self.myscene.alpha = 1.0
             }, completion:{ finished in
-//                self.view.insertSubview(self.myscene, aboveSubview: self.wallpaper)
                 self.activity.stopAnimating()
             }
         )
