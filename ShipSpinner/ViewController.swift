@@ -106,13 +106,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 scene.rootNode.addChildNode(node as! SCNNode)
             }
             myscene.scene = scene
-            myscene.antialiasingMode = SCNAntialiasingMode.Multisampling4X
+//            myscene.antialiasingMode = SCNAntialiasingMode.Multisampling4X
+          //@jtan: it would appear that at this time, having any multisampling at all will crash the app on an iPad. It's not clear that there are any discernable effects on other devices without actual investigation. The error is that of a "gpu restart" meaning that the GPU dies around 60FPS because, supposedly, there is some bugn in the thread handling for SceneKit. Multisampling seems to make this a  lot worse.
         } else {
             myscene.scene = SCNScene(named: shipInfo.2 as String)
         }
         myscene.backgroundColor = UIColor.clearColor()
         loadLight(wallpaperID) // Load the right Lide nodes
-        
+      
         showMyScene()
         
         // Spin
