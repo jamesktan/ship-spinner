@@ -189,10 +189,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 dispatch_async(dispatch_get_main_queue(), {
                     self.shipListView.reloadData()
                     self.activity.stopAnimating()
-//                    self.showView(self.buttonList) // Hides the view
                     self.loadShipData(self.shipID)
                     frame.presenter!.setShip(self.shipID) // Set New Default Ship
-//                    tableView.deselectRowAtIndexPath(indexPath, animated: true) // Unhighlight Row
 
                 })
             })
