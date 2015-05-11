@@ -2,38 +2,74 @@
   "images" : [
     {
       "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "NaabalLogo58-1.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "29x29",
+      "idiom" : "iphone",
+      "filename" : "NaabalLogo87.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "NaabalLogo80.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "40x40",
+      "idiom" : "iphone",
+      "filename" : "NaabalLogo120.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "NaabalLogo120-1.png",
+      "scale" : "2x"
+    },
+    {
+      "size" : "60x60",
+      "idiom" : "iphone",
+      "filename" : "NaabalLogo180.png",
+      "scale" : "3x"
+    },
+    {
+      "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "logo29.png",
+      "filename" : "NaabalLogo29.png",
       "scale" : "1x"
     },
     {
       "size" : "29x29",
       "idiom" : "ipad",
-      "filename" : "logo58.png",
+      "filename" : "NaabalLogo58.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "logo40.png",
+      "filename" : "NaabalLogo40.png",
       "scale" : "1x"
     },
     {
       "size" : "40x40",
       "idiom" : "ipad",
-      "filename" : "logo80.png",
+      "filename" : "NaabalLogo80-1.png",
       "scale" : "2x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "logo4_76.png",
+      "filename" : "NaabalLogo76.png",
       "scale" : "1x"
     },
     {
       "size" : "76x76",
       "idiom" : "ipad",
-      "filename" : "logo4_152.png",
+      "filename" : "NaabalLogo152.png",
       "scale" : "2x"
     }
   ],

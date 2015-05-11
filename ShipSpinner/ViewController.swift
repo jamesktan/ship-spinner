@@ -43,7 +43,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var views : NSArray? = nil //preload
     var buttons : NSArray? = nil
     var count = 0
-    
+    var originalCenter : CGPoint? = nil
+  
     // Labels
     @IBOutlet weak var l_name: UILabel!
     @IBOutlet weak var tv_description: UITextView!
@@ -79,7 +80,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         loadWallpaper(wallpaperID)
         loadShipData(shipID)
         wallpaper.addMotionEffect(frame.presenter!.createParallax())
-        
+      
+      
     }
 
     override func didReceiveMemoryWarning() {
@@ -211,7 +213,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     // Custom Methods - Hide / Show Windows
     func hideMyScene() {
         self.myscene.alpha = 0.0
-        self.myscene.removeFromSuperview()
+//        self.myscene.removeFromSuperview()
         self.activity.startAnimating()
     }
     
@@ -219,7 +221,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         UIView.animateWithDuration(3.0, animations: {
             self.myscene.alpha = 1.0
             }, completion:{ finished in
-                self.view.insertSubview(self.myscene, aboveSubview: self.wallpaper)
+//                self.view.insertSubview(self.myscene, aboveSubview: self.wallpaper)
                 self.activity.stopAnimating()
             }
         )
@@ -260,19 +262,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // Handles the Main Scene View
     func handleAnimationScene() {
-//        var value : CGFloat = -288.0
-//        if buttonList.selected {
-//            value = -166.0
-//        }
-//        if buttonDetail.selected {
-//            value = -410.0
-//        }
-//        if buttonList.selected && buttonDetail.selected {
-//            value = -288.0
-//        }
-//        UIView.animateWithDuration(transTime, animations: {
-//            self.myscene.frame.origin.x = value
-//        })
+        var value : CGFloat = -120
+        if buttonList.selected {
+            value = 0
+        }
+        if buttonDetail.selected {
+            value = -200
+        }
+        if buttonList.selected && buttonDetail.selected {
+            value = -90
+        }
+        UIView.animateWithDuration(transTime, animations: {
+            self.myscene.frame.origin.x = value
+        })
     }
 
     // Custom Methods - Changing Properties
