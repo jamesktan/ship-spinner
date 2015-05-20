@@ -333,7 +333,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     @IBAction func launchPurchase(sender: AnyObject) {
-        self.performSegueWithIdentifier("showPurchase", sender: self)
+      if buttonList.selected {
+        showView(buttonList)
+      }
+      if buttonDetail.selected {
+        showView(buttonDetail)
+      }
+      self.performSegueWithIdentifier("showPurchase", sender: self)
     }
     override func prefersStatusBarHidden() -> Bool {
         return true
