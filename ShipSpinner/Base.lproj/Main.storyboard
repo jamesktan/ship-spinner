@@ -35,7 +35,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="800" height="800"/>
                                 </variation>
                             </sceneKitView>
-                            <view alpha="0.0" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="37m-do-Q6J" userLabel="INFOVIEW">
+                            <view alpha="0.0" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="37m-do-Q6J" userLabel="INFOVIEW">
                                 <rect key="frame" x="356" y="1" width="244" height="599"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9xH-nr-77D">
@@ -50,7 +50,7 @@
                                             <rect key="frame" x="50" y="70" width="100" height="100"/>
                                         </variation>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNN-Eg-q9b">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNN-Eg-q9b">
                                         <rect key="frame" x="0.0" y="220" width="244" height="379"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="244" id="0na-72-LOZ"/>
@@ -213,7 +213,7 @@
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sf3-AC-0oN">
                                 <rect key="frame" x="21" y="182" width="37" height="37"/>
                                 <variation key="heightClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="13" y="150" width="37" height="37"/>
+                                    <rect key="frame" x="14" y="150" width="37" height="37"/>
                                 </variation>
                                 <variation key="heightClass=regular" fixedFrame="YES">
                                     <rect key="frame" x="21" y="182" width="37" height="37"/>
@@ -535,6 +535,23 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="81" y="1176"/>
+        </scene>
+        <!--Purchase View-->
+        <scene sceneID="eoG-14-bcG">
+            <objects>
+                <viewController id="lao-Y5-2Vf" customClass="PurchaseView" customModule="ShipSpinner" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zEf-1m-ME6"/>
+                        <viewControllerLayoutGuide type="bottom" id="b5b-kN-h7Q"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wfr-3R-8xi">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qos-z8-hZC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="81" y="1876"/>
         </scene>
     </scenes>
     <resources>

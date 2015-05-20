@@ -50,6 +50,9 @@
 		54C6AFFE1ACC6EE100E1D0F1 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6AFFD1ACC6EE100E1D0F1 /* Interactor.swift */; };
 		54C6B0001ACC6EF000E1D0F1 /* ShipEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6AFFF1ACC6EF000E1D0F1 /* ShipEntity.swift */; };
 		54C6B0021ACC7BA200E1D0F1 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54C6B0011ACC7BA200E1D0F1 /* DataManager.swift */; };
+		54D7C5D81B0C8FD500359073 /* PurchaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D7C5D71B0C8FD500359073 /* PurchaseView.swift */; };
+		54D7C5DA1B0C8FE900359073 /* PurchasePresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D7C5D91B0C8FE900359073 /* PurchasePresent.swift */; };
+		54D7C5DC1B0C900C00359073 /* PurchaseInteract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54D7C5DB1B0C900C00359073 /* PurchaseInteract.swift */; };
 		54E089EE1A19435800BDC644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E089ED1A19435800BDC644 /* AppDelegate.swift */; };
 		54E089F11A19435800BDC644 /* ShipSpinner.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 54E089EF1A19435800BDC644 /* ShipSpinner.xcdatamodeld */; };
 		54E089F31A19435800BDC644 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54E089F21A19435800BDC644 /* ViewController.swift */; };
@@ -134,6 +137,9 @@
 		54C6AFFD1ACC6EE100E1D0F1 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		54C6AFFF1ACC6EF000E1D0F1 /* ShipEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipEntity.swift; sourceTree = "<group>"; };
 		54C6B0011ACC7BA200E1D0F1 /* DataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		54D7C5D71B0C8FD500359073 /* PurchaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseView.swift; sourceTree = "<group>"; };
+		54D7C5D91B0C8FE900359073 /* PurchasePresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchasePresent.swift; sourceTree = "<group>"; };
+		54D7C5DB1B0C900C00359073 /* PurchaseInteract.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PurchaseInteract.swift; sourceTree = "<group>"; };
 		54E089E81A19435800BDC644 /* ShipSpinner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShipSpinner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		54E089EC1A19435800BDC644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		54E089ED1A19435800BDC644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -270,6 +276,26 @@
 			name = SSZipArchive;
 			sourceTree = "<group>";
 		};
+		54D7C5D51B0C8FB400359073 /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				54E089F21A19435800BDC644 /* ViewController.swift */,
+				54C6AFFB1ACC6EBF00E1D0F1 /* Presenter.swift */,
+				54C6AFFD1ACC6EE100E1D0F1 /* Interactor.swift */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
+		54D7C5D61B0C8FBD00359073 /* PurchaseView */ = {
+			isa = PBXGroup;
+			children = (
+				54D7C5D71B0C8FD500359073 /* PurchaseView.swift */,
+				54D7C5D91B0C8FE900359073 /* PurchasePresent.swift */,
+				54D7C5DB1B0C900C00359073 /* PurchaseInteract.swift */,
+			);
+			name = PurchaseView;
+			sourceTree = "<group>";
+		};
 		54E089DF1A19435800BDC644 = {
 			isa = PBXGroup;
 			children = (
@@ -292,9 +318,8 @@
 			isa = PBXGroup;
 			children = (
 				54E089ED1A19435800BDC644 /* AppDelegate.swift */,
-				54E089F21A19435800BDC644 /* ViewController.swift */,
-				54C6AFFB1ACC6EBF00E1D0F1 /* Presenter.swift */,
-				54C6AFFD1ACC6EE100E1D0F1 /* Interactor.swift */,
+				54D7C5D51B0C8FB400359073 /* MainView */,
+				54D7C5D61B0C8FBD00359073 /* PurchaseView */,
 				54C6B0011ACC7BA200E1D0F1 /* DataManager.swift */,
 				54C6AFFF1ACC6EF000E1D0F1 /* ShipEntity.swift */,
 				5471FBC91AD250C9003451D4 /* Util.swift */,
@@ -529,14 +554,17 @@
 				54E089F31A19435800BDC644 /* ViewController.swift in Sources */,
 				5471FBDA1AD25AC8003451D4 /* unzip.c in Sources */,
 				5471FBDC1AD25AC8003451D4 /* SSZipArchive.m in Sources */,
+				54D7C5D81B0C8FD500359073 /* PurchaseView.swift in Sources */,
 				54E089EE1A19435800BDC644 /* AppDelegate.swift in Sources */,
 				54C6B0001ACC6EF000E1D0F1 /* ShipEntity.swift in Sources */,
+				54D7C5DC1B0C900C00359073 /* PurchaseInteract.swift in Sources */,
 				5471FBCA1AD250CA003451D4 /* Util.swift in Sources */,
 				5471FBD91AD25AC8003451D4 /* mztools.c in Sources */,
 				54C6B0021ACC7BA200E1D0F1 /* DataManager.swift in Sources */,
 				54C6AFFC1ACC6EBF00E1D0F1 /* Presenter.swift in Sources */,
 				5471FBD81AD25AC8003451D4 /* ioapi.c in Sources */,
 				546DA63C1AF3573A00E4F05F /* Reachability.m in Sources */,
+				54D7C5DA1B0C8FE900359073 /* PurchasePresent.swift in Sources */,
 				5471FBDB1AD25AC8003451D4 /* zip.c in Sources */,
 				54E089F11A19435800BDC644 /* ShipSpinner.xcdatamodeld in Sources */,
 				54C6AFFE1ACC6EE100E1D0F1 /* Interactor.swift in Sources */,
