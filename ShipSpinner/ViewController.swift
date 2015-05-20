@@ -95,7 +95,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         l_name.text = shipInfo.0 as String
         tv_description.text = shipInfo.1 as String
         fleetIcon.image = shipInfo.3
-        
         hideMyScene()
         
         // Model
@@ -245,6 +244,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         handleAnimation(view, moveToPoint: view.frame.origin, alpha: alpha)
         sender.selected = !(sender.selected)
         handleAnimationScene()
+        tv_description.setContentOffset(CGPoint(x: 0, y: 0), animated: true)
+
 
     }
     
@@ -259,7 +260,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // Handles the Main Scene View
     func handleAnimationScene() {
-        var value : CGFloat = -120
+        var value : CGFloat = -107.5
         if buttonList.selected {
             value = 0
         }
