@@ -65,7 +65,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
 
     // UIView LifeCycle Stuff
-    
+  
     override func viewDidLoad() {
         
         super.viewDidLoad()
@@ -332,6 +332,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         self.presentViewController(alert, animated: true, completion: nil)
     }
 
+    @IBAction func launchPurchase(sender: AnyObject) {
+        self.performSegueWithIdentifier("showPurchase", sender: self)
+    }
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
