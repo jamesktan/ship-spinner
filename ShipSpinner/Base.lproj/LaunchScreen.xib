@@ -10,11 +10,8 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NaabalLogo2048_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="jQb-AE-rZV">
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="jQb-AE-rZV">
                     <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                    <variation key="heightClass=compact" fixedFrame="YES">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="400"/>
-                    </variation>
                     <variation key="heightClass=compact-widthClass=compact" fixedFrame="YES">
                         <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
                     </variation>
@@ -41,6 +38,6 @@
         </view>
     </objects>
     <resources>
-        <image name="NaabalLogo2048_2.png" width="1024" height="1024"/>
+        <image name="bg4.jpg" width="4096" height="1600"/>
     </resources>
 </document>

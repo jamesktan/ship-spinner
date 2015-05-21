@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -35,10 +36,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="800" height="800"/>
                                 </variation>
                             </sceneKitView>
-                            <view alpha="0.0" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="37m-do-Q6J" userLabel="INFOVIEW">
+                            <view alpha="0.0" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="37m-do-Q6J" userLabel="INFOVIEW">
                                 <rect key="frame" x="356" y="1" width="244" height="599"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="TEs test test" translatesAutoresizingMaskIntoConstraints="NO" id="HNN-Eg-q9b">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="TEs test test" translatesAutoresizingMaskIntoConstraints="NO" id="HNN-Eg-q9b">
                                         <rect key="frame" x="0.0" y="220" width="244" height="379"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="244" id="0na-72-LOZ">
@@ -80,7 +81,7 @@
                                             <rect key="frame" x="0.0" y="213" width="200" height="587"/>
                                         </variation>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxf-6n-vNs">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kxf-6n-vNs">
                                         <rect key="frame" x="8" y="8" width="228" height="54"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="2Gx-8F-tmG"/>
@@ -118,7 +119,7 @@
                                             <rect key="frame" x="8" y="8" width="184" height="54"/>
                                         </variation>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9xH-nr-77D">
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9xH-nr-77D">
                                         <rect key="frame" x="47" y="70" width="150" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="Ek7-Ig-ujJ"/>
@@ -282,7 +283,7 @@
                                     <action selector="showView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BUq-V8-Hom"/>
                                 </connections>
                             </button>
-                            <view alpha="0.0" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGF-Dr-atJ" userLabel="SETTING">
+                            <view alpha="0.0" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGF-Dr-atJ" userLabel="SETTING">
                                 <rect key="frame" x="178" y="1" width="244" height="104"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTW-VB-23J">
@@ -434,7 +435,7 @@
                                     <action selector="showView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oK5-aV-BzX"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgL-fA-WqQ">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CgL-fA-WqQ">
                                 <rect key="frame" x="16" y="128" width="46" height="46"/>
                                 <inset key="contentEdgeInsets" minX="7" minY="7" maxX="7" maxY="7"/>
                                 <state key="normal" image="jewel5.png">
@@ -451,7 +452,7 @@
                                     <action selector="launchPurchase:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h2P-No-ACK"/>
                                 </connections>
                             </button>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sf3-AC-0oN">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="sf3-AC-0oN">
                                 <rect key="frame" x="21" y="182" width="37" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="37" id="3f9-F2-eFS"/>
@@ -575,16 +576,16 @@
                                 <exclude reference="MKc-l1-gqg"/>
                                 <exclude reference="Toe-hV-y5e"/>
                                 <exclude reference="u5O-hH-ttZ"/>
-                                <exclude reference="EPl-5M-mWI"/>
-                                <exclude reference="OoO-LT-bmx"/>
-                                <exclude reference="eC6-4s-8Yx"/>
-                                <exclude reference="k8I-Dj-wdx"/>
                                 <exclude reference="3ys-BV-gaq"/>
                                 <exclude reference="AFX-PR-YVK"/>
                                 <exclude reference="V1G-qJ-gzu"/>
                                 <exclude reference="aIv-X4-czi"/>
                                 <exclude reference="oaN-m6-qwo"/>
                                 <exclude reference="yVn-Ed-81g"/>
+                                <exclude reference="EPl-5M-mWI"/>
+                                <exclude reference="OoO-LT-bmx"/>
+                                <exclude reference="eC6-4s-8Yx"/>
+                                <exclude reference="k8I-Dj-wdx"/>
                                 <exclude reference="KX1-UP-Ebg"/>
                                 <exclude reference="SAy-wm-edG"/>
                                 <exclude reference="TVj-3G-BjO"/>
@@ -617,11 +618,11 @@
                                 <include reference="1zn-gD-nsF"/>
                                 <include reference="2Ht-Na-5Lp"/>
                                 <include reference="Toe-hV-y5e"/>
-                                <include reference="eC6-4s-8Yx"/>
-                                <include reference="k8I-Dj-wdx"/>
                                 <include reference="V1G-qJ-gzu"/>
                                 <include reference="aIv-X4-czi"/>
                                 <include reference="oaN-m6-qwo"/>
+                                <include reference="eC6-4s-8Yx"/>
+                                <include reference="k8I-Dj-wdx"/>
                                 <include reference="SAy-wm-edG"/>
                                 <include reference="TVj-3G-BjO"/>
                                 <include reference="m9l-V3-ivH"/>
@@ -648,11 +649,11 @@
                                 <include reference="5sC-6G-VsA"/>
                                 <include reference="MKc-l1-gqg"/>
                                 <include reference="u5O-hH-ttZ"/>
-                                <include reference="EPl-5M-mWI"/>
-                                <include reference="OoO-LT-bmx"/>
                                 <include reference="3ys-BV-gaq"/>
                                 <include reference="AFX-PR-YVK"/>
                                 <include reference="yVn-Ed-81g"/>
+                                <include reference="EPl-5M-mWI"/>
+                                <include reference="OoO-LT-bmx"/>
                                 <include reference="KX1-UP-Ebg"/>
                                 <include reference="xiq-Zo-Qs7"/>
                                 <include reference="4yh-Vl-wdc"/>
@@ -697,15 +698,16 @@
                         <viewControllerLayoutGuide type="bottom" id="b5b-kN-h7Q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="wfr-3R-8xi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg4.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="85q-h1-LDN">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                             </imageView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TP2-rk-gZN">
+                            <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TP2-rk-gZN">
                                 <rect key="frame" x="-4" y="51" width="240" height="298"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PURCHASE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilG-VH-tKv">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="PURCHASE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilG-VH-tKv">
                                         <rect key="frame" x="20" y="20" width="200" height="71"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="71" id="WHx-vv-hOP"/>
@@ -737,7 +739,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyo-zw-hH1">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hyo-zw-hH1">
                                         <rect key="frame" x="20" y="99" width="200" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="N5C-xG-4oz"/>
@@ -774,7 +776,7 @@
                                             <action selector="launchWeb:" destination="lao-Y5-2Vf" eventType="touchUpInside" id="Utk-zx-4OR"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zwi-Kt-gqf">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zwi-Kt-gqf">
                                         <rect key="frame" x="20" y="137" width="200" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="DWd-w0-cgp"/>
@@ -811,7 +813,7 @@
                                             <action selector="launchWeb:" destination="lao-Y5-2Vf" eventType="touchUpInside" id="i8I-eX-xgV"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aV-le-P7X">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6aV-le-P7X">
                                         <rect key="frame" x="20" y="175" width="200" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="OQB-YB-mKI"/>
@@ -848,7 +850,7 @@
                                             <action selector="launchWeb:" destination="lao-Y5-2Vf" eventType="touchUpInside" id="Z8o-qi-ce4"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWr-4s-0gu">
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWr-4s-0gu">
                                         <rect key="frame" x="20" y="248" width="173" height="30"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="F5t-dO-GUu"/>
@@ -994,20 +996,20 @@
                                 <exclude reference="85q-h1-LDN"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="5Lw-UZ-72Z"/>
+                                <exclude reference="Ajx-Ix-vyA"/>
+                                <exclude reference="GhJ-fT-J7W"/>
+                                <exclude reference="NTs-nH-6ji"/>
+                                <exclude reference="BJG-0M-XYE"/>
+                                <exclude reference="WCI-2e-GOy"/>
+                                <exclude reference="lef-rl-5cv"/>
+                                <exclude reference="qqd-cx-9iR"/>
                                 <exclude reference="CKZ-Jt-o0M"/>
                                 <exclude reference="V75-vA-SGl"/>
                                 <exclude reference="Vi3-ID-LIG"/>
                                 <exclude reference="XFu-uL-KN5"/>
                                 <exclude reference="lnQ-F1-xdK"/>
                                 <exclude reference="ojP-lC-9oh"/>
-                                <exclude reference="BJG-0M-XYE"/>
-                                <exclude reference="WCI-2e-GOy"/>
-                                <exclude reference="lef-rl-5cv"/>
-                                <exclude reference="qqd-cx-9iR"/>
-                                <exclude reference="5Lw-UZ-72Z"/>
-                                <exclude reference="Ajx-Ix-vyA"/>
-                                <exclude reference="GhJ-fT-J7W"/>
-                                <exclude reference="NTs-nH-6ji"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -1015,13 +1017,13 @@
                                 <include reference="85q-h1-LDN"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="5Lw-UZ-72Z"/>
+                                <include reference="GhJ-fT-J7W"/>
+                                <include reference="lef-rl-5cv"/>
+                                <include reference="qqd-cx-9iR"/>
                                 <include reference="V75-vA-SGl"/>
                                 <include reference="Vi3-ID-LIG"/>
                                 <include reference="ojP-lC-9oh"/>
-                                <include reference="lef-rl-5cv"/>
-                                <include reference="qqd-cx-9iR"/>
-                                <include reference="5Lw-UZ-72Z"/>
-                                <include reference="GhJ-fT-J7W"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -1029,13 +1031,13 @@
                                 <include reference="85q-h1-LDN"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="Ajx-Ix-vyA"/>
+                                <include reference="NTs-nH-6ji"/>
+                                <include reference="BJG-0M-XYE"/>
+                                <include reference="WCI-2e-GOy"/>
                                 <include reference="CKZ-Jt-o0M"/>
                                 <include reference="XFu-uL-KN5"/>
                                 <include reference="lnQ-F1-xdK"/>
-                                <include reference="BJG-0M-XYE"/>
-                                <include reference="WCI-2e-GOy"/>
-                                <include reference="Ajx-Ix-vyA"/>
-                                <include reference="NTs-nH-6ji"/>
                             </mask>
                         </variation>
                     </view>
