@@ -36,7 +36,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="800" height="800"/>
                                 </variation>
                             </sceneKitView>
-                            <view alpha="0.0" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="37m-do-Q6J" userLabel="INFOVIEW">
+                            <view alpha="0.0" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="37m-do-Q6J" userLabel="INFOVIEW">
                                 <rect key="frame" x="356" y="1" width="244" height="599"/>
                                 <subviews>
                                     <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CFk-lR-bsE">
@@ -148,7 +148,7 @@
                                     <action selector="showView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BUq-V8-Hom"/>
                                 </connections>
                             </button>
-                            <view alpha="0.0" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGF-Dr-atJ" userLabel="SETTING">
+                            <view alpha="0.0" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lGF-Dr-atJ" userLabel="SETTING">
                                 <rect key="frame" x="178" y="1" width="244" height="104"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTW-VB-23J">
@@ -859,20 +859,20 @@
                                 <exclude reference="85q-h1-LDN"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="5Lw-UZ-72Z"/>
-                                <exclude reference="Ajx-Ix-vyA"/>
-                                <exclude reference="GhJ-fT-J7W"/>
-                                <exclude reference="NTs-nH-6ji"/>
-                                <exclude reference="BJG-0M-XYE"/>
-                                <exclude reference="WCI-2e-GOy"/>
-                                <exclude reference="lef-rl-5cv"/>
-                                <exclude reference="qqd-cx-9iR"/>
                                 <exclude reference="CKZ-Jt-o0M"/>
                                 <exclude reference="V75-vA-SGl"/>
                                 <exclude reference="Vi3-ID-LIG"/>
                                 <exclude reference="XFu-uL-KN5"/>
                                 <exclude reference="lnQ-F1-xdK"/>
                                 <exclude reference="ojP-lC-9oh"/>
+                                <exclude reference="BJG-0M-XYE"/>
+                                <exclude reference="WCI-2e-GOy"/>
+                                <exclude reference="lef-rl-5cv"/>
+                                <exclude reference="qqd-cx-9iR"/>
+                                <exclude reference="5Lw-UZ-72Z"/>
+                                <exclude reference="Ajx-Ix-vyA"/>
+                                <exclude reference="GhJ-fT-J7W"/>
+                                <exclude reference="NTs-nH-6ji"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
@@ -880,13 +880,13 @@
                                 <include reference="85q-h1-LDN"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="5Lw-UZ-72Z"/>
-                                <include reference="GhJ-fT-J7W"/>
-                                <include reference="lef-rl-5cv"/>
-                                <include reference="qqd-cx-9iR"/>
                                 <include reference="V75-vA-SGl"/>
                                 <include reference="Vi3-ID-LIG"/>
                                 <include reference="ojP-lC-9oh"/>
+                                <include reference="lef-rl-5cv"/>
+                                <include reference="qqd-cx-9iR"/>
+                                <include reference="5Lw-UZ-72Z"/>
+                                <include reference="GhJ-fT-J7W"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -894,13 +894,13 @@
                                 <include reference="85q-h1-LDN"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="Ajx-Ix-vyA"/>
-                                <include reference="NTs-nH-6ji"/>
-                                <include reference="BJG-0M-XYE"/>
-                                <include reference="WCI-2e-GOy"/>
                                 <include reference="CKZ-Jt-o0M"/>
                                 <include reference="XFu-uL-KN5"/>
                                 <include reference="lnQ-F1-xdK"/>
+                                <include reference="BJG-0M-XYE"/>
+                                <include reference="WCI-2e-GOy"/>
+                                <include reference="Ajx-Ix-vyA"/>
+                                <include reference="NTs-nH-6ji"/>
                             </mask>
                         </variation>
                     </view>
