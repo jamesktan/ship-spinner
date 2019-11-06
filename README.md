@@ -1,4 +1,6 @@
 # Ship-Spinner
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjamesktan%2Fship-spinner.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjamesktan%2Fship-spinner?ref=badge_shield)
+
 Ship Spinner is an application I put together to test out a few things. Here I use ScenKit and the VIPER design pattern to serve up assets and content to display. 
 
 ### Story
@@ -22,3 +24,7 @@ The owners of the various content provided in this application are as follows:
 - Description & Backstory : Homeworld Shipyards, Homeworld Wikia
 - UI Assets : FlatIcon
 - Background Assets : DeviantArt Author and Relic and Gearbox
+
+
+## License
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fjamesktan%2Fship-spinner.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fjamesktan%2Fship-spinner?ref=badge_large)
